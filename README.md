@@ -10,3 +10,6 @@ Göktuğ Erdem- 201911025
 Kutay Kaymakçı- 201911034
 
 Mustafa Mert Aydın- 201911011
+
+# Advisor
+Dr. Öğr. Üyesi Murat SARAN
