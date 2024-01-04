@@ -13,3 +13,9 @@ Mustafa Mert Aydın- 201911011
 
 # Advisor
 Dr. Öğr. Üyesi Murat SARAN
+
+# Project Webpage 
+* https://dyslexiaedugameapp.com/
+
+# Project Prototype
+* https://www.figma.com/file/kGOsA0EtRd6LQwFLSeDXrZ/Untitled?type=design&node-id=4%3A26&mode=design&t=CrPbPjA1bmSXGfHG-1
