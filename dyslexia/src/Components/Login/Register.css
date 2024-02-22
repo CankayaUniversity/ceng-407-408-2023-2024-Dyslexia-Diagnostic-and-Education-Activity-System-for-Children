@@ -8,16 +8,16 @@
     background-size: 100% 100%;  /* Arka planı kaplayacak şekilde ayarlayın */
     background-position: center; /* Arka planı ortala */
   }
-  .login-form {
+  .register-form {
     width: 250ph;
     text-align: center;
     border: none; /* Kenarlıkları kaldır */
-    margin-left: 11%;
+    margin-left: 6%;
     margin-top: 5%; /* Kutuyu biraz aşağıya taşı */
 }
 
-.login-form input[type='text'],
-.login-form input[type='password'] {
+.register-form input[type='text'],
+.register-form input[type='password'] {
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 10px;
@@ -26,21 +26,21 @@
     box-sizing: border-box;
 }
   
-  .login-form h1,p {
+  .register-form h1,p {
     color: rgba(239, 152, 54, 1); /* Başlık rengi */
     margin-bottom: 20px;
   }
   
-  .login-form input[type='checkbox'] {
+  .register-form input[type='checkbox'] {
     margin-right: 5px;
   }
   
-  .login-form label {
+  .register-form label {
     color: rgba(239, 152, 54, 1); /* Label rengi */
     font-size: 14px;
   }
   
-  .login-form button {
+  .register-form button {
     width: 100%;
     padding: 10px;
     background-color:rgba(239, 152, 54, 1); /* Buton arka plan rengi */
@@ -51,7 +51,7 @@
     margin-top: 10px;
   }
   
-  .login-form {
+  .register-form {
     color:white; /* Link rengi */
     text-decoration: none;
     font-size: 14px;
@@ -59,6 +59,6 @@
     margin-top: 10px;
   }
   
-  .login-form a:hover {
+  .register-form a:hover {
     text-decoration: none;
   }
