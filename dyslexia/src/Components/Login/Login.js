@@ -1,8 +1,31 @@
 import React, {useState} from 'react'
 import './Login.css'
+import {Link,useNavigate} from "react-router-dom";
 const Login = () => {
     const [email,setEmail]= useState('');
     const [password,setPassword]= useState('');
+    const navigate = useNavigate();
+    const check = (event) => {
+        event.preventDefault();
+    
+        if (!validateForm({ email, password })) {
+            alert('Please make sure all fields are filled out correctly.');
+            return;
+        }
+        navigate('/MainPage');
+        //loginMutation.mutate({email,password})
+    };
+
+    function validateForm({ email, password }) {
+        return password.length > 0 || email.length > 0;
+    }
+    const register=()=> {
+        navigate('/Register');
+    }
+    const forgotPassword=()=> {
+        navigate('/ForgotPassword');
+    }
+
   return (
     <div className='container'>
      <div className='login-form'>
@@ -10,39 +33,29 @@ const Login = () => {
                 <div>
                     <input 
                         type='text' 
-                        placeholder='email' 
-                        id='email' 
+                        placeholder='Email'
                         value={email}
-                        />
+                        onChange={(e)=>setEmail(e.target.value)}/>
                 </div>
                 <div>
                     <input 
                         type='password' 
                         placeholder='Password' 
-                        id='password' 
                         value={password}
-                    /> 
+                        onChange={(e)=>setPassword(e.target.value)}/> 
                 </div>
                 <div>
-                     <button type='submit' >LOGIN</button>
+                     <button type='submit' onClick={check}>LOGIN</button>
                 </div> 
                 <div>
                     <p>If you don't have an account , you can create one for free.</p>
                 </div>
                 <div>
-                     <button type='submit' >Create Account</button>
-                </div> 
-                <div>
-                     <button type='submit' >Forgot password</button>
-                </div> 
-                {/* 
-                <div>
-                onClick={check}
-                    <Link to='/Register'>
-                        Need an account?
-                    </Link>
+                     <button onClick={register}>Create Account</button>
                 </div>
-                */}
+                <div>
+                     <button onClick={forgotPassword} >Forgot Password</button>
+                </div>
      </div>            
     </div>
   )
