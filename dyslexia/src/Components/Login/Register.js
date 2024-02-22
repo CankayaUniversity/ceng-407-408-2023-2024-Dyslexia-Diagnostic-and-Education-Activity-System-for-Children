@@ -11,16 +11,29 @@ const Register = () => {
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
     const navigate = useNavigate();
+    const currentYear = new Date().getFullYear();
+    const startYear = currentYear - 20; // 20 yıl önce
+    const endYear = currentYear - 4; // 4 yıl önce
 
+    // ageOptions dizisi, sadece belirli yaş aralığındaki yılları içerecek şekilde güncelleniyor.
+    const ageOptions = [];
+    for (let year = endYear; year >= startYear; year--) {
+        ageOptions.push(<option key={year} value={year}>{year}</option>);
+    }
+    
     const handleChange = (e) => {
         const { name, value } = e.target;
         if (name === 'name') setName(value);
         else if (name === 'surname') setSurname(value);
-        else if (name === 'age') setAge(value);
+        else if (name === 'age') {
+            const ageValue = currentYear - value;
+            setAge(ageValue);
+        }
         else if (name === 'gender') setGender(value);
         else if (name === 'email') setEmail(value);
         else if (name === 'password') setPassword(value);
         else if (name === 'confirmPassword') setConfirmPassword(value);
+        console.log(age);
     };
 
     const handleSubmit = async (event) => {
@@ -31,6 +44,7 @@ const Register = () => {
             alert('Please make sure all fields are filled out correctly and passwords match.');
             return;
         }
+
         navigate('/')
     };
 
@@ -69,22 +83,28 @@ const Register = () => {
                 />
             </div>
             <div>
-                <input 
-                    type='text' 
-                    placeholder='Age' 
-                    name='age' 
+                <label htmlFor="age">Age</label>
+                <select
+                    name='age'
                     value={age}
                     onChange={handleChange}
-                />
+                    required
+                >
+                    <option value=''>Select Year of Birth</option>
+                    {ageOptions}
+                </select>
             </div>
             <div>
-                <input 
-                    type='text' 
-                    placeholder='Gender' 
-                    name='gender' 
-                    value={gender}
+                <label>Gender</label>
+                <select
+                    name='gender'
+                    value={gender} // Bu seçilen değeri belirlemek için kullanılır.
                     onChange={handleChange}
-                />
+                >
+                    <option value='' disabled hidden>Select Gender</option>
+                    <option value='female'>Female</option>
+                    <option value='male'>Male</option>
+                </select>
             </div>
             <div>
                 <input 
