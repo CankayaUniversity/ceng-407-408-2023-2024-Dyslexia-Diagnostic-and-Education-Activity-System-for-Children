@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: column; /* Sütun yönünde düzenleme */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Tam ekran yüksekliği */
+    background-image: url('/public/images/main.png'); /* Arka plan resmini ayarlayın */
+    background-size: 100% 100%;  /* Arka planı kaplayacak şekilde ayarlayın */
+    background-position: center; /* Arka planı ortala */
+  }
+  .login-form {
+    width: 250ph;
+    text-align: center;
+    border: none; /* Kenarlıkları kaldır */
+    margin-left: 11%;
+    margin-top: 10vh; /* Kutuyu biraz aşağıya taşı */
+}
+
+.login-form input[type='text'],
+.login-form input[type='password'] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none; /* Input kenarlıklarını kaldır */
+    border-bottom: 2px solid rgba(239, 152, 54, 1) ;/* Sadece alt kenarlık */
+    box-sizing: border-box;
+}
+  
+  .login-form h1,p {
+    color: rgba(239, 152, 54, 1); /* Başlık rengi */
+    margin-bottom: 20px;
+  }
+  
+  .login-form input[type='checkbox'] {
+    margin-right: 5px;
+  }
+  
+  .login-form label {
+    color: rgba(239, 152, 54, 1); /* Label rengi */
+    font-size: 14px;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color:rgba(239, 152, 54, 1); /* Buton arka plan rengi */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .login-form a {
+    color:rgba(239, 152, 54, 1); /* Link rengi */
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .login-form a:hover {
+    text-decoration: underline;
+  }
