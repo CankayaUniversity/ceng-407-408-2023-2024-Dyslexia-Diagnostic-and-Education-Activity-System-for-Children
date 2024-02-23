@@ -27,7 +27,7 @@ const Login = () => {
     }
 
   return (
-    <div className='container'>
+    <div className='login-container'>
      <div className='login-form'>
         <h1>LOGIN</h1>
                 <div>
@@ -46,16 +46,10 @@ const Login = () => {
                 </div>
                 <div>
                      <button type='submit' onClick={check}>LOGIN</button>
+                     <p>If you don't have an account , you can create one for free.</p>
+                    <button onClick={register}>Create Account</button>
+                    <button onClick={forgotPassword} >Forgot Password</button>
                 </div> 
-                <div>
-                    <p>If you don't have an account , you can create one for free.</p>
-                </div>
-                <div>
-                     <button onClick={register}>Create Account</button>
-                </div>
-                <div>
-                     <button onClick={forgotPassword} >Forgot Password</button>
-                </div>
      </div>            
     </div>
   )

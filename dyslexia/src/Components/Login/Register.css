@@ -1,9 +1,9 @@
-.container {
+.register-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Tam ekran yüksekliği */
-    padding-top: 4%;
+    padding-top: 5%;
     background-image: url('/public/images/main.png'); /* Arka plan resmini ayarlayın */
     background-size: 100% 100%;  /* Arka planı kaplayacak şekilde ayarlayın */
     background-position: center; /* Arka planı ortala */
@@ -13,13 +13,13 @@
     text-align: center;
     border: none; /* Kenarlıkları kaldır */
     margin-left: 6%;
-    margin-top: 5%; /* Kutuyu biraz aşağıya taşı */
+    margin-top: 10%; /* Kutuyu biraz aşağıya taşı */
 }
 
 .register-form input[type='text'],
 .register-form input[type='password'] {
     width: calc(100% - 20px);
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 10px;
     border: none; /* Input kenarlıklarını kaldır */
     border-bottom: 2px solid rgba(239, 152, 54, 1) ;/* Sadece alt kenarlık */
@@ -64,7 +64,7 @@
   }
   .register-form select {
     width: calc(100% - 20px); /* Genişlik diğer inputlarla aynı olacak şekilde ayarla */
-    padding: 10px;
+    padding: 8px;
     margin-bottom: 10px;
     border: 2px solid rgba(239, 152, 54, 1); /* Border stilini belirle */
     border-radius: 5px; /* Kenarları yuvarlaklaştır */
@@ -73,3 +73,4 @@
 .register-form select option {
     font-size: 16px; /* Option etiketleri için font boyutunu büyüt */
 }
+

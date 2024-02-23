@@ -8,6 +8,7 @@ import Login from "./Components/Login/Login";
 import Register from "./Components/Login/Register";
 import ForgotPassword from "./Components/Login/ForgotPassword";
 import MainPage from "./Components/Main/MainPage";
+import RegisterAgreement from "./Components/Login/RegisterAgreement";
 function App() {
   return (
     <div className="App">
@@ -15,9 +16,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Login/>}/>
           <Route path='/Register' element={<Register/>}/>
+          <Route path="/RegisterAgreement" element={<RegisterAgreement/>}/>
           <Route path="/ForgotPassword" element={<ForgotPassword/>}/>
-          <Route 
-              path='/MainPage'element={<MainPage/>}/>
+          <Route path='/MainPage'element={<MainPage/>}/>
+        
         </Routes>
       </Router>
     </div>
