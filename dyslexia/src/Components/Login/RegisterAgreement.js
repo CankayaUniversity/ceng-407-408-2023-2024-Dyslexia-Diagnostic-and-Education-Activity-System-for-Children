@@ -26,8 +26,8 @@ const RegisterAgreement = () => {
   return (
     <div className='agreement-container'>
         <div>
-            <div className="modal">
-                <div className="modal-content">
+            <div className="agreement-modal">
+                <div className="agreement-modal-content">
                     <span className="close" onClick={handleClose}>&times;</span>
                     <h2>Sign Up for Free</h2>
                     <form>

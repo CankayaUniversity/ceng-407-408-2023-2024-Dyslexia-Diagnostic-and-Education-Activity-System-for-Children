@@ -8,7 +8,7 @@
     background-size: 100% 100%;  /* Arka planı kaplayacak şekilde ayarlayın */
     background-position: center; /* Arka planı ortala */
   }
-.modal {
+.agreement-modal {
   display: block; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -20,7 +20,7 @@
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.modal-content {
+.agreement-modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;

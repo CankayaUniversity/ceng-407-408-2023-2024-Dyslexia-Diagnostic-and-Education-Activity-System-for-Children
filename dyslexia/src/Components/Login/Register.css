@@ -13,7 +13,7 @@
     text-align: center;
     border: none; /* Kenarlıkları kaldır */
     margin-left: 6%;
-    margin-top: 10%; /* Kutuyu biraz aşağıya taşı */
+    margin-top: 5%; /* Kutuyu biraz aşağıya taşı */
 }
 
 .register-form input[type='text'],
@@ -51,14 +51,7 @@
     margin-top: 10px;
   }
   
-  .register-form {
-    color:white; /* Link rengi */
-    text-decoration: none;
-    font-size: 14px;
-    display: inline-block;
-    margin-top: 10px;
-  }
-  
+
   .register-form a:hover {
     text-decoration: none;
   }
@@ -74,3 +67,15 @@
     font-size: 16px; /* Option etiketleri için font boyutunu büyüt */
 }
 
+.back-button {
+  color: rgba(239, 152, 54, 1); /* Match the color of the register button */
+  font-size: 2em; /* Adjust size as needed */
+  cursor: pointer; /* Change the cursor to indicate it's clickable */
+}
+
+.register-header {
+  display: flex;
+  align-items: center; /* Align the icon and text vertically */
+  justify-content: center; /* Center the icon and text horizontally */
+  gap: 10px; /* Add space between the icon and text */
+}
