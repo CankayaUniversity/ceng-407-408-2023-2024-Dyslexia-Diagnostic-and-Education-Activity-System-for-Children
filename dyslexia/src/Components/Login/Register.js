@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import './Register.css'
 import { useNavigate } from 'react-router-dom'
+import { IoArrowBackCircle } from "react-icons/io5";
 
 const Register = () => {
     const [email, setEmail] = useState('')
@@ -60,6 +61,9 @@ const Register = () => {
 
   return (
     <div className='register-container'>
+        <div className='register-header'>
+            <IoArrowBackCircle className="back-button" onClick={() => navigate(-1)} />
+        </div>
         <div className='register-form'>
             <h1>Sign Up for Free</h1>
             <div>
