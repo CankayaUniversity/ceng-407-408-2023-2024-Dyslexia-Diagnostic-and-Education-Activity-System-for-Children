@@ -25,15 +25,12 @@ const Register = () => {
         const { name, value } = e.target;
         if (name === 'name') setName(value);
         else if (name === 'surname') setSurname(value);
-        else if (name === 'age') {
-            const ageValue = currentYear - value;
-            setAge(ageValue);
-        }
+        else if (name === 'age') setAge(parseInt(value));
         else if (name === 'gender') setGender(value);
         else if (name === 'email') setEmail(value);
         else if (name === 'password') setPassword(value);
         else if (name === 'confirmPassword') setConfirmPassword(value);
-        console.log(age);
+
     };
 
     const handleSubmit = async (event) => {
@@ -44,8 +41,9 @@ const Register = () => {
             alert('Please make sure all fields are filled out correctly and passwords match.');
             return;
         }
-
-        navigate('/')
+        console.log(userInfoToSave);
+        localStorage.setItem('userInfo', JSON.stringify(userInfoToSave));
+        navigate('/RegisterAgreement')
     };
 
     function validateForm({ email, name,surname,gender,age, password, confirmPassword }) {
@@ -54,14 +52,14 @@ const Register = () => {
             password.length > 0 &&
             name.length > 0 &&
             surname.length > 0 &&
-            age.length > 0 &&
+            age.toString().length > 0 &&
             email.length > 0 &&
             confirmPassword.length > 0
         );
     }
 
   return (
-    <div className='container'>
+    <div className='register-container'>
         <div className='register-form'>
             <h1>Sign Up for Free</h1>
             <div>
@@ -83,7 +81,6 @@ const Register = () => {
                 />
             </div>
             <div>
-                <label htmlFor="age">Age</label>
                 <select
                     name='age'
                     value={age}
@@ -95,7 +92,6 @@ const Register = () => {
                 </select>
             </div>
             <div>
-                <label>Gender</label>
                 <select
                     name='gender'
                     value={gender} // Bu seçilen değeri belirlemek için kullanılır.
