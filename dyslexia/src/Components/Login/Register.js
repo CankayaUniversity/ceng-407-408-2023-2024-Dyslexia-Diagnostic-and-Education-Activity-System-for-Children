@@ -13,7 +13,7 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('')
     const navigate = useNavigate();
     const currentYear = new Date().getFullYear();
-    const startYear = currentYear - 20; // 20 yıl önce
+    const startYear = currentYear - 15; // 20 yıl önce
     const endYear = currentYear - 4; // 4 yıl önce
 
     // ageOptions dizisi, sadece belirli yaş aralığındaki yılları içerecek şekilde güncelleniyor.
