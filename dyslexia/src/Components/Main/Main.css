@@ -1,0 +1,46 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding-top: 6%;
+    background-image: url('/public/images/MainPage.jpg');
+    background-size: 100% 100%;  
+    background-position: center; 
+  }
+  .card {
+    background-color: white; /* or any color you prefer */
+    padding: 30px; /* This adds space inside the card */
+    margin: 10px; /* This adds space outside, between the card and other elements */
+    border-radius: 10px; /* Optional: if you want rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: if you want a shadow for depth */
+    width: 300px; /* or any width you prefer */
+    height: 200px; /* or any height you prefer */
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* This adds space between the two cards */
+  }
+
+  .profile-icon {
+    position: absolute; /* Position it relative to the next positioned parent */
+    top: 20px; /* Space from the top */
+    left: 20px; /* Space from the left */
+    display: flex;
+    align-items: center; /* Align text and icon vertically */
+    justify-content: center; /* Center text inside the star */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .profile-icon .icon {
+    font-size: 110px; /* Size of the star icon */
+    color: #019BE1; /* Color of the star icon */
+  }
+  
+  .profile-icon .text {
+    position: absolute; /* Position the text over the icon */
+    font-weight: bold; /* Make the text bold */
+    color: hsl(0, 0%, 100%); /* Color of the text */
+  }
