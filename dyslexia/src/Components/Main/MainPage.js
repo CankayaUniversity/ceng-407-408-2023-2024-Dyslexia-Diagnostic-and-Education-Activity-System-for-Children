@@ -6,23 +6,25 @@ import { Card } from 'react-bootstrap';
 
 const MainPage = () => {
   const navigate = useNavigate();
-
-  const ProfileInfo =()=>{
-    navigate('/Profile');
-  }
   return (
     <div className='main-container'>
-      <div className='profile-icon'>
-        <ImStarFull className="icon" onClick={ProfileInfo} />
-        <span className="text">PROFILE</span>
-      </div>
+      <Link to={`/Profile`}>
+        <div className='profile-icon'>
+            <ImStarFull className="icon"/>
+            <span className="text">PROFILE</span>
+        </div>
+     </Link>
       <div className="card-container">
-        <Card title="Diagnosis Tests">
-          {/* Diğer içerikler buraya eklenebilir */}
-        </Card>
-        <Card title="Educational Games">
-          {/* Diğer içerikler buraya eklenebilir */}
-        </Card>
+        <Link to={`/DiagnosisAgreement`}>
+          <Card title="Diagnosis Tests">
+            {/* Diğer içerikler buraya eklenebilir */}
+          </Card>
+        </Link>
+        <Link to={`/EducationalGamesList`}>
+          <Card title="Educational Games">
+            {/* Diğer içerikler buraya eklenebilir */}
+          </Card>
+        </Link>
       </div>
     </div>
   )

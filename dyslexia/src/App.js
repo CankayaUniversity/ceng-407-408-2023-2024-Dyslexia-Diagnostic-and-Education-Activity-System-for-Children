@@ -10,6 +10,8 @@ import ForgotPassword from "./Components/Login/ForgotPassword";
 import MainPage from "./Components/Main/MainPage";
 import RegisterAgreement from "./Components/Login/RegisterAgreement";
 import Profile from "./Components/Main/Profile/Profile";
+import DiagnosticTestAgreement from "./Components/Main/DiagnosticTest/DiagnosticTestAgreement";
+import EducationalGamesList from "./Components/Main/EducationalGame/EducationalGamesList";
 //import MatchDinoParts from "./Games/MatchDinoParts";
 function App() {
   return (
@@ -22,7 +24,8 @@ function App() {
           <Route path="/ForgotPassword" element={<ForgotPassword/>}/>
           <Route path='/MainPage'element={<MainPage/>}/>
           <Route path="/Profile" element={<Profile/>}/>
-          
+          <Route path="/DiagnosisAgreement" element={<DiagnosticTestAgreement/>}/>
+          <Route path="/EducationalGamesList" element={<EducationalGamesList/>}/>
         </Routes>
       </Router>
     </div>

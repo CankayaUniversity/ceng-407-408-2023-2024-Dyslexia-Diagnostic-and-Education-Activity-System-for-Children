@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Profile.css'
 import { ImStarFull } from "react-icons/im";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate ,Link} from 'react-router-dom'
 import { IoIosCloudy } from "react-icons/io";
 
 const Profile = () => {
@@ -51,15 +51,14 @@ const Profile = () => {
         alert('Profile updated successfully!');
         // navigate('/someOtherPage');
       };
-      const main = () => {
-        navigate('/MainPage');
-      };
   return (
     <div className='profile-container'>
-      <div className='profile-icon'>
-        <ImStarFull className="icon" onClick={main}/>
-        <span className="text">PROFILE</span>
-      </div>
+      <Link to={`/MainPage`}>
+        <div className='profile-icon'>
+            <ImStarFull className="icon"/>
+            <span className="text">PROFILE</span>
+        </div>
+     </Link>
       <div className="profile-modal">
         <div className="profile-modal-content">
             <h1>MY PROFILE</h1>
@@ -109,7 +108,7 @@ const Profile = () => {
           <div className="save-button" onClick={handleSave}>
             <IoIosCloudy className="icon-save" />
             <span>OK</span>
-        </div>
+          </div>
         </div>
 
       </div>
