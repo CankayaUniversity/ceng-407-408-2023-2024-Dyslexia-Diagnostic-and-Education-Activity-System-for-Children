@@ -1,7 +1,8 @@
 import React from 'react'
 import './Main.css'
 import { ImStarFull } from "react-icons/im";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
+import { Card } from 'react-bootstrap';
 
 const MainPage = () => {
   const navigate = useNavigate();
@@ -15,15 +16,13 @@ const MainPage = () => {
         <ImStarFull className="icon" onClick={ProfileInfo} />
         <span className="text">PROFILE</span>
       </div>
-       <div className="card-container">
-        <div className="card">
-          Diagnosis Tests
-          {/* You can add more content here */}
-        </div>
-        <div className="card">
-          Educational Games
-          {/* You can add more content here */}
-        </div>
+      <div className="card-container">
+        <Card title="Diagnosis Tests">
+          {/* Diğer içerikler buraya eklenebilir */}
+        </Card>
+        <Card title="Educational Games">
+          {/* Diğer içerikler buraya eklenebilir */}
+        </Card>
       </div>
     </div>
   )

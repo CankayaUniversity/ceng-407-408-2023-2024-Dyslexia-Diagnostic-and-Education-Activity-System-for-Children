@@ -10,6 +10,7 @@ import ForgotPassword from "./Components/Login/ForgotPassword";
 import MainPage from "./Components/Main/MainPage";
 import RegisterAgreement from "./Components/Login/RegisterAgreement";
 import Profile from "./Components/Main/Profile/Profile";
+//import MatchDinoParts from "./Games/MatchDinoParts";
 function App() {
   return (
     <div className="App">
@@ -21,7 +22,7 @@ function App() {
           <Route path="/ForgotPassword" element={<ForgotPassword/>}/>
           <Route path='/MainPage'element={<MainPage/>}/>
           <Route path="/Profile" element={<Profile/>}/>
-        
+          
         </Routes>
       </Router>
     </div>
@@ -29,3 +30,4 @@ function App() {
 }
 
 export default App;
+/*<Route path="/MatchDino" element={<MatchDinoParts/>}/> */
