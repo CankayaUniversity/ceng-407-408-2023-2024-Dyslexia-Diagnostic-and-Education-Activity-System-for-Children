@@ -13,6 +13,8 @@ import Profile from "./Components/Main/Profile/Profile";
 import DiagnosticTestAgreement from "./Components/Main/DiagnosticTest/DiagnosticTestAgreement";
 import EducationalGamesList from "./Components/Main/EducationalGame/EducationalGamesList";
 //import MatchDinoParts from "./Games/MatchDinoParts";
+import ProfileReadOnly from "./Components/Main/Profile/ProfileReadOnly";
+import TestsInformation from "./Components/Main/DiagnosticTest/TestsInformation";
 function App() {
   return (
     <div className="App">
@@ -24,8 +26,11 @@ function App() {
           <Route path="/ForgotPassword" element={<ForgotPassword/>}/>
           <Route path='/MainPage'element={<MainPage/>}/>
           <Route path="/Profile" element={<Profile/>}/>
+          <Route path="/ProfileReadOnly" element={<ProfileReadOnly/>}/>
           <Route path="/DiagnosisAgreement" element={<DiagnosticTestAgreement/>}/>
+          <Route path="/TestsInformation" element={<TestsInformation/>}/>
           <Route path="/EducationalGamesList" element={<EducationalGamesList/>}/>
+
         </Routes>
       </Router>
     </div>
