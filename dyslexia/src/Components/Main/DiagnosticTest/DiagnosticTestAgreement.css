@@ -27,8 +27,8 @@
     padding: 55px;
     border-radius: 15px; /* Rounded corners for the modal */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    width: 45%; /* Width of the modal */
-    height: 50%;
+    width: 50%; /* Width of the modal */
+    height: 30%;
     margin-top: 70px;  /* Could be more or less, depending on screen size */
    }
    
@@ -60,3 +60,41 @@
         font-weight: bold; /* Make the text bold */
         color: hsl(0, 0%, 100%); /* Color of the text */
       }
+
+      .diagnosisAgreement-modal-content.error {
+        /* İçerik alanına hata durumu için stil ekleme */
+        border: 2px solid red;
+      }
+      
+      .text-error {
+        /* Hata metni için stil ekleme */
+        color: red;
+      }
+      
+      /* Checkbox ve etiket için stiller */
+      .agreement-checkbox {
+        margin-top: 30px; /* veya ihtiyacınıza göre ayarlayın */
+        margin-left: 160px;
+        display: flex;
+        align-items: center;
+      }
+      
+      .agreement-checkbox input[type="checkbox"] {
+        text-align: center;
+        margin-right: 10px;
+      }
+      
+.close {
+  margin-top: 0;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
