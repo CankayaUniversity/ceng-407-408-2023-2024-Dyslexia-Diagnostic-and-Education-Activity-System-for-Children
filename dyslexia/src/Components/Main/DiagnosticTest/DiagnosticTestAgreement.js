@@ -32,7 +32,7 @@ const DiagnosticTestAgreement = () => {
       <div className="diagnosisAgreement-modal">
         <div className="diagnosisAgreement-modal-content">
             <span className="close" onClick={handleClose}>&times;</span>
-            <h1>Privacy and Licanse Agreement</h1>
+            <h1>Privacy and License Agreement</h1>
             <div className="agreement-checkbox">
                 <input
                 type="checkbox"
