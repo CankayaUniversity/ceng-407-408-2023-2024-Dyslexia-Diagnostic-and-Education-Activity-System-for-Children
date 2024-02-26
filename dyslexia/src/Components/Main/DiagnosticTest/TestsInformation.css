@@ -1,4 +1,4 @@
-.diagnosisAgreement-container {
+.testInfo-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
     background-size: 100% 100%;  
     background-position: center; 
 }
-  .diagnosisAgreement-modal {
+  .testInfo-modal {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 10%;
@@ -21,16 +21,31 @@
     background-color:hwb(0 100% 0% / 0.514); /* Black w/ opacity */
   }
 
-  .diagnosisAgreement-modal-content {
+  .testInfo-modal-content {
     background-color:  #ffffff;
-    margin: 5% auto; /* 15% from the top and centered */
-    padding: 55px;
+    margin: 6% auto; /* 15% from the top and centered */
+    padding: 50px;
     border-radius: 15px; /* Rounded corners for the modal */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    width: 50%; /* Width of the modal */
-    height: 30%;
-    margin-top: 70px;  /* Could be more or less, depending on screen size */
+    width: 25%; /* Width of the modal */
+    height: 25%;
+    margin-top: 155px;  /* Could be more or less, depending on screen size */
+    margin-left: 80px;
    }
+   .testInfo-modal-content h2 {
+    color: black;
+    margin-top: 0px;
+   }
+
+   .testInfo-title {
+    position: absolute; /* H1'i pozisyonlamak için */
+    right: 0; /* Sağ tarafa yerleştir */
+    top: 20%; /* Üstten yüzde 50 aşağıda olacak şekilde ayarla */
+    transform: translateY(-50%); /* H1'i dikey olarak ortala */
+    margin-right: 170px; /* Sağdan biraz boşluk bırak */
+    /* Diğer stil özellikleri */
+  }
+   
    
     .profile-modal-content h1 {
         font-size: small;
@@ -41,6 +56,7 @@
         color: #019BE1; /* Blue color for the MY PROFILE heading */
         font-family: Arial, sans-serif; /* Font family can be changed as needed */
     }
+
 
     .profile-icon {
         position: absolute; /* Position it relative to the next positioned parent */
@@ -60,32 +76,10 @@
         font-weight: bold; /* Make the text bold */
         color: hsl(0, 0%, 100%); /* Color of the text */
       }
-
-      .diagnosisAgreement-modal-content.error {
-        /* İçerik alanına hata durumu için stil ekleme */
-        border: 2px solid red;
-      }
-      
-      .text-error {
-        /* Hata metni için stil ekleme */
-        color: red;
-      }
-      
-      /* Checkbox ve etiket için stiller */
-      .agreement-checkbox {
-        margin-top: 30px; /* veya ihtiyacınıza göre ayarlayın */
-        margin-left: 160px;
-        display: flex;
-        align-items: center;
-      }
-      
-      .agreement-checkbox input[type="checkbox"] {
-        text-align: center;
-        margin-right: 10px;
-      }
+    
       
 .close {
-  margin-top: 0;
+  margin-top: -15px;
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -99,29 +93,26 @@
   cursor: pointer;
 }
 
-.save-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 1rem; /* Adjust font size as needed */
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.icon-save {
-  margin-right: -180px; /* Creates space between the icon and text */
-  font-size: 70px; /* Adjust icon size as needed */
-  color: #019BE1;
-}
-
-.save-button span {
-  margin-right: -180px;
-  position: absolute; /* Position the text over the icon */
-  font-weight: bold; /* Make the text bold */
-  color: hsl(0, 0%, 100%); /* Color of the text */
-}
-
-.icon-save:hover {
-  background-color: #017ca1; /* Darker shade for button hover state */
-}
+.start-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem; /* Adjust font size as needed */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-icon-save {
+    margin-top: -20px;
+    margin-right: -180px; /* Creates space between the icon and text */
+    font-size: 100px; /* Adjust icon size as needed */
+    color: #019BE1;
+  }
+  
+  .start-button span {
+    margin-right: -180px;
+    position: absolute; /* Position the text over the icon */
+    font-weight: bold; /* Make the text bold */
+    color: hsl(0, 0%, 100%); /* Color of the text */
+  }
