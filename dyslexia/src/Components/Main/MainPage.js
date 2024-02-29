@@ -16,12 +16,12 @@ const MainPage = () => {
      </Link>
       <div className="card-container">
         <Link to={`/DiagnosisAgreement`}>
-          <Card title="Diagnosis Tests">
+          <Card title="Diagnosis Tests" className='card'>
             {/* Diğer içerikler buraya eklenebilir */}
           </Card>
         </Link>
         <Link to={`/EducationalGamesList`}>
-          <Card title="Educational Games">
+          <Card title="Educational Games" className='card'>
             {/* Diğer içerikler buraya eklenebilir */}
           </Card>
         </Link>

@@ -9,18 +9,19 @@
     background-position: center; 
   }
   .login-form {
-    width: 200ph;
+    width: 300px;
     text-align: center;
     border: none; 
-    margin-left: 11%;
-    margin-top: 2%; 
+    margin-left: 5%;
+    margin-top: -5%; 
+    font-size: 16px;
 }
 
 .login-form input[type='text'],
 .login-form input[type='password'] {
     width: calc(100% - 20px);
     padding: 5px;
-    margin-bottom: 3%;
+    margin-bottom: 10px;
     border: none; 
     border-bottom: 2px solid rgba(239, 152, 54, 1) ;
     box-sizing: border-box;
@@ -28,7 +29,7 @@
   
   .login-form h1,p {
     color: rgba(239, 152, 54, 1);
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   
   .login-form input[type='checkbox'] {
@@ -41,14 +42,15 @@
   }
   
   .login-form button {
+    margin-bottom: 0;
     width: 100%;
-    padding: 5px;
+    padding: 10px;
     background-color:rgba(239, 152, 54, 1);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 2px;
+    margin-top: 10px;
   }
 
   .login-form div {
@@ -58,3 +60,21 @@
   .login-form a:hover {
     text-decoration: none;
   }
+
+  @media screen and (max-width: 768px) {
+    .login-container{
+      background-image: url('/public/images/MobileLogin.png');
+    }
+    .login-form {
+        margin-top: -45%;
+        width: 70%; /* Ekranın %80'ine genişlik ver */
+        margin-left: 0; /* Sol kenar boşluğunu kaldır */
+    }
+}
+@media screen and (orientation: portrait) {
+  .login-form {
+      width: 300px; /* Sabit genişliği koru */
+      margin-left: auto; /* Otomatik kenar boşlukları ile ortala */
+      margin-right: auto; /* Otomatik kenar boşlukları ile ortala */
+  }
+}

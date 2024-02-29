@@ -79,3 +79,21 @@
   justify-content: center; /* Center the icon and text horizontally */
   gap: 10px; /* Add space between the icon and text */
 }
+
+@media screen and (max-width: 768px) {
+  .register-container{
+    background-image: url('/public/images/MobileLogin.png');
+  }
+  .register-form {
+      margin-top: -45%;
+      width: 70%; /* Ekranın %80'ine genişlik ver */
+      margin-left: 0; /* Sol kenar boşluğunu kaldır */
+  }
+}
+@media screen and (orientation: portrait) {
+.register-form {
+    width: 300px; /* Sabit genişliği koru */
+    margin-left: auto; /* Otomatik kenar boşlukları ile ortala */
+    margin-right: auto; /* Otomatik kenar boşlukları ile ortala */
+}
+}
