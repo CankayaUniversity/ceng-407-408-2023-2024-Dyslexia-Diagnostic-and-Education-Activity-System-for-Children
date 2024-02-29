@@ -44,3 +44,29 @@
     font-weight: bold; /* Make the text bold */
     color: hsl(0, 0%, 100%); /* Color of the text */
   }
+
+/* Bu medya sorgusu, ekran genişliği 768px'den az olan ve yatay yönlendirme olan cihazlar için geçerlidir */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .card-container {
+    flex-direction: row; /* Kartları yatay olarak sıralar */
+    flex-wrap: wrap; /* Eğer kartlar sığmazsa, alt satıra taşır */
+    justify-content: space-around; /* Kartlar arasında eşit boşluk bırakır */
+    align-items: center; /* Kartları dikey olarak ortalar */
+  }
+
+  .card {
+    /* Yatay mod için kart boyutlarını ve stilini ayarlar */
+    width: calc(50% - 20px); /* Her kart ekranın yarısını kaplar, 20px boşluk bırakır */
+    height: auto; /* Yükseklik içerik boyutuna göre ayarlanır */
+    margin: 10px; /* Her yönde 10px dış boşluk bırakır */
+    padding: 15px; /* İç padding */
+    /* Diğer stil ayarları */
+  }
+
+  .main-container {
+    /* Yatay mod için ana konteyner stilini ayarlar */
+    height: auto; /* Yükseklik içerik boyutuna göre ayarlanır */
+    padding-top: 0; /* Üst paddingi kaldırır */
+    /* Diğer stil ayarları */
+  }
+}
