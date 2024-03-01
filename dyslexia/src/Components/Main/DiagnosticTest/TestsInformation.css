@@ -116,3 +116,67 @@
     font-weight: bold; /* Make the text bold */
     color: hsl(0, 0%, 100%); /* Color of the text */
   }
+
+  @media screen and (max-width: 950px){
+  
+    .testInfo-modal {
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 13%;
+      top: 18%;
+      width: 80%; /* Full width */
+      height: 75%; /* Full height */
+      justify-content: center;
+      align-items: center;
+      background-color:hwb(0 100% 0% / 0.514); /* Fallback color */
+      background-color:hwb(0 100% 0% / 0.514); /* Black w/ opacity */
+    }
+  
+    .testInfo-modal-content {
+      background-color:  #ffffff;
+      margin: 6% auto; /* 15% from the top and centered */
+      padding: 50px;
+      border-radius: 15px; /* Rounded corners for the modal */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+      width: 30%; /* Width of the modal */
+      height: 25%;
+      margin-top: 120px;  /* Could be more or less, depending on screen size */
+      margin-left: 80px;
+     }
+     .testInfo-modal-content h2 {
+      color: black;
+      margin-top: -15px;
+     }
+     .testInfo-title {
+      position: absolute; /* H1'i pozisyonlamak için */
+      right: 0; /* Sağ tarafa yerleştir */
+      top: 15%; /* Üstten yüzde 50 aşağıda olacak şekilde ayarla */
+      transform: translateY(-50%); /* H1'i dikey olarak ortala */
+      margin-right: 170px; /* Sağdan biraz boşluk bırak */
+      /* Diğer stil özellikleri */
+    }
+
+    .start-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem; /* Adjust font size as needed */
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    
+    .start-icon-save {
+      margin-top: -20px;
+      margin-right: -100px; /* Creates space between the icon and text */
+      font-size: 100px; /* Adjust icon size as needed */
+      color: #019BE1;
+    }
+    
+    .start-button span {
+      margin-right: -100px;
+      position: absolute; /* Position the text over the icon */
+      font-weight: bold; /* Make the text bold */
+      color: hsl(0, 0%, 100%); /* Color of the text */
+    }
+  }

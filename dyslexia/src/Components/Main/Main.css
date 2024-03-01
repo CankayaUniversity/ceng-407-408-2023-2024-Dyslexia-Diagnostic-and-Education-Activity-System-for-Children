@@ -8,15 +8,17 @@
     background-size: 100% 100%;  
     background-position: center; 
   }
-  .card {
-    background-color: white; /* or any color you prefer */
-    padding: 30px; /* This adds space inside the card */
-    margin: 10px; /* This adds space outside, between the card and other elements */
-    border-radius: 10px; /* Optional: if you want rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: if you want a shadow for depth */
-    width: 300px; /* or any width you prefer */
-    height: 200px; /* or any height you prefer */
+
+.card_Main {
+    background-color: white; 
+    padding: 30px;
+    margin: 10px; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 300px;
+    height: 200px;
   }
+
   
   .card-container {
     display: flex;
@@ -46,27 +48,14 @@
   }
 
 /* Bu medya sorgusu, ekran genişliği 768px'den az olan ve yatay yönlendirme olan cihazlar için geçerlidir */
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  .card-container {
-    flex-direction: row; /* Kartları yatay olarak sıralar */
-    flex-wrap: wrap; /* Eğer kartlar sığmazsa, alt satıra taşır */
-    justify-content: space-around; /* Kartlar arasında eşit boşluk bırakır */
-    align-items: center; /* Kartları dikey olarak ortalar */
-  }
-
-  .card {
-    /* Yatay mod için kart boyutlarını ve stilini ayarlar */
-    width: calc(50% - 20px); /* Her kart ekranın yarısını kaplar, 20px boşluk bırakır */
-    height: auto; /* Yükseklik içerik boyutuna göre ayarlanır */
-    margin: 10px; /* Her yönde 10px dış boşluk bırakır */
-    padding: 15px; /* İç padding */
-    /* Diğer stil ayarları */
-  }
-
-  .main-container {
-    /* Yatay mod için ana konteyner stilini ayarlar */
-    height: auto; /* Yükseklik içerik boyutuna göre ayarlanır */
-    padding-top: 0; /* Üst paddingi kaldırır */
-    /* Diğer stil ayarları */
+@media screen and (max-width: 950px){
+  .card_Main {
+    padding: 15px;
+    margin: 10px; 
+    margin-top: -5%;
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 250px;
+    height: 200px;
   }
 }

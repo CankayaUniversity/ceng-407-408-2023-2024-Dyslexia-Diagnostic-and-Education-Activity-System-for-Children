@@ -1,11 +1,11 @@
 import React from 'react'
 import './Main.css'
 import { ImStarFull } from "react-icons/im";
-import { useNavigate,Link } from 'react-router-dom'
+import {Link } from 'react-router-dom'
 import { Card } from 'react-bootstrap';
 
 const MainPage = () => {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();  useNavigate,
   return (
     <div className='main-container'>
       <Link to={`/Profile`}>
@@ -16,12 +16,12 @@ const MainPage = () => {
      </Link>
       <div className="card-container">
         <Link to={`/DiagnosisAgreement`}>
-          <Card title="Diagnosis Tests" className='card'>
+          <Card title="Diagnosis Tests"  className='card_Main'>
             {/* Diğer içerikler buraya eklenebilir */}
           </Card>
         </Link>
         <Link to={`/EducationalGamesList`}>
-          <Card title="Educational Games" className='card'>
+          <Card title="Educational Games" className='card_Main'>
             {/* Diğer içerikler buraya eklenebilir */}
           </Card>
         </Link>
