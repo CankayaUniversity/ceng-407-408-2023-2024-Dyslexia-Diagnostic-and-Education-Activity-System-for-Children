@@ -31,6 +31,10 @@
     height: 30%;
     margin-top: 70px;  /* Could be more or less, depending on screen size */
    }
+   .diagnosisAgreement-modal-content h1 {
+    color:  #000000;
+    margin-top: 10px;  /* Could be more or less, depending on screen size */
+   }
    
     .profile-modal-content h1 {
         font-size: small;
@@ -124,4 +128,32 @@
 
 .icon-save:hover {
   background-color: #017ca1; /* Darker shade for button hover state */
+}
+
+@media screen and (max-width: 950px){
+  
+  .diagnosisAgreement-modal {
+    left: 13%;
+    top: 20%;
+    width: 80%; /* Full width */
+    height: 70%; /* Full height */
+    justify-content: center;
+    align-items: center;
+    background-color:hwb(0 100% 0% / 0.514); /* Fallback color */
+    background-color:hwb(0 100% 0% / 0.514); /* Black w/ opacity */
+  }
+  .diagnosisAgreement-modal-content {
+    background-color:  #ffffff;
+    padding: 65px;
+    border-radius: 15px; /* Rounded corners for the modal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 65%; /* Width of the modal */
+    height: 20%;
+    margin-top: 80px;  /* Could be more or less, depending on screen size */
+   }
+
+   .diagnosisAgreement-modal-content h1 {
+    color:  #000000;
+    margin-top: -30px;  /* Could be more or less, depending on screen size */
+   }
 }
