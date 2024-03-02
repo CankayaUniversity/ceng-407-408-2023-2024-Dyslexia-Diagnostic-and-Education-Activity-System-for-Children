@@ -120,6 +120,7 @@
 }
 
 .save-button span {
+  margin-top: 2%;
   margin-right: -180px;
   position: absolute; /* Position the text over the icon */
   font-weight: bold; /* Make the text bold */

@@ -5,10 +5,12 @@ import { useNavigate ,Link} from 'react-router-dom'
 import { IoIosCloudy } from "react-icons/io";
 
 const Profile = () => {
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
     const currentYear = new Date().getFullYear();
     const startYear = currentYear - 15;
     const endYear = currentYear - 4;
+    const [saveSuccess, setSaveSuccess] = useState(false);
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
     const ageOptions = [];
     for (let year = endYear; year >= startYear; year--) {
@@ -47,8 +49,12 @@ const Profile = () => {
     
       const handleSave = () => {
         localStorage.setItem('userInfo', JSON.stringify(profile));
-        alert('Profile updated successfully!');
-        // navigate('/someOtherPage');
+        setSaveSuccess(true); // İşlem başarılı olduğunda durum güncelleniyor
+        setShowSuccessMessage(true); // Mesajı göstermek için
+
+        setTimeout(() => {
+          setShowSuccessMessage(false); // Mesajı bir süre sonra gizle
+        }, 5000); // 3 saniye sonra mesajı gizle
       };
   return (
     <div className='profile-container'>
@@ -104,10 +110,18 @@ const Profile = () => {
             readOnly
             className='readonly-input'
           />
-          <div className="save-button" onClick={handleSave}>
-            <IoIosCloudy className="icon-save" />
-            <span>OK</span>
+          <div>
+            {showSuccessMessage && (
+              <div className="success-message">
+                Profile updated successfully!
+              </div>
+            )}
+            <div className="save-button" onClick={handleSave}>
+              <IoIosCloudy className="icon-save" />
+              <span>OK</span>
+            </div>
           </div>
+         
         </div>
 
       </div>
