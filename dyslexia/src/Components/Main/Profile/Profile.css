@@ -33,6 +33,7 @@
    }
    
     .profile-modal-content h1 {
+        font-size: 18px;
         margin: 0px;
         padding-top: 10px;
         padding-bottom: 20px;
@@ -63,6 +64,7 @@
       }
       
       .icon-save {
+        margin-top: 4%;
         margin-right: -180px; /* Creates space between the icon and text */
         font-size: 70px; /* Adjust icon size as needed */
         color: #019BE1;
@@ -74,10 +76,14 @@
         font-weight: bold; /* Make the text bold */
         color: hsl(0, 0%, 100%); /* Color of the text */
       }
-      
-      .icon-save:hover {
-        background-color: #017ca1; /* Darker shade for button hover state */
-      }
+      .success-message {
+        color: green; /* Yeşil renk */
+        position: absolute; /* Konumlandırma */
+        left: 50%; /* Yatayda ortala */
+        transform: translateX(-50%); /* Tam ortalamak için */
+        font-size: 1rem; /* Yazı boyutu */
+        font-weight: bold; /* Yazı kalınlığı */
+    }
 
   .profile-icon {
     position: absolute; /* Position it relative to the next positioned parent */
@@ -101,3 +107,45 @@
     /* Existing styles... */
     margin-bottom: 0; /* Remove bottom margin if any */
   }
+
+  
+@media screen and (max-width: 950px){
+  
+  .profile-modal {
+    left: 13%;
+    top: 17%;
+    width: 80%; /* Full width */
+    height: 75%; /* Full height */
+    justify-content: center;
+    align-items: center;
+    background-color:hwb(0 100% 0% / 0.514); /* Fallback color */
+    background-color:hwb(0 100% 0% / 0.514); /* Black w/ opacity */
+  }
+  .profile-modal-content {
+    background-color:  #ffffff;
+    padding: 65px;
+    border-radius: 15px; /* Rounded corners for the modal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 35%; /* Width of the modal */
+    height:82%;
+    margin-top: 20px;  /* Could be more or less, depending on screen size */
+    padding: 20px;
+   }
+   .profile-modal-content h1 {
+    font-size: 16px;
+    margin-top: -10%;
+    text-align: center;
+    color: #019BE1; /* Blue color for the MY PROFILE heading */
+    font-family: Arial, sans-serif; /* Font family can be changed as needed */
+  }
+   input[type='text'],
+    select {
+    box-sizing: border-box;
+    width: 250px;
+    border: 2px solid #a1d1e6; /* Light blue border */
+    border-radius: 10px; /* Rounded borders for the inputs */
+    padding: 0;
+    font-size: 15px;
+    margin-bottom: 5px; /* Space between the inputs */
+    }
+}
