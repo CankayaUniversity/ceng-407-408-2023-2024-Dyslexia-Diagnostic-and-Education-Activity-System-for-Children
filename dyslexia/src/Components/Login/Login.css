@@ -9,6 +9,7 @@
     background-position: center; 
   }
   .login-form {
+    font-family: 'Popins', sans-serif;
     width: 300px;
     text-align: center;
     border: none; 
@@ -61,13 +62,13 @@
     text-decoration: none;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 430px) {
     .login-container{
       background-image: url('/public/images/MobileLogin.png');
     }
     .login-form {
-        margin-top: -45%;
-        width: 70%; /* Ekranın %80'ine genişlik ver */
+        margin-top: -80%;
+        width: 80%; /* Ekranın %80'ine genişlik ver */
         margin-left: 0; /* Sol kenar boşluğunu kaldır */
     }
 }

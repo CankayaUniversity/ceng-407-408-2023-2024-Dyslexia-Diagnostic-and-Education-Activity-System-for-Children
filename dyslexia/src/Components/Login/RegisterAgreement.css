@@ -21,12 +21,14 @@
 }
 
 .agreement-modal-content {
+  font-family: 'Popins', sans-serif;
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 30%; /* Could be more or less, depending on screen size */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10%;
 }
 
 .close {
@@ -44,6 +46,7 @@
 }
 
 h2 {
+  font-family: 'Popins', sans-serif;
   color:  rgba(239, 152, 54, 1);
 }
 
@@ -55,7 +58,8 @@ input[type="checkbox"] {
   margin-right: 5px;
 }
 
-button {
+.reg_button {
+  font-family: 'Popins', sans-serif;
   background-color: rgba(239, 152, 54, 1); 
   border: none;
   color: white;
@@ -68,5 +72,37 @@ button {
   cursor: pointer;
 }
 
+@media screen and (max-width: 900px) {
+  .agreement-container{
+    background-image: url('/public/images/MobileLogin.png');
+  }
+  .agreement-modal-content {
+    background-color: #fefefe;
+    margin: 50% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  .reg_button {
+    background-color: rgba(239, 152, 54, 1); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 50px 2px;
+    margin-left: 30%;
+    cursor: pointer;
+  }
+}
 
-
+@media screen and (orientation: portrait) {
+.agreement-modal-content {
+    width: 300px; /* Sabit genişliği koru */
+    margin-left: auto; /* Otomatik kenar boşlukları ile ortala */
+    margin-right: auto; /* Otomatik kenar boşlukları ile ortala */
+}
+}

@@ -49,6 +49,10 @@
 
 /* Bu medya sorgusu, ekran genişliği 768px'den az olan ve yatay yönlendirme olan cihazlar için geçerlidir */
 @media screen and (max-width: 950px){
+  .main-container {
+    padding-top: 10%; /* Değişiklik: Daha esnek bir üst boşluk */
+  }
+  
   .card_Main {
     padding: 15px;
     margin: 10px; 
