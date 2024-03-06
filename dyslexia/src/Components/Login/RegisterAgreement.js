@@ -28,14 +28,21 @@ const RegisterAgreement = () => {
         <div>
             <div className="agreement-modal">
                 <div className="agreement-modal-content">
+                    <div>
                     <span className="close" onClick={handleClose}>&times;</span>
-                    <h2>Sign Up for Free</h2>
-                    <form>
-                    <label>
-                     <input type="checkbox" name="agree"/> I agree to the Privacy and License Agreement
-                    </label>
-                    <button type="submit" onClick={handleSubmit}>REGISTER</button>
-                    </form>
+                    </div>
+                    <div>
+                        <h2>Sign Up for Free</h2>
+                        <form>
+                            <label>
+                            <input type="checkbox" name="agree"/> I agree to the Privacy and License Agreement
+                            </label>
+                        </form>
+                    </div>
+                    <div>
+                    <button type="submit" className="reg_button" onClick={handleSubmit}>REGISTER</button>
+                    </div>
+                    
                 </div>
             </div>
         </div>
