@@ -12,7 +12,7 @@
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 10%;
-    top: 13%;
+    top: 15%;
     width: 80%; /* Full width */
     height: 80%; /* Full height */
     justify-content: center;
@@ -23,15 +23,16 @@
 
   .diagnosisAgreement-modal-content {
     background-color:  #ffffff;
-    margin: 5% auto; /* 15% from the top and centered */
+    margin: 8% auto; /* 15% from the top and centered */
     padding: 55px;
     border-radius: 15px; /* Rounded corners for the modal */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     width: 50%; /* Width of the modal */
     height: 30%;
-    margin-top: 70px;  /* Could be more or less, depending on screen size */
+    margin-top: 75px;  /* Could be more or less, depending on screen size */
    }
    .diagnosisAgreement-modal-content h1 {
+    font-size:22px;
     color:  #000000;
     margin-top: 10px;  /* Could be more or less, depending on screen size */
    }
@@ -66,18 +67,15 @@
       }
 
       .diagnosisAgreement-modal-content.error {
-        /* İçerik alanına hata durumu için stil ekleme */
         border: 2px solid red;
       }
       
       .text-error {
-        /* Hata metni için stil ekleme */
         color: red;
       }
       
-      /* Checkbox ve etiket için stiller */
       .agreement-checkbox {
-        margin-top: 30px; /* veya ihtiyacınıza göre ayarlayın */
+        margin-top: 30px;
         margin-left: 160px;
         display: flex;
         align-items: center;
@@ -150,10 +148,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     width: 65%; /* Width of the modal */
     height: 20%;
-    margin-top: 80px;  /* Could be more or less, depending on screen size */
+    margin-top: 55px;  /* Could be more or less, depending on screen size */
    }
 
    .diagnosisAgreement-modal-content h1 {
+    font-size: 23px;
     color:  #000000;
     margin-top: -30px;  /* Could be more or less, depending on screen size */
    }
