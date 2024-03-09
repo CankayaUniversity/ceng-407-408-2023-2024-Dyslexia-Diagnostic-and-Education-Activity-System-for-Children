@@ -33,7 +33,7 @@
     margin-left: 80px;
    }
    .testInfo-modal-content h2 {
-    color: black;
+    color: #019BE1;
     margin-top: 0px;
    }
 
@@ -79,7 +79,8 @@
     
       
 .close {
-  margin-top: -15px;
+  margin-top: -60px;
+  margin-right: -40px;
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -144,7 +145,7 @@
       margin-left: 80px;
      }
      .testInfo-modal-content h2 {
-      color: black;
+      color: #019BE1;
       margin-top: -15px;
      }
      .testInfo-title {
