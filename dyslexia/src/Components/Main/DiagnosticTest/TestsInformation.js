@@ -8,7 +8,7 @@ const TestsInformation = () => {
   const navigate = useNavigate();
 
   const handleStart= () => {
-    navigate('/MainPage');
+    navigate('/LetterMatchingTest');
   };
 
   const handleClose = () => {
