@@ -15,6 +15,7 @@ import EducationalGamesList from "./Components/Main/EducationalGame/EducationalG
 //import MatchDinoParts from "./Games/MatchDinoParts";
 import ProfileReadOnly from "./Components/Main/Profile/ProfileReadOnly";
 import TestsInformation from "./Components/Main/DiagnosticTest/TestsInformation";
+import LetterMatchingTest from "./Components/Main/DiagnosticTest/TestGames/LetterMatchingTest";
 function App() {
   return (
     <div className="App">
@@ -30,6 +31,7 @@ function App() {
           <Route path="/DiagnosisAgreement" element={<DiagnosticTestAgreement/>}/>
           <Route path="/TestsInformation" element={<TestsInformation/>}/>
           <Route path="/EducationalGamesList" element={<EducationalGamesList/>}/>
+          <Route path="/LetterMatchingTest" element={<LetterMatchingTest/>}/>
 
         </Routes>
       </Router>
