@@ -125,10 +125,6 @@
   color: hsl(0, 0%, 100%); /* Color of the text */
 }
 
-.icon-save:hover {
-  background-color: #017ca1; /* Darker shade for button hover state */
-}
-
 @media screen and (max-width: 950px){
   
   .diagnosisAgreement-modal {

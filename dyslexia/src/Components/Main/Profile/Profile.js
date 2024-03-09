@@ -66,8 +66,8 @@ const Profile = () => {
      </Link>
       <div className="profile-modal">
         <div className="profile-modal-content">
-            <h1>MY PROFILE</h1>
-            <input 
+          <h1 className='profile-header'>MY PROFILE</h1>
+          <input 
             type='text' 
             name='name' 
             value={profile.name}
@@ -116,11 +116,12 @@ const Profile = () => {
                 Profile updated successfully!
               </div>
             )}
+            </div>
             <div className="save-button" onClick={handleSave}>
               <IoIosCloudy className="icon-save" />
               <span>OK</span>
             </div>
-          </div>
+          
          
         </div>
 

@@ -12,7 +12,7 @@
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 10%;
-    top: 13%;
+    top: 17%;
     width: 80%; /* Full width */
     height: 80%; /* Full height */
     justify-content: center;
@@ -23,17 +23,17 @@
 
   .profile-modal-content {
     background-color:  #ffffff;
-    margin: 5% auto; /* 15% from the top and centered */
+    margin: auto;
     padding: 55px;
     border-radius: 15px; /* Rounded corners for the modal */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     width: 25%; /* Width of the modal */
-    height: 60%;
+    height: 55%;
     margin-top: 70px;  /* Could be more or less, depending on screen size */
    }
    
     .profile-modal-content h1 {
-        font-size: 18px;
+        font-size: 20px;
         margin: 0px;
         padding-top: 10px;
         padding-bottom: 20px;
@@ -50,6 +50,7 @@
     border-radius: 10px; /* Rounded borders for the inputs */
     padding: 3px;
     font-size: 16px;
+    margin: auto;
     margin-bottom: 5px; /* Space between the inputs */
     }
 
@@ -109,13 +110,13 @@
   }
 
   
-@media screen and (max-width: 950px){
+@media screen and (max-width: 950px ){
   
   .profile-modal {
-    left: 13%;
-    top: 17%;
-    width: 80%; /* Full width */
-    height: 75%; /* Full height */
+    left: 15%;
+    top: 18%;
+    width: 70%; /* Full width */
+    height: 80%; /* Full height */
     justify-content: center;
     align-items: center;
     background-color:hwb(0 100% 0% / 0.514); /* Fallback color */
@@ -126,8 +127,8 @@
     padding: 65px;
     border-radius: 15px; /* Rounded corners for the modal */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    width: 35%; /* Width of the modal */
-    height:82%;
+    width: 60%; /* Width of the modal */
+    height:80%;
     margin-top: 20px;  /* Could be more or less, depending on screen size */
     padding: 20px;
    }
@@ -140,12 +141,35 @@
   }
    input[type='text'],
     select {
+    width: calc(100% - 40%);
+    margin-left: calc(30% - 30px);;
     box-sizing: border-box;
-    width: 250px;
-    border: 2px solid #a1d1e6; /* Light blue border */
-    border-radius: 10px; /* Rounded borders for the inputs */
-    padding: 0;
+    border: 2px solid #a1d1e6;
+    border-radius: 5px; 
+    padding: 2;
     font-size: 15px;
-    margin-bottom: 5px; /* Space between the inputs */
+    margin-bottom: 5px;
     }
+
+    .save-button {
+      align-items: center;
+      cursor: pointer;
+      font-size: 1rem; /* Adjust font size as needed */
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    
+    .icon-save {
+      margin: -10px;
+      padding-left: 130px;
+      color: #019BE1;
+    }
+    .save-button span {
+      margin: 0%;
+      padding-left: 120px;
+      position: absolute; /* Position the text over the icon */
+      font-weight: bold; /* Make the text bold */
+      color: hsl(0, 0%, 100%); /* Color of the text */
+    }
+
 }
