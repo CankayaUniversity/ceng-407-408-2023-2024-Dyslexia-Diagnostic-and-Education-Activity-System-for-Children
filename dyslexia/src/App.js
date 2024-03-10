@@ -16,6 +16,8 @@ import EducationalGamesList from "./Components/Main/EducationalGame/EducationalG
 import ProfileReadOnly from "./Components/Main/Profile/ProfileReadOnly";
 import TestsInformation from "./Components/Main/DiagnosticTest/TestsInformation";
 import LetterMatchingTest from "./Components/Main/DiagnosticTest/TestGames/LetterMatchingTest";
+import NavigationSkillTest from "./Components/Main/DiagnosticTest/TestGames/NavigationSkillTest";
+import SymmetryTest from "./Components/Main/DiagnosticTest/TestGames/SymmetryTest";
 function App() {
   return (
     <div className="App">
@@ -32,7 +34,8 @@ function App() {
           <Route path="/TestsInformation" element={<TestsInformation/>}/>
           <Route path="/EducationalGamesList" element={<EducationalGamesList/>}/>
           <Route path="/LetterMatchingTest" element={<LetterMatchingTest/>}/>
-
+          <Route path="/NavigationSkillTest" element={<NavigationSkillTest/>}/>
+          <Route path="/SymmetryTest" element={<SymmetryTest/>}/>
         </Routes>
       </Router>
     </div>
