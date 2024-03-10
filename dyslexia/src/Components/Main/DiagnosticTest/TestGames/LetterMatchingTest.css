@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 90vh;
-    padding-top: 6%;
+    padding-top: 4%;
     background-image: url('/public/images/LetterMatching.jpg');
     background-size: 100% 100%;  
     background-position: center; 
@@ -12,27 +12,67 @@
   .question_container {
     display: flex;
     flex-wrap: wrap;
-    width: calc(60% - 40px); /* Tahtanın içine sığacak şekilde ayarlayın, 40px tahtanın kenarlık genişliğini temsil edebilir */
-    height: calc(69% - 50px); /* Aynı şekilde yüksekliği de tahtanın içine sığdırmak için */
-    position: absolute; /* Pozisyonu ayarlamak için */
-    top: 48%; /* Tahtanın ortasına yerleştirmek için */
-    left: 75%;
-    transform: translate(-48%, -50%); /* Tam ortalanmış olacak */
+    justify-content: center;
+    width: 47%; /* Tahtanın genişliğini ayarlayın */
+    height: 65%; /* Tahtanın yüksekliğini ayarlayın */
+    position: absolute;
+    top: 49.5%; 
+    left: 71.5%;
+    transform: translate(-50%, -50%); /* Merkezden çevirme */
   }
   
-  .card {
-    flex: 10% 0 50%; /* her kartın genişliğini %50 yapar, böylece iki kart yan yana sığar */
-    height: 50%; /* Her kartın yüksekliğini %50 yapar, böylece dört kart tahtanın içinde sığar */
+  .card_LetterGame {
     background-image: url('/public/images/question_Background.jpeg');
     background-size: cover;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px; /* Kartlar arasında küçük bir boşluk bırakır */
+    margin: 3px;
+    margin-inline-end: 1%; /* Blok içindeki yandan marjin, yani sağ marjin için kullanılır */
+    width: calc( 50% - 10px); /* Her kartın genişliği */
+    height: calc(50% - 25px); /* Her kartın yüksekliği */
+  }
+
+  .continue-button {
+    position: fixed; /* Butonun pozisyonunu sabitle */
+    width: 15%;
+    height:7%;
+    bottom: 40px;    /* Alttan 20px uzaklıkta */
+    right: 20%;     /* Sağdan 20px uzaklıkta */
+    z-index: 10;     /* Butonun z-index'ini diğer öğelerin üstünde tut */
+    background-color:hwb(0 100% 0% / 0.158); /* Fallback color */
+    background-color:hwb(0 100% 0% / 0.336); /* Black w/ opacity */
+    text-align: center;
+    color: black;
+    font-size: large;
+    border: hwb(0 100% 0% / 0.158);
+    border-radius: 15px;
   }
   
-  .letter {
-    font-size: 48px; /* Harf boyutu */
-    font-family: 'Times New Roman', serif; /* Harf fontu */
+  
+  @media screen and (max-width: 950px){
+    .LetterMatching-container {
+      padding-top: 3%;
+    }
+    
+    .question_container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 47%; /* Tahtanın genişliğini ayarlayın */
+      height: 65%; /* Tahtanın yüksekliğini ayarlayın */
+      position: absolute;
+      top: 49.5%; 
+      left: 71.5%;
+      transform: translate(-50%, -50%); /* Merkezden çevirme */
+    }
+    
+    .card_LetterGame {
+      background-image: url('/public/images/question_Background.jpeg');
+      background-size: cover;
+      margin: 3px;
+      margin-inline-end: 1%; /* Blok içindeki yandan marjin, yani sağ marjin için kullanılır */
+      width: calc( 50% - 10px); /* Her kartın genişliği */
+      height: calc(50% - 25px); /* Her kartın yüksekliği */
+    }
+    .continue-button {
+      bottom: 30px;
+    }
   }
