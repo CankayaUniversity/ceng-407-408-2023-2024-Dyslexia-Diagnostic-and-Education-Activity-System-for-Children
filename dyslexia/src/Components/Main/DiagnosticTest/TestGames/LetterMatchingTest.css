@@ -44,6 +44,7 @@
     font-size: large;
     border: hwb(0 100% 0% / 0.158);
     border-radius: 15px;
+    cursor: pointer;
   }
   
   
