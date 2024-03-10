@@ -13,32 +13,32 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 47%; /* Tahtanın genişliğini ayarlayın */
-    height: 65%; /* Tahtanın yüksekliğini ayarlayın */
+    width: 47%; 
+    height: 65%; 
     position: absolute;
     top: 49.5%; 
     left: 71.5%;
-    transform: translate(-50%, -50%); /* Merkezden çevirme */
+    transform: translate(-50%, -50%);
   }
   
   .card_LetterGame {
     background-image: url('/public/images/question_Background.jpeg');
     background-size: cover;
     margin: 3px;
-    margin-inline-end: 1%; /* Blok içindeki yandan marjin, yani sağ marjin için kullanılır */
-    width: calc( 50% - 10px); /* Her kartın genişliği */
-    height: calc(50% - 25px); /* Her kartın yüksekliği */
+    margin-inline-end: 1%;
+    width: calc( 50% - 10px);
+    height: calc(50% - 25px);
   }
 
   .continue-button {
-    position: fixed; /* Butonun pozisyonunu sabitle */
+    position: fixed;
     width: 15%;
     height:7%;
-    bottom: 40px;    /* Alttan 20px uzaklıkta */
-    right: 20%;     /* Sağdan 20px uzaklıkta */
-    z-index: 10;     /* Butonun z-index'ini diğer öğelerin üstünde tut */
-    background-color:hwb(0 100% 0% / 0.158); /* Fallback color */
-    background-color:hwb(0 100% 0% / 0.336); /* Black w/ opacity */
+    bottom: 40px;
+    right: 20%;
+    z-index: 10; 
+    background-color:hwb(0 100% 0% / 0.158);
+    background-color:hwb(0 100% 0% / 0.336); 
     text-align: center;
     color: black;
     font-size: large;
@@ -46,7 +46,6 @@
     border-radius: 15px;
     cursor: pointer;
   }
-  
   
   @media screen and (max-width: 950px){
     .LetterMatching-container {
@@ -57,21 +56,21 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      width: 47%; /* Tahtanın genişliğini ayarlayın */
-      height: 65%; /* Tahtanın yüksekliğini ayarlayın */
+      width: 47%; 
+      height: 65%;
       position: absolute;
       top: 49.5%; 
       left: 71.5%;
-      transform: translate(-50%, -50%); /* Merkezden çevirme */
+      transform: translate(-50%, -50%); 
     }
     
     .card_LetterGame {
       background-image: url('/public/images/question_Background.jpeg');
       background-size: cover;
       margin: 3px;
-      margin-inline-end: 1%; /* Blok içindeki yandan marjin, yani sağ marjin için kullanılır */
-      width: calc( 50% - 10px); /* Her kartın genişliği */
-      height: calc(50% - 25px); /* Her kartın yüksekliği */
+      margin-inline-end: 1%;
+      width: calc( 50% - 10px); 
+      height: calc(50% - 25px);
     }
     .continue-button {
       bottom: 30px;
