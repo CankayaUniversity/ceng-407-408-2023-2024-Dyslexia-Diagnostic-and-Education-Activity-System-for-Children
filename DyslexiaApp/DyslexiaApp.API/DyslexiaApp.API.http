@@ -1,0 +1,6 @@
+@DyslexiaApp.API_HostAddress = http://localhost:5075
+
+GET {{DyslexiaApp.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
