@@ -24,8 +24,7 @@ namespace DyslexiaApp.API.Data.Entities
         [StringLength(50)]
         public string SupportStatus { get; set; } // Destek talebinin mevcut durumunu gösterir. Örneğin: "Açık", "Cevaplandı", "Kapalı".
 
-        [ForeignKey("Sistem")]
-        public Guid SistemId { get; set; }
+        
         public virtual Sistem Sistem { get; set; }
 
     }

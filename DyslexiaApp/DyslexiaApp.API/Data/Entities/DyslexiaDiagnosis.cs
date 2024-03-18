@@ -8,8 +8,7 @@ namespace DyslexiaApp.API.Data.Entities
         [Key]
         public Guid Id { get; set; }
 
-        [ForeignKey("User")]
-        public Guid UserId { get; set; }
+       
         public virtual User User { get; set; }
 
         [Required]

@@ -11,12 +11,10 @@ namespace DyslexiaApp.API.Data.Entities
         [Required]
         public TimeSpan TimeSpent { get; set; }
 
-        [ForeignKey("DyslexiaDiagnosis")]
-        public Guid DyslexiaDiagnosisId { get; set; }
+       
         public virtual DyslexiaDiagnosis DyslexiaDiagnosis { get; set; }
 
-        [ForeignKey("EducationalGame")]
-        public Guid EducationalGameId { get; set; }
+       
         public virtual EducationalGame EducationalGame { get; set; }
 
         // Her MatchingGame, birden fazla GameSession ile ilişkilendirilebilir.
