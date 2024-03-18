@@ -638,4 +638,3 @@ C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\ne
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\DyslexiaApp.MAUI.pdb
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\DyslexiaApp.MAUI.genruntimeconfig.cache
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\ref\DyslexiaApp.MAUI.dll
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\build-signature\signature
