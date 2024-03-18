@@ -21,8 +21,7 @@ namespace DyslexiaApp.API.Data.Entities
 
         public List<Support>Supports { get; set; } = new List<Support>();
 
-        [ForeignKey("User")]
-        public Guid UserId { get; set; }
+        
         public virtual User User { get; set; }
 
         public Sistem()

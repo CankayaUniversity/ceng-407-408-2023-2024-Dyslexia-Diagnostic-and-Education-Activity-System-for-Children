@@ -15,8 +15,6 @@ namespace DyslexiaApp.API.Data.Entities
         [StringLength(1000)]
         public string Description { get; set; } // Oyunun açıklaması. Oyun hakkında genel bilgiler içerir.
 
-        [ForeignKey("User")]
-        public Guid UserId { get; set; }
         public virtual User User { get; set; }
 
         // Her eğitim oyununun birden fazla oyun oturumu olabilir.

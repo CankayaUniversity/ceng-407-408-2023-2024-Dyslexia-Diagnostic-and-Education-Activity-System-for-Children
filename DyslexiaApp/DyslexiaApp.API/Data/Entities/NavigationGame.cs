@@ -13,8 +13,7 @@ namespace DyslexiaApp.API.Data.Entities
         [Required]
         public TimeSpan TimeSpent { get; set; } // Oyunun oynanma süresi.
 
-        [ForeignKey("DyslexiaDiagnosis")]
-        public Guid DyslexiaDiagnosisId { get; set; }
+        
         public virtual DyslexiaDiagnosis DyslexiaDiagnosis { get; set; }
 
     }

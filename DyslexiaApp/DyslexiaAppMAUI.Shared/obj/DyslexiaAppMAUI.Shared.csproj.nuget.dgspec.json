@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\90544\\Desktop\\408\\DyslexiaApp\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {}
+    "C:\\Users\\Ahmet Emre Aydın\\Desktop\\408\\DyslexiaApp\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\90544\\Desktop\\408\\DyslexiaApp\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
+    "C:\\Users\\Ahmet Emre Aydın\\Desktop\\408\\DyslexiaApp\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\90544\\Desktop\\408\\DyslexiaApp\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\408\\DyslexiaApp\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
         "projectName": "DyslexiaAppMAUI.Shared",
-        "projectPath": "C:\\Users\\90544\\Desktop\\408\\DyslexiaApp\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
-        "packagesPath": "C:\\Users\\90544\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\90544\\Desktop\\408\\DyslexiaApp\\DyslexiaAppMAUI.Shared\\obj\\",
+        "projectPath": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\408\\DyslexiaApp\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
+        "packagesPath": "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\408\\DyslexiaApp\\DyslexiaAppMAUI.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\90544\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ahmet Emre Aydın\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

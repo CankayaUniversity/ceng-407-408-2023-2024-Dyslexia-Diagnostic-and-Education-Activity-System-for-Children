@@ -1,4 +1,5 @@
 
+using DyslexiaApp.API.Endpoints;
 using DyslexiaApp.API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -25,7 +26,7 @@ public class Program
             );
 
 
-        builder.Services.AddAuthentication();
+        builder.Services.AddAuthorization();
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
@@ -53,7 +54,7 @@ public class Program
         app.UseAuthentication();
         app.UseAuthorization();
 
-
+        app.MapEndpoints();
 
         app.MapControllers();
 
