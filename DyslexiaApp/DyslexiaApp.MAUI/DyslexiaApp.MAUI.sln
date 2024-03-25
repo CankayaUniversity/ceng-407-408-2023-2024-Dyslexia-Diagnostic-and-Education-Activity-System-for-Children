@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DyslexiaApp.MAUI", "DyslexiaApp.MAUI.csproj", "{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DyslexiaAppMAUI.Shared", "..\DyslexiaAppMAUI.Shared\DyslexiaAppMAUI.Shared.csproj", "{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DyslexiaApp.API", "..\DyslexiaApp.API\DyslexiaApp.API.csproj", "{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CED6B09-E72B-4BF4-BE0D-68BA5782803D}
+	EndGlobalSection
+EndGlobal
