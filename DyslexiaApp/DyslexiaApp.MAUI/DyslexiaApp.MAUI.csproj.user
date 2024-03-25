@@ -7,11 +7,7 @@
     <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
     <DefaultDevice>pixel_5_-_api_34_1</DefaultDevice>
   </PropertyGroup>
-  <ItemGroup>
-    <MauiXaml Update="Pages\LoginPage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Update="App.xaml">
       <SubType>Designer</SubType>
