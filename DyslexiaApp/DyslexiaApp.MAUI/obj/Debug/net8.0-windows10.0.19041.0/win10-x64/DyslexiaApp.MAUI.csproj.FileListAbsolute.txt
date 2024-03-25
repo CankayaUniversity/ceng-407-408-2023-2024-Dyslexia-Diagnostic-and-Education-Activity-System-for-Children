@@ -368,3 +368,8 @@ C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\ne
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Mvvm.dll
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Refit.dll
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Refit.HttpClientFactory.dll
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\back_icon.scale-100.jpg
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\login.scale-100.jpg
