@@ -576,17 +576,17 @@ public final class R {
 		public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f070073;
 		public static final int abc_textfield_search_default_mtrl_alpha = 0x7f070074;
 		public static final int abc_textfield_search_material = 0x7f070075;
-		public static final int btn_checkbox_checked_mtrl = 0x7f070079;
-		public static final int btn_checkbox_checked_to_unchecked_mtrl_animation = 0x7f07007a;
-		public static final int btn_checkbox_unchecked_mtrl = 0x7f07007b;
-		public static final int btn_checkbox_unchecked_to_checked_mtrl_animation = 0x7f07007c;
-		public static final int btn_radio_off_mtrl = 0x7f07007d;
-		public static final int btn_radio_off_to_on_mtrl_animation = 0x7f07007e;
-		public static final int btn_radio_on_mtrl = 0x7f07007f;
-		public static final int btn_radio_on_to_off_mtrl_animation = 0x7f070080;
-		public static final int test_level_drawable = 0x7f0700e3;
-		public static final int tooltip_frame_dark = 0x7f0700e4;
-		public static final int tooltip_frame_light = 0x7f0700e5;
+		public static final int btn_checkbox_checked_mtrl = 0x7f07007a;
+		public static final int btn_checkbox_checked_to_unchecked_mtrl_animation = 0x7f07007b;
+		public static final int btn_checkbox_unchecked_mtrl = 0x7f07007c;
+		public static final int btn_checkbox_unchecked_to_checked_mtrl_animation = 0x7f07007d;
+		public static final int btn_radio_off_mtrl = 0x7f07007e;
+		public static final int btn_radio_off_to_on_mtrl_animation = 0x7f07007f;
+		public static final int btn_radio_on_mtrl = 0x7f070080;
+		public static final int btn_radio_on_to_off_mtrl_animation = 0x7f070081;
+		public static final int test_level_drawable = 0x7f0700e5;
+		public static final int tooltip_frame_dark = 0x7f0700e6;
+		public static final int tooltip_frame_light = 0x7f0700e7;
 	}
 	public static final class id {
 		public static final int action_bar = 0x7f080033;

@@ -1,4 +1,4 @@
-﻿using DyslexiaApp.API.Data.Enums;
+﻿using DyslexiaAppMAUI.Shared.Models;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 
@@ -17,7 +17,7 @@ namespace DyslexiaApp.API.Data.Entities
         [MaxLength(30)]
         public string LastName { get; set; }
 
-        
+        [Required]
         public DateTime Birthday { get; set; } 
 
         [Range(minimum:0, maximum:100)] //belirli bir aralık tanımlamak için
