@@ -1,6 +1,8 @@
-﻿namespace DyslexiaAppMAUI.Shared.Dtos;
+﻿using DyslexiaAppMAUI.Shared.Models;
 
-public record LoggedInUser(Guid Id ,string Name, string Email);
+namespace DyslexiaAppMAUI.Shared.Dtos;
+
+public record LoggedInUser(Guid Id ,string Name, string Email,string LastName,DateTime Birthday,Gender Gender);
 
 
 

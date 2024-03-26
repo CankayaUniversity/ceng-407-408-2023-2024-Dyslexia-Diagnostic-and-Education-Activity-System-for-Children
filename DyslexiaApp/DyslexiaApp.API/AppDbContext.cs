@@ -1,5 +1,5 @@
 ﻿using DyslexiaApp.API.Data.Entities;
-using DyslexiaApp.API.Data.Enums;
+using DyslexiaAppMAUI.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 

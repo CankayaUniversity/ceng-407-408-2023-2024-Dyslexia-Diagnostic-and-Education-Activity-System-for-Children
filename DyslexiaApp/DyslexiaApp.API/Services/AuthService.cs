@@ -1,6 +1,7 @@
 ﻿using DyslexiaApp.API.Data;
 using DyslexiaApp.API.Data.Entities;
 using DyslexiaAppMAUI.Shared.Dtos;
+using DyslexiaAppMAUI.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 namespace DyslexiaApp.API.Services
@@ -23,6 +24,9 @@ namespace DyslexiaApp.API.Services
                 {
                     Email = dto.Email,
                     FirstName = dto.Name,
+                    LastName = dto.LastName,
+                    Gender = dto.Gender,
+                    Birthday = dto.Birthday,
                 };
 
                 (user.Salt, user.HashedPassword) = _passwordService.GenerateSaltAndHash(dto.Password);
@@ -57,7 +61,7 @@ namespace DyslexiaApp.API.Services
 
         private ResultWithDataDto<AuthResponseDto> GenerateAuthResponse(User user)
         {
-            var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.Email);
+            var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.Email,user.LastName,user.Birthday,user.Gender);
             var token = _tokenService.GenerateJwt(loggedInUser);
             var authResponse = new AuthResponseDto(loggedInUser, token);
 

@@ -309,6 +309,7 @@ C:\Users\90544\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccata
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\DyslexiaApp.MAUI.runtimeconfig.json
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\DyslexiaApp.MAUI.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\DyslexiaApp.MAUI.pdb
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Mvvm.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.Binder.dll
@@ -329,6 +330,8 @@ C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\ne
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.Essentials.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.Graphics.dll
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Refit.dll
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Refit.HttpClientFactory.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\ar\Microsoft.Maui.Controls.resources.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\ca\Microsoft.Maui.Controls.resources.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\cs\Microsoft.Maui.Controls.resources.dll
@@ -573,9 +576,8 @@ C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\ne
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\back_icon.jpg
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\login.jpg
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -588,6 +590,9 @@ C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\ne
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauifont.stamp

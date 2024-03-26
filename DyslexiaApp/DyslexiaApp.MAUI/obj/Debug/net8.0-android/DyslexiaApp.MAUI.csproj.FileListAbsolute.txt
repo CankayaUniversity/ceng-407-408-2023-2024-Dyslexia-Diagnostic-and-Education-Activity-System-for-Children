@@ -1106,6 +1106,8 @@ C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\ne
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\mauifont.stamp
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\f\OpenSans-Regular.ttf
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\f\OpenSans-Semibold.ttf
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\back_icon.jpg
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\login.jpg
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable-xxxhdpi\dotnet_bot.png
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable-xxhdpi\dotnet_bot.png
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png
@@ -1213,6 +1215,8 @@ C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\ne
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\armeabi-v7a\System.Private.CoreLib.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\ar\Microsoft.Maui.Controls.resources.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\ca\Microsoft.Maui.Controls.resources.dll
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\CommunityToolkit.Mvvm.dll
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\CommunityToolkit.Mvvm.pdb
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\cs\Microsoft.Maui.Controls.resources.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\da\Microsoft.Maui.Controls.resources.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\de\Microsoft.Maui.Controls.resources.dll
@@ -1280,6 +1284,8 @@ C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\ne
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\pl\Microsoft.Maui.Controls.resources.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\pt-BR\Microsoft.Maui.Controls.resources.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\pt\Microsoft.Maui.Controls.resources.dll
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\Refit.dll
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\Refit.HttpClientFactory.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\ro\Microsoft.Maui.Controls.resources.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\ru\Microsoft.Maui.Controls.resources.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\sk\Microsoft.Maui.Controls.resources.dll

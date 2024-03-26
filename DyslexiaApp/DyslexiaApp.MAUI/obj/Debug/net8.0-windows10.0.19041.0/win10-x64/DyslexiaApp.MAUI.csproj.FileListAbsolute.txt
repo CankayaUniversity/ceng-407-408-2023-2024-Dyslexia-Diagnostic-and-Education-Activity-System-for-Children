@@ -191,6 +191,7 @@ C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\ne
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.pdb
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Mvvm.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Binder.dll
@@ -228,6 +229,8 @@ C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\ne
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Release.Net.dll
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Refit.dll
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Refit.HttpClientFactory.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ca\Microsoft.Maui.Controls.resources.dll
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\cs\Microsoft.Maui.Controls.resources.dll
@@ -289,11 +292,8 @@ C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\ne
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauifont.stamp
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\back_icon.scale-100.jpg
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\login.scale-100.jpg
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png
@@ -340,6 +340,11 @@ C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\ne
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
+C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.AssemblyInfoInputs.cache
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.AssemblyInfo.cs
@@ -368,8 +373,3 @@ C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\ne
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Mvvm.dll
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Refit.dll
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Refit.HttpClientFactory.dll
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\back_icon.scale-100.jpg
-C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\login.scale-100.jpg
