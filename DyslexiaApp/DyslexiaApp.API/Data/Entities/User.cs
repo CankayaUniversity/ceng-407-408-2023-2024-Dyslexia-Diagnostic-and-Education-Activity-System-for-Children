@@ -29,7 +29,6 @@ namespace DyslexiaApp.API.Data.Entities
         public string Email { get; set; }
 
         [Required]
-        [MaxLength(30)]
         public string HashedPassword { get; set; }
 
         public string Salt { get; set; }

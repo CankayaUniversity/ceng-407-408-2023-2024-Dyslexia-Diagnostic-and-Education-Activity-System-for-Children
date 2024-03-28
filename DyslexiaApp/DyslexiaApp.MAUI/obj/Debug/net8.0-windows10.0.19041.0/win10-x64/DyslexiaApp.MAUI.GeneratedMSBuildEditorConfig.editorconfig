@@ -9,65 +9,65 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DyslexiaApp.MAUI
-build_property.ProjectDir = C:\Users\Ahmet Emre Aydın\Desktop\408\DyslexiaApp\DyslexiaApp.MAUI\
+build_property.ProjectDir = C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/Ahmet Emre Aydın/Desktop/408/DyslexiaApp/DyslexiaApp.MAUI/App.xaml]
+[C:/Users/90544/Desktop/bitirme/DyslexiaApp/DyslexiaApp.MAUI/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Ahmet Emre Aydın/Desktop/408/DyslexiaApp/DyslexiaApp.MAUI/AppShell.xaml]
+[C:/Users/90544/Desktop/bitirme/DyslexiaApp/DyslexiaApp.MAUI/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/Ahmet Emre Aydın/Desktop/408/DyslexiaApp/DyslexiaApp.MAUI/MainPage.xaml]
+[C:/Users/90544/Desktop/bitirme/DyslexiaApp/DyslexiaApp.MAUI/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/Ahmet Emre Aydın/Desktop/408/DyslexiaApp/DyslexiaApp.MAUI/Pages/Login/ForgotPassword.xaml]
+[C:/Users/90544/Desktop/bitirme/DyslexiaApp/DyslexiaApp.MAUI/Pages/Login/ForgotPassword.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Login.ForgotPassword.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Login\ForgotPassword.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Login\ForgotPassword.xaml
 
-[C:/Users/Ahmet Emre Aydın/Desktop/408/DyslexiaApp/DyslexiaApp.MAUI/Pages/Login/LoginPage.xaml]
+[C:/Users/90544/Desktop/bitirme/DyslexiaApp/DyslexiaApp.MAUI/Pages/Login/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Login.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Login\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Login\LoginPage.xaml
 
-[C:/Users/Ahmet Emre Aydın/Desktop/408/DyslexiaApp/DyslexiaApp.MAUI/Pages/Login/Register.xaml]
+[C:/Users/90544/Desktop/bitirme/DyslexiaApp/DyslexiaApp.MAUI/Pages/Login/Register.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Login.Register.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Login\Register.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Login\Register.xaml
 
-[C:/Users/Ahmet Emre Aydın/Desktop/408/DyslexiaApp/DyslexiaApp.MAUI/Pages/Login/RegisterAgreement.xaml]
+[C:/Users/90544/Desktop/bitirme/DyslexiaApp/DyslexiaApp.MAUI/Pages/Login/RegisterAgreement.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Login.RegisterAgreement.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Login\RegisterAgreement.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Login\RegisterAgreement.xaml
 
-[C:/Users/Ahmet Emre Aydın/Desktop/408/DyslexiaApp/DyslexiaApp.MAUI/Pages/Main/HomePage.xaml]
+[C:/Users/90544/Desktop/bitirme/DyslexiaApp/DyslexiaApp.MAUI/Pages/Main/HomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Main.HomePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Main\HomePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Main\HomePage.xaml
 
-[C:/Users/Ahmet Emre Aydın/Desktop/408/DyslexiaApp/DyslexiaApp.MAUI/Resources/Styles/Colors.xaml]
+[C:/Users/90544/Desktop/bitirme/DyslexiaApp/DyslexiaApp.MAUI/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/Ahmet Emre Aydın/Desktop/408/DyslexiaApp/DyslexiaApp.MAUI/Resources/Styles/Styles.xaml]
+[C:/Users/90544/Desktop/bitirme/DyslexiaApp/DyslexiaApp.MAUI/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml

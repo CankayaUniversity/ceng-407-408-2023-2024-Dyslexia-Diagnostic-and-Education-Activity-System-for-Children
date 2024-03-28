@@ -66,10 +66,10 @@ public static class MauiProgram
             .ConfigureHttpClient(HttpClient =>
             {
                 var baseUrl = DeviceInfo.Platform == DevicePlatform.WinUI
-                                ? "https://127.0.0.1:7154"
-                                : "https://localhost:7154";
+                                ? "https://127.0.0.1:7066"
+                                : "https://localhost:7066";
 
-                HttpClient.BaseAddress = new Uri("http://localhost:7066");
+                HttpClient.BaseAddress = new Uri(baseUrl);
             });
     }
 }
