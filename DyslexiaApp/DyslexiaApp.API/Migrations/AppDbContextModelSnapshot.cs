@@ -244,8 +244,7 @@ namespace DyslexiaApp.API.Migrations
 
                     b.Property<string>("HashedPassword")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");

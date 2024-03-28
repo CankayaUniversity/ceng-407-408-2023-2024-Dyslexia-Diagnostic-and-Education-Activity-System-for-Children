@@ -22,11 +22,14 @@ namespace DyslexiaApp.API.Services
             
                 var user = new User
                 {
+                    Id = Guid.NewGuid(), 
                     Email = dto.Email,
                     FirstName = dto.Name,
                     LastName = dto.LastName,
                     Gender = dto.Gender,
                     Birthday = dto.Birthday,
+                    Role = Role.User, 
+                    IsActive = true 
                 };
 
                 (user.Salt, user.HashedPassword) = _passwordService.GenerateSaltAndHash(dto.Password);
