@@ -12,7 +12,37 @@ namespace DyslexiaApp.API.Services
         {
             _context = context;
         }
+        public async Task<DyslexiaDiagnosisDto[]> GetDyslexiaDiagnosesAsync() =>
+        await _context.DyslexiaDiagnosis
+        .AsNoTracking()
+        .Select(diagnosis => new DyslexiaDiagnosisDto(
+            diagnosis.Id,
+            diagnosis.TestResults,
+            diagnosis.FeedBack,
+            diagnosis.Description,
+            // MatchingGames için DTO'ları oluşturma
+            diagnosis.MatchingGames.Select(matchingGame => new MatchingGameDto(
+                matchingGame.Id,
+                matchingGame.TimeSpent,
+                null, // DyslexiaDiagnosisDto burada null geçilir, döngüsel referansı önlemek için
+                new EducationalDto(
+                    matchingGame.EducationalGame.Id,
+                    matchingGame.EducationalGame.Name,
+                    matchingGame.EducationalGame.Description,
+                    matchingGame.EducationalGame.GameSessions.Select(gs => new GameSessionDto(gs.Id, gs.TimeSpent, gs.SessionScore)).ToArray(),
+                    Array.Empty<MatchingGameDto>() // Eğitim oyununun eşleşen oyunları için boş bir dizi
+                ),
+                matchingGame.GameSessions.Select(gs => new GameSessionDto(gs.Id, gs.TimeSpent, gs.SessionScore)).ToArray()
+            )).ToArray(),
+            // NavigationGames için DTO'ları oluşturma
+            diagnosis.NavigationGames.Select(navGame => new NavigationGameDto(
+                navGame.Id,
+                navGame.TimeSpent,
+                null // Burada da DyslexiaDiagnosisDto için null geçiyoruz, döngüsel referansı önlemek için
+            )).ToArray()
+        ))
+        .ToArrayAsync();
 
-      
+
     }
 }

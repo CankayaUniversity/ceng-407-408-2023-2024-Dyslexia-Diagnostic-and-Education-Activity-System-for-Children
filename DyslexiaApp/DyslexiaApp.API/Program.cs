@@ -33,8 +33,8 @@ public class Program
         builder.Services.AddSwaggerGen();
         builder.Services.AddTransient<TokenService>()
                         .AddTransient<PasswordService>()
-                        .AddTransient<AuthService>();
-
+                        .AddTransient<AuthService>()
+                        .AddTransient<DyslexiaDiagnosisService>();
 
         var app = builder.Build();
 

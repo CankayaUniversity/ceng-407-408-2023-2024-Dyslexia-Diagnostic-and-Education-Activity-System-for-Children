@@ -1,6 +1,24 @@
 [
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__0_2",
+    "RelativePath": "api/dyslexiadiagnosis",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "DyslexiaAppMAUI.Shared.Dtos.DyslexiaDiagnosisDto[]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoints\u003Eb__0_1",
     "RelativePath": "api/signin",
     "HttpMethod": "POST",

@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace DyslexiaAppMAUI.Shared.Dtos;
 
-public record SignupRequestDto(string Name,string LastName,Gender Gender, string Email, string Password,DateTime Birthday);
+public record SignupRequestDto(string Name, string LastName, string Gender, string Email, string Password, DateTime Birthday);
+
 
 
 
