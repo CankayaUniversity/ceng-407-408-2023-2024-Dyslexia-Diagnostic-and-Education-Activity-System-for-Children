@@ -10,7 +10,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <MauiXaml Update="Pages\Login\HomePage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+  </ItemGroup>
   <ItemGroup>
     <None Update="App.xaml">
       <SubType>Designer</SubType>

@@ -1,5 +1,4 @@
 namespace DyslexiaApp.MAUI.Pages.Login;
-using DyslexiaApp.MAUI.Pages.Main;
 using DyslexiaApp.MAUI.Services;
 using DyslexiaApp.MAUI.ViewModels;
 using Microsoft.Maui.Controls;

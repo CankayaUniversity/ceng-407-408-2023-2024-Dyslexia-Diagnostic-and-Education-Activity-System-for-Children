@@ -1,5 +1,4 @@
 ﻿using DyslexiaApp.MAUI.Pages.Login;
-using DyslexiaApp.MAUI.Pages.Main;
 using DyslexiaApp.MAUI.Services;
 
 namespace DyslexiaApp.MAUI

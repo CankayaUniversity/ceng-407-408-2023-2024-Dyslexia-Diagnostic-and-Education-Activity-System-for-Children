@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-DPC8B16</Machine>
-    <WindowsUser>90544</WindowsUser>
+    <Machine>DESKTOP-NCB84K9</Machine>
+    <WindowsUser>HP</WindowsUser>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>com.companyname.dyslexiaapp.maui</PackageIdentityName>
     <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>
     </WindowsSdkPath>
-    <LayoutDir>C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>0DFD745C9945470C172A9F9D66BDA0D72CC7C653BC7C826BDFB3602A746C270A</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <RegisteredManifestChecksum>79D8FB7C112C1DCBA1A10EBA7577BD805C95164FF15146B17D23436281F4EAFC</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>com.companyname.dyslexiaapp.maui_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>com.companyname.dyslexiaapp.maui_9zz4h110yvjzm!App</RegisteredUserModeAppID>
     <RegisteredPackageID>com.companyname.dyslexiaapp.maui</RegisteredPackageID>
@@ -27,640 +27,640 @@
     <RegisteredVersion>1.0.0.1</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-03-30T15:27:57.664</Modified>
+      <Modified>2024-03-30T17:40:57.471</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-03-30T15:27:57.353</Modified>
+      <Modified>2024-03-30T17:40:56.746</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.runtimeconfig.json">
       <PackagePath>DyslexiaApp.MAUI.runtimeconfig.json</PackagePath>
-      <Modified>2024-03-30T15:27:56.952</Modified>
+      <Modified>2024-03-30T15:50:15.103</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.dll">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.dll">
       <PackagePath>DyslexiaApp.MAUI.dll</PackagePath>
-      <Modified>2024-03-30T15:27:55.680</Modified>
+      <Modified>2024-03-30T17:40:55.986</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>DyslexiaApp.MAUI.exe</PackagePath>
-      <Modified>2024-03-30T15:27:55.704</Modified>
+      <Modified>2024-03-30T17:40:55.994</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\Resources\Raw\AboutAssets.txt">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
-      <Modified>2024-03-26T13:45:40.410</Modified>
+      <Modified>2024-03-30T15:41:15.275</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-03-30T15:24:06.357</Modified>
+      <Modified>2024-03-30T15:42:53.569</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-03-30T15:24:06.384</Modified>
+      <Modified>2024-03-30T15:42:53.595</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-03-30T15:24:06.415</Modified>
+      <Modified>2024-03-30T15:42:53.641</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-03-30T15:24:06.452</Modified>
+      <Modified>2024-03-30T15:42:53.701</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-03-30T15:24:06.572</Modified>
+      <Modified>2024-03-30T15:42:53.905</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
-      <Modified>2024-03-26T13:45:40.410</Modified>
+      <Modified>2024-03-30T15:41:15.269</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
-      <Modified>2024-03-26T13:45:40.410</Modified>
+      <Modified>2024-03-30T15:41:15.271</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-03-30T15:24:07.991</Modified>
+      <Modified>2024-03-30T15:41:26.341</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.719</Modified>
+      <Modified>2024-03-30T15:41:26.342</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.757</Modified>
+      <Modified>2024-03-30T15:41:26.344</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.779</Modified>
+      <Modified>2024-03-30T15:41:26.345</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.810</Modified>
+      <Modified>2024-03-30T15:41:26.347</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.948</Modified>
+      <Modified>2024-03-30T15:41:26.348</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.216</Modified>
+      <Modified>2024-03-30T15:41:26.350</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.223</Modified>
+      <Modified>2024-03-30T15:41:26.351</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.250</Modified>
+      <Modified>2024-03-30T15:41:26.352</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.230</Modified>
+      <Modified>2024-03-30T15:41:26.353</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.237</Modified>
+      <Modified>2024-03-30T15:41:26.354</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.163</Modified>
+      <Modified>2024-03-30T15:41:26.356</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.173</Modified>
+      <Modified>2024-03-30T15:41:26.358</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.206</Modified>
+      <Modified>2024-03-30T15:41:26.359</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.182</Modified>
+      <Modified>2024-03-30T15:41:26.360</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.192</Modified>
+      <Modified>2024-03-30T15:41:26.361</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.009</Modified>
+      <Modified>2024-03-30T15:41:26.362</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.021</Modified>
+      <Modified>2024-03-30T15:41:26.363</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.032</Modified>
+      <Modified>2024-03-30T15:41:26.365</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.045</Modified>
+      <Modified>2024-03-30T15:41:26.367</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.066</Modified>
+      <Modified>2024-03-30T15:41:26.368</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.084</Modified>
+      <Modified>2024-03-30T15:41:26.369</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.095</Modified>
+      <Modified>2024-03-30T15:41:26.371</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.150</Modified>
+      <Modified>2024-03-30T15:41:26.372</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.108</Modified>
+      <Modified>2024-03-30T15:41:26.373</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.125</Modified>
+      <Modified>2024-03-30T15:41:26.374</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.414</Modified>
+      <Modified>2024-03-30T15:41:26.375</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.428</Modified>
+      <Modified>2024-03-30T15:41:26.376</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.445</Modified>
+      <Modified>2024-03-30T15:41:26.378</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.467</Modified>
+      <Modified>2024-03-30T15:41:26.379</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.515</Modified>
+      <Modified>2024-03-30T15:41:26.381</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.337</Modified>
+      <Modified>2024-03-30T15:41:26.382</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.349</Modified>
+      <Modified>2024-03-30T15:41:26.384</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.362</Modified>
+      <Modified>2024-03-30T15:41:26.384</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.378</Modified>
+      <Modified>2024-03-30T15:41:26.386</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.396</Modified>
+      <Modified>2024-03-30T15:41:26.387</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.268</Modified>
+      <Modified>2024-03-30T15:41:26.388</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.284</Modified>
+      <Modified>2024-03-30T15:41:26.390</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.297</Modified>
+      <Modified>2024-03-30T15:41:26.391</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.308</Modified>
+      <Modified>2024-03-30T15:41:26.392</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.324</Modified>
+      <Modified>2024-03-30T15:41:26.394</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.535</Modified>
+      <Modified>2024-03-30T15:41:26.395</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.554</Modified>
+      <Modified>2024-03-30T15:41:26.396</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.574</Modified>
+      <Modified>2024-03-30T15:41:26.399</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.607</Modified>
+      <Modified>2024-03-30T15:41:26.400</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.698</Modified>
+      <Modified>2024-03-30T15:41:26.401</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\back_icon.scale-100.jpg">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\back_icon.scale-100.jpg">
       <PackagePath>back_icon.scale-100.jpg</PackagePath>
-      <Modified>2024-03-26T13:45:40.410</Modified>
+      <Modified>2024-03-30T15:41:15.272</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-03-30T15:24:07.994</Modified>
+      <Modified>2024-03-30T15:42:57.301</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.011</Modified>
+      <Modified>2024-03-30T15:42:57.368</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.033</Modified>
+      <Modified>2024-03-30T15:42:57.420</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.068</Modified>
+      <Modified>2024-03-30T15:42:57.503</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-03-30T15:24:08.192</Modified>
+      <Modified>2024-03-30T15:42:57.832</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\login.scale-100.jpg">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\login.scale-100.jpg">
       <PackagePath>login.scale-100.jpg</PackagePath>
-      <Modified>2024-03-26T13:45:40.410</Modified>
+      <Modified>2024-03-30T15:41:15.274</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.deps.json">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.deps.json">
       <PackagePath>DyslexiaApp.MAUI.deps.json</PackagePath>
-      <Modified>2024-03-30T15:27:56.948</Modified>
+      <Modified>2024-03-30T17:25:42.860</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
       <Modified>2023-10-16T19:41:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\WinRT.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2023-10-16T19:41:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\communitytoolkit.mvvm\8.2.2\lib\net6.0\CommunityToolkit.Mvvm.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\communitytoolkit.mvvm\8.2.2\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
       <Modified>2023-10-24T20:16:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.configuration\8.0.0\lib\net8.0\Microsoft.Extensions.Configuration.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.configuration\8.0.0\lib\net8.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
       <Modified>2023-10-31T14:59:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.configuration.abstractions\8.0.0\lib\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.configuration.abstractions\8.0.0\lib\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.Configuration.Abstractions.dll</PackagePath>
       <Modified>2023-10-31T14:59:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.configuration.binder\8.0.0\lib\net8.0\Microsoft.Extensions.Configuration.Binder.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.configuration.binder\8.0.0\lib\net8.0\Microsoft.Extensions.Configuration.Binder.dll">
       <PackagePath>Microsoft.Extensions.Configuration.Binder.dll</PackagePath>
       <Modified>2023-10-31T14:59:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.dependencyinjection\8.0.0\lib\net8.0\Microsoft.Extensions.DependencyInjection.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.dependencyinjection\8.0.0\lib\net8.0\Microsoft.Extensions.DependencyInjection.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.dll</PackagePath>
       <Modified>2023-10-31T14:59:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\8.0.0\lib\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\8.0.0\lib\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
       <Modified>2023-10-31T14:58:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.diagnostics\8.0.0\lib\net8.0\Microsoft.Extensions.Diagnostics.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.diagnostics\8.0.0\lib\net8.0\Microsoft.Extensions.Diagnostics.dll">
       <PackagePath>Microsoft.Extensions.Diagnostics.dll</PackagePath>
       <Modified>2023-10-31T14:59:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.diagnostics.abstractions\8.0.0\lib\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.diagnostics.abstractions\8.0.0\lib\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.Diagnostics.Abstractions.dll</PackagePath>
       <Modified>2023-10-31T14:59:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.http\8.0.0\lib\net8.0\Microsoft.Extensions.Http.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.http\8.0.0\lib\net8.0\Microsoft.Extensions.Http.dll">
       <PackagePath>Microsoft.Extensions.Http.dll</PackagePath>
       <Modified>2023-10-31T14:59:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.logging\8.0.0\lib\net8.0\Microsoft.Extensions.Logging.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.logging\8.0.0\lib\net8.0\Microsoft.Extensions.Logging.dll">
       <PackagePath>Microsoft.Extensions.Logging.dll</PackagePath>
       <Modified>2023-10-31T14:59:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.logging.abstractions\8.0.0\lib\net8.0\Microsoft.Extensions.Logging.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.logging.abstractions\8.0.0\lib\net8.0\Microsoft.Extensions.Logging.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.Logging.Abstractions.dll</PackagePath>
       <Modified>2023-10-31T14:59:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.logging.debug\8.0.0\lib\net8.0\Microsoft.Extensions.Logging.Debug.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.logging.debug\8.0.0\lib\net8.0\Microsoft.Extensions.Logging.Debug.dll">
       <PackagePath>Microsoft.Extensions.Logging.Debug.dll</PackagePath>
       <Modified>2023-10-31T14:59:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.options\8.0.0\lib\net8.0\Microsoft.Extensions.Options.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.options\8.0.0\lib\net8.0\Microsoft.Extensions.Options.dll">
       <PackagePath>Microsoft.Extensions.Options.dll</PackagePath>
       <Modified>2023-10-31T14:59:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.options.configurationextensions\8.0.0\lib\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.options.configurationextensions\8.0.0\lib\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll">
       <PackagePath>Microsoft.Extensions.Options.ConfigurationExtensions.dll</PackagePath>
       <Modified>2023-10-31T14:59:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.extensions.primitives\8.0.0\lib\net8.0\Microsoft.Extensions.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.extensions.primitives\8.0.0\lib\net8.0\Microsoft.Extensions.Primitives.dll">
       <PackagePath>Microsoft.Extensions.Primitives.dll</PackagePath>
       <Modified>2023-10-31T14:58:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.graphics.win2d\1.0.5.1\lib\net5.0-windows10.0.17763.0\Microsoft.Graphics.Canvas.Interop.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.graphics.win2d\1.0.5.1\lib\net5.0-windows10.0.17763.0\Microsoft.Graphics.Canvas.Interop.dll">
       <PackagePath>Microsoft.Graphics.Canvas.Interop.dll</PackagePath>
       <Modified>2023-05-31T20:07:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.compatibility\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.compatibility\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.dll">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.dll</PackagePath>
       <Modified>2024-01-15T19:09:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.dll">
       <PackagePath>Microsoft.Maui.Controls.dll</PackagePath>
       <Modified>2024-01-15T19:06:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.xaml\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Xaml.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.xaml\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Xaml.dll">
       <PackagePath>Microsoft.Maui.Controls.Xaml.dll</PackagePath>
       <Modified>2024-01-15T19:07:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.core\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.core\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.dll">
       <PackagePath>Microsoft.Maui.dll</PackagePath>
       <Modified>2024-01-15T19:07:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.essentials\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Essentials.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.essentials\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Essentials.dll">
       <PackagePath>Microsoft.Maui.Essentials.dll</PackagePath>
       <Modified>2024-01-15T19:09:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.graphics\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Graphics.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.graphics\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Graphics.dll">
       <PackagePath>Microsoft.Maui.Graphics.dll</PackagePath>
       <Modified>2024-01-15T19:07:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.graphics.win2d.winui.desktop\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.graphics.win2d.winui.desktop\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll">
       <PackagePath>Microsoft.Maui.Graphics.Win2D.WinUI.Desktop.dll</PackagePath>
       <Modified>2024-01-15T19:09:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.InteractiveExperiences.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.InteractiveExperiences.Projection.dll">
       <PackagePath>Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
       <Modified>2023-07-21T16:44:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.WinUI.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.WinUI.dll">
       <PackagePath>Microsoft.WinUI.dll</PackagePath>
       <Modified>2023-07-21T22:29:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppLifecycle.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppLifecycle.Projection.dll">
       <PackagePath>Microsoft.Windows.AppLifecycle.Projection.dll</PackagePath>
       <Modified>2023-07-21T22:29:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Builder.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Builder.Projection.dll">
       <PackagePath>Microsoft.Windows.AppNotifications.Builder.Projection.dll</PackagePath>
       <Modified>2023-07-21T22:29:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Projection.dll">
       <PackagePath>Microsoft.Windows.AppNotifications.Projection.dll</PackagePath>
       <Modified>2023-07-21T22:29:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll">
       <PackagePath>Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll</PackagePath>
       <Modified>2023-07-21T22:29:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.Resources.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.Resources.Projection.dll">
       <PackagePath>Microsoft.Windows.ApplicationModel.Resources.Projection.dll</PackagePath>
       <Modified>2023-04-28T12:59:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll">
       <PackagePath>Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll</PackagePath>
       <Modified>2023-07-21T22:29:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.PushNotifications.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.PushNotifications.Projection.dll">
       <PackagePath>Microsoft.Windows.PushNotifications.Projection.dll</PackagePath>
       <Modified>2023-07-21T22:29:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Security.AccessControl.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Security.AccessControl.Projection.dll">
       <PackagePath>Microsoft.Windows.Security.AccessControl.Projection.dll</PackagePath>
       <Modified>2023-07-21T22:29:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Power.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Power.Projection.dll">
       <PackagePath>Microsoft.Windows.System.Power.Projection.dll</PackagePath>
       <Modified>2023-07-21T22:29:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Projection.dll">
       <PackagePath>Microsoft.Windows.System.Projection.dll</PackagePath>
       <Modified>2023-07-21T22:29:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Widgets.Projection.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Widgets.Projection.dll">
       <PackagePath>Microsoft.Windows.Widgets.Projection.dll</PackagePath>
       <Modified>2023-04-20T18:26:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
       <Modified>2023-07-21T22:29:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Release.Net.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Release.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Release.Net.dll</PackagePath>
       <Modified>2023-07-24T19:10:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\refit\7.0.0\lib\net7.0\Refit.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\refit\7.0.0\lib\net7.0\Refit.dll">
       <PackagePath>Refit.dll</PackagePath>
       <Modified>2023-06-29T18:43:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\refit.httpclientfactory\7.0.0\lib\net7.0\Refit.HttpClientFactory.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\refit.httpclientfactory\7.0.0\lib\net7.0\Refit.HttpClientFactory.dll">
       <PackagePath>Refit.HttpClientFactory.dll</PackagePath>
       <Modified>2023-06-29T18:43:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ar\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ar\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ar\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ca\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ca\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ca\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\cs\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\cs\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>cs\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\da\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\da\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>da\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\de\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\de\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>de\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\el\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\el\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>el\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\es\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\es\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>es\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\fi\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\fi\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>fi\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\fr\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\fr\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>fr\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\he\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\he\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>he\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\hi\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\hi\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>hi\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\hr\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\hr\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>hr\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\hu\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\hu\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>hu\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\id\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\id\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>id\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\it\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\it\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>it\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ja\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ja\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ja\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ko\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ko\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ko\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ms\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ms\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ms\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:06:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\nb\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\nb\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>nb\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\nl\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\nl\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>nl\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:06:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\pl\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\pl\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>pl\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\pt-BR\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\pt-BR\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>pt-BR\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\pt\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\pt\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>pt\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ro\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ro\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ro\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ru\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\ru\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ru\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\sk\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\sk\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>sk\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\sv\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\sv\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>sv\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:06:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\th\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\th\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>th\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\tr\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\tr\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>tr\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\uk\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\uk\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>uk\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\vi\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\vi\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>vi\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\zh-HK\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\zh-HK\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>zh-HK\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:06:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\zh-Hans\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\zh-Hans\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>zh-Hans\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:07:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\zh-Hant\Microsoft.Maui.Controls.resources.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\zh-Hant\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>zh-Hant\Microsoft.Maui.Controls.resources.dll</PackagePath>
       <Modified>2024-01-15T19:06:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.graphics.win2d\1.0.5.1\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.graphics.win2d\1.0.5.1\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2023-05-31T20:12:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2023-04-28T12:58:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaAppMAUI.Shared\bin\Debug\net8.0\DyslexiaAppMAUI.Shared.dll">
+    <AppxPackagedFile Include="C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaAppMAUI.Shared\bin\Debug\net8.0\DyslexiaAppMAUI.Shared.dll">
       <PackagePath>DyslexiaAppMAUI.Shared.dll</PackagePath>
-      <Modified>2024-03-30T15:23:51.640</Modified>
+      <Modified>2024-03-30T15:49:05.345</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.compatibility\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.compatibility\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
       <Modified>2024-01-15T19:00:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.pri">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.controls.core\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.pri">
       <PackagePath>Microsoft.Maui.Controls.pri</PackagePath>
       <Modified>2024-01-15T18:59:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\90544\.nuget\packages\microsoft.maui.core\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.pri">
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.maui.core\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.pri">
       <PackagePath>Microsoft.Maui.pri</PackagePath>
       <Modified>2024-01-15T18:58:56.000</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.3.msix">
+    <ResolvedSDKReference Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.3.msix">
       <Name>Microsoft.WindowsAppRuntime.1.3</Name>
       <Version>3000.934.1904.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.3, MinVersion = 3000.934.1904.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.3.msix</AppxLocation>
+      <AppxLocation>C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.3.msix</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.3.msix">
+    <ResolvedSDKReference Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.3.msix">
       <Name>Microsoft.WindowsAppRuntime.1.3</Name>
       <Version>3000.934.1904.0</Version>
       <Architecture>win32</Architecture>
       <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.3, MinVersion = 3000.934.1904.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.3.msix</AppxLocation>
+      <AppxLocation>C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.3.msix</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.3.msix">
+    <ResolvedSDKReference Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.3.msix">
       <Name>Microsoft.WindowsAppRuntime.1.3</Name>
       <Version>3000.934.1904.0</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.3, MinVersion = 3000.934.1904.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.3.msix</AppxLocation>
+      <AppxLocation>C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.3.msix</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.3.msix">
+    <ResolvedSDKReference Include="C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.3.msix">
       <Name>Microsoft.WindowsAppRuntime.1.3</Name>
       <Version>3000.934.1904.0</Version>
       <Architecture>arm64</Architecture>
       <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.3, MinVersion = 3000.934.1904.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\90544\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.3.msix</AppxLocation>
+      <AppxLocation>C:\Users\HP\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.3.msix</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
