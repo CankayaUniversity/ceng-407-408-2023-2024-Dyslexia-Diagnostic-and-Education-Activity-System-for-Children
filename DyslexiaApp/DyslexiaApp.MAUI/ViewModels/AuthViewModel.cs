@@ -29,7 +29,7 @@ namespace DyslexiaApp.MAUI.ViewModels;
         private DateTime _birthdate;
 
         [ObservableProperty, NotifyPropertyChangedFor(nameof(CanSignup))]
-        private Gender _gender;
+        private string _gender;
 
         [ObservableProperty, NotifyPropertyChangedFor(nameof(CanSignin)), NotifyPropertyChangedFor(nameof(CanSignup))]
         private string? _password;
@@ -43,7 +43,7 @@ namespace DyslexiaApp.MAUI.ViewModels;
                                   && !string.IsNullOrEmpty(FirstName)
                                   && !string.IsNullOrEmpty(LastName)
                                   && Birthdate != default(DateTime)
-                                  && Gender != default(Gender)
+                                  && !string.IsNullOrEmpty(Gender)
                                   && !string.IsNullOrEmpty(ConfirmationPassword)
                                   && Password == ConfirmationPassword;
 

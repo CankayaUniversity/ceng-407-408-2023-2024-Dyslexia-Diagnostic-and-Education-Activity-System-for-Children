@@ -15,6 +15,9 @@ namespace DyslexiaApp.API.Endpoints;
            async (SigninRequestDto dto, AuthService authService) =>
                TypedResults.Ok(await authService.SigninAsync(dto)));
 
+        app.MapPost("/api/dyslexiadiagnosis",
+           async (DyslexiaDiagnosisService dyslexiaDiagnosisService) =>
+           TypedResults.Ok(await dyslexiaDiagnosisService.GetDyslexiaDiagnosesAsync()));
         return app;
       }
    }

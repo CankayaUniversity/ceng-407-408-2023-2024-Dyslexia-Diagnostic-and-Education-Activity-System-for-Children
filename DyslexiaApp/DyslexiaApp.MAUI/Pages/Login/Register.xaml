@@ -99,11 +99,11 @@
                          Date="{Binding Birthdate, Mode=TwoWay}"/>
 
             <Picker Style="{StaticResource CustomPickerStyle}"
-            SelectedItem="{Binding Gender, Converter={StaticResource GenderConverter}}">
+                    SelectedItem="{Binding Gender}">
                 <Picker.ItemsSource>
-                    <x:Array Type="{x:Type local:Gender}">
-                        <x:Static Member="local:Gender.Female"/>
-                        <x:Static Member="local:Gender.Male"/>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
@@ -126,5 +126,5 @@
         <ActivityIndicator 
             IsRunning="{Binding IsBusy}" />
     </Grid>
-   
+
 </ContentPage>
