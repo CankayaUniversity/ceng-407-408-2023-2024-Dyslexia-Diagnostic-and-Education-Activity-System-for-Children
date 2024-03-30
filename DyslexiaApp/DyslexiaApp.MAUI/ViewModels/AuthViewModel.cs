@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using DyslexiaApp.MAUI.Pages.Main;
+using DyslexiaApp.MAUI.Pages.Login;
 using DyslexiaApp.MAUI.Services;
 using DyslexiaAppMAUI.Shared.Dtos;
 using DyslexiaAppMAUI.Shared.Models;
@@ -29,7 +29,7 @@ namespace DyslexiaApp.MAUI.ViewModels;
         private DateTime _birthdate;
 
         [ObservableProperty, NotifyPropertyChangedFor(nameof(CanSignup))]
-        private string _gender;
+        private string? _gender;
 
         [ObservableProperty, NotifyPropertyChangedFor(nameof(CanSignin)), NotifyPropertyChangedFor(nameof(CanSignup))]
         private string? _password;
@@ -61,7 +61,7 @@ namespace DyslexiaApp.MAUI.ViewModels;
                 {
                     _authService.Signin(result.Data);
 
-                    await GoToAsync($"//{nameof(HomePage)}", animate: true);
+                    await GoToAsync($"//{nameof(RegisterAgreement)}", animate: true);
                 }
                 else
                 {

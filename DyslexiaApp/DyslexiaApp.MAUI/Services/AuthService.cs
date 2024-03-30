@@ -1,6 +1,7 @@
 ﻿using DyslexiaAppMAUI.Shared.Dtos;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -25,17 +26,24 @@ public class AuthService
     {
         if (Preferences.Default.ContainsKey(AuthKey))
         {
-            var serialized = Preferences.Default.Get<string?>(AuthKey,null);
+            var serialized = Preferences.Default.Get<string?>(AuthKey, null);
             if (string.IsNullOrEmpty(serialized))
             {
                 Preferences.Default.Remove(AuthKey);
             }
             else
             {
-                (User, Token) = JsonSerializer.Deserialize<AuthResponseDto>(serialized);
+                try
+                {
+                    (User, Token) = JsonSerializer.Deserialize<AuthResponseDto>(serialized);
+                }
+                catch (JsonException ex)
+                {
+                    // Burada log yapabilir veya hata mesajını kullanıcıya gösterebilirsiniz.
+                    Debug.WriteLine($"JSON Deserialization Error: {ex.Message}");
+                }
             }
         }
-
     }
     public void Signout()
     {

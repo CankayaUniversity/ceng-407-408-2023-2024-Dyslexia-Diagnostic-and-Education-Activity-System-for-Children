@@ -9,13 +9,13 @@ public partial class RegisterAgreement : ContentPage
 
     private async void OnCloseButtonClicked(object sender, EventArgs e)
     {
-        //await Navigation.PushAsync(new Register());
+        await Shell.Current.GoToAsync($"//{nameof(Register)}");
     }
     private async void OnRegisterAgreementButtonClicked(object sender, EventArgs e)
     {
         if (AgreementCheckBox.IsChecked)
         {
-            await Navigation.PushAsync(new MainPage());
+            await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
         }
         else
         {

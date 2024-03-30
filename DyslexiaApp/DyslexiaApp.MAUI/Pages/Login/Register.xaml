@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DyslexiaApp.MAUI.Pages.Login.Register"
              xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
-             xmlns:local="clr-namespace:DyslexiaAppMAUI.Shared.Models;assembly=DyslexiaAppMAUI.Shared"
              x:DataType="vm:AuthViewModel"
              Title="Create New Account"
              BackgroundImageSource="login.jpg">

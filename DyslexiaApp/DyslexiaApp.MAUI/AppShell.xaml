@@ -14,6 +14,20 @@
         Route="MainPage" />-->
     <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}"
                   Route="LoginPage"/>
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate pages:HomePage}"
+        Route="HomePage" />
+    <ShellContent
+         Title="Register Agreement"
+         ContentTemplate="{DataTemplate pages:RegisterAgreement}"
+         Route="RegisterAgreement" />
+
+    <ShellContent
+         Title="Register"
+         ContentTemplate="{DataTemplate pages:Register}"
+         Route="Register" />
+
     <!--<TabBar>
         <ShellContent Title="Login"
                       ContentTemplate="{DataTemplate pages:LoginPage}"

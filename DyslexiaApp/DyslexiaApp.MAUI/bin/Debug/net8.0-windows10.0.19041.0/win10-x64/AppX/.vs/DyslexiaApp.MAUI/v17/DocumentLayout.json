@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Ahmet Emre Ayd\u0131n\\Desktop\\408\\DyslexiaApp\\DyslexiaApp.MAUI\\bin\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\AppX\\",
+  "WorkspaceRootPath": "C:\\Users\\HP\\OneDrive\\Desktop\\408_1\\DyslexiaApp\\DyslexiaApp.MAUI\\bin\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\AppX\\",
   "Documents": [],
   "DocumentGroupContainers": [
     {
@@ -13,15 +13,15 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             }
           ]
         }

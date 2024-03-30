@@ -1,1 +1,1 @@
-C:\Users\90544\Desktop\bitirme\DyslexiaApp\DyslexiaApp.MAUI\DyslexiaApp.MAUI.csproj;x64
+C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaApp.MAUI\DyslexiaApp.MAUI.csproj;x64
