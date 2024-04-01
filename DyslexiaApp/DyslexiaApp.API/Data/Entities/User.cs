@@ -36,8 +36,6 @@ namespace DyslexiaApp.API.Data.Entities
 
         public string Salt { get; set; }
 
-        //[Required]
-        //public Gender Gender { get; set; }
 
         [Required] 
         public Role Role { get; set; }
