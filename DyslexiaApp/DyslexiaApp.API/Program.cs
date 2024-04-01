@@ -1,9 +1,9 @@
-
 using DyslexiaApp.API.Endpoints;
 using DyslexiaApp.API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using System.Configuration;
+using DyslexiaApp.API.Converter;
+using System.Text.Json;
 
 
 namespace DyslexiaApp.API;
@@ -26,6 +26,11 @@ public class Program
             );
 
 
+        builder.Services.AddControllers().AddJsonOptions(options =>
+        {
+            Console.WriteLine("aaaa");
+            options.JsonSerializerOptions.Converters.Add(new TimeSpanConverter());
+        }); 
         builder.Services.AddAuthorization();
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -34,7 +39,8 @@ public class Program
         builder.Services.AddTransient<TokenService>()
                         .AddTransient<PasswordService>()
                         .AddTransient<AuthService>()
-                        .AddTransient<DyslexiaDiagnosisService>();
+                        .AddTransient<DyslexiaDiagnosisService>()
+                        .AddTransient<EducationalGameService>();
 
         var app = builder.Build();
 
@@ -67,6 +73,7 @@ public class Program
         if (dataContext.Database.GetPendingMigrations().Any())
             dataContext.Database.Migrate();
     }
+
 }
 
 

@@ -2,7 +2,6 @@
 
 public record GameSessionDto(
     Guid Id,
-    TimeSpan TimeSpent,
     int SessionScore
 );
 
