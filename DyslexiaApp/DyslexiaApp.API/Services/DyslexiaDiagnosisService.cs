@@ -1,4 +1,5 @@
-﻿using DyslexiaAppMAUI.Shared.Dtos;
+﻿using DyslexiaApp.API.Data.Entities;
+using DyslexiaAppMAUI.Shared.Dtos;
 using Microsoft.EntityFrameworkCore;
 
 namespace DyslexiaApp.API.Services
@@ -23,25 +24,42 @@ namespace DyslexiaApp.API.Services
             // MatchingGames için DTO'ları oluşturma
             diagnosis.MatchingGames.Select(matchingGame => new MatchingGameDto(
                 matchingGame.Id,
-                matchingGame.TimeSpent,
-                null, // DyslexiaDiagnosisDto burada null geçilir, döngüsel referansı önlemek için
+                null,
+                // DyslexiaDiagnosisDto burada null geçilir, döngüsel referansı önlemek için
                 new EducationalDto(
                     matchingGame.EducationalGame.Id,
                     matchingGame.EducationalGame.Name,
                     matchingGame.EducationalGame.Description,
-                    matchingGame.EducationalGame.GameSessions.Select(gs => new GameSessionDto(gs.Id, gs.TimeSpent, gs.SessionScore)).ToArray(),
+                    matchingGame.EducationalGame.GameSessions.Select(gs => new GameSessionDto(gs.Id, gs.SessionScore)).ToArray(),
                     Array.Empty<MatchingGameDto>() // Eğitim oyununun eşleşen oyunları için boş bir dizi
                 ),
-                matchingGame.GameSessions.Select(gs => new GameSessionDto(gs.Id, gs.TimeSpent, gs.SessionScore)).ToArray()
+                matchingGame.GameSessions.Select(gs => new GameSessionDto(gs.Id, gs.SessionScore)).ToArray()
             )).ToArray(),
             // NavigationGames için DTO'ları oluşturma
             diagnosis.NavigationGames.Select(navGame => new NavigationGameDto(
                 navGame.Id,
-                navGame.TimeSpent,
-                null // Burada da DyslexiaDiagnosisDto için null geçiyoruz, döngüsel referansı önlemek için
+                null
+                 // Burada da DyslexiaDiagnosisDto için null geçiyoruz, döngüsel referansı önlemek için
             )).ToArray()
         ))
         .ToArrayAsync();
+
+        public async Task<DyslexiaDiagnosisDto> AddDyslexiaDiagnosisAsync(DyslexiaDiagnosisDto newDiagnosisDto)
+        {
+            var newDiagnosis = new DyslexiaDiagnosis
+            {
+                Id = Guid.NewGuid(),
+                TestResults = newDiagnosisDto.TestResults,
+                FeedBack = newDiagnosisDto.FeedBack,
+                Description = newDiagnosisDto.Description,
+                // MatchingGames ve NavigationGames gibi ilişkili varlıklar burada yönetilmeli
+            };
+
+            _context.DyslexiaDiagnosis.Add(newDiagnosis);
+            await _context.SaveChangesAsync();
+
+            return newDiagnosisDto; // Gerçek uygulamada, oluşturulan varlıkla doldurulmuş yeni bir DTO döndürmek daha uygun olabilir.
+        }
 
 
     }

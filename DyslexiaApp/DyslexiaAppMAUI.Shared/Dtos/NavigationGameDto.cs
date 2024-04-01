@@ -8,7 +8,6 @@ namespace DyslexiaAppMAUI.Shared.Dtos;
 
 public record struct NavigationGameDto(
     Guid Id,
-    TimeSpan TimeSpent,
     DyslexiaDiagnosisDto? DyslexiaDiagnosis
 );
 
