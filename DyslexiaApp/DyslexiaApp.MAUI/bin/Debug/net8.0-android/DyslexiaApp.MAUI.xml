@@ -30,6 +30,9 @@
         <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.ConfirmationPassword">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel._confirmationPassword"/>
         </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.PendingSignup">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel._pendingSignup"/>
+        </member>
         <member name="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel.signupCommand">
             <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SignupCommand"/>.</summary>
         </member>
@@ -75,6 +78,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConfirmationPassword">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConfirmationPassword" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PendingSignup">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PendingSignup" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
         </member>
@@ -110,6 +116,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConfirmationPassword">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConfirmationPassword" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PendingSignup">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PendingSignup" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
