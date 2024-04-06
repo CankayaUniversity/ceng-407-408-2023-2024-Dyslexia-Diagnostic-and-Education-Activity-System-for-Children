@@ -68,8 +68,9 @@
                 </HorizontalStackLayout>
 
                 <Button Text="Register" 
-                 Style="{StaticResource ButtonStyle}"
-                 Clicked="OnRegisterAgreementButtonClicked"/>
+                        Style="{StaticResource ButtonStyle}"
+                        Clicked="OnRegisterAgreementButtonClicked"
+                        IsEnabled="{Binding Source={x:Reference AgreementCheckBox}, Path=IsChecked}" />
 
             </StackLayout>
         </Frame>
