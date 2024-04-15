@@ -4,8 +4,7 @@ public record EducationalDto(
     Guid Id,
     string Name,
     string Description,
-    GameSessionDto[] GameSessions,
-    MatchingGameDto[] MatchingGames
+    GameSessionDto[] GameSessions
 );
 
 

@@ -8,8 +8,8 @@ namespace DyslexiaApp.API.Data.Entities
         [Key]
         public Guid Id { get; set; }
 
-        [Required]
-        public TimeSpan TimeSpent { get; set; }
+        //[Required]
+       // public TimeSpan TimeSpent { get; set; }
 
        
         public virtual DyslexiaDiagnosis DyslexiaDiagnosis { get; set; }

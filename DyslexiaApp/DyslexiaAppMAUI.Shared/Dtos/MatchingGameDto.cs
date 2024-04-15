@@ -2,11 +2,7 @@
 
 public record struct MatchingGameDto(
     Guid Id,
-    TimeSpan TimeSpent,
-    DyslexiaDiagnosisDto? DyslexiaDiagnosis,
+    // DyslexiaDiagnosisDto? DyslexiaDiagnosis, // Kaldırıldı
     EducationalDto EducationalGame,
     GameSessionDto[] GameSessions
 );
-
-
-

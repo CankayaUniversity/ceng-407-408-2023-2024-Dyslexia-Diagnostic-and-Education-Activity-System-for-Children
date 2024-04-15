@@ -46,3 +46,15 @@ C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaAppMAUI.Shared\obj\Debug\
 C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\refint\DyslexiaAppMAUI.Shared.dll
 C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\DyslexiaAppMAUI.Shared.pdb
 C:\Users\HP\OneDrive\Desktop\408_1\DyslexiaApp\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\ref\DyslexiaAppMAUI.Shared.dll
+D:\408\DyslexiaApp\DyslexiaAppMAUI.Shared\bin\Debug\net8.0\DyslexiaAppMAUI.Shared.deps.json
+D:\408\DyslexiaApp\DyslexiaAppMAUI.Shared\bin\Debug\net8.0\DyslexiaAppMAUI.Shared.dll
+D:\408\DyslexiaApp\DyslexiaAppMAUI.Shared\bin\Debug\net8.0\DyslexiaAppMAUI.Shared.pdb
+D:\408\DyslexiaApp\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\DyslexiaAppMAUI.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\408\DyslexiaApp\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\DyslexiaAppMAUI.Shared.AssemblyInfoInputs.cache
+D:\408\DyslexiaApp\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\DyslexiaAppMAUI.Shared.AssemblyInfo.cs
+D:\408\DyslexiaApp\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\DyslexiaAppMAUI.Shared.csproj.CoreCompileInputs.cache
+D:\408\DyslexiaApp\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\DyslexiaAppMAUI.Shared.sourcelink.json
+D:\408\DyslexiaApp\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\DyslexiaAppMAUI.Shared.dll
+D:\408\DyslexiaApp\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\refint\DyslexiaAppMAUI.Shared.dll
+D:\408\DyslexiaApp\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\DyslexiaAppMAUI.Shared.pdb
+D:\408\DyslexiaApp\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\ref\DyslexiaAppMAUI.Shared.dll
