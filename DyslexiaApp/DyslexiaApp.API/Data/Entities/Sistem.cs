@@ -13,8 +13,8 @@ namespace DyslexiaApp.API.Data.Entities
         [StringLength(255)]
         public string Layout { get; set; } // Bu alanın içeriği, uygulamanın kullanıcı arayüzü düzeninin nasıl olduğunu açıklar.
 
-        [Required]
-        public TimeSpan TimeSpent { get; set; } // Kullanıcıların sistemle etkileşimde geçirdiği toplam zaman.
+        //[Required]
+        //public TimeSpan TimeSpent { get; set; } // Kullanıcıların sistemle etkileşimde geçirdiği toplam zaman.
 
         [Required]
         public string NavigationElements { get; set; }  // Bu bilgi, kullanıcıların sistem içerisinde nasıl gezindiklerine dair önemli ipuçları sunar.

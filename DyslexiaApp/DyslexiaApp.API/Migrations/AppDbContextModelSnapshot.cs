@@ -92,9 +92,6 @@ namespace DyslexiaApp.API.Migrations
                     b.Property<int>("SessionScore")
                         .HasColumnType("int");
 
-                    b.Property<TimeSpan>("TimeSpent")
-                        .HasColumnType("time");
-
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
@@ -120,9 +117,6 @@ namespace DyslexiaApp.API.Migrations
 
                     b.Property<Guid>("EducationalGameId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<TimeSpan>("TimeSpent")
-                        .HasColumnType("time");
 
                     b.HasKey("Id");
 
@@ -167,9 +161,6 @@ namespace DyslexiaApp.API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<TimeSpan>("TimeSpent")
-                        .HasColumnType("time");
-
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
@@ -206,9 +197,6 @@ namespace DyslexiaApp.API.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
-
-                    b.Property<TimeSpan>("TimeSpent")
-                        .HasColumnType("time");
 
                     b.HasKey("Id");
 

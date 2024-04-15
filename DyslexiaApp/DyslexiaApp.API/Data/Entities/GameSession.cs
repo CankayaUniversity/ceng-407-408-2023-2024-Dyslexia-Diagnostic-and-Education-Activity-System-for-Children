@@ -9,8 +9,8 @@ namespace DyslexiaApp.API.Data.Entities
         [Key]
         public Guid Id { get; set; }
 
-        [Required]
-        public TimeSpan TimeSpent { get; set; }
+        //[Required]
+        //public TimeSpan TimeSpent { get; set; }
 
         // Her oyun oturumu bir kullanıcıya ait olacaktır.
       

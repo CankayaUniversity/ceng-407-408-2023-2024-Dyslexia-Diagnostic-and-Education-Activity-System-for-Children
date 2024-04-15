@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace DyslexiaAppMAUI.Shared.Dtos;
 
 public record struct NavigationGameDto(
-    Guid Id,
-    TimeSpan TimeSpent,
-    DyslexiaDiagnosisDto? DyslexiaDiagnosis
+    Guid Id
+// DyslexiaDiagnosisDto? DyslexiaDiagnosis // Kaldırıldı
 );
+
 
 
 

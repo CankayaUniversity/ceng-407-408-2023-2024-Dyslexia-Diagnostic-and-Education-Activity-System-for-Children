@@ -9,7 +9,7 @@ namespace DyslexiaApp.API.Data.Entities
         [Key]
         public Guid Id { get; set; } 
 
-        public TimeSpan TimeSpent { get; set; } // Kullanıcının sorununu çözmek için harcanan zaman.
+        //public TimeSpan TimeSpent { get; set; } // Kullanıcının sorununu çözmek için harcanan zaman.
 
         public string FAQs { get; set; } // Kullanıcıların sorularına hızlı cevap bulmalarını sağlamak amacıyla kullanılır.
 
