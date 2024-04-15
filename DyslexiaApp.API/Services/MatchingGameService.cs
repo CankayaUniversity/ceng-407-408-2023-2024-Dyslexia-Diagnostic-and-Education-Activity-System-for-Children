@@ -51,14 +51,7 @@ namespace DyslexiaApp.API.Services
             {
                 var question = new Question
                 {
-                    QuestionText = $"Question {i + 1} : {game.Description.Substring(0, Math.Min(50, game.Description.Length))}...",
-                    Options = new List<string>
-                    {
-                        "Options A",
-                        "Options B",
-                        "Options C",
-                        "Options D"
-                    },
+                   
                     CorrectAnswerIndex = new Random().Next(0, 4)
                 };
                 questions.Add(question);
