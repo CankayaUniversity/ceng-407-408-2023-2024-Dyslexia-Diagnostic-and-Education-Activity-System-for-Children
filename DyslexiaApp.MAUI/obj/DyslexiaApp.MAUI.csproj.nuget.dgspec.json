@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\bitirme\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj": {}
+    "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj": {}
   },
   "projects": {
-    "D:\\bitirme\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj": {
+    "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bitirme\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj",
         "projectName": "DyslexiaApp.MAUI",
-        "projectPath": "D:\\bitirme\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj",
-        "packagesPath": "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\",
-        "outputPath": "D:\\bitirme\\DyslexiaApp.MAUI\\obj\\",
+        "projectPath": "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaApp.MAUI\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ahmet Emre Aydın\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -37,32 +37,32 @@
           "net8.0-android34.0": {
             "targetAlias": "net8.0-android",
             "projectReferences": {
-              "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
-                "projectPath": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
+              "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
+                "projectPath": "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
               }
             }
           },
           "net8.0-ios17.2": {
             "targetAlias": "net8.0-ios",
             "projectReferences": {
-              "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
-                "projectPath": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
+              "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
+                "projectPath": "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
               }
             }
           },
           "net8.0-maccatalyst17.2": {
             "targetAlias": "net8.0-maccatalyst",
             "projectReferences": {
-              "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
-                "projectPath": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
+              "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
+                "projectPath": "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
               }
             }
           },
           "net8.0-windows10.0.19041": {
             "targetAlias": "net8.0-windows10.0.19041.0",
             "projectReferences": {
-              "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
-                "projectPath": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
+              "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
+                "projectPath": "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
               }
             }
           }
@@ -325,20 +325,20 @@
         }
       }
     },
-    "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
+    "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
         "projectName": "DyslexiaAppMAUI.Shared",
-        "projectPath": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
-        "packagesPath": "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\",
-        "outputPath": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\obj\\",
+        "projectPath": "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\OneDrive\\Desktop\\bitirme\\DyslexiaAppMAUI.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ahmet Emre Aydın\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
