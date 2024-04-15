@@ -19,9 +19,6 @@ namespace DyslexiaApp.MAUI
                 typeof(ForgotPassword),
                 typeof(RegisterAgreement),
                 typeof(HomePage),
-                typeof(DiagnosticTestAgreement),
-                typeof(DiagnosisLetterMatchingInformation),
-                typeof(EducationalGameList),
             ];
         private readonly AuthService _authService;
         private static void RegisterRoutes()
