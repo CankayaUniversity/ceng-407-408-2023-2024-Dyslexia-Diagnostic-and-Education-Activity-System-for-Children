@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DyslexiaApp.MAUI.Pages.Login.RegisterAgreement"
+             Title="Registiration Agreement"
+             BackgroundImageSource="login.jpg">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="TitleTextColor">#EFAE36</Color>
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="Margin" Value="0,0,0,10" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="TextColor" Value="#EFAE36" />
+                <Setter Property="PlaceholderColor" Value="#EFAE36" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="FontFamily" Value="Popins" />
+                <Setter Property="WidthRequest" Value="200" />
+            </Style>
+
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="Margin" Value="0,15" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="TextColor" Value="#EFAE36" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="HeightRequest" Value="20" />
+                <Setter Property="WidthRequest" Value="100" />
+                <Setter Property="BorderColor"  Value="White" />
+                <Setter Property="FontFamily" Value="Popins" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label Text="Sign Up for Free"
+        FontSize="Medium"
+        HorizontalOptions="Center"
+        TextColor="#EFAE36"
+        FontAttributes="Bold"
+        Margin="0,170,0,-200"/>
+
+        <Frame VerticalOptions="CenterAndExpand"
+        HorizontalOptions="CenterAndExpand"
+        Margin="0,35,0,0"
+        WidthRequest="300"
+        BackgroundColor="#FFE9C9"
+        BorderColor="White">
+
+            <StackLayout>
+                <Button Text="X"
+                 FontSize="Small"
+                 BackgroundColor="Transparent"
+                 TextColor="#AAAAAA"
+                 HorizontalOptions="End"
+                 Clicked="OnCloseButtonClicked"/>
+                <Label Text="Privacy and License Agreement"
+                   TextColor="#EFAE36"
+                   HorizontalOptions="Center" />
+                <HorizontalStackLayout HorizontalOptions="Start" VerticalOptions="Center">
+                    <CheckBox x:Name="AgreementCheckBox"
+                      IsChecked="False"
+                      Color="#EFAE36"
+                      VerticalOptions="Center"
+                      Margin="50,0,0,0"/>
+                    <Label Text="I Agree"
+                   TextColor="#EFAE36"
+                   VerticalOptions="Center"
+                   Margin="0,0,0,0"/>
+                </HorizontalStackLayout>
+
+                <Button Text="Register" 
+                 Style="{StaticResource ButtonStyle}"
+                 Clicked="OnRegisterAgreementButtonClicked"/>
+
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
