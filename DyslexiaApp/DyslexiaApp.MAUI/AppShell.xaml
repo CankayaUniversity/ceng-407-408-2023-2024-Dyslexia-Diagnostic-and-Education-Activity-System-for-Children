@@ -7,14 +7,19 @@
     xmlns:pages="clr-namespace:DyslexiaApp.MAUI.Pages.Login"
     Shell.FlyoutBehavior="Disabled"
     Title="DyslexiaApp.MAUI">
-    
-    <ShellContent 
-        ContentTemplate="{DataTemplate pages:LoginPage}"
-        Route="LoginPage"/>
+
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+    <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}"
+                  Route="LoginPage"/>
     <ShellContent
+        Title="Home"
         ContentTemplate="{DataTemplate pages:HomePage}"
         Route="HomePage" />
     <ShellContent
+         Title="Register Agreement"
          ContentTemplate="{DataTemplate pages:RegisterAgreement}"
          Route="RegisterAgreement" />
 
@@ -22,15 +27,6 @@
          Title="Register"
          ContentTemplate="{DataTemplate pages:Register}"
          Route="Register" />
-    
-    <ShellContent
-         Title="Diagnosis Letter Matching Information"
-         ContentTemplate="{DataTemplate pages:DiagnosisLetterMatchingInformation}"
-         Route="DiagnosisLetterMatchingInformation" />
-    <ShellContent
-         Title="Diagnosis Educational Game Page"
-         ContentTemplate="{DataTemplate pages:EducationalGameList}"
-         Route="EducationalGameList" />
 
     <!--<TabBar>
         <ShellContent Title="Login"
