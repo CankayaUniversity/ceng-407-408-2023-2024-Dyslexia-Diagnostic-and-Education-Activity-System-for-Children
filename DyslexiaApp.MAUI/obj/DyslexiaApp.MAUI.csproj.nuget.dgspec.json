@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\bitirme\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj": {}
+    "D:\\408\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj": {}
   },
   "projects": {
-    "D:\\bitirme\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj": {
+    "D:\\408\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bitirme\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj",
+        "projectUniqueName": "D:\\408\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj",
         "projectName": "DyslexiaApp.MAUI",
-        "projectPath": "D:\\bitirme\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj",
-        "packagesPath": "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\",
-        "outputPath": "D:\\bitirme\\DyslexiaApp.MAUI\\obj\\",
+        "projectPath": "D:\\408\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj",
+        "packagesPath": "C:\\Users\\goktu\\.nuget\\packages\\",
+        "outputPath": "D:\\408\\DyslexiaApp.MAUI\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ahmet Emre Aydın\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\goktu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -37,32 +37,32 @@
           "net8.0-android34.0": {
             "targetAlias": "net8.0-android",
             "projectReferences": {
-              "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
-                "projectPath": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
+              "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
+                "projectPath": "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
               }
             }
           },
           "net8.0-ios17.2": {
             "targetAlias": "net8.0-ios",
             "projectReferences": {
-              "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
-                "projectPath": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
+              "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
+                "projectPath": "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
               }
             }
           },
           "net8.0-maccatalyst17.2": {
             "targetAlias": "net8.0-maccatalyst",
             "projectReferences": {
-              "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
-                "projectPath": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
+              "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
+                "projectPath": "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
               }
             }
           },
           "net8.0-windows10.0.19041": {
             "targetAlias": "net8.0-windows10.0.19041.0",
             "projectReferences": {
-              "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
-                "projectPath": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
+              "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
+                "projectPath": "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
               }
             }
           }
@@ -96,16 +96,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.2, )",
+              "version": "[8.0.3, )",
               "autoReferenced": true
             },
             "Refit.HttpClientFactory": {
@@ -132,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-ios17.2": {
           "targetAlias": "net8.0-ios",
@@ -151,16 +151,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.2, )",
+              "version": "[8.0.3, )",
               "autoReferenced": true
             },
             "Refit.HttpClientFactory": {
@@ -187,7 +187,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-maccatalyst17.2": {
           "targetAlias": "net8.0-maccatalyst",
@@ -206,16 +206,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.2, )",
+              "version": "[8.0.3, )",
               "autoReferenced": true
             },
             "Refit.HttpClientFactory": {
@@ -243,7 +243,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
@@ -262,11 +262,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
             },
             "Refit.HttpClientFactory": {
               "target": "Package",
@@ -298,7 +298,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -325,20 +325,20 @@
         }
       }
     },
-    "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
+    "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
+        "projectUniqueName": "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
         "projectName": "DyslexiaAppMAUI.Shared",
-        "projectPath": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
-        "packagesPath": "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\",
-        "outputPath": "D:\\bitirme\\DyslexiaAppMAUI.Shared\\obj\\",
+        "projectPath": "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
+        "packagesPath": "C:\\Users\\goktu\\.nuget\\packages\\",
+        "outputPath": "D:\\408\\DyslexiaAppMAUI.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ahmet Emre Aydın\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\goktu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -386,7 +386,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
