@@ -1,25 +1,3 @@
- .gitignore
-DyslexiaApp.API/obj/Debug/net8.0/DyslexiaApp.API.AssemblyInfo.cs
-           DyslexiaApp.API/obj/Debug/net8.0/DyslexiaApp.API.AssemblyInfoInputs.cache
-          DyslexiaApp.API/obj/Debug/net8.0/DyslexiaApp.API.csproj.AssemblyReference.cache
-           DyslexiaApp.MAUI/DyslexiaApp.MAUI.csproj.user
-          DyslexiaApp.MAUI/obj/Debug/net8.0-android/DyslexiaApp.MAUI.AssemblyInfo.cs
-         DyslexiaApp.MAUI/obj/Debug/net8.0-android/DyslexiaApp.MAUI.AssemblyInfoInputs.cache
-           DyslexiaApp.MAUI/obj/Debug/net8.0-android/DyslexiaApp.MAUI.csproj.AssemblyReference.cache
-           DyslexiaApp.MAUI/obj/Debug/net8.0-android/designtime/build.props
-           DyslexiaApp.MAUI/obj/Debug/net8.0-android/lp/153/jl/res.zip
-           DyslexiaApp.MAUI/obj/Debug/net8.0-android/lp/154/jl/res.zip
-           DyslexiaApp.MAUI/obj/Debug/net8.0-android/lp/155/jl/res.zip
-           DyslexiaApp.MAUI/obj/Debug/net8.0-android/lp/156/jl/res.zip
-         DyslexiaApp.MAUI/obj/Debug/net8.0-android/lp/157/jl/res.zip
-          DyslexiaApp.MAUI/obj/Debug/net8.0-ios/iossimulator-x64/DyslexiaApp.MAUI.AssemblyInfo.cs
-           DyslexiaApp.MAUI/obj/Debug/net8.0-ios/iossimulator-x64/DyslexiaApp.MAUI.AssemblyInfoInputs.cache
-        DyslexiaApp.MAUI/obj/Debug/net8.0-ios/iossimulator-x64/DyslexiaApp.MAUI.csproj.AssemblyReference.cache
-          DyslexiaApp.MAUI/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/DyslexiaApp.MAUI.AssemblyInfo.cs
-          DyslexiaApp.MAUI/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/DyslexiaApp.MAUI.AssemblyInfoInputs.cache
-          DyslexiaApp.MAUI/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/DyslexiaApp.MAUI.csproj.AssemblyReference.cache
-         DyslexiaApp.MAUI/obj/Debug/net8.0-windows10.0.19041.0/win10-x64/DyslexiaApp.MAUI.AssemblyInfo.cs
-          DyslexiaApp.MAUI/obj/Debug/net8.0-windows10.0.19041.0/win10-x64/DyslexiaApp.MAUI.AssemblyInfoInputs.cache
-           DyslexiaApp.MAUI/obj/Debug/net8.0-windows10.0.19041.0/win10-x64/DyslexiaApp.MAUI.csproj.AssemblyReference.cache
-          DyslexiaAppMAUI.Shared/obj/Debug/net8.0/DyslexiaAppMAUI.Shared.AssemblyInfo.cs
-         DyslexiaAppMAUI.Shared/obj/Debug/net8.0/DyslexiaAppMAUI.Shared.AssemblyInfoInputs.cache
+*.user
+/obj/
+/bin/
