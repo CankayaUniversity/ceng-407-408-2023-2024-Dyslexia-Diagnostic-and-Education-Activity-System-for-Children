@@ -1,7 +1,10 @@
 ﻿using DyslexiaApp.API.Data.Entities;
 using DyslexiaAppMAUI.Shared.Dtos;
-using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace DyslexiaApp.API.Services
 {
@@ -9,95 +12,93 @@ namespace DyslexiaApp.API.Services
     {
         private readonly AppDbContext _context;
 
-        public MatchingGameService(AppDbContext context, EducationalGameService educationalGameService)
+        public MatchingGameService(AppDbContext context)
         {
             _context = context;
         }
+
+        // Oyun başlatma
         public async Task<bool> StartGameAsync(Guid userId, Guid gameId)
         {
-            var game = await _context.MatchingGames
+            try
+            {
+                var game = await _context.MatchingGames
                                      .Include(mg => mg.EducationalGame)
                                      .FirstOrDefaultAsync(mg => mg.Id == gameId);
 
-            if (game == null)
+                if (game == null)
+                {
+                    return false;
+                }
+
+                var user = await _context.Users.FindAsync(userId);
+                if (user == null) return false;
+
+                var session = new GameSession
+                {
+                    Id = Guid.NewGuid(),
+                    EducationalGame = game.EducationalGame,
+                    User = user,
+                    SessionScore = 0
+                };
+
+                _context.GameSessions.Add(session);
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+            catch (Exception ex)
             {
+                Console.WriteLine($"An error occurred: {ex.Message}");
                 return false;
             }
-            var user = await _context.Users.FindAsync(userId);
-            if (user == null) return false;
+        }
 
-            var session = new GameSession
+        // Soru ve resimleri oluşturma
+        public async Task CreateQuestionWithImages(Guid mainImageId, List<Guid> optionImageIds, int correctIndex)
+        {
+            Image mainImage = await _context.Images.FindAsync(mainImageId);
+            List<Image> optionImages = await _context.Images.Where(img => optionImageIds.Contains(img.Id)).ToListAsync();
+
+            Question question = new Question
             {
                 Id = Guid.NewGuid(),
-                EducationalGame = game.EducationalGame,
-                User = user,
-                SessionScore = 0
+                QuestionText = "Find the symmetric image",
+                MainImage = mainImage,
+                ImageOptions = optionImages,
+                CorrectAnswerIndex = correctIndex
             };
 
-            var questions = GenerateQuestions(game.EducationalGame);
-
-
-            _context.GameSessions.Add(session);
+            _context.Questions.Add(question);
             await _context.SaveChangesAsync();
-
-            return true;
         }
 
-        private List<Question> GenerateQuestions(EducationalGame game)
+        // Soruları bir oyunla ilişkilendirme
+        public async Task AddQuestionToMatchingGame(Guid gameId, Guid questionId)
         {
-            var questions = new List<Question>();
+            MatchingGame game = await _context.MatchingGames.Include(g => g.Questions).FirstOrDefaultAsync(g => g.Id == gameId);
+            Question question = await _context.Questions.FindAsync(questionId);
 
-            for(int i = 0; i < 10; i++)
+            if (game != null && question != null)
             {
-                var question = new Question
-                {
-                    QuestionText = $"Question {i + 1} : {game.Description.Substring(0, Math.Min(50, game.Description.Length))}...",
-                    Options = new List<string>
-                    {
-                        "Options A",
-                        "Options B",
-                        "Options C",
-                        "Options D"
-                    },
-                    CorrectAnswerIndex = new Random().Next(0, 4)
-                };
-                questions.Add(question);
-            }
-            return questions;
-
-        }
-
-        public int EvaluateAnswers(List<Question> questions, List<int> userAnswers)
-        {
-            int score = 0;
-
-            for (int i = 0; i < questions.Count; i++)
-            {
-                if (questions[i].CorrectAnswerIndex == userAnswers[i])
-                {
-                    score++;
-                }
-            }
-            return score;
-        }
-
-        public async Task UpdateSessionScoreAsync(Guid sessionId, int score)
-        {
-            var session = await _context.GameSessions.FindAsync(sessionId);
-            
-            if (session == null)
-            {
-                session.SessionScore = score;
-
+                game.Questions.Add(question);
                 await _context.SaveChangesAsync();
             }
         }
-        
-        public class Question
+
+        // Oyun için soruları yükleme
+        public async Task<List<Question>> LoadQuestionsForGame(Guid gameId)
         {
-            public string QuestionText { get; set; }
-            public List<string> Options { get; set; }
-            public int CorrectAnswerIndex { get; set; }
+            // MatchingGame içindeki Questions koleksiyonunu ve her Question için MainImage ve ImageOptions'ı yükleyin.
+            MatchingGame game = await _context.MatchingGames
+                 .Include(g => g.Questions)
+                    .ThenInclude(q => q.MainImage)  // MainImage doğru yüklendi
+                .Include(g => g.Questions)
+                    .ThenInclude(q => q.ImageOptions)  // ImageOptions her bir Question için yüklenmeli
+                .FirstOrDefaultAsync(g => g.Id == gameId);
+
+            return game?.Questions.ToList();
         }
+
     }
 }

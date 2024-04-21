@@ -20,6 +20,10 @@ namespace DyslexiaApp.API
         public DbSet<GameSession> GameSessions { get; set; }
         public DbSet<EducationalGame> EducationalGames { get; set; }
         public DbSet<DyslexiaDiagnosis> DyslexiaDiagnosis { get; set; }
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<Image> Images { get; set; }
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -87,6 +91,9 @@ namespace DyslexiaApp.API
                 .WithMany(eg => eg.GameSessions)
               
                 .OnDelete(DeleteBehavior.NoAction);
+
+          
+
 
         }
     }

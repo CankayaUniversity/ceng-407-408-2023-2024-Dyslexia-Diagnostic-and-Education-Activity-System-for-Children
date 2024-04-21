@@ -106,6 +106,30 @@ namespace DyslexiaApp.API.Migrations
                     b.ToTable("GameSessions");
                 });
 
+            modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Image", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("QuestionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("QuestionId");
+
+                    b.ToTable("Images");
+                });
+
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.MatchingGame", b =>
                 {
                     b.Property<Guid>("Id")
@@ -141,6 +165,34 @@ namespace DyslexiaApp.API.Migrations
                     b.HasIndex("DyslexiaDiagnosisId");
 
                     b.ToTable("NavigationGames");
+                });
+
+            modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Question", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("CorrectAnswerIndex")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("MainImageId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("MatchingGameId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("QuestionText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MainImageId");
+
+                    b.HasIndex("MatchingGameId");
+
+                    b.ToTable("Questions");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Sistem", b =>
@@ -297,6 +349,13 @@ namespace DyslexiaApp.API.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Image", b =>
+                {
+                    b.HasOne("DyslexiaApp.API.Data.Entities.Question", null)
+                        .WithMany("ImageOptions")
+                        .HasForeignKey("QuestionId");
+                });
+
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.MatchingGame", b =>
                 {
                     b.HasOne("DyslexiaApp.API.Data.Entities.DyslexiaDiagnosis", "DyslexiaDiagnosis")
@@ -325,6 +384,19 @@ namespace DyslexiaApp.API.Migrations
                         .IsRequired();
 
                     b.Navigation("DyslexiaDiagnosis");
+                });
+
+            modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Question", b =>
+                {
+                    b.HasOne("DyslexiaApp.API.Data.Entities.Image", "MainImage")
+                        .WithMany()
+                        .HasForeignKey("MainImageId");
+
+                    b.HasOne("DyslexiaApp.API.Data.Entities.MatchingGame", null)
+                        .WithMany("Questions")
+                        .HasForeignKey("MatchingGameId");
+
+                    b.Navigation("MainImage");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Sistem", b =>
@@ -366,6 +438,13 @@ namespace DyslexiaApp.API.Migrations
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.MatchingGame", b =>
                 {
                     b.Navigation("GameSessions");
+
+                    b.Navigation("Questions");
+                });
+
+            modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Question", b =>
+                {
+                    b.Navigation("ImageOptions");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Sistem", b =>

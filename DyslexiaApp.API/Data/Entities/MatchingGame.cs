@@ -19,11 +19,13 @@ namespace DyslexiaApp.API.Data.Entities
 
         // Her MatchingGame, birden fazla GameSession ile ilişkilendirilebilir.
         public virtual ICollection<GameSession> GameSessions { get; set; }
+        public virtual ICollection<Question> Questions { get; set; }
 
         public MatchingGame()
         {
             // GameSessions koleksiyonunu başlatmak.
             GameSessions = new HashSet<GameSession>();
+            Questions = new HashSet<Question>();
         }
     }
 }
