@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gKUEWb9DaEP3Mifer0QTQczhkcV8hy3PzsfWZCt5whyAXqFu0Mf2H6JVdY2/ZStS8umCbozgzqWPkVSpIAhv1Q==",
+  "dgSpecHash": "1SLSni2GmsLl0mdTp0z4Y0MD5AyNjzSL2PeglRmlTZSlqvY0NLt/uvRwHvBuKVGpwvLeXDiYMQyYZo2mOOO+xA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj",
+  "projectFilePath": "D:\\408\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",

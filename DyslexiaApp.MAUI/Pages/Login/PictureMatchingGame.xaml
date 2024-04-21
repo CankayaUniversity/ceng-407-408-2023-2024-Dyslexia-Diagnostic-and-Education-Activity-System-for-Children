@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DyslexiaApp.MAUI.Pages.Login.PictureMatchingGame"
+             Title="Picture Matching Game"
+             BackgroundImageSource="picturematching.jpeg">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="HomeIconStyle" TargetType="ImageButton">
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="WidthRequest" Value="150" />
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>
+
+            <Style x:Key="QuestionContainerStyle" TargetType="ContentView">
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="HeightRequest" Value="250" />
+                <Setter Property="Margin" Value="200,120,100,10" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="BackgroundColor" Value="White" />
+            </Style>
+
+            <Style x:Key="CardImageStyle" TargetType="ImageButton">
+                <Setter Property="WidthRequest" Value="400" />
+                <Setter Property="HeightRequest" Value="200" />
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+
+            <Style x:Key="ContinueButtonStyle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="130" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="Margin" Value="0,0,100,10" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="Text" Value="Next" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="BackgroundColor" Value="#CAFFFFFF" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ImageButton Source="home_button.png"
+                     Style="{StaticResource HomeIconStyle}"
+                     Clicked="Home_Button" />
+
+        <!-- Question image -->
+        <ContentView Grid.Row="0" 
+                     Style="{StaticResource QuestionContainerStyle}">
+            <Image Source="dino_question_image.png" />
+        </ContentView>
+
+        <!-- Option images -->
+        <Grid Grid.Row="1"
+              HorizontalOptions="End"
+              VerticalOptions="Center">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Option 1 -->
+            <ImageButton Grid.Row="0" Grid.Column="0"
+                         Source="option_1.png"
+                         Style="{StaticResource CardImageStyle}"
+                         Command="{Binding SelectOptionCommand}"
+                         CommandParameter="1" />
+
+            <!-- Option 2 -->
+            <ImageButton Grid.Row="0" Grid.Column="1"
+                         Source="option_2.png"
+                         Style="{StaticResource CardImageStyle}"
+                         Command="{Binding SelectOptionCommand}"
+                         CommandParameter="2" />
+
+            <!-- Option 3 -->
+            <ImageButton Grid.Row="1" Grid.Column="0"
+                         Source="option_3.png"
+                         Style="{StaticResource CardImageStyle}"
+                         Command="{Binding SelectOptionCommand}"
+                         CommandParameter="3" />
+
+            <!-- Option 4 -->
+            <ImageButton Grid.Row="1" Grid.Column="1"
+                         Source="option_4.png"
+                         Style="{StaticResource CardImageStyle}"
+                         Command="{Binding SelectOptionCommand}"
+                         CommandParameter="4" />
+        </Grid>
+
+        <Button Grid.Row="2"
+                Style="{StaticResource ContinueButtonStyle}"
+                Command="{Binding NextCommand}" />
+    </Grid>
+</ContentPage>

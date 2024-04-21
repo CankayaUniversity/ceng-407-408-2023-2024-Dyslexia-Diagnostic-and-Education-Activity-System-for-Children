@@ -14,5 +14,6 @@ namespace DyslexiaApp.MAUI.Services
         Task<ResultWithDataDto<AuthResponseDto>> SignupAsync(SignupRequestDto dto);
         [Post("/api/signin")]
         Task<ResultWithDataDto<AuthResponseDto>> SigninAsync(SigninRequestDto dto);
+
     }
 }

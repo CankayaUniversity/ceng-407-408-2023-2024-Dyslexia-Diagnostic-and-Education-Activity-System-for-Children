@@ -2,10 +2,10 @@ namespace DyslexiaApp.MAUI.Pages.Login;
 
 public partial class RegisterAgreement : ContentPage
 {
-	public RegisterAgreement()
-	{
-		InitializeComponent();
-	}
+    public RegisterAgreement()
+    {
+        InitializeComponent();
+    }
 
     private async void OnCloseButtonClicked(object sender, EventArgs e)
     {
@@ -15,7 +15,7 @@ public partial class RegisterAgreement : ContentPage
     {
         if (AgreementCheckBox.IsChecked)
         {
-            await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
         else
         {

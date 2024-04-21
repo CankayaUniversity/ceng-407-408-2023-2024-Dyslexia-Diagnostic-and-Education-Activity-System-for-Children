@@ -36,6 +36,9 @@ public static class MauiProgram
 
         builder.Services.AddTransient<AuthService>();
 
+        builder.Services.AddSingleton<EducationalGamesViewModel>()
+                        .AddSingleton<EducationalGameList>();
+
         ConfigureRefit(builder.Services);
 
         return builder.Build();
@@ -63,13 +66,26 @@ public static class MauiProgram
             }
         };
         services.AddRefitClient<IAuthApi>(refitSettings)
-            .ConfigureHttpClient(HttpClient =>
-            {
-                var baseUrl = DeviceInfo.Platform == DevicePlatform.WinUI
-                                ? "https://127.0.0.1:7066"
-                                : "https://localhost:7066";
+            .ConfigureHttpClient(SetHttpClient);
 
-                HttpClient.BaseAddress = new Uri(baseUrl);
-            });
+        services.AddRefitClient<IEducationalGameListApi>(refitSettings)
+            .ConfigureHttpClient(SetHttpClient);
+
+
+        static void SetHttpClient(HttpClient httpClient)
+        {
+            var baseUrl = DeviceInfo.Platform == DevicePlatform.WinUI
+                               ? "https://127.0.0.1:7066"
+                               : "https://localhost:7066";
+
+            if(DeviceInfo.DeviceType == DeviceType.Physical)
+            {
+                baseUrl = "https://slhnsmp9-7066.euw.devtunnels.ms/";
+            }
+
+            httpClient.BaseAddress = new Uri(baseUrl);
+
+        }
+           
     }
 }

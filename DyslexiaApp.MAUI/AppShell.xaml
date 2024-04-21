@@ -8,18 +8,13 @@
     Shell.FlyoutBehavior="Disabled"
     Title="DyslexiaApp.MAUI">
 
-    <!--<ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />-->
-    <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}"
-                  Route="LoginPage"/>
+    <ShellContent 
+        ContentTemplate="{DataTemplate pages:LoginPage}"
+        Route="LoginPage"/>
     <ShellContent
-        Title="Home"
         ContentTemplate="{DataTemplate pages:HomePage}"
         Route="HomePage" />
     <ShellContent
-         Title="Register Agreement"
          ContentTemplate="{DataTemplate pages:RegisterAgreement}"
          Route="RegisterAgreement" />
 
@@ -27,6 +22,27 @@
          Title="Register"
          ContentTemplate="{DataTemplate pages:Register}"
          Route="Register" />
+
+    <ShellContent
+         Title="Diagnosis Letter Matching Information"
+         ContentTemplate="{DataTemplate pages:DiagnosisLetterMatchingInformation}"
+         Route="DiagnosisLetterMatchingInformation" />
+    <ShellContent
+         Title="Diagnosis Educational Game Page"
+         ContentTemplate="{DataTemplate pages:EducationalGameList}"
+         Route="EducationalGameList" />
+    <ShellContent
+          Title="Picture Matching Game"
+          ContentTemplate="{DataTemplate pages:PictureMatchingGame}"
+          Route="PictureMatchingGame" />
+    <ShellContent
+       Title="Picture Matching Game"
+       ContentTemplate="{DataTemplate pages:ProfilePage}"
+       Route="ProfilePage" />
+    <ShellContent
+   Title="Picture Matching Game"
+   ContentTemplate="{DataTemplate pages:DiagnosticTestAgreement}"
+   Route="DiagnosticTestAgreement" />
 
     <!--<TabBar>
         <ShellContent Title="Login"

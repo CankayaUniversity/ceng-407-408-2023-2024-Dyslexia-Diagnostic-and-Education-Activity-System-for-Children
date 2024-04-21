@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
+      "projectUniqueName": "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
       "projectName": "DyslexiaAppMAUI.Shared",
-      "projectPath": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
+      "projectPath": "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
       "packagesPath": "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaAppMAUI.Shared\\obj\\",
+      "outputPath": "D:\\408\\DyslexiaAppMAUI.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

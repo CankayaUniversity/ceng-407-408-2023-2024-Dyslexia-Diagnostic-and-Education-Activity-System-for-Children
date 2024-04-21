@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DyslexiaApp.MAUI.Pages.Login.EducationalGameList"
+             xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
+             Title="Educational Game List"
+             x:DataType="vm:EducationalGamesViewModel"
+             xmlns:dto="clr-namespace:DyslexiaAppMAUI.Shared.Dtos;assembly=DyslexiaAppMAUI.Shared"
+             BackgroundImageSource="mainpage.jpg">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="CardMainStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="Margin" Value="50" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="WidthRequest" Value="230" />
+                <Setter Property="HeightRequest" Value="200" />
+            </Style>
+            <Style x:Key="CardContainerStyle" TargetType="StackLayout">
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="Spacing" Value="30" />
+            </Style>
+
+            <Style x:Key="HomeIconStyle" TargetType="ImageButton">
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="WidthRequest" Value="80" />
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="CornerRadius" Value="55" />
+                <Setter Property="VerticalOptions" Value="StartAndExpand" />
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+            </Style>
+
+            <Style x:Key="StartIconStyle" TargetType="ImageButton">
+                <Setter Property="Margin" Value="10,-50,-10,10" />
+                <Setter Property="WidthRequest" Value="160" />
+                <Setter Property="HeightRequest" Value="120" />
+                <Setter Property="CornerRadius" Value="60" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="HorizontalOptions" Value="End" />
+            </Style>
+
+            <Style x:Key="StartIconTextStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <Color x:Key="SemiTransparentBlack">#CCF5F6F6</Color>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid Style="{StaticResource HomeIconStyle}" VerticalOptions="Start" HorizontalOptions="Start">
+            <ImageButton Source="home_button.png" 
+                         Margin="0,10,-20,10"
+                         BackgroundColor="Transparent"
+                         VerticalOptions="Center" 
+                         HorizontalOptions="Center"
+                         Clicked="Home_Button"/>
+        </Grid>
+
+        <Grid VerticalOptions="Center" 
+               HorizontalOptions="Center"
+               WidthRequest="1100"
+               HeightRequest="500"
+               Margin="30,0,0,0"
+               Background="{StaticResource SemiTransparentBlack}">
+
+            <CollectionView  ItemsSource="{Binding Educational}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Horizontal" 
+                                     VerticalItemSpacing="20"
+                                     HorizontalItemSpacing="20"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="dto:EducationalDto">
+                        <Grid RowDefinitions="*, Auto,Auto">
+                            <Image Grid.Row="0"
+                                   Source="listedpicture.jpeg"
+                                   Aspect="Fill"
+                                   WidthRequest="200"
+                                   HeightRequest="200"
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="Start"/>
+                            <Label  Grid.Row="0"
+                                    Text="{Binding Name}"
+                                    FontSize="Medium"
+                                    TextColor="ForestGreen"
+                                    FontAttributes="Bold"
+                                    Margin="60,90,0,0"
+                                    BackgroundColor="Transparent" />
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:EducationalGamesViewModel}}, Path= ShowGameDetailsCommand}" CommandParameter="{Binding .}" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+
+        <ContentView x:Name="popupContentView" 
+                     IsVisible="{Binding IsPopupVisible}" 
+                     Padding="10"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     HeightRequest="600" 
+                     WidthRequest="900">
+            <Frame HeightRequest="300" 
+                   WidthRequest="550">
+                <VerticalStackLayout>
+                    <ImageButton Source="close.png" 
+                          BackgroundColor="Transparent"
+                          WidthRequest="5"
+                          HeightRequest="5"
+                          Scale="0.5" 
+                          Padding="0"
+                          VerticalOptions="End" 
+                          HorizontalOptions="End"
+                          Command="{Binding ClosePopupCommand}"/>
+                    <Label Text="{Binding SelectedGame.Name}"
+                            Margin="0,-30"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            TextColor="#019BE1"/>
+
+                    <Label  Text="{Binding SelectedGame.Description}"
+                            Margin="0,40"
+                            FontAttributes="Bold"
+                            FontSize="Small"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            TextColor="Black"/>
+
+                    <Grid Style="{StaticResource StartIconStyle}" VerticalOptions="End" HorizontalOptions="End">
+                        <ImageButton Source="cloud.png" 
+                                     BackgroundColor="Transparent"
+                                     VerticalOptions="Center" 
+                                     HorizontalOptions="Center"
+                                     Clicked="NavigateButtonClicked"/>
+                        <Label Text="Start Test" 
+                                Style="{StaticResource StartIconTextStyle}" 
+                                VerticalOptions="Center" 
+                                HorizontalOptions="Center"/>
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+        </ContentView>
+        <ActivityIndicator IsRunning="{Binding IsBusy}" />
+    </Grid>
+</ContentPage>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DyslexiaApp.MAUI.Pages.Login.DiagnosisNavigationInfo"
+             Title="Diagnosis Navigation Test Information"
+                          BackgroundImageSource="mainpage.jpg">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="HomeIconStyle" TargetType="ImageButton">
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="WidthRequest" Value="100" />
+                <Setter Property="HeightRequest" Value="110" />
+                <Setter Property="CornerRadius" Value="55" />
+                <Setter Property="VerticalOptions" Value="StartAndExpand" />
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+            </Style>
+
+            <Style x:Key="StartIconStyle" TargetType="ImageButton">
+                <Setter Property="Margin" Value="10,-50,-10,10" />
+                <Setter Property="WidthRequest" Value="160" />
+                <Setter Property="HeightRequest" Value="120" />
+                <Setter Property="CornerRadius" Value="60" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="HorizontalOptions" Value="End" />
+            </Style>
+
+            <Style x:Key="StartIconTextStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <Color x:Key="SemiTransparentBlack">#CCF5F6F6</Color>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid Style="{StaticResource ProfileIconStyle}" VerticalOptions="Start" HorizontalOptions="Start">
+            <ImageButton Source="home_button.png"
+                         Margin="0,10,-20,10"
+                         BackgroundColor="Transparent"
+                         VerticalOptions="Center" 
+                         HorizontalOptions="Center"
+                         Clicked="Close_Button"/>
+        </Grid>
+
+        <Grid VerticalOptions="Center" 
+               HorizontalOptions="Center"
+               WidthRequest="1100"
+               HeightRequest="450"
+               Background="{StaticResource SemiTransparentBlack}">
+
+            <Label Text="Navigation Skilss "
+                   Margin="30,0,150,210"
+                   FontAttributes="Bold"
+                   FontSize="Header"
+                   HorizontalOptions="End"
+                   VerticalOptions="Center"
+                   TextColor="Black"/>
+
+            <VerticalStackLayout >
+                <Frame BackgroundColor="White" Padding="30"
+                        CornerRadius="15"
+                        BorderColor="Transparent"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                        WidthRequest="330" HeightRequest="300"
+                        Margin="-500,80,10,10">
+
+                    <VerticalStackLayout >
+                        <ImageButton Source="close.png" 
+                                      BackgroundColor="Transparent"
+                                      WidthRequest="5"
+                                      HeightRequest="5"
+                                      Scale="0.5" 
+                                      Padding="0"
+                                      VerticalOptions="End" 
+                                      HorizontalOptions="End"
+                                      Clicked="Close_Button"/>
+
+                        <Label Text="How to play..? "
+                               Margin="0,-30"
+                               FontAttributes="Bold"
+                               FontSize="Medium"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Start"
+                               TextColor="#019BE1"/>
+                        <Label Text="Select one of the two options depending on the direction name displayed on the screen."
+                               Margin="0,40"
+                               FontAttributes="Bold"
+                               FontSize="Small"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Start"
+                               TextColor="Black"/>
+
+                        <Grid Style="{StaticResource StartIconStyle}" VerticalOptions="End" HorizontalOptions="End">
+                            <ImageButton Source="cloud.png" 
+                                  BackgroundColor="Transparent"
+                                  VerticalOptions="Center" 
+                                  HorizontalOptions="Center"/>
+                            <!--Clicked="StartLetterMatching_Button"-->
+                            <Label Text="Start Test" 
+                                   Style="{StaticResource StartIconTextStyle}" 
+                                   VerticalOptions="Center" 
+                                   HorizontalOptions="Center"/>
+                        </Grid>
+
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+        </Grid>
+
+    </Grid>
+</ContentPage>

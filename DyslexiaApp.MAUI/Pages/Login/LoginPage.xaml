@@ -72,8 +72,7 @@
                     Clicked="ForgotPasswordButton_Clicked"/>
 
         </VerticalStackLayout>
-        <ActivityIndicator 
-             IsRunning="{Binding IsBusy}" />
+        <ActivityIndicator IsRunning="{Binding IsBusy}" />
     </Grid>
     
 

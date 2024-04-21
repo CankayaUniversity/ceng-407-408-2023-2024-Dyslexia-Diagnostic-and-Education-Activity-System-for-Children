@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaApp.API\\DyslexiaApp.API.csproj": {}
+    "D:\\408\\DyslexiaApp.API\\DyslexiaApp.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaApp.API\\DyslexiaApp.API.csproj": {
+    "D:\\408\\DyslexiaApp.API\\DyslexiaApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaApp.API\\DyslexiaApp.API.csproj",
+        "projectUniqueName": "D:\\408\\DyslexiaApp.API\\DyslexiaApp.API.csproj",
         "projectName": "DyslexiaApp.API",
-        "projectPath": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaApp.API\\DyslexiaApp.API.csproj",
+        "projectPath": "D:\\408\\DyslexiaApp.API\\DyslexiaApp.API.csproj",
         "packagesPath": "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaApp.API\\obj\\",
+        "outputPath": "D:\\408\\DyslexiaApp.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
-                "projectPath": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
+              "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
+                "projectPath": "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj"
               }
             }
           }
@@ -112,14 +112,14 @@
         }
       }
     },
-    "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
+    "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
+        "projectUniqueName": "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
         "projectName": "DyslexiaAppMAUI.Shared",
-        "projectPath": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
+        "projectPath": "D:\\408\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj",
         "packagesPath": "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ahmet Emre Aydın\\Desktop\\DyslexiaApplication\\DyslexiaAppMAUI.Shared\\obj\\",
+        "outputPath": "D:\\408\\DyslexiaAppMAUI.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
