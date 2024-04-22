@@ -28,16 +28,5 @@ public partial class EducationalGameList : ContentPage
         await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
     }
 
-    private void OnFrameTapped(object sender, EventArgs e)
-    {
-        popupContentView.IsVisible = true;
-    }
-
-    private async void NavigateButtonClicked(object sender, EventArgs e)
-    {
-        popupContentView.IsVisible = false; 
-        await Navigation.PushAsync(new PictureMatchingGame());
-    }
-
 
 }

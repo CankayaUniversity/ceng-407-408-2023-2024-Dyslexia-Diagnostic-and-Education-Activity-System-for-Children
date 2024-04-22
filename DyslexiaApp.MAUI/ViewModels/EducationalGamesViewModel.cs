@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using DyslexiaApp.MAUI.Pages.Login;
 using DyslexiaApp.MAUI.Services;
 using DyslexiaAppMAUI.Shared.Dtos;
 using System;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DyslexiaApp.MAUI.ViewModels
 {
-    public partial class EducationalGamesViewModel (IEducationalGameListApi educationalGameListApi): BaseViewModel
+    public partial class EducationalGamesViewModel(IEducationalGameListApi educationalGameListApi) : BaseViewModel
     {
         private readonly IEducationalGameListApi _educationalGameListApi = educationalGameListApi;
 
@@ -22,18 +23,17 @@ namespace DyslexiaApp.MAUI.ViewModels
 
         public async Task InitializeAsync()
         {
-            if(_isInitialized)
+            if (_isInitialized)
                 return;
             IsBusy = true;
 
             try
             {
-                //make API call to fetch Educational Games
                 _isInitialized = true;
                 Educational = await _educationalGameListApi.GetEducationalGamesAsync();
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _isInitialized = false;
                 await ShowErrorAlertAsync(ex.Message);
@@ -62,13 +62,16 @@ namespace DyslexiaApp.MAUI.ViewModels
             }
         }
 
-        // ClosePopupCommand, pop-up'ı kapatmak için kullanılır.
         [RelayCommand]
         private void ClosePopup()
         {
             IsPopupVisible = false;
         }
 
-
+        [RelayCommand]
+        private async Task GoToPictureMatchingGame()
+        {
+            await Shell.Current.GoToAsync($"//{nameof(PictureMatchingGame)}");
+        }
     }
 }

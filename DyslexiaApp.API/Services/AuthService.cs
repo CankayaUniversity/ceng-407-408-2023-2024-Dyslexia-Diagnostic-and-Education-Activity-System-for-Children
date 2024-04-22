@@ -28,7 +28,7 @@ namespace DyslexiaApp.API.Services
                     LastName = dto.LastName,
                     Gender = dto.Gender,
                     Birthday = dto.Birthday,
-                    Role = Role.User, 
+                    Role = Role.Admin, 
                     IsActive = true 
                 };
 
@@ -69,6 +69,58 @@ namespace DyslexiaApp.API.Services
             var authResponse = new AuthResponseDto(loggedInUser, token);
 
             return ResultWithDataDto<AuthResponseDto>.Success(authResponse);
+        }
+
+        // Kullanıcı profili güncelleme metodu
+        public async Task<ResultDto> UpdateUserProfileAsync(UserUpdateDto updateDto)
+        {
+            var user = await _context.Users.FindAsync(updateDto.Id);
+            if (user == null) return ResultDto.Failure("Kullanıcı bulunamadı!");
+
+            user.FirstName = updateDto.FirstName;
+            user.LastName = updateDto.LastName;
+            user.Email = updateDto.Email;
+            user.Birthday = updateDto.Birthday;
+            user.Gender = updateDto.Gender;
+            // Şifre ve rol güncellemesi için ek mantık gerekebilir.
+
+            try
+            {
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
+                return ResultDto.Success();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception if you have logging in place.
+                return ResultDto.Failure(ex.Message);
+            }
+        }
+
+        // Kullanıcı hesabını devre dışı bırakma metodu
+        public async Task<ResultDto> DeactivateUserAccountAsync(Guid userId)
+        {
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null) return ResultDto.Failure("Kullanıcı bulunamadı!");
+
+            user.IsActive = false;
+
+            try
+            {
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
+                return ResultDto.Success();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception if you have logging in place.
+                return ResultDto.Failure(ex.Message);
+            }
+        }
+
+        public async Task<User> GetUserByIdAsync(Guid userId)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
         }
 
     }

@@ -144,12 +144,14 @@
                         <ImageButton Source="cloud.png" 
                                      BackgroundColor="Transparent"
                                      VerticalOptions="Center" 
-                                     HorizontalOptions="Center"
-                                     Clicked="NavigateButtonClicked"/>
+                                     HorizontalOptions="Center"/>
                         <Label Text="Start Test" 
                                 Style="{StaticResource StartIconTextStyle}" 
                                 VerticalOptions="Center" 
                                 HorizontalOptions="Center"/>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GoToPictureMatchingGameCommand}" />
+                        </Grid.GestureRecognizers>
                     </Grid>
                 </VerticalStackLayout>
             </Frame>

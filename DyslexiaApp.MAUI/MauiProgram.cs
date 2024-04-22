@@ -39,6 +39,9 @@ public static class MauiProgram
         builder.Services.AddSingleton<EducationalGamesViewModel>()
                         .AddSingleton<EducationalGameList>();
 
+        builder.Services.AddTransient<PictureMatchingViewModel>()
+                        .AddTransient<PictureMatchingGame>();
+
         ConfigureRefit(builder.Services);
 
         return builder.Build();
@@ -78,14 +81,14 @@ public static class MauiProgram
                                ? "https://127.0.0.1:7066"
                                : "https://localhost:7066";
 
-            if(DeviceInfo.DeviceType == DeviceType.Physical)
+            if (DeviceInfo.DeviceType == DeviceType.Physical)
             {
-                baseUrl = "https://slhnsmp9-7066.euw.devtunnels.ms/";
+                baseUrl = "https://r599zg0c-7066.euw.devtunnels.ms/";
             }
 
             httpClient.BaseAddress = new Uri(baseUrl);
 
         }
-           
+
     }
 }
