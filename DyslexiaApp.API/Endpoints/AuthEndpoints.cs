@@ -81,6 +81,31 @@ public static class AuthEndpoints
             return result.IsSuccess ? Results.NoContent() : Results.Problem(result.ErrorMessage, statusCode: StatusCodes.Status400BadRequest);
         });
 
+        app.MapPost("/api/question",
+            async (QuestionDto dto, QuestionService questionService) =>
+            {
+                var question = questionService.MapDtoToQuestion(dto); // Convert DTO to Entity
+                return TypedResults.Ok(await questionService.AddQuestionAsync(question));
+            });
+
+
+        // Endpoint to get all questions
+        app.MapGet("/api/question",
+            async (QuestionService questionService) =>
+                TypedResults.Ok(await questionService.GetAllQuestionsAsync()));
+
+        // Endpoint to get a single question by ID
+        app.MapGet("/api/question/{questionId}",
+            async (Guid questionId, QuestionService questionService) =>
+            {
+                var question = await questionService.GetQuestionByIdAsync(questionId);
+                if (question == null)
+                {
+                    return Results.NotFound("Question not found.");
+                }
+                return TypedResults.Ok(question);
+            });
+
 
         return app;
     }

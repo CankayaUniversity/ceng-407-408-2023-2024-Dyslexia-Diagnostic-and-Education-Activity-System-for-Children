@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DyslexiaAppMAUI.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11f179d312216dc0b476dde05e16634427f3309b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b20f396ae2fd88c6af0dfc5c55395af66f56adb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("DyslexiaAppMAUI.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DyslexiaAppMAUI.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

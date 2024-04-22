@@ -35,7 +35,8 @@ public class Program
                         .AddTransient<PasswordService>()
                         .AddTransient<AuthService>()
                         .AddTransient<DyslexiaDiagnosisService>()
-                        .AddTransient<EducationalGameService>();
+                        .AddTransient<EducationalGameService>()
+                        .AddTransient<QuestionService>();
 
         var app = builder.Build();
 

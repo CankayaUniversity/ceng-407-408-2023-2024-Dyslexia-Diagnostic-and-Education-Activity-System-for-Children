@@ -82,7 +82,7 @@ namespace DyslexiaApp.API.Services
             user.Email = updateDto.Email;
             user.Birthday = updateDto.Birthday;
             user.Gender = updateDto.Gender;
-            // Şifre ve rol güncellemesi için ek mantık gerekebilir.
+            // Eğer şifre güncellenmesine izin verilecekse, burada şifre güncelleme işlemi yapılabilir.
 
             try
             {
@@ -96,6 +96,7 @@ namespace DyslexiaApp.API.Services
                 return ResultDto.Failure(ex.Message);
             }
         }
+
 
         // Kullanıcı hesabını devre dışı bırakma metodu
         public async Task<ResultDto> DeactivateUserAccountAsync(Guid userId)
@@ -118,9 +119,17 @@ namespace DyslexiaApp.API.Services
             }
         }
 
-        public async Task<User> GetUserByIdAsync(Guid userId)
+        public async Task<ResultWithDataDto<LoggedInUser>> GetUserByIdAsync(Guid userId)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            var user = await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == userId);
+
+            if (user == null)
+            {
+                return ResultWithDataDto<LoggedInUser>.Failure("User is not found!");
+            }
+
+            var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.Email, user.LastName, user.Birthday, user.Gender);
+            return ResultWithDataDto<LoggedInUser>.Success(loggedInUser);
         }
 
     }
