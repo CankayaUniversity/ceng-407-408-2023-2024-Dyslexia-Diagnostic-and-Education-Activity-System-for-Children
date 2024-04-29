@@ -10,4 +10,9 @@ public partial class DiagnosisLetterMatchingInformation : ContentPage
     {
         await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
     }
+
+    private async void StartTest1(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync($"//{nameof(LetterMatchingGame)}");
+    }
 }

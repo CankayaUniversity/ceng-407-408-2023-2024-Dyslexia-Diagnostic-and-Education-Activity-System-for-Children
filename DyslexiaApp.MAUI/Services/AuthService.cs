@@ -11,7 +11,7 @@ namespace DyslexiaApp.MAUI.Services;
 public class AuthService
 {
     private const string AuthKey = "AuthKey";
-    public LoggedInUser User { get; private set; }
+    public LoggedInUser? User { get; private set; }
     public string? Token { get; private set; }
 
     public void Signin(AuthResponseDto dto)
@@ -35,7 +35,7 @@ public class AuthService
             {
                 try
                 {
-                    (User, Token) = JsonSerializer.Deserialize<AuthResponseDto>(serialized);
+                    (User, Token) = JsonSerializer.Deserialize<AuthResponseDto>(serialized)!;
                 }
                 catch (JsonException ex)
                 {

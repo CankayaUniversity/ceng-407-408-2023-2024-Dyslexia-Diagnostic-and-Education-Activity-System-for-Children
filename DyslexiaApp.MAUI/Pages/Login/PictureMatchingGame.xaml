@@ -36,7 +36,6 @@
                          Style="{StaticResource HomeIconStyle}"
                          Clicked="Home_Button" />
 
-
             <StackLayout HorizontalOptions="Start"
                          VerticalOptions="Start"
                          Margin="200,130">
@@ -107,16 +106,28 @@
                                BorderColor="Black"
                                BackgroundColor="#A2DBAE">
                             <Image Source="{Binding Url}">
-                                <!--<Image.GestureRecognizers>
-                                    <TapGestureRecognizer 
-                                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PictureMatchingViewModel}}, Path=CheckAnswerCommand}"
-                                            CommandParameter="{Binding .}"/>
-                                </Image.GestureRecognizers>-->
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PictureMatchingViewModel}}, Path=ItemSelectedGameCommand}"
+                                                          CommandParameter="{Binding .}"/>
+                                </Image.GestureRecognizers>
                             </Image>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+
+            <Image Source="check.png"
+                   IsVisible="{Binding IsAnswerCorrect}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   WidthRequest="150"
+                   HeightRequest="200" />
+            <Image Source="cross.png"
+                   IsVisible="{Binding IsCrossVisible}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   WidthRequest="150"
+                   HeightRequest="200" />
         </Grid>
         <Grid WidthRequest="100"
               HeightRequest="50"

@@ -42,6 +42,9 @@ public static class MauiProgram
         builder.Services.AddTransient<PictureMatchingViewModel>()
                         .AddTransient<PictureMatchingGame>();
 
+        builder.Services.AddSingleton<ProfileViewModel>()
+                        .AddSingleton<ProfilePage>();
+
         ConfigureRefit(builder.Services);
 
         return builder.Build();
@@ -73,6 +76,7 @@ public static class MauiProgram
 
         services.AddRefitClient<IEducationalGameListApi>(refitSettings)
             .ConfigureHttpClient(SetHttpClient);
+
         services.AddRefitClient<IPictureMatchingApi>(refitSettings)
             .ConfigureHttpClient(SetHttpClient);
 
@@ -85,7 +89,7 @@ public static class MauiProgram
 
             if (DeviceInfo.DeviceType == DeviceType.Physical)
             {
-                baseUrl = "https://l6mzbh91-7066.euw.devtunnels.ms/";
+                baseUrl = "https://stk0z5pb-7066.euw.devtunnels.ms";
             }
 
             httpClient.BaseAddress = new Uri(baseUrl);

@@ -1,9 +1,11 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using DyslexiaApp.MAUI.Pages.Login;
 using DyslexiaApp.MAUI.Services;
 using DyslexiaAppMAUI.Shared.Dtos;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,34 +67,60 @@ public partial class PictureMatchingViewModel : BaseViewModel
         }
     }
 
+    [ObservableProperty]
+    private bool isAnswerCorrect;
+
+    [ObservableProperty]
+    private bool isCrossVisible;
+
     [RelayCommand]
-
-    public void CheckAnswer(int selectedIndex)
+    public void ItemSelectedGame(ImageDto selectedImage)
     {
-        IsBusy = true;
-        currentAttempts++;
+        var selectedIndex = Question?.ImageOptions?.IndexOf(selectedImage) ?? -1;
+        Debug.WriteLine($"Seçilen öğenin indeksi: {selectedIndex}");
 
-        if (selectedIndex == Question.CorrectAnswerIndex)
+        // Doğru cevap kontrolü
+        if (selectedIndex == Question?.CorrectAnswerIndex)
         {
-            isCorrect = true;
-            //LoadNextQuestion();
+            Debug.WriteLine("Tebrikler! Doğru cevabı seçtiniz.");
+            IsCorrect = true;
+            // Burada kullanıcıya başarılı olduğunu bildiren bir mesaj gösterebilirsiniz.
+            // Ayrıca, sonraki soruya geçiş yapabilirsiniz veya oyunu sonlandırabilirsiniz.
+            IsAnswerCorrect = true;
+
         }
         else
         {
-            isCorrect = false;
-            AttemptsRemaining--;
-            if (AttemptsRemaining == 0)
+            Debug.WriteLine("Üzgünüm, yanlış cevap.");
+            IsCorrect = false;
+            IsCrossVisible = true; // cross.png'yi göster
+
+            // Burada kullanıcıya yanlış cevap verdiğini bildiren bir mesaj gösterebilirsiniz.
+            // Ayrıca, kullanıcının tekrar deneme hakkı varsa, deneme sayısını azaltabilirsiniz.
+
+            IsAnswerCorrect = false;
+            IsCrossVisible = true; // cross.png'yi göster
+
+            Device.StartTimer(TimeSpan.FromSeconds(3), () =>
             {
-                EndGame();
+                IsCrossVisible = false; // 3 saniye sonra cross.png'yi gizle
+                return false; // Timer'ı durdur
+            });
+
+            if (CurrentAttempts.HasValue && AttemptsRemaining.HasValue && AttemptsRemaining > 0)
+            {
+                CurrentAttempts++;
+                AttemptsRemaining--;
+
+                if (AttemptsRemaining <= 0)
+                {
+                    Debug.WriteLine("Deneme hakkınız kalmamıştır. Oyun sonlandırılıyor.");
+                    // Oyunu sonlandırma ve kullanıcıyı başka bir sayfaya yönlendirme
+                    Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+                }
             }
         }
+    }
 
-        IsBusy = false;
-    }
-    private void EndGame()
-    {
-        // Oyun sonu mantığı, örneğin sonuçları gösterme veya ana menüye dönme
-        Console.WriteLine("Oyun bitti, kalan hakkınız: " + attemptsRemaining);
-    }
 
 }

@@ -57,8 +57,10 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\back_icon.jpg" />
+	  <None Remove="Resources\Images\check.png" />
 	  <None Remove="Resources\Images\close.png" />
 	  <None Remove="Resources\Images\cloud.png" />
+	  <None Remove="Resources\Images\cross.png" />
 	  <None Remove="Resources\Images\diagnosis.jpg" />
 	  <None Remove="Resources\Images\education.jpg" />
 	  <None Remove="Resources\Images\heart.png" />
@@ -111,6 +113,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Login\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Login\LetterMatchingGame.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Login\PictureMatchingGame.xaml">

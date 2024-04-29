@@ -36,13 +36,17 @@
           ContentTemplate="{DataTemplate pages:PictureMatchingGame}"
           Route="PictureMatchingGame" />
     <ShellContent
-       Title="Picture Matching Game"
-       ContentTemplate="{DataTemplate pages:ProfilePage}"
-       Route="ProfilePage" />
+           Title="Picture Matching Game"
+           ContentTemplate="{DataTemplate pages:ProfilePage}"
+           Route="ProfilePage" />
     <ShellContent
-   Title="Picture Matching Game"
-   ContentTemplate="{DataTemplate pages:DiagnosticTestAgreement}"
-   Route="DiagnosticTestAgreement" />
+           Title="Picture Matching Game"
+           ContentTemplate="{DataTemplate pages:DiagnosticTestAgreement}"
+           Route="DiagnosticTestAgreement" />
+    <ShellContent
+       Title="Picture Matching Game"
+       ContentTemplate="{DataTemplate pages:LetterMatchingGame}"
+       Route="LetterMatchingGame" />
 
     <!--<TabBar>
         <ShellContent Title="Login"

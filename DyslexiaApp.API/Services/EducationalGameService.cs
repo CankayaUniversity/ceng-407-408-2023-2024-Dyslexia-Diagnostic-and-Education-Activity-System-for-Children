@@ -16,18 +16,19 @@ namespace DyslexiaApp.API.Services
 
         public async Task<EducationalDto[]> GetEducationalGamesAsync() =>
             await _context.EducationalGames
-                .AsNoTracking()
-                .Select(game => new EducationalDto(
-                    game.Id,
-                    game.Name,
-                    game.Description,
-                    game.GameSessions.Select(gs => new GameSessionDto(
-                        gs.Id,
-                        gs.SessionScore
-                    )).ToArray()
-                // MatchingGames alanı kaldırıldığı için, burada sadece dört argüman var.
-                ))
-                .ToArrayAsync();
+            .AsNoTracking()
+            .Select(game => new EducationalDto(
+            game.Id,
+            game.Name,
+            game.Description,
+            game.GameSessions.Select(gs => new GameSessionDto(
+                gs.Id,
+                gs.SessionScore
+            )).ToArray(),
+            new List<MatchingGameDto>() // Eksik olan eşleşme oyunları listesi
+        ))
+        .ToArrayAsync();
+
 
         public async Task<EducationalDto> AddEducationalGameAsync(EducationalDto newGameDto)
         {

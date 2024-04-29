@@ -102,11 +102,12 @@
                             <ImageButton Source="cloud.png" 
                                   BackgroundColor="Transparent"
                                   VerticalOptions="Center" 
-                                  HorizontalOptions="Center"/>
+                                  HorizontalOptions="Center"
+                                         Clicked="StartTest1"/>
                             <Label Text="Start Test" 
                                    Style="{StaticResource StartIconTextStyle}" 
                                    VerticalOptions="Center" 
-                                   HorizontalOptions="Center"/>
+                                   HorizontalOptions="Center" />
                         </Grid>
 
                     </VerticalStackLayout>

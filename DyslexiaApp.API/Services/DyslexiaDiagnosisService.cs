@@ -14,30 +14,31 @@ namespace DyslexiaApp.API.Services
         }
 
         public async Task<DyslexiaDiagnosisDto[]> GetDyslexiaDiagnosesAsync() =>
-            await _context.DyslexiaDiagnosis
-                .AsNoTracking()
-                .Select(diagnosis => new DyslexiaDiagnosisDto(
-                    diagnosis.Id,
-                    diagnosis.TestResults,
-                    diagnosis.FeedBack,
-                    diagnosis.Description,
-                    diagnosis.MatchingGames.Select(matchingGame => new MatchingGameDto(
-                        matchingGame.Id,
-                        new EducationalDto(
-                            matchingGame.EducationalGame.Id,
-                            matchingGame.EducationalGame.Name,
-                            matchingGame.EducationalGame.Description,
-                            matchingGame.EducationalGame.GameSessions.Select(gs => new GameSessionDto(gs.Id, gs.SessionScore)).ToArray()
-                        // MatchingGames için argüman geçirilmiyor.
-                        ),
-                        matchingGame.GameSessions.Select(gs => new GameSessionDto(gs.Id, gs.SessionScore)).ToArray()
-                    )).ToArray(),
-                    diagnosis.NavigationGames.Select(navGame => new NavigationGameDto(
-                        navGame.Id
-                    // DyslexiaDiagnosis için argüman geçirilmiyor.
-                    )).ToArray()
-                ))
-                .ToArrayAsync();
+    await _context.DyslexiaDiagnosis
+        .AsNoTracking()
+        .Select(diagnosis => new DyslexiaDiagnosisDto(
+            diagnosis.Id,
+            diagnosis.TestResults,
+            diagnosis.FeedBack,
+            diagnosis.Description,
+            diagnosis.MatchingGames.Select(matchingGame => new MatchingGameDto(
+                matchingGame.Id,
+                new EducationalDto(
+                    matchingGame.EducationalGame.Id,
+                    matchingGame.EducationalGame.Name,
+                    matchingGame.EducationalGame.Description,
+                    matchingGame.EducationalGame.GameSessions.Select(gs => new GameSessionDto(gs.Id, gs.SessionScore)).ToArray(),
+                    new List<MatchingGameDto>() // Bu liste ilişkili oyunlar için, gerekirse doldur
+                ),
+                matchingGame.GameSessions.Select(gs => new GameSessionDto(gs.Id, gs.SessionScore)).ToArray(),
+                new List<QuestionDto>() // Eksik olan sorular listesi
+            )).ToArray(),
+            diagnosis.NavigationGames.Select(navGame => new NavigationGameDto(
+                navGame.Id
+            )).ToArray()
+        ))
+        .ToArrayAsync();
+
 
         public async Task<DyslexiaDiagnosisDto> AddDyslexiaDiagnosisAsync(DyslexiaDiagnosisDto newDiagnosisDto)
         {
