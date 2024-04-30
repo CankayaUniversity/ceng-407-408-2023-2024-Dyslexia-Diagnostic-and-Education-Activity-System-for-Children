@@ -23,13 +23,13 @@ namespace DyslexiaApp.API.Services
 
 
             };
-        
-        
+
+
         public string GenerateJwt(LoggedInUser user)
         {
             var securityKey = GetSecurityKey(_configuration);
 
-            var credentials = new SigningCredentials (securityKey, SecurityAlgorithms.HmacSha256);
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var issuer = _configuration["Jwt:Issuer"];
             var expireInMinutes = Convert.ToInt32(_configuration["Jwt:ExpireInMinute"]);
@@ -45,11 +45,11 @@ namespace DyslexiaApp.API.Services
                 claims: claims,
                 expires: DateTime.Now.AddMinutes(expireInMinutes),
                 signingCredentials: credentials);
-                
+
             var jwt = new JwtSecurityTokenHandler().WriteToken(token);
 
             return jwt;
-                
+
         }
 
         private static SymmetricSecurityKey GetSecurityKey(IConfiguration configuration)

@@ -1,6 +1,8 @@
 ﻿obj\Debug\net8.0-android\resizetizer\r\drawable\back_icon.jpg
+obj\Debug\net8.0-android\resizetizer\r\drawable\check.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\close.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\cloud.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\cross.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\diagnosis.jpg
 obj\Debug\net8.0-android\resizetizer\r\drawable\education.jpg
 obj\Debug\net8.0-android\resizetizer\r\drawable\heart.png
@@ -8,6 +10,7 @@ obj\Debug\net8.0-android\resizetizer\r\drawable\home_button.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\lettermatching.jpeg
 obj\Debug\net8.0-android\resizetizer\r\drawable\listedpicture.jpeg
 obj\Debug\net8.0-android\resizetizer\r\drawable\login.jpg
+obj\Debug\net8.0-android\resizetizer\r\drawable\login_page_mobile.jpg
 obj\Debug\net8.0-android\resizetizer\r\drawable\mainpage.jpg
 obj\Debug\net8.0-android\resizetizer\r\drawable\navigation.jpeg
 obj\Debug\net8.0-android\resizetizer\r\drawable\picturematching.jpeg

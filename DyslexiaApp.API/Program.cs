@@ -5,71 +5,58 @@ using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
 
-namespace DyslexiaApp.API;
 
-public class Program
+
+namespace DyslexiaApp.API
 {
-    public static void Main(string[] args)
+    public class Program
     {
-        var builder = WebApplication.CreateBuilder(args);
-
-        var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-        builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
-        builder.Services.AddAuthentication(options =>
+        public static void Main(string[] args)
         {
-            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-        })
+            var builder = WebApplication.CreateBuilder(args);
+
+            // Database and JWT Authentication Setup
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
             .AddJwtBearer(jwtOptions =>
                 jwtOptions.TokenValidationParameters = TokenService.GetTokenValidationParameters(builder.Configuration)
             );
 
+            // Additional Service Configurations
+            builder.Services.AddAuthorization();
+            builder.Services.AddControllers();
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+            builder.Services.AddTransient<TokenService>()
+                            .AddTransient<PasswordService>()
+                            .AddTransient<AuthService>()
+                            .AddTransient<DyslexiaDiagnosisService>()
+                            .AddTransient<EducationalGameService>()
+                            .AddTransient<QuestionService>();
 
-        
-        builder.Services.AddAuthorization();
-        builder.Services.AddControllers();
-        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-        builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
-        builder.Services.AddTransient<TokenService>()
-                        .AddTransient<PasswordService>()
-                        .AddTransient<AuthService>()
-                        .AddTransient<DyslexiaDiagnosisService>()
-                        .AddTransient<EducationalGameService>()
-                        .AddTransient<QuestionService>();
+            var app = builder.Build();
 
-        var app = builder.Build();
+            // Application Middleware and Endpoint Configuration
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
 
-#if DEBUG
-        MigrateDatabase(app.Services);
-#endif
-        // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
+            app.UseHttpsRedirection();
+            app.UseAuthentication();
+            app.UseAuthorization();
+            app.MapEndpoints();
+            app.MapControllers();
+            app.Run();
         }
-
-#if !DEBUG
-        app.UseHttpsRedirection();
-#endif
-        app.UseAuthentication();
-        app.UseAuthorization();
-
-        app.MapEndpoints();
-
-        app.MapControllers();
-
-        app.Run();
     }
-    static void MigrateDatabase(IServiceProvider serviceProvider)
-    {
-        var scope = serviceProvider.CreateScope();
-        var dataContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        if (dataContext.Database.GetPendingMigrations().Any())
-            dataContext.Database.Migrate();
-    }
-
 }
 
 

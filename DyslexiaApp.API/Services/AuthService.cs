@@ -13,48 +13,60 @@ namespace DyslexiaApp.API.Services
         private readonly PasswordService _passwordService = passwordService;
 
 
-        public async Task <ResultWithDataDto<AuthResponseDto>> SignupAsync(SignupRequestDto dto)
+        public async Task<ResultWithDataDto<AuthResponseDto>> SignupAsync(SignupRequestDto dto)
         {
-            if(await _context.Users.AsNoTracking().AnyAsync(u=> u.Email == dto.Email))
+            var Received = dto.Password;
+            // E-posta adresi zaten kayıtlı mı diye kontrol edilir
+            if (await _context.Users.AsNoTracking().AnyAsync(u => u.Email == dto.Email))
             {
-                return ResultWithDataDto<AuthResponseDto>.Failure("Email already exist");
+                return ResultWithDataDto<AuthResponseDto>.Failure("Bu e-posta adresi zaten kayıtlı.");
             }
-            
-                var user = new User
-                {
-                    Id = Guid.NewGuid(), 
-                    Email = dto.Email,
-                    FirstName = dto.Name,
-                    LastName = dto.LastName,
-                    Gender = dto.Gender,
-                    Birthday = dto.Birthday,
-                    Role = Role.Admin, 
-                    IsActive = true 
-                };
 
-                (user.Salt, user.HashedPassword) = _passwordService.GenerateSaltAndHash(dto.Password);
+            // Şifrenin boş veya null olmadığını kontrol et
+            if (string.IsNullOrWhiteSpace(dto.Password))
+            {
+                return ResultWithDataDto<AuthResponseDto>.Failure("Şifre boş olamaz.");
+            }
+
+            // Yeni kullanıcı nesnesi oluştur
+            var user = new User
+            {
+                Id = Guid.NewGuid(),
+                Email = dto.Email,
+                FirstName = dto.Name,
+                LastName = dto.LastName,
+                Gender = dto.Gender,
+                Birthday = dto.Birthday,
+                Role = Role.Admin,
+                IsActive = true
+            };
+
+            // Şifre için tuz ve hash oluştur
+            (user.Salt, user.HashedPassword) = _passwordService.GenerateSaltAndHash(dto.Password);
+
+            // Kullanıcıyı veritabanına ekle
             try
             {
                 await _context.Users.AddAsync(user);
                 await _context.SaveChangesAsync();
                 return GenerateAuthResponse(user);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                return ResultWithDataDto<AuthResponseDto>.Failure(ex.Message);
+                return ResultWithDataDto<AuthResponseDto>.Failure("Kayıt sırasında bir hata oluştu: " + ex.Message);
             }
         }
 
-       
+
 
         public async Task<ResultWithDataDto<AuthResponseDto>> SigninAsync(SigninRequestDto dto)
         {
             var dbUser = await _context.Users
                                 .AsNoTracking()
-                                .FirstOrDefaultAsync(u  => u.Email == dto.Email);
+                                .FirstOrDefaultAsync(u => u.Email == dto.Email);
             if (dbUser == null)
                 return ResultWithDataDto<AuthResponseDto>.Failure("User does not exist");
-            if(!_passwordService.AreEqual(dto.Password, dbUser.Salt, dbUser.HashedPassword))
+            if (!_passwordService.AreEqual(dto.Password, dbUser.Salt, dbUser.HashedPassword))
                 return ResultWithDataDto<AuthResponseDto>.Failure("Incorrect password!");
 
 
@@ -64,7 +76,7 @@ namespace DyslexiaApp.API.Services
 
         private ResultWithDataDto<AuthResponseDto> GenerateAuthResponse(User user)
         {
-            var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.Email,user.LastName,user.Birthday,user.Gender);
+            var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.Email, user.LastName, user.Birthday, user.Gender);
             var token = _tokenService.GenerateJwt(loggedInUser);
             var authResponse = new AuthResponseDto(loggedInUser, token);
 

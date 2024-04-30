@@ -5,7 +5,8 @@
              xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
              x:DataType="vm:AuthViewModel"
              BackgroundImageSource="login.jpg"
-             Title="Login">
+             Title="Login"
+             x:Name="Login">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="EntryStyle" TargetType="Entry">
@@ -16,7 +17,6 @@
                 <Setter Property="HeightRequest" Value="40" />
                 <Setter Property="FontFamily" Value="Popins" />
             </Style>
-
             <Style x:Key="ButtonStyle" TargetType="Button">
                 <Setter Property="Margin" Value="0,10" />
                 <Setter Property="BackgroundColor" Value="#EFAE36" />
@@ -25,7 +25,6 @@
                 <Setter Property="HeightRequest" Value="40" />
                 <Setter Property="FontFamily" Value="Popins" />
             </Style>
-
             <Style x:Key="LabelStyle" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="TextColor" Value="#EFAE36" />
@@ -33,47 +32,44 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <Grid>
-        <VerticalStackLayout HorizontalOptions="Center"
-                  VerticalOptions="CenterAndExpand"
-                  Spacing="10"
-                  Padding="0,100,0,0"
-                  WidthRequest="300">
-
-            <Label Text="LOGIN" 
-                Style="{StaticResource LabelStyle}" 
-                FontAttributes="Bold"
-                FontSize="24"/>
-
-            <Entry Text="{Binding Email}" 
-                   Placeholder="Email" 
-                   Style="{StaticResource EntryStyle}"
-                   Keyboard="Email"/>
-
-            <Entry Text="{Binding Password}" 
-                   Placeholder="Password" 
-                   IsPassword="True" 
-                   Style="{StaticResource EntryStyle}" />
-
-            <Button Text="LOGIN" 
-                    Style="{StaticResource ButtonStyle}"
-                    IsEnabled="{Binding CanSignin}"
-                    Command="{Binding SinginCommand}"/>
-
-            <Label Text="If you don't have an account, you can create one for free."
-                   HorizontalTextAlignment="Center"
-                   Style="{StaticResource LabelStyle}" />
-
-            <Button Text="Create Account" 
-                    Style="{StaticResource ButtonStyle}"
-                    Clicked="CreateAccountButton_Clicked" />
-            <Button Text="Forgot password" 
-                    Style="{StaticResource ButtonStyle}"
-                    Clicked="ForgotPasswordButton_Clicked"/>
-
-        </VerticalStackLayout>
-        <ActivityIndicator IsRunning="{Binding IsBusy}" />
-    </Grid>
-    
-
+    <ScrollView>
+        <Grid RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <VerticalStackLayout Grid.Row="1" HorizontalOptions="Center"
+                                 VerticalOptions="CenterAndExpand"
+                                 Spacing="10"
+                                 Padding="0,100,0,0">
+                <Label Text="LOGIN" 
+                       Style="{StaticResource LabelStyle}" 
+                       FontAttributes="Bold"
+                       FontSize="24"/>
+                <Entry Text="{Binding Email}" 
+                       Placeholder="Email" 
+                       Style="{StaticResource EntryStyle}"
+                       Keyboard="Email"/>
+                <Entry Text="{Binding Password}" 
+                       Placeholder="Password" 
+                       IsPassword="True" 
+                       Style="{StaticResource EntryStyle}" />
+                <Button Text="LOGIN" 
+                        Style="{StaticResource ButtonStyle}"
+                        IsEnabled="{Binding CanSignin}"
+                        Command="{Binding SinginCommand}"/>
+                <Label Text="If you don't have an account, you can create one for free."
+                       HorizontalTextAlignment="Center"
+                       Style="{StaticResource LabelStyle}" />
+                <Button Text="Create Account" 
+                        Style="{StaticResource ButtonStyle}"
+                        Clicked="CreateAccountButton_Clicked" />
+                <Button Text="Forgot password" 
+                        Style="{StaticResource ButtonStyle}"
+                        Clicked="ForgotPasswordButton_Clicked"/>
+            </VerticalStackLayout>
+            <ActivityIndicator Grid.Row="1" IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
+    </ScrollView>
 </ContentPage>

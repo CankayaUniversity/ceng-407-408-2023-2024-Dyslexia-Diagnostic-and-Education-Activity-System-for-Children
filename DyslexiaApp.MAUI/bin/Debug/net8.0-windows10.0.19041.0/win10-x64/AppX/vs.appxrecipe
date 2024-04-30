@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-04-29T15:06:10.798</Modified>
+      <Modified>2024-04-30T13:14:40.599</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-04-29T15:06:10.613</Modified>
+      <Modified>2024-04-29T17:28:29.572</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.runtimeconfig.json">
       <PackagePath>DyslexiaApp.MAUI.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.dll">
       <PackagePath>DyslexiaApp.MAUI.dll</PackagePath>
-      <Modified>2024-04-29T15:06:09.786</Modified>
+      <Modified>2024-04-30T13:14:35.698</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>DyslexiaApp.MAUI.exe</PackagePath>
-      <Modified>2024-04-29T15:06:09.791</Modified>
+      <Modified>2024-04-30T13:14:36.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -292,23 +292,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-04-29T15:06:00.653</Modified>
+      <Modified>2024-04-29T17:24:14.674</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-04-29T15:06:00.664</Modified>
+      <Modified>2024-04-29T17:24:14.690</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-04-29T15:06:00.681</Modified>
+      <Modified>2024-04-29T17:24:14.702</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-04-29T15:06:00.708</Modified>
+      <Modified>2024-04-29T17:24:14.715</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-04-29T15:06:00.787</Modified>
+      <Modified>2024-04-29T17:24:14.783</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\education.scale-100.jpg">
       <PackagePath>education.scale-100.jpg</PackagePath>
@@ -334,6 +334,10 @@
       <PackagePath>login.scale-100.jpg</PackagePath>
       <Modified>2024-04-01T16:34:42.681</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\login_page_mobile.scale-100.jpg">
+      <PackagePath>login_page_mobile.scale-100.jpg</PackagePath>
+      <Modified>2024-04-29T17:23:11.202</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mainpage.scale-100.jpg">
       <PackagePath>mainpage.scale-100.jpg</PackagePath>
       <Modified>2024-02-23T13:22:58.000</Modified>
@@ -356,7 +360,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.deps.json">
       <PackagePath>DyslexiaApp.MAUI.deps.json</PackagePath>
-      <Modified>2024-04-29T15:06:10.535</Modified>
+      <Modified>2024-04-29T17:28:29.215</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ahmet Emre Aydın\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

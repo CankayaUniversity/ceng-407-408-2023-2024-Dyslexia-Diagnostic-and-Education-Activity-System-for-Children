@@ -67,6 +67,7 @@
 	  <None Remove="Resources\Images\home_button.png" />
 	  <None Remove="Resources\Images\lettermatching.jpeg" />
 	  <None Remove="Resources\Images\listedpicture.jpeg" />
+	  <None Remove="Resources\Images\login_page_mobile.jpg" />
 	  <None Remove="Resources\Images\mainpage.jpg" />
 	  <None Remove="Resources\Images\navigation.jpeg" />
 	  <None Remove="Resources\Images\picturematching.jpeg" />

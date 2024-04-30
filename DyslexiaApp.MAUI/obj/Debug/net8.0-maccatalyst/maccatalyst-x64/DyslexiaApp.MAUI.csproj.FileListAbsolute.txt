@@ -1571,3 +1571,6 @@ D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\refint\Dysl
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\DyslexiaApp.MAUI.pdb
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\DyslexiaApp.MAUI.genruntimeconfig.cache
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\DyslexiaApp.MAUI.dll
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\check.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\login_page_mobile.jpg
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\cross.png

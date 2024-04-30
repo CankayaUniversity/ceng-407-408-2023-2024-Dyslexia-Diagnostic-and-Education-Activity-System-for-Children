@@ -8,6 +8,8 @@ public static class AuthEndpoints
 {
     public static IEndpointRouteBuilder MapEndpoints(this IEndpointRouteBuilder app)
     {
+
+        var tokenService = app.ServiceProvider.GetRequiredService<TokenService>();
         app.MapPost("/api/signup",
             async (SignupRequestDto dto, AuthService authService) =>
                 TypedResults.Ok(await authService.SignupAsync(dto)));
@@ -43,14 +45,15 @@ public static class AuthEndpoints
             }
 
             // Kullanıcı bilgilerini getir
-            var user = await authService.GetUserByIdAsync(userId);
-            if (user == null)
+            var userResult = await authService.GetUserByIdAsync(userId);
+            if (!userResult.IsSuccess)
             {
                 return Results.NotFound("Kullanıcı bulunamadı.");
             }
 
-            return Results.Ok(user);
+            return Results.Ok(userResult.Data);
         });
+
 
 
         app.MapPut("/api/user/update", async (UserUpdateDto dto, AuthService authService, HttpRequest request) =>
@@ -63,7 +66,15 @@ public static class AuthEndpoints
             }
 
             var result = await authService.UpdateUserProfileAsync(dto);
-            return result.IsSuccess ? Results.NoContent() : Results.Problem(result.ErrorMessage, statusCode: StatusCodes.Status400BadRequest);
+            if (result.IsSuccess)
+            {
+                var updatedUser = await authService.GetUserByIdAsync(dto.Id); // Bu metod, güncellenmiş kullanıcıyı döndürmelidir.
+                return Results.Ok(updatedUser);
+            }
+            else
+            {
+                return Results.Problem(result.ErrorMessage, statusCode: StatusCodes.Status400BadRequest);
+            }
         });
 
 
@@ -105,6 +116,23 @@ public static class AuthEndpoints
                 }
                 return TypedResults.Ok(question);
             });
+        app.MapGet("/api/token", async (HttpContext httpContext, AuthService authService, string email, string password) =>
+        {
+            // Kullanıcı adı ve şifre ile kullanıcıyı doğrula
+            var userDto = new SigninRequestDto(email, password);
+            var authResult = await authService.SigninAsync(userDto);
+
+            if (!authResult.IsSuccess)
+            {
+                return Results.Problem("Kullanıcı adı veya şifre hatalı", statusCode: StatusCodes.Status401Unauthorized);
+            }
+
+            // Token oluştur
+            var user = new LoggedInUser(authResult.Data.User.Id, authResult.Data.User.Name, authResult.Data.User.LastName, authResult.Data.User.Email, authResult.Data.User.Birthday, authResult.Data.User.Gender);
+            var token = tokenService.GenerateJwt(user);
+
+            return Results.Ok(new { Token = token });
+        });
 
 
         return app;

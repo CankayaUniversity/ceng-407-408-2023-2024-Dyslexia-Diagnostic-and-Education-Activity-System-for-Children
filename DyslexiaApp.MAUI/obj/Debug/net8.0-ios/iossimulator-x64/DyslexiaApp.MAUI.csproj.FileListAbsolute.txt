@@ -1631,3 +1631,6 @@ D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\refint\DyslexiaApp
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\DyslexiaApp.MAUI.pdb
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\DyslexiaApp.MAUI.genruntimeconfig.cache
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\ref\DyslexiaApp.MAUI.dll
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\cross.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\check.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\login_page_mobile.jpg

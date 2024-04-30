@@ -196,6 +196,33 @@
     ]
   },
   {
+    "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec__DisplayClass0_0",
+    "Method": "\u003CMapEndpoints\u003Eb__12",
+    "RelativePath": "api/token",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoints\u003Eb__0_6",
     "RelativePath": "api/user/{userId}",
