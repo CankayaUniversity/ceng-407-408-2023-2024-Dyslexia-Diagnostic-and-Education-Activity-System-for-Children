@@ -23,16 +23,21 @@ namespace DyslexiaApp.API.Services
             try
             {
                 var game = await _context.MatchingGames
-                                     .Include(mg => mg.EducationalGame)
-                                     .FirstOrDefaultAsync(mg => mg.Id == gameId);
+                                         .Include(mg => mg.EducationalGame)
+                                         .FirstOrDefaultAsync(mg => mg.Id == gameId);
 
                 if (game == null)
                 {
+                    Console.WriteLine("Game not found.");
                     return false;
                 }
 
                 var user = await _context.Users.FindAsync(userId);
-                if (user == null) return false;
+                if (user == null)
+                {
+                    Console.WriteLine("User not found.");
+                    return false;
+                }
 
                 var session = new GameSession
                 {
@@ -53,6 +58,7 @@ namespace DyslexiaApp.API.Services
                 return false;
             }
         }
+
 
         // Soru ve resimleri oluşturma
         public async Task CreateQuestionWithImages(Guid mainImageId, List<Guid> optionImageIds, int correctIndex)
@@ -89,16 +95,30 @@ namespace DyslexiaApp.API.Services
         // Oyun için soruları yükleme
         public async Task<List<Question>> LoadQuestionsForGame(Guid gameId)
         {
-            // MatchingGame içindeki Questions koleksiyonunu ve her Question için MainImage ve ImageOptions'ı yükleyin.
-            MatchingGame game = await _context.MatchingGames
-                 .Include(g => g.Questions)
-                    .ThenInclude(q => q.MainImage)  // MainImage doğru yüklendi
-                .Include(g => g.Questions)
-                    .ThenInclude(q => q.ImageOptions)  // ImageOptions her bir Question için yüklenmeli
-                .FirstOrDefaultAsync(g => g.Id == gameId);
+            try
+            {
+                MatchingGame game = await _context.MatchingGames
+                    .Include(g => g.Questions)
+                        .ThenInclude(q => q.MainImage)
+                    .Include(g => g.Questions)
+                        .ThenInclude(q => q.ImageOptions)
+                    .FirstOrDefaultAsync(g => g.Id == gameId);
 
-            return game?.Questions.ToList();
+                if (game == null)
+                {
+                    Console.WriteLine("Game not found.");
+                    return new List<Question>();
+                }
+
+                return game.Questions.ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while loading questions: {ex.Message}");
+                return new List<Question>();
+            }
         }
+
 
     }
 }

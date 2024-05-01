@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace DyslexiaAppMAUI.Shared.Dtos;
 
 public record struct NavigationGameDto(
-    Guid Id
-// DyslexiaDiagnosisDto? DyslexiaDiagnosis // Kaldırıldı
+    Guid Id,
+    List <QuestionDto> Questions
 );
 
 

@@ -89,6 +89,9 @@ namespace DyslexiaApp.API.Migrations
                     b.Property<Guid?>("MatchingGameId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("NavigationGameId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("SessionScore")
                         .HasColumnType("int");
 
@@ -100,6 +103,8 @@ namespace DyslexiaApp.API.Migrations
                     b.HasIndex("EducationalGameId");
 
                     b.HasIndex("MatchingGameId");
+
+                    b.HasIndex("NavigationGameId");
 
                     b.HasIndex("UserId");
 
@@ -157,6 +162,10 @@ namespace DyslexiaApp.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("BalloonPosition")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid>("DyslexiaDiagnosisId")
                         .HasColumnType("uniqueidentifier");
 
@@ -182,6 +191,9 @@ namespace DyslexiaApp.API.Migrations
                     b.Property<Guid?>("MatchingGameId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("NavigationGameId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("QuestionText")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -191,6 +203,8 @@ namespace DyslexiaApp.API.Migrations
                     b.HasIndex("MainImageId");
 
                     b.HasIndex("MatchingGameId");
+
+                    b.HasIndex("NavigationGameId");
 
                     b.ToTable("Questions");
                 });
@@ -338,6 +352,10 @@ namespace DyslexiaApp.API.Migrations
                         .WithMany("GameSessions")
                         .HasForeignKey("MatchingGameId");
 
+                    b.HasOne("DyslexiaApp.API.Data.Entities.NavigationGame", null)
+                        .WithMany("GameSessions")
+                        .HasForeignKey("NavigationGameId");
+
                     b.HasOne("DyslexiaApp.API.Data.Entities.User", "User")
                         .WithMany("GameSessions")
                         .HasForeignKey("UserId")
@@ -396,6 +414,10 @@ namespace DyslexiaApp.API.Migrations
                         .WithMany("Questions")
                         .HasForeignKey("MatchingGameId");
 
+                    b.HasOne("DyslexiaApp.API.Data.Entities.NavigationGame", null)
+                        .WithMany("Questions")
+                        .HasForeignKey("NavigationGameId");
+
                     b.Navigation("MainImage");
                 });
 
@@ -436,6 +458,13 @@ namespace DyslexiaApp.API.Migrations
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.MatchingGame", b =>
+                {
+                    b.Navigation("GameSessions");
+
+                    b.Navigation("Questions");
+                });
+
+            modelBuilder.Entity("DyslexiaApp.API.Data.Entities.NavigationGame", b =>
                 {
                     b.Navigation("GameSessions");
 

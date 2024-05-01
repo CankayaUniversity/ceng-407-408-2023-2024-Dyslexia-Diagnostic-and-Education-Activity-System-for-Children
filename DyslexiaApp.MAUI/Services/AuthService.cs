@@ -16,9 +16,9 @@ public class AuthService
 
     public void Signin(AuthResponseDto dto)
     {
-        var serialized= JsonSerializer.Serialize(dto);
+        var serialized = JsonSerializer.Serialize(dto);
         Preferences.Default.Set(AuthKey, serialized);
-              
+
         (User, Token) = dto;
     }
 

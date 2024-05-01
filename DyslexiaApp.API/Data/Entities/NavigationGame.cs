@@ -11,9 +11,16 @@ namespace DyslexiaApp.API.Data.Entities
         public Guid Id { get; set; }
 
         // Oyunun oynanma süresi.
+        public string BalloonPosition { get; set; }  // 'Right' veya 'Left'
 
-        
+        public virtual ICollection<GameSession> GameSessions { get; set; }
         public virtual DyslexiaDiagnosis DyslexiaDiagnosis { get; set; }
+        public virtual ICollection<Question> Questions { get; set; }
+        public NavigationGame()
+        {
+            GameSessions = new HashSet<GameSession>();
+            Questions = new HashSet<Question>();
+        }
 
     }
 }
