@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
              x:Class="DyslexiaApp.MAUI.Pages.Login.HomePage"
+             x:DataType="vm:ChatViewModel"
              Title="Main Page"
              BackgroundImageSource="mainpage.jpg">
     <ContentPage.Resources>
@@ -51,6 +53,7 @@
 
         <!-- Profile Icon Grid'i, içeriği sol üst köşeye konumlandırılmış -->
         <Grid Style="{StaticResource ProfileIconStyle}" VerticalOptions="Start" HorizontalOptions="Start">
+
             <ImageButton Source="star.png" 
                  BackgroundColor="Transparent"
                  VerticalOptions="Center" 
@@ -60,16 +63,16 @@
                 </ImageButton.GestureRecognizers>
             </ImageButton>
             <Label Text="PROFILE" 
-           Style="{StaticResource ProfileIconTextStyle}" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center">
+                   Style="{StaticResource ProfileIconTextStyle}" 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnProfileTapped"/>
                 </Label.GestureRecognizers>
             </Label>
         </Grid>
 
-        <VerticalStackLayout  Style="{StaticResource MainContainerStyle}">
+        <Grid  Style="{StaticResource MainContainerStyle}">
             <StackLayout Style="{StaticResource CardContainerStyle}">
                 <Frame Style="{StaticResource CardMainStyle}">
                     <ContentView >
@@ -115,6 +118,72 @@
                 </Frame>
             </StackLayout>
 
-        </VerticalStackLayout>
+        </Grid>
+
+        <Frame IsVisible="{Binding IsPopupVisible}"
+                  HorizontalOptions="CenterAndExpand"
+                  VerticalOptions="CenterAndExpand"
+                   BackgroundColor="White" Padding="20" CornerRadius="15"
+                        BorderColor="Black" WidthRequest="500" HeightRequest="500">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <ImageButton Source="close.png" 
+                             BackgroundColor="Transparent"
+                             WidthRequest="30"
+                             HeightRequest="30"
+                             Aspect="AspectFit"
+                             HorizontalOptions="End" 
+                             VerticalOptions="Start"
+                             Grid.Column="1" Grid.Row="0"
+                             Command="{Binding CloseChatCommand}"/>
+
+                <CollectionView Grid.Row="0" Grid.Column="0" ItemsSource="{Binding Messages}"
+                        HorizontalOptions="End" VerticalOptions="End"
+                        HeightRequest="350" WidthRequest="400"
+                        Margin="0,50,-10,0"
+                        BackgroundColor="SkyBlue">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Label Text="{Binding .}" Margin="10" HorizontalOptions="End"/>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!--x:Name="chatEntry"-->
+                <Grid Grid.Row="1"
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="End"
+                      HeightRequest="50"
+                      WidthRequest="200"
+                      Margin="10,50,150,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Entry  Text="{Binding CurrentMessage}" WidthRequest="300" Placeholder="Type your question here..." Grid.Column="0"/>
+                    <Button Text="Send"  Command="{Binding SendMessageCommand}" Grid.Column="1" WidthRequest="100"/>
+                </Grid>
+            </Grid>
+        </Frame>
+
+
+        <Grid HorizontalOptions="End"
+              VerticalOptions="End"
+              Margin="50,20">
+            <ImageButton Source="chat.png" BackgroundColor="Transparent"
+                         WidthRequest="50"
+                         VerticalOptions="End"
+                         HorizontalOptions="End"
+                         Command="{Binding ShowChatCommand}"/>
+        </Grid>
+
     </Grid>
 </ContentPage>

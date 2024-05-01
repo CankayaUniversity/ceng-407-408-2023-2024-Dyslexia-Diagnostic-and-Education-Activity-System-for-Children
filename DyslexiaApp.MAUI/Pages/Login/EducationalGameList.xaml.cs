@@ -18,11 +18,6 @@ public partial class EducationalGameList : ContentPage
         await _educationalGamesViewModel.InitializeAsync();
     }
 
-    private void Close_Button(object sender, EventArgs e)
-    {
-        popupContentView.IsVisible = false;
-    }
-
     private async void Home_Button(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync($"//{nameof(HomePage)}");

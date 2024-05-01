@@ -5393,3 +5393,6 @@ D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\jni_remap.x86.o
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\app_shared_libraries\armeabi-v7a\libxamarin-app.so
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\app_shared_libraries\x86\libxamarin-app.so
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\chat.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\speech_bubble_left.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\speech_bubble_right.png

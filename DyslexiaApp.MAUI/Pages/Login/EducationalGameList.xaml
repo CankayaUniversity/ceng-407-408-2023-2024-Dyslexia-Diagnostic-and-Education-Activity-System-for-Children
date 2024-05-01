@@ -115,7 +115,7 @@
             </CollectionView>
         </Grid>
 
-        <ContentView x:Name="popupContentView" 
+        <ContentView 
                      IsVisible="{Binding IsPopupVisible}" 
                      Padding="10"
                      HorizontalOptions="Center"

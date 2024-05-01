@@ -47,6 +47,7 @@ appiconWideTile.scale-150.png
 appiconWideTile.scale-200.png
 appiconWideTile.scale-400.png
 back_icon.scale-100.jpg
+chat.scale-100.png
 check.scale-100.png
 close.scale-100.png
 cloud.scale-100.png
@@ -67,6 +68,8 @@ login_page_mobile.scale-100.jpg
 mainpage.scale-100.jpg
 navigation.scale-100.jpeg
 picturematching.scale-100.jpeg
+speech_bubble_left.scale-100.png
+speech_bubble_right.scale-100.png
 star.scale-100.png
 symmetry.scale-100.jpeg
 splashSplashScreen.scale-100.png

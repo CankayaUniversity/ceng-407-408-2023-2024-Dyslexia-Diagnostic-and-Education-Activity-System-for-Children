@@ -1574,3 +1574,6 @@ D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\Dyslexi
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\check.png
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\login_page_mobile.jpg
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\cross.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\chat.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\speech_bubble_right.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\speech_bubble_left.png

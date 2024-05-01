@@ -57,6 +57,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\back_icon.jpg" />
+	  <None Remove="Resources\Images\chat.png" />
 	  <None Remove="Resources\Images\check.png" />
 	  <None Remove="Resources\Images\close.png" />
 	  <None Remove="Resources\Images\cloud.png" />
@@ -71,6 +72,8 @@
 	  <None Remove="Resources\Images\mainpage.jpg" />
 	  <None Remove="Resources\Images\navigation.jpeg" />
 	  <None Remove="Resources\Images\picturematching.jpeg" />
+	  <None Remove="Resources\Images\speech_bubble_left.png" />
+	  <None Remove="Resources\Images\speech_bubble_right.png" />
 	  <None Remove="Resources\Images\star.png" />
 	  <None Remove="Resources\Images\symmetry.jpeg" />
 	</ItemGroup>

@@ -45,6 +45,9 @@ public static class MauiProgram
         builder.Services.AddSingleton<ProfileViewModel>()
                         .AddSingleton<ProfilePage>();
 
+        builder.Services.AddTransient<ChatViewModel>()
+            .AddTransient<HomePage>();
+
         ConfigureRefit(builder.Services);
 
         return builder.Build();
@@ -89,7 +92,7 @@ public static class MauiProgram
 
             if (DeviceInfo.DeviceType == DeviceType.Physical)
             {
-                baseUrl = "https://stk0z5pb-7066.euw.devtunnels.ms";
+                baseUrl = "https://z3x53kct-7066.euw.devtunnels.ms/";
             }
 
             httpClient.BaseAddress = new Uri(baseUrl);
