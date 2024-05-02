@@ -6,17 +6,25 @@ namespace DyslexiaApp.API.Endpoints;
 
 public static class AuthEndpoints
 {
+    private static Guid GetUserId(this ClaimsPrincipal principal)=>
+        Guid.Parse(principal.FindFirstValue(ClaimTypes.NameIdentifier)!);
     public static IEndpointRouteBuilder MapEndpoints(this IEndpointRouteBuilder app)
     {
 
         var tokenService = app.ServiceProvider.GetRequiredService<TokenService>();
-        app.MapPost("/api/signup",
+        app.MapPost("/api/auth/signup",
             async (SignupRequestDto dto, AuthService authService) =>
                 TypedResults.Ok(await authService.SignupAsync(dto)));
 
-        app.MapPost("/api/signin",
+        app.MapPost("/api/auth/signin",
             async (SigninRequestDto dto, AuthService authService) =>
                 TypedResults.Ok(await authService.SigninAsync(dto)));
+
+        app.MapPost("/api/auth/change-password",
+            async (ChangePasswordDto dto, ClaimsPrincipal principal, AuthService authService) =>
+            TypedResults.Ok(await authService.ChangePassowordAsync(dto, principal.GetUserId()))
+            )
+            .RequireAuthorization();
 
         app.MapPost("/api/dyslexiadiagnosis",
             async (DyslexiaDiagnosisDto dto, DyslexiaDiagnosisService dyslexiaDiagnosisService) =>
@@ -34,8 +42,10 @@ public static class AuthEndpoints
             async (EducationalGameService educationalGameService) =>
                 TypedResults.Ok(await educationalGameService.GetEducationalGamesAsync())); // Var olan eğitici oyunları getirir
 
+        var authGroup = app.MapGroup("/api/user").RequireAuthorization();
+
         // Kullanıcı Bilgilerini Getirme Endpoint'i
-        app.MapGet("/api/user/{userId}", async (Guid userId, AuthService authService, HttpContext httpContext) =>
+        authGroup.MapGet("/{userId}", async (Guid userId, AuthService authService, HttpContext httpContext) =>
         {
             // Yetki kontrolü burada gerçekleştirilebilir.
             var userIdClaim = httpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -56,7 +66,7 @@ public static class AuthEndpoints
 
 
 
-        app.MapPut("/api/user/update", async (UserUpdateDto dto, AuthService authService, HttpRequest request) =>
+        authGroup.MapPut("/update", async (UserUpdateDto dto, AuthService authService, HttpRequest request) =>
         {
             // Yetki kontrolü burada gerçekleştirilebilir.
             var userIdClaim = request.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -79,7 +89,7 @@ public static class AuthEndpoints
 
 
         // Kullanıcı Hesabını Devre Dışı Bırakma
-        app.MapDelete("/api/user/deactivate/{userId}", async (Guid userId, AuthService authService, HttpRequest request) =>
+        authGroup.MapDelete("/deactivate/{userId}", async (Guid userId, AuthService authService, HttpRequest request) =>
         {
             // Yetki kontrolü burada gerçekleştirilebilir.
             var userIdClaim = request.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -134,7 +144,7 @@ public static class AuthEndpoints
             return Results.Ok(new { Token = token });
         });
 
-
+        
         return app;
     }
 }

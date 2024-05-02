@@ -10,10 +10,13 @@ namespace DyslexiaApp.MAUI.Services
 {
     public interface IAuthApi
     {
-        [Post("/api/signup")]
+        [Post("/api/auth/signup")]
         Task<ResultWithDataDto<AuthResponseDto>> SignupAsync(SignupRequestDto dto);
-        [Post("/api/signin")]
+        [Post("/api/auth/signin")]
         Task<ResultWithDataDto<AuthResponseDto>> SigninAsync(SigninRequestDto dto);
 
+        [Headers("Authorization: Bearer")]
+        [Post("/api/auth/change-password")]
+        Task<ResultDto> ChangePasswordAsync(ChangePasswordDto dto);
     }
 }

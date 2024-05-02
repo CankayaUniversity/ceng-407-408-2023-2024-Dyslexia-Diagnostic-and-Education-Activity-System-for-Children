@@ -143,6 +143,22 @@ namespace DyslexiaApp.API.Services
             var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.Email, user.LastName, user.Birthday, user.Gender);
             return ResultWithDataDto<LoggedInUser>.Success(loggedInUser);
         }
+        public async Task<ResultDto> ChangePassowordAsync(ChangePasswordDto dto, Guid userId)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u=> u.Id == userId);
+            if (user is null)
+                return ResultDto.Failure("Invalid request");
 
+            if(!_passwordService.AreEqual(dto.OldPassword, user.Salt, user.HashedPassword))
+            {
+                return ResultDto.Failure("Incorrect password!");
+            }
+
+            (user.Salt, user.HashedPassword) = _passwordService.GenerateSaltAndHash(dto.NewPassword);
+
+            await _context.SaveChangesAsync();
+
+            return ResultDto.Success();
+        }
     }
 }

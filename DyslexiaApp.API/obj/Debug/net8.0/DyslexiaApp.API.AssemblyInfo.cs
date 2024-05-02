@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DyslexiaApp.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f33cd29285681256f3764943d2b66d53d8e60c4b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f12d7c70e882f0b2810619c9d1df08a3d884d97b")]
 [assembly: System.Reflection.AssemblyProductAttribute("DyslexiaApp.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DyslexiaApp.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
