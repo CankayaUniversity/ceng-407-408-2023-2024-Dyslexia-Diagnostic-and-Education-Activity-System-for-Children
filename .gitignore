@@ -1,4 +1,4 @@
 *.user
 /obj/
 /bin/
-appsettings.development.json
+appsettings.Development.json
