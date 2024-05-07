@@ -1,31 +1,27 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DyslexiaApp.MAUI.Pages.Login;
 using DyslexiaApp.MAUI.Services;
 using DyslexiaAppMAUI.Shared.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace DyslexiaApp.MAUI.ViewModels;
-
-[QueryProperty(nameof(QuestionId), nameof(QuestionId))]
 
 public partial class PictureMatchingViewModel : BaseViewModel
 {
     private readonly IPictureMatchingApi _pictureMatchingApi;
-
-    [ObservableProperty]
-    private QuestionDto? _question;
-
-    private bool _isInitialized;
+    private bool _isInitialized = false;
 
     [ObservableProperty]
     private Guid questionId;
+
+    //[ObservableProperty]
+    //private ObservableCollection<QuestionDto> questions;
+
+    [ObservableProperty]
+    private QuestionDto? _question;
 
     // Kullanıcının kalan hakkı
     [ObservableProperty]
@@ -53,13 +49,12 @@ public partial class PictureMatchingViewModel : BaseViewModel
         try
         {
             _isInitialized = true;
-            var question = await _pictureMatchingApi.GetQuestionByIdAsync(questionId); // Buraya bir breakpoint ekleyin
-            Question = question; // Bu satıra da bir breakpoint ekleyin
-
+            var question = await _pictureMatchingApi.GetQuestionByIdAsync(questionId);
+            Question = question;
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error loading question details: {ex.Message}");
+            Debug.WriteLine($"Error loading question details: {ex.Message}");
         }
         finally
         {
@@ -120,7 +115,6 @@ public partial class PictureMatchingViewModel : BaseViewModel
                 }
             }
         }
+
     }
-
-
 }

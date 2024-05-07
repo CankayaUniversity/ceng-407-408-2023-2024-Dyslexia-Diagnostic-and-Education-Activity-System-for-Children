@@ -42,6 +42,9 @@ public static class MauiProgram
         builder.Services.AddTransient<PictureMatchingViewModel>()
                         .AddTransient<PictureMatchingGame>();
 
+        //builder.Services.AddSingleton<IPictureMatchingApi, IPictureMatchingApi>();  // Ensure your implementation class is correctly named
+        //builder.Services.AddSingleton<PictureMatchingViewModel>();
+
         builder.Services.AddSingleton<ProfileViewModel>()
                         .AddSingleton<ProfilePage>();
 
@@ -92,7 +95,7 @@ public static class MauiProgram
 
             if (DeviceInfo.DeviceType == DeviceType.Physical)
             {
-                baseUrl = "https://nwn16q69-7066.euw.devtunnels.ms/";
+                baseUrl = "https://32c00r8v-7066.euw.devtunnels.ms";
             }
 
             httpClient.BaseAddress = new Uri(baseUrl);

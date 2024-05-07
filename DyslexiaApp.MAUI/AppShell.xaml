@@ -48,6 +48,10 @@
        ContentTemplate="{DataTemplate pages:LetterMatchingGame}"
        Route="LetterMatchingGame" />
 
+    <!--<ShellContent 
+        Route="PictureMatchingGame" 
+        ContentTemplate="{DataTemplate local:PictureMatchingGame}" />-->
+
     <!--<TabBar>
         <ShellContent Title="Login"
                       ContentTemplate="{DataTemplate pages:LoginPage}"

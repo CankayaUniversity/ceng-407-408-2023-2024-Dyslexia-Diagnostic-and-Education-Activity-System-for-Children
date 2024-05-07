@@ -56,7 +56,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid>
+    <Grid HeightRequest="1000">
         <Grid Style="{StaticResource HomeIconStyle}" VerticalOptions="Start" HorizontalOptions="Start">
             <ImageButton Source="home_button.png" 
                          Margin="0,10,-20,10"
@@ -160,7 +160,8 @@
                                 VerticalOptions="Center" 
                                 HorizontalOptions="Center"/>
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToPictureMatchingGameCommand}" />
+                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:EducationalGamesViewModel}}, Path=GoToPictureMatchingGameCommand}" 
+                                                  CommandParameter="{Binding SelectedGame.MatchingGames[0].Questions[0]}" />
                         </Grid.GestureRecognizers>
                     </Grid>
                 </VerticalStackLayout>

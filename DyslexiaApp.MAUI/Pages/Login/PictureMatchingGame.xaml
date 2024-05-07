@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DyslexiaApp.MAUI.Pages.Login.PictureMatchingGame"
              xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
+             Shell.PresentationMode="ModalAnimated"
              x:DataType="vm:PictureMatchingViewModel"
              xmlns:dto="clr-namespace:DyslexiaAppMAUI.Shared.Dtos;assembly=DyslexiaAppMAUI.Shared"
              Title="Picture Matching Game"
@@ -121,13 +122,14 @@
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
                    WidthRequest="150"
-                   HeightRequest="200" />
+                   HeightRequest="200" 
+                   BackgroundColor="Transparent"/>
             <Image Source="cross.png"
                    IsVisible="{Binding IsCrossVisible}"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
                    WidthRequest="150"
-                   HeightRequest="200" />
+                   HeightRequest="200"/>
         </Grid>
         <Grid WidthRequest="100"
               HeightRequest="50"
