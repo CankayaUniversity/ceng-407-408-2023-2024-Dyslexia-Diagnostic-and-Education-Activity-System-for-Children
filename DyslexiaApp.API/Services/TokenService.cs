@@ -2,6 +2,7 @@
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace DyslexiaApp.API.Services
@@ -58,6 +59,21 @@ namespace DyslexiaApp.API.Services
 
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!));
             return securityKey;
+        }
+
+        public string GeneratePasswordResetToken(string userEmail)
+        {
+            // Token içeriğini hazırla: kullanıcının e-postası ve zaman damgası
+            long time = DateTimeOffset.UtcNow.ToUnixTimeSeconds(); // Mevcut zamanı Unix zaman damgası olarak al
+            string tokenData = $"{userEmail}-{time}";
+
+            // SHA256 kullanarak tokenData'yı hash'le
+            using var sha256 = SHA256.Create();
+            byte[] hashedData = sha256.ComputeHash(Encoding.UTF8.GetBytes(tokenData));
+            string token = Convert.ToBase64String(hashedData);
+
+            // Token ve son kullanma zamanını geri döndür
+            return token;
         }
     }
 }

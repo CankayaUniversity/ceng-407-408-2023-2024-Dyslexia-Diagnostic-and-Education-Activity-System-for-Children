@@ -1,11 +1,16 @@
 using DyslexiaApp.API.Endpoints;
 using DyslexiaApp.API.Services;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Filters;
 using System.Text.Json;
-
-
-
+using Google.Apis.Gmail.v1;
+using Microsoft.Extensions.Options;
+using DyslexiaApp.API.Models;
 
 namespace DyslexiaApp.API
 {
@@ -15,34 +20,61 @@ namespace DyslexiaApp.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Database and JWT Authentication Setup
+            // Database setup
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+            // JWT and Google Authentication setup
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
             })
             .AddJwtBearer(jwtOptions =>
                 jwtOptions.TokenValidationParameters = TokenService.GetTokenValidationParameters(builder.Configuration)
             );
 
-            // Additional Service Configurations
+            // Authorization setup
             builder.Services.AddAuthorization();
+
+            // Controllers setup
             builder.Services.AddControllers();
+
+            // API explorer and Swagger setup
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-            builder.Services.AddTransient<TokenService>()
-                            .AddTransient<PasswordService>()
-                            .AddTransient<AuthService>()
-                            .AddTransient<DyslexiaDiagnosisService>()
-                            .AddTransient<EducationalGameService>()
-                            .AddTransient<QuestionService>();
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+                {
+                    In = ParameterLocation.Header,
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey
+                });
+                options.OperationFilter<SecurityRequirementsOperationFilter>();
+            });
+
+            // Register services
+            builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+            builder.Services.AddTransient<TokenService>();
+            builder.Services.AddTransient<PasswordService>();
+            builder.Services.AddTransient<AuthService>();
+            builder.Services.AddTransient<DyslexiaDiagnosisService>();
+            builder.Services.AddTransient<EducationalGameService>();
+            builder.Services.AddTransient<QuestionService>();
+            builder.Services.AddTransient<MatchingGameService>();
+            builder.Services.AddTransient<NavigationGameService>();
+            
+            builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+            // SendGrid e-posta servisini ekleyin
+            builder.Services.AddSingleton<IEmailService, SendGridEmailService>(serviceProvider =>
+            {
+                var emailSettings = serviceProvider.GetRequiredService<IOptions<EmailSettings>>().Value;
+                return new SendGridEmailService(emailSettings.ApiKey);
+            });
 
             var app = builder.Build();
 
-            // Application Middleware and Endpoint Configuration
+            // Middleware setup
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -58,7 +90,3 @@ namespace DyslexiaApp.API
         }
     }
 }
-
-
-
-

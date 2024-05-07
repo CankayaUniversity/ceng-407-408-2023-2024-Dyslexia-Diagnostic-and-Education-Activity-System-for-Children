@@ -1,5 +1,6 @@
 ﻿using DyslexiaApp.API.Services;
 using DyslexiaAppMAUI.Shared.Dtos;
+using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 
 namespace DyslexiaApp.API.Endpoints;
@@ -143,8 +144,36 @@ public static class AuthEndpoints
 
             return Results.Ok(new { Token = token });
         });
+       
+        app.MapPost("/api/auth/forgot-password", async (ForgotPasswordRequestDto dto, AuthService authService, IEmailService emailService) =>
+        {
+            var result = await authService.ForgotPasswordAsync(dto.Email, emailService);
+            if (!result.IsSuccess)
+            {
+                return Results.BadRequest(new { Error = result.ErrorMessage });
+            }
+            return Results.Ok();
+        })
+    .WithName("ForgotPassword")
+    .Produces(StatusCodes.Status200OK)
+    .Produces(StatusCodes.Status400BadRequest)
+    .WithTags("Auth");
 
-        
+        app.MapPost("/api/auth/reset-password", async (ResetPasswordRequestDto dto, AuthService authService) =>
+        {
+            var result = await authService.ResetPasswordAsync(dto.Token, dto.Email, dto.NewPassword);
+            if (!result.IsSuccess)
+            {
+                return Results.BadRequest(new { Error = result.ErrorMessage });
+            }
+            return Results.Ok();
+        })
+        .WithName("ResetPassword")
+        .Produces(StatusCodes.Status200OK)
+        .Produces(StatusCodes.Status400BadRequest)
+        .WithTags("Auth");
+
+
         return app;
     }
 }

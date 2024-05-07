@@ -160,5 +160,94 @@ namespace DyslexiaApp.API.Services
 
             return ResultDto.Success();
         }
+        public async Task<ResultWithDataDto<ResetPasswordRequestDto>> ForgotPasswordAsync(string email, IEmailService emailService)
+        {
+            var result = await GeneratePasswordResetTokenAsync(email);
+            if (!result.IsSuccess)
+            {
+                return ResultWithDataDto<ResetPasswordRequestDto>.Failure(result.ErrorMessage);
+            }
+
+            var resetLink = $"https://localhost:7066/reset-password?token={result.Data.Token}&email={email}";
+            await emailService.SendEmailAsync(email, "Şifre Sıfırlama", $"Şifrenizi sıfırlamak için bu linki kullanın: {resetLink}");
+
+            return ResultWithDataDto<ResetPasswordRequestDto>.Success(new ResetPasswordRequestDto { ResetLink = resetLink });
+        }
+
+        public async Task<ResultDto> ResetPassword(string token, string newPassword)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.ResetPasswordToken == token && u.ResetPasswordTokenExpiry > DateTime.Now);
+
+            if (user == null)
+            {
+                return ResultDto.Failure("Invalid or expired reset token.");
+            }
+
+            // Update the password
+            (user.Salt, user.HashedPassword) = _passwordService.GenerateSaltAndHash(newPassword);
+            user.ResetPasswordToken = null; // Clear the reset token
+            user.ResetPasswordTokenExpiry = null;
+
+            await _context.SaveChangesAsync();
+
+            return ResultDto.Success();
+        }
+
+        public async Task<ResultWithDataDto<AuthResponseDto>> SigninWithGoogleAsync(string email)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+
+            // Eğer kullanıcı mevcut değilse, yeni bir kullanıcı oluştur
+            if (user == null)
+            {
+                user = new User
+                {
+                    Id = Guid.NewGuid(),
+                    Email = email,
+                    IsActive = true // Diğer gerekli alanlar varsayılan değerlerle doldurulabilir
+                };
+
+                await _context.Users.AddAsync(user);
+                await _context.SaveChangesAsync();
+            }
+
+            // Oturum açma işleminin geri dönüş değeri
+            return GenerateAuthResponse(user);
+        }
+
+        public async Task<ResultWithDataDto<PasswordResetTokenDto>> GeneratePasswordResetTokenAsync(string email)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (user == null) return ResultWithDataDto<PasswordResetTokenDto>.Failure("User does not exist");
+
+            // Doğru parametre ile GeneratePasswordResetToken metodunu çağır
+            var token = _tokenService.GeneratePasswordResetToken(user.Email);  // Burada user.Email kullanılmalı
+
+            // Token'ı veritabanında bir yerde saklayın veya kullanıcı ile ilişkilendirin
+            // Örnek olarak, user nesnesine token ve zaman damgası ekleyebilirsiniz.
+            user.ResetPasswordToken = token;
+            user.ResetPasswordTokenExpiry = DateTimeOffset.UtcNow.AddHours(24).DateTime;  // Convert DateTimeOffset to DateTime
+
+            // Değişiklikleri veritabanına kaydet
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+
+            return ResultWithDataDto<PasswordResetTokenDto>.Success(new PasswordResetTokenDto(token));
+        }
+
+        public async Task<ResultDto> ResetPasswordAsync(string token, string email, string newPassword)
+        {
+            // Token ve e-posta adresini doğrulayın
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email && u.ResetPasswordToken == token);
+            if (user == null) return ResultDto.Failure("Invalid token or email");
+
+            // Şifreyi güncelleyin
+            (user.Salt, user.HashedPassword) = _passwordService.GenerateSaltAndHash(newPassword);
+            user.ResetPasswordToken = null; // Token'ı sıfırla veya geçersiz kıl
+            await _context.SaveChangesAsync();
+
+            return ResultDto.Success();
+        }
+
     }
 }

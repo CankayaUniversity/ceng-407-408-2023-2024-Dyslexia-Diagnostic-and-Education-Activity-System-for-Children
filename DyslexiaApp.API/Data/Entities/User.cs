@@ -43,6 +43,10 @@ namespace DyslexiaApp.API.Data.Entities
         [Required]
         public bool IsActive { get; set; }
 
+        public string? ResetPasswordToken { get; set; }
+        public DateTime? ResetPasswordTokenExpiry { get; set; }
+
+
         public virtual List<EducationalGame> EducationalGames { get; set; }
         public virtual List<DyslexiaDiagnosis> DyslexiaDiagnoses { get; set; }
         public virtual List<Sistem> Sistems { get; set; }

@@ -86,6 +86,18 @@
               "target": "Package",
               "version": "[8.2.2, )"
             },
+            "Google.Apis": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
+            "Google.Apis.Gmail.v1": {
+              "target": "Package",
+              "version": "[1.68.0.3399, )"
+            },
             "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -108,9 +120,17 @@
               "version": "[8.0.2, )",
               "autoReferenced": true
             },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "Refit.HttpClientFactory": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.29.3, )"
             }
           },
           "imports": [
@@ -141,6 +161,18 @@
               "target": "Package",
               "version": "[8.2.2, )"
             },
+            "Google.Apis": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
+            "Google.Apis.Gmail.v1": {
+              "target": "Package",
+              "version": "[1.68.0.3399, )"
+            },
             "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -163,9 +195,17 @@
               "version": "[8.0.2, )",
               "autoReferenced": true
             },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "Refit.HttpClientFactory": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.29.3, )"
             }
           },
           "imports": [
@@ -196,6 +236,18 @@
               "target": "Package",
               "version": "[8.2.2, )"
             },
+            "Google.Apis": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
+            "Google.Apis.Gmail.v1": {
+              "target": "Package",
+              "version": "[1.68.0.3399, )"
+            },
             "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -218,9 +270,17 @@
               "version": "[8.0.2, )",
               "autoReferenced": true
             },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "Refit.HttpClientFactory": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.29.3, )"
             }
           },
           "imports": [
@@ -252,6 +312,18 @@
               "target": "Package",
               "version": "[8.2.2, )"
             },
+            "Google.Apis": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
+            "Google.Apis.Gmail.v1": {
+              "target": "Package",
+              "version": "[1.68.0.3399, )"
+            },
             "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -268,9 +340,17 @@
               "target": "Package",
               "version": "[8.0.6, )"
             },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
             "Refit.HttpClientFactory": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.29.3, )"
             }
           },
           "imports": [
@@ -370,6 +450,28 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Google.Apis": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
+            "Google.Apis.Gmail.v1": {
+              "target": "Package",
+              "version": "[1.68.0.3399, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.29.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

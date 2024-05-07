@@ -70,3 +70,4 @@ D:\408\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\DyslexiaAppMAUI.Shared.dll
 D:\408\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\refint\DyslexiaAppMAUI.Shared.dll
 D:\408\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\DyslexiaAppMAUI.Shared.pdb
 D:\408\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\ref\DyslexiaAppMAUI.Shared.dll
+D:\408\DyslexiaAppMAUI.Shared\obj\Debug\net8.0\DyslexiaAppMAUI.Shared.csproj.AssemblyReference.cache

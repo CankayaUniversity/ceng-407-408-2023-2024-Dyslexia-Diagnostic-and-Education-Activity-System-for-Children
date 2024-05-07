@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DyslexiaApp.MAUI</name>
+    </assembly>
+    <members>
+        <member name="T:DyslexiaApp.MAUI.ViewModels.AuthViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.FirstName">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel._firstName"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.LastName">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel._lastName"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.Email">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel._email"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.Birthdate">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel._birthdate"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.Gender">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel._gender"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.Password">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel._password"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.ConfirmationPassword">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel._confirmationPassword"/>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel.signupCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SignupCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SignupCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SignupAsync"/>.</summary>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel.singinCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SinginCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SinginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SinginAsync"/>.</summary>
+        </member>
+        <member name="T:DyslexiaApp.MAUI.ViewModels.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.BaseViewModel._isBusy"/>
+        </member>
+        <member name="T:DyslexiaApp.MAUI.ViewModels.ChatViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.IsPopupVisible">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ChatViewModel.isPopupVisible"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.Messages">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ChatViewModel.messages"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.CurrentMessage">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ChatViewModel.currentMessage"/>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.ChatViewModel.showChatCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.ShowChatCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.ShowChatCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.ChatViewModel.ShowChat"/>.</summary>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.ChatViewModel.closeChatCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.CloseChatCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.CloseChatCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.ChatViewModel.CloseChat"/>.</summary>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.ChatViewModel.sendMessageCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.SendMessageCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.SendMessageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.ChatViewModel.SendMessage"/>.</summary>
+        </member>
+        <member name="T:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.Educational">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel._educational"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.IsPopupVisible">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.isPopupVisible"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.SelectedGame">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.selectedGame"/>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.showGameDetailsCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.ShowGameDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.ShowGameDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.ShowGameDetails(DyslexiaAppMAUI.Shared.Dtos.EducationalDto)"/>.</summary>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.closePopupCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.ClosePopupCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.ClosePopupCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.ClosePopup"/>.</summary>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.goToPictureMatchingGameCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.GoToPictureMatchingGameCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.GoToPictureMatchingGameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.GoToPictureMatchingGame"/>.</summary>
+        </member>
+        <member name="T:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.Question">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel._question"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.QuestionId">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.questionId"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.AttemptsRemaining">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.attemptsRemaining"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.CurrentAttempts">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.currentAttempts"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.IsCorrect">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.isCorrect"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.IsAnswerCorrect">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.isAnswerCorrect"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.IsCrossVisible">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.isCrossVisible"/>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.itemSelectedGameCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.ItemSelectedGameCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.ItemSelectedGameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel.ItemSelectedGame(DyslexiaAppMAUI.Shared.Dtos.ImageDto)"/>.</summary>
+        </member>
+        <member name="T:DyslexiaApp.MAUI.ViewModels.ProfileViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.FirstName">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ProfileViewModel._firstName"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.LastName">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ProfileViewModel._lastName"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.Email">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ProfileViewModel._email"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.Birthdate">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ProfileViewModel._birthdate"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.Gender">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ProfileViewModel._gender"/>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FirstName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FirstName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LastName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LastName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Birthdate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Birthdate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Gender">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Gender" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConfirmationPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConfirmationPassword" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPopupVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPopupVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Messages">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Messages" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Educational">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Educational" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedGame">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedGame" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Question">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Question" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.QuestionId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "QuestionId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AttemptsRemaining">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AttemptsRemaining" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentAttempts">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentAttempts" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsCorrect">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsCorrect" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsAnswerCorrect">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsAnswerCorrect" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsCrossVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsCrossVisible" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FirstName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FirstName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CanSignup">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CanSignup" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LastName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LastName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CanSignin">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CanSignin" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Birthdate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Birthdate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Gender">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Gender" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConfirmationPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConfirmationPassword" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPopupVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPopupVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Messages">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Messages" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Educational">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Educational" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedGame">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedGame" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Question">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Question" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.QuestionId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "QuestionId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AttemptsRemaining">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AttemptsRemaining" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentAttempts">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentAttempts" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsCorrect">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsCorrect" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsAnswerCorrect">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsAnswerCorrect" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsCrossVisible">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsCrossVisible" generated properties.</summary>
+        </member>
+        <member name="T:Refit.Implementation.Generated">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.SignupAsync(DyslexiaAppMAUI.Shared.Dtos.SignupRequestDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.SigninAsync(DyslexiaAppMAUI.Shared.Dtos.SigninRequestDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.ChangePasswordAsync(DyslexiaAppMAUI.Shared.Dtos.ChangePasswordDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#SignupAsync(DyslexiaAppMAUI.Shared.Dtos.SignupRequestDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#SigninAsync(DyslexiaAppMAUI.Shared.Dtos.SigninRequestDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#ChangePasswordAsync(DyslexiaAppMAUI.Shared.Dtos.ChangePasswordDto)">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIEducationalGameListApi">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIEducationalGameListApi.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIEducationalGameListApi.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIEducationalGameListApi.GetEducationalGamesAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIEducationalGameListApi.GetAllQuestionsAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIEducationalGameListApi.DyslexiaApp#MAUI#Services#IEducationalGameListApi#GetEducationalGamesAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIEducationalGameListApi.DyslexiaApp#MAUI#Services#IEducationalGameListApi#GetAllQuestionsAsync">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIPictureMatchingApi">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIPictureMatchingApi.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIPictureMatchingApi.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIPictureMatchingApi.GetQuestionByIdAsync(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIPictureMatchingApi.DyslexiaApp#MAUI#Services#IPictureMatchingApi#GetQuestionByIdAsync(System.Guid)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
