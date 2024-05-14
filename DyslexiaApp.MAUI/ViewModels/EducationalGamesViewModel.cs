@@ -21,8 +21,19 @@ public partial class EducationalGamesViewModel : BaseViewModel
     [ObservableProperty]
     private EducationalDto[] _educational = [];
 
-
     private bool _isInitialized;
+
+    [ObservableProperty]
+    private bool isPopupVisible;
+
+    [ObservableProperty]
+    private EducationalDto selectedGame;
+
+    [ObservableProperty]
+    private ObservableCollection<QuestionDto> gameQuestions;
+
+    [ObservableProperty]
+    private int currentQuestionIndex;
 
     public async Task InitializeAsync()
     {
@@ -47,19 +58,10 @@ public partial class EducationalGamesViewModel : BaseViewModel
         }
     }
 
-    [ObservableProperty]
-    private bool isPopupVisible;
-
-    [ObservableProperty]
-    private EducationalDto selectedGame;
-
     public EducationalGamesViewModel(IEducationalGameListApi educationalGameListApi)
     {
         _educationalGameListApi = educationalGameListApi;
     }
-
-    //[ObservableProperty]
-    //private ObservableCollection<QuestionDto> gameQuestions;
 
     [RelayCommand]
     private void ShowGameDetails(EducationalDto game)
@@ -67,46 +69,85 @@ public partial class EducationalGamesViewModel : BaseViewModel
         if (game != null)
         {
             SelectedGame = game;
-            IsPopupVisible = true;
 
             Debug.WriteLine($"Game Selected: {SelectedGame.Name}");
             Debug.WriteLine($"Description: {SelectedGame.Description}");
             Debug.WriteLine($"ID: {SelectedGame.Id}");
 
-            //GameQuestions = new ObservableCollection<QuestionDto>(
-            //   SelectedGame.MatchingGames.SelectMany(mg => mg.Questions));
+            GameQuestions = new ObservableCollection<QuestionDto>(
+               SelectedGame.MatchingGames.SelectMany(mg => mg.Questions).ToList());
 
-            foreach (var matchingGame in SelectedGame.MatchingGames)
+            foreach (var question in GameQuestions)
             {
-                Debug.WriteLine($"Matching Game ID: {matchingGame.Id}");
-                foreach (var question in matchingGame.Questions)
-                {
-                    Debug.WriteLine($"Question ID: {question.Id}");
-                }
+                Debug.WriteLine($" Game Questions: Question ID: {question.Id}");
             }
-
-
+            CurrentQuestionIndex = 0;
+            IsPopupVisible = true;
         }
     }
 
-    // In EducationalGamesViewModel.cs
     [RelayCommand]
-    private async Task GoToPictureMatchingGame(QuestionDto selectedQuestion)
+    private async Task GoToPictureMatchingGame()
     {
+        var selectedQuestion = GameQuestions[CurrentQuestionIndex];
         if (selectedQuestion != null)
         {
-            var route = $"{nameof(PictureMatchingGame)}?questionId={selectedQuestion.Id}";
+            var route = $"{nameof(PlayGame)}?questionId={selectedQuestion.Id}";
             await Shell.Current.GoToAsync(route);
             Debug.WriteLine($"Navigating to PictureMatchingGame with Question ID: {selectedQuestion.Id}");
         }
     }
 
+    [RelayCommand]
+    public async Task GoToNextQuestion()
+    {
+        if (CurrentQuestionIndex < GameQuestions.Count - 1)
+        {
+            CurrentQuestionIndex++;
+            var nextQuestion = GameQuestions[CurrentQuestionIndex];
+            Debug.WriteLine($"next Question ID: {nextQuestion.Id}");
+            var route = $"{nameof(PictureMatchingGame)}?questionId={nextQuestion.Id}";
+            await Shell.Current.GoToAsync(route);
+        }
+        else
+        {
+            await Shell.Current.DisplayAlert("End of Game", "You have completed all questions in this game.", "OK");
 
+            await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+        }
+    }
 
     [RelayCommand]
     private void ClosePopup()
     {
         IsPopupVisible = false;
     }
-
 }
+
+//[RelayCommand]
+//private async Task GoToPictureMatchingGame()
+//{
+//    var selectedQuestion = gameQuestions[currentQuestionIndex];
+//    if (selectedQuestion != null)
+//    {
+//        var route = $"{nameof(PictureMatchingGame)}?questionId={selectedQuestion.Id}";
+//        await Shell.Current.GoToAsync(route);
+//        Debug.WriteLine($"Navigating to PictureMatchingGame with Question ID: {selectedQuestion.Id}");
+//    }
+//}
+//[RelayCommand]
+//public async Task GoToNextQuestion()
+//{
+//    if (CurrentQuestionIndex < GameQuestions.Count - 1)
+//    {
+//        CurrentQuestionIndex++;
+//        var nextQuestion = GameQuestions[CurrentQuestionIndex];
+//        Debug.WriteLine($"next Question ID: {nextQuestion.Id}");
+//        var route = $"{nameof(PictureMatchingGame)}?questionId={nextQuestion.Id}";
+//        await Shell.Current.GoToAsync(route);
+//    }
+//    else
+//    {
+//        await Shell.Current.DisplayAlert("End of Game", "You have completed all questions in this game.", "OK");
+//    }
+//}

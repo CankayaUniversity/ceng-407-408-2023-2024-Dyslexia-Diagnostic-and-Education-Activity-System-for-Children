@@ -3,10 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DyslexiaApp.MAUI.Pages.Login.PictureMatchingGame"
              xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
-             Shell.PresentationMode="ModalAnimated"
-             x:DataType="vm:PictureMatchingViewModel"
+             x:DataType="vm:MatchingViewModel"
              xmlns:dto="clr-namespace:DyslexiaAppMAUI.Shared.Dtos;assembly=DyslexiaAppMAUI.Shared"
-             Title="Picture Matching Game"
              BackgroundImageSource="picturematching.jpeg">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -32,11 +30,16 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <Grid>
-        <Grid>
-            <ImageButton Source="home_button.png"
-                         Style="{StaticResource HomeIconStyle}"
-                         Clicked="Home_Button" />
+        <Grid Style="{StaticResource HomeIconStyle}" VerticalOptions="Start" HorizontalOptions="Start">
+            <ImageButton Source="home_button.png" 
+                 Margin="0,10,-20,10"
+                 BackgroundColor="Transparent"
+                 VerticalOptions="Center" 
+                 HorizontalOptions="Center"
+                 Clicked="Home_Button"/>
+        </Grid>
 
+        <Grid>
             <StackLayout HorizontalOptions="Start"
                          VerticalOptions="Start"
                          Margin="200,130">
@@ -69,7 +72,7 @@
                              VerticalOptions="Center"
                              WidthRequest="100">
                     <Image Source="heart.png" 
-                           WidthRequest="50" />
+                           WidthRequest="50"/>
                     <Label Text="{Binding AttemptsRemaining, StringFormat='x{0:F0}'}"
                            FontSize="24"
                            FontAttributes="Bold"
@@ -85,7 +88,7 @@
               WidthRequest="500"
               Margin="600,0,10,30">
 
-            <CollectionView ItemsSource="{Binding Question.ImageOptions}"
+            <CollectionView ItemsSource="{Binding FilteredImageOptions}"
                             HeightRequest="425"
                             WidthRequest="500"
                             Margin="0,0,10,30"
@@ -104,11 +107,11 @@
                                Margin="5"
                                Padding="0"
                                CornerRadius="10"
-                               BorderColor="Black"
-                               BackgroundColor="#A2DBAE">
-                            <Image Source="{Binding Url}">
+                               BorderColor="Black">
+                            <Image Source="{Binding Url}"
+                                   Aspect="AspectFill">
                                 <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PictureMatchingViewModel}}, Path=ItemSelectedGameCommand}"
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MatchingViewModel}}, Path=ItemSelectedGameCommand}"
                                                           CommandParameter="{Binding .}"/>
                                 </Image.GestureRecognizers>
                             </Image>
@@ -117,14 +120,14 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <Image Source="check.png"
+            <Image Source="accept.png"
                    IsVisible="{Binding IsAnswerCorrect}"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
                    WidthRequest="150"
                    HeightRequest="200" 
                    BackgroundColor="Transparent"/>
-            <Image Source="cross.png"
+            <Image Source="delete.png"
                    IsVisible="{Binding IsCrossVisible}"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
@@ -134,9 +137,10 @@
         <Grid WidthRequest="100"
               HeightRequest="50"
               Margin="855,500,0,20">
-            <Button Text="Next"
-                    BackgroundColor="LightGray"
-                    FontSize="Medium"/>
+            <Button x:Name="NextButton"
+                    FontSize="Medium"
+                    Text="Next"
+                    IsEnabled="{Binding IsAnswerCorrect}" />
         </Grid>
     </Grid>
 </ContentPage>

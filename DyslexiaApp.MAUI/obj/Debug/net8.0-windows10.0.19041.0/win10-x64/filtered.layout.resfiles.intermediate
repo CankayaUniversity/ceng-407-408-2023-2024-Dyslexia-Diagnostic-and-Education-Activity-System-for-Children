@@ -1,5 +1,6 @@
 OpenSans-Regular.ttf
 OpenSans-Semibold.ttf
+accept.scale-100.png
 appicon.ico
 appiconLargeTile.scale-100.png
 appiconLargeTile.scale-125.png
@@ -52,6 +53,7 @@ check.scale-100.png
 close.scale-100.png
 cloud.scale-100.png
 cross.scale-100.png
+delete.scale-100.png
 diagnosis.scale-100.jpg
 dotnet_bot.scale-100.png
 dotnet_bot.scale-125.png
@@ -68,10 +70,13 @@ login_page_mobile.scale-100.jpg
 mainpage.scale-100.jpg
 navigation.scale-100.jpeg
 picturematching.scale-100.jpeg
+power.scale-100.png
+reset_password.scale-100.png
 speech_bubble_left.scale-100.png
 speech_bubble_right.scale-100.png
 star.scale-100.png
 symmetry.scale-100.jpeg
+trash.scale-100.png
 splashSplashScreen.scale-100.png
 splashSplashScreen.scale-125.png
 splashSplashScreen.scale-150.png

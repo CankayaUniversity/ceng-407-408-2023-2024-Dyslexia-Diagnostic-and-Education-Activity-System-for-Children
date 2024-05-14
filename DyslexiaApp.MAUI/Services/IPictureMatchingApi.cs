@@ -7,6 +7,9 @@ namespace DyslexiaApp.MAUI.Services
     {
         [Get("/api/question/{questionId}")]
         Task<QuestionDto> GetQuestionByIdAsync(Guid questionId);
+
+        [Get("/api/question")]
+        Task<List<QuestionDto>> GetAllQuestionsAsync();
     }
 
 }

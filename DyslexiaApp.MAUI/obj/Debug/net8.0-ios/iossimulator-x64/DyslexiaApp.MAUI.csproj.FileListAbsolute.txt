@@ -1647,4 +1647,10 @@ D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-ios\iossimulator-x64\Newtonsoft.Json.dl
 D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-ios\iossimulator-x64\System.CodeDom.dll
 D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-ios\iossimulator-x64\System.Management.dll
 D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-ios\iossimulator-x64\System.Security.Cryptography.Pkcs.dll
-D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\build-signature\signature
+D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-ios\iossimulator-x64\SendGrid.dll
+D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-ios\iossimulator-x64\StarkbankEcdsa.dll
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\accept.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\delete.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\trash.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\reset_password.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\power.png

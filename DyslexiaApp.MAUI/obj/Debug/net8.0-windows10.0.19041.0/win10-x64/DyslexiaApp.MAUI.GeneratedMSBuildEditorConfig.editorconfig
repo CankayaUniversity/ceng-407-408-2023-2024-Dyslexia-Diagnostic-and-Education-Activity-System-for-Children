@@ -91,6 +91,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Log
 build_metadata.AdditionalFiles.TargetPath = Pages\Login\PictureMatchingGame.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Login\PictureMatchingGame.xaml
 
+[D:/408/DyslexiaApp.MAUI/Pages/Login/PlayGame.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Login.PlayGame.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Login\PlayGame.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Login\PlayGame.xaml
+
 [D:/408/DyslexiaApp.MAUI/Pages/Login/ProfilePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Login.ProfilePage.xaml

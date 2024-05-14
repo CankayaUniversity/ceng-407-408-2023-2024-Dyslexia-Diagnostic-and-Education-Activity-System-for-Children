@@ -1,5 +1,6 @@
 using DyslexiaApp.MAUI.ViewModels;
 using DyslexiaAppMAUI.Shared.Dtos;
+using Microsoft.Maui;
 using System.Diagnostics;
 
 namespace DyslexiaApp.MAUI.Pages.Login;
@@ -8,6 +9,7 @@ namespace DyslexiaApp.MAUI.Pages.Login;
 public partial class PictureMatchingGame : ContentPage
 {
     private readonly PictureMatchingViewModel _pictureViewModel;
+    private EducationalGamesViewModel _educationalViewModel;
 
     private string _questionId;
     public string QuestionId
@@ -19,13 +21,14 @@ public partial class PictureMatchingGame : ContentPage
             LoadQuestionData(_questionId);
         }
     }
-
-    public PictureMatchingGame(PictureMatchingViewModel pictureViewModel)
+    public PictureMatchingGame(PictureMatchingViewModel pictureViewModel, EducationalGamesViewModel educationalViewModel)
     {
         InitializeComponent();
         _pictureViewModel = pictureViewModel;
+        _educationalViewModel = educationalViewModel;
         BindingContext = _pictureViewModel;
 
+        NextButton.Command = new Command(() => _educationalViewModel.GoToNextQuestion());
     }
     private async void LoadQuestionData(string questionId)
     {

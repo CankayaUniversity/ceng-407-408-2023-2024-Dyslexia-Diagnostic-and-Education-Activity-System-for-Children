@@ -19,35 +19,30 @@
          Route="RegisterAgreement" />
 
     <ShellContent
-         Title="Register"
          ContentTemplate="{DataTemplate pages:Register}"
          Route="Register" />
 
     <ShellContent
-         Title="Diagnosis Letter Matching Information"
          ContentTemplate="{DataTemplate pages:DiagnosisLetterMatchingInformation}"
          Route="DiagnosisLetterMatchingInformation" />
     <ShellContent
-         Title="Diagnosis Educational Game Page"
          ContentTemplate="{DataTemplate pages:EducationalGameList}"
          Route="EducationalGameList" />
     <ShellContent
-          Title="Picture Matching Game"
           ContentTemplate="{DataTemplate pages:PictureMatchingGame}"
           Route="PictureMatchingGame" />
     <ShellContent
-           Title="Picture Matching Game"
            ContentTemplate="{DataTemplate pages:ProfilePage}"
            Route="ProfilePage" />
     <ShellContent
-           Title="Picture Matching Game"
            ContentTemplate="{DataTemplate pages:DiagnosticTestAgreement}"
            Route="DiagnosticTestAgreement" />
     <ShellContent
-       Title="Picture Matching Game"
        ContentTemplate="{DataTemplate pages:LetterMatchingGame}"
        Route="LetterMatchingGame" />
-
+    <ShellContent
+       ContentTemplate="{DataTemplate pages:PlayGame}"
+       Route="PlayGame" />
     <!--<ShellContent 
         Route="PictureMatchingGame" 
         ContentTemplate="{DataTemplate local:PictureMatchingGame}" />-->

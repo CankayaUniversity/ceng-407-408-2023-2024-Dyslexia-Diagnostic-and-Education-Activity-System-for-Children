@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DyslexiaApp.MAUI.Pages.Login.DiagnosisLetterMatchingInformation"
-             Title="Diagnosis Letter Matching Test Information"             
+             xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
+             x:DataType="vm:DiagnosisMatchingGamesViewModel"
+             xmlns:dto="clr-namespace:DyslexiaAppMAUI.Shared.Dtos;assembly=DyslexiaAppMAUI.Shared"
              BackgroundImageSource="mainpage.jpg">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -102,12 +104,14 @@
                             <ImageButton Source="cloud.png" 
                                   BackgroundColor="Transparent"
                                   VerticalOptions="Center" 
-                                  HorizontalOptions="Center"
-                                         Clicked="StartTest1"/>
+                                  HorizontalOptions="Center"/>
                             <Label Text="Start Test" 
                                    Style="{StaticResource StartIconTextStyle}" 
                                    VerticalOptions="Center" 
                                    HorizontalOptions="Center" />
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:DiagnosisMatchingGamesViewModel}}, Path=GoToLetterMatchingGameCommand}" />
+                            </Grid.GestureRecognizers>
                         </Grid>
 
                     </VerticalStackLayout>

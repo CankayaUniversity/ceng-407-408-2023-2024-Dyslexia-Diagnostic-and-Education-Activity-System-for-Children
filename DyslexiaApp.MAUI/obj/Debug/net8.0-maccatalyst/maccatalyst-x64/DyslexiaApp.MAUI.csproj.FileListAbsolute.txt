@@ -1587,3 +1587,10 @@ D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Newtonsoft.
 D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.CodeDom.dll
 D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.Management.dll
 D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.Security.Cryptography.Pkcs.dll
+D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\SendGrid.dll
+D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\StarkbankEcdsa.dll
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\power.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\reset_password.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\delete.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\accept.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\trash.png

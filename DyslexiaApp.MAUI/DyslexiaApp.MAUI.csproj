@@ -56,12 +56,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\accept.png" />
 	  <None Remove="Resources\Images\back_icon.jpg" />
 	  <None Remove="Resources\Images\chat.png" />
 	  <None Remove="Resources\Images\check.png" />
 	  <None Remove="Resources\Images\close.png" />
 	  <None Remove="Resources\Images\cloud.png" />
 	  <None Remove="Resources\Images\cross.png" />
+	  <None Remove="Resources\Images\delete.png" />
 	  <None Remove="Resources\Images\diagnosis.jpg" />
 	  <None Remove="Resources\Images\education.jpg" />
 	  <None Remove="Resources\Images\heart.png" />
@@ -72,10 +74,13 @@
 	  <None Remove="Resources\Images\mainpage.jpg" />
 	  <None Remove="Resources\Images\navigation.jpeg" />
 	  <None Remove="Resources\Images\picturematching.jpeg" />
+	  <None Remove="Resources\Images\power.png" />
+	  <None Remove="Resources\Images\reset_password.png" />
 	  <None Remove="Resources\Images\speech_bubble_left.png" />
 	  <None Remove="Resources\Images\speech_bubble_right.png" />
 	  <None Remove="Resources\Images\star.png" />
 	  <None Remove="Resources\Images\symmetry.jpeg" />
+	  <None Remove="Resources\Images\trash.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -128,6 +133,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Login\PictureMatchingGame.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Login\PlayGame.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Login\ProfilePage.xaml">

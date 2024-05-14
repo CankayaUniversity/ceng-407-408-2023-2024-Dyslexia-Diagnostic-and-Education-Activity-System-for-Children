@@ -25,6 +25,7 @@ namespace DyslexiaApp.MAUI
                 typeof (PictureMatchingGame),
                 typeof(ProfilePage),
                 typeof(LetterMatchingGame),
+                typeof(PlayGame),
             ];
         private readonly AuthService _authService;
         private static void RegisterRoutes()

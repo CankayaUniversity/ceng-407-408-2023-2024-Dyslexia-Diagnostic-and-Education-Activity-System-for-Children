@@ -34,6 +34,8 @@ public class MonoPackageManager_Resources {
 		"Newtonsoft.Json.dll",
 		"Refit.dll",
 		"Refit.HttpClientFactory.dll",
+		"SendGrid.dll",
+		"StarkbankEcdsa.dll",
 		"System.CodeDom.dll",
 		"System.Management.dll",
 		"System.Security.Cryptography.Pkcs.dll",

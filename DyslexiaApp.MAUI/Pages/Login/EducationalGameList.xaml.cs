@@ -23,6 +23,4 @@ public partial class EducationalGameList : ContentPage
         await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
     }
 
-
-
 }

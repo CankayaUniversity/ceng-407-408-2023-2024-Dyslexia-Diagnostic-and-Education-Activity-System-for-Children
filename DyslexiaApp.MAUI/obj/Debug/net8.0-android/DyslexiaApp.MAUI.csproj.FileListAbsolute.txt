@@ -5411,3 +5411,11 @@ D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\Newtonsoft.Json.
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\System.CodeDom.dll
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\System.Management.dll
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\System.Security.Cryptography.Pkcs.dll
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\accept.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\delete.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\power.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\reset_password.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\trash.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\SendGrid.dll
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\SendGrid.pdb
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\android\assets\StarkbankEcdsa.dll
