@@ -66,18 +66,18 @@
         </Grid>
 
         <Grid VerticalOptions="Center" 
-               HorizontalOptions="Center"
-               WidthRequest="1100"
-               HeightRequest="500"
-               Margin="30,0,0,0"
-               Background="{StaticResource SemiTransparentBlack}">
+              HorizontalOptions="Center"
+              WidthRequest="1100"
+              HeightRequest="500"
+              Margin="30,0,0,0"
+              Background="{StaticResource SemiTransparentBlack}">
 
-            <CollectionView  ItemsSource="{Binding Educational}"
-                             WidthRequest="700"
-                             HeightRequest="600"
-                             Margin="50,-100"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Start">
+            <CollectionView ItemsSource="{Binding FilteredEducational}"
+                            WidthRequest="700"
+                            HeightRequest="600"
+                            Margin="50,-100"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Start">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Horizontal" 
                                      VerticalItemSpacing="20"
@@ -96,18 +96,17 @@
                                 <Image Grid.Row="0"
                                        Source="listedpicture.jpeg"
                                        Aspect="AspectFill"/>
-                                <Label  Grid.Row="0"
-                                        Text="{Binding Name}"
-                                        FontSize="Medium"
-                                        TextColor="ForestGreen"
-                                        FontAttributes="Bold"
-                                        Margin="60,90,0,0"
-                                        BackgroundColor="Transparent" />
+                                <Label Grid.Row="0"
+                                       Text="{Binding Name}"
+                                       FontSize="Medium"
+                                       TextColor="ForestGreen"
+                                       FontAttributes="Bold"
+                                       Margin="60,90,0,0"
+                                       BackgroundColor="Transparent" />
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:EducationalGamesViewModel}}, Path= ShowGameDetailsCommand}" CommandParameter="{Binding .}" />
                                 </Grid.GestureRecognizers>
                             </Grid>
-
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

@@ -1,54 +1,112 @@
 ﻿using DyslexiaAppMAUI.Shared.Dtos;
+using Refit;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace DyslexiaApp.MAUI.Services;
-public class AuthService
+namespace DyslexiaApp.MAUI.Services
 {
-    private const string AuthKey = "AuthKey";
-    public LoggedInUser? User { get; private set; }
-    public string? Token { get; private set; }
-
-    public void Signin(AuthResponseDto dto)
+    public class AuthService
     {
-        var serialized = JsonSerializer.Serialize(dto);
-        Preferences.Default.Set(AuthKey, serialized);
+        private const string AuthKey = "AuthKey";
+        public LoggedInUser? User { get; private set; }
+        public string? Token { get; private set; }
+        public string? ProfileUpdateToken { get; private set; }
 
-        (User, Token) = dto;
-    }
+        private readonly IAuthApi _authApi;
 
-    public void Initialize()
-    {
-        if (Preferences.Default.ContainsKey(AuthKey))
+        public AuthService(IAuthApi authApi)
         {
-            var serialized = Preferences.Default.Get<string?>(AuthKey, null);
-            if (string.IsNullOrEmpty(serialized))
+            _authApi = authApi;
+        }
+
+        public async Task<ResultWithDataDto<ProfileUpdateTokenDto>> GenerateProfileUpdateTokenAsync(string email)
+        {
+            try
             {
-                Preferences.Default.Remove(AuthKey);
-            }
-            else
-            {
-                try
+                var result = await _authApi.GenerateProfileUpdateTokenAsync(email);
+                if (result != null && result.IsSuccess)
                 {
-                    (User, Token) = JsonSerializer.Deserialize<AuthResponseDto>(serialized)!;
+                    ProfileUpdateToken = result.Data.Token;
                 }
-                catch (JsonException ex)
+                else
                 {
-                    // Burada log yapabilir veya hata mesajını kullanıcıya gösterebilirsiniz.
-                    Debug.WriteLine($"JSON Deserialization Error: {ex.Message}");
+                    Debug.WriteLine($"API call was not successful or result is null. Result: {result}");
+                }
+                return result;
+            }
+            catch (ApiException ex)
+            {
+                Debug.WriteLine($"API error: {ex.Content}");
+                Debug.WriteLine($"Status Code: {ex.StatusCode}");
+                Debug.WriteLine($"Reason Phrase: {ex.ReasonPhrase}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"General error: {ex.Message}");
+                throw;
+            }
+        }
+
+        public async Task<ResultDto> UpdateUserProfileWithTokenAsync(UpdateUserWithTokenDto updateUserWithTokenDto)
+        {
+            try
+            {
+                var result = await _authApi.UpdateUserProfileWithTokenAsync(updateUserWithTokenDto);
+                Debug.WriteLine($"UpdateUserProfileWithTokenAsync result: {result}");
+                return result;
+            }
+            catch (ApiException ex)
+            {
+                Debug.WriteLine($"API error: {ex.Content}");
+                Debug.WriteLine($"Status Code: {ex.StatusCode}");
+                Debug.WriteLine($"Reason Phrase: {ex.ReasonPhrase}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"General error: {ex.Message}");
+                throw;
+            }
+        }
+
+        public void Signin(AuthResponseDto dto)
+        {
+            var serialized = JsonSerializer.Serialize(dto);
+            Preferences.Default.Set(AuthKey, serialized);
+
+            (User, Token) = dto;
+        }
+
+        public void Initialize()
+        {
+            if (Preferences.Default.ContainsKey(AuthKey))
+            {
+                var serialized = Preferences.Default.Get<string?>(AuthKey, null);
+                if (string.IsNullOrEmpty(serialized))
+                {
+                    Preferences.Default.Remove(AuthKey);
+                }
+                else
+                {
+                    try
+                    {
+                        (User, Token) = JsonSerializer.Deserialize<AuthResponseDto>(serialized)!;
+                    }
+                    catch (JsonException ex)
+                    {
+                        Debug.WriteLine($"JSON Deserialization Error: {ex.Message}");
+                    }
                 }
             }
         }
-    }
-    public void Signout()
-    {
-        Preferences.Default.Remove(AuthKey);
-        (User, Token) = (null, null);
-    }
 
+        public void Signout()
+        {
+            Preferences.Default.Remove(AuthKey);
+            (User, Token) = (null, null);
+        }
+    }
 }

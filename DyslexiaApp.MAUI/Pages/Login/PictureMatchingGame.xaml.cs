@@ -8,7 +8,7 @@ namespace DyslexiaApp.MAUI.Pages.Login;
 [QueryProperty(nameof(QuestionId), "questionId")]
 public partial class PictureMatchingGame : ContentPage
 {
-    private readonly PictureMatchingViewModel _pictureViewModel;
+    private readonly MatchingViewModel _pictureViewModel;
     private EducationalGamesViewModel _educationalViewModel;
 
     private string _questionId;
@@ -21,14 +21,14 @@ public partial class PictureMatchingGame : ContentPage
             LoadQuestionData(_questionId);
         }
     }
-    public PictureMatchingGame(PictureMatchingViewModel pictureViewModel, EducationalGamesViewModel educationalViewModel)
+    public PictureMatchingGame(MatchingViewModel pictureViewModel, EducationalGamesViewModel educationalViewModel)
     {
         InitializeComponent();
         _pictureViewModel = pictureViewModel;
         _educationalViewModel = educationalViewModel;
         BindingContext = _pictureViewModel;
 
-        NextButton.Command = new Command(() => _educationalViewModel.GoToNextQuestion());
+        //NextButton.Command = new Command(() => _educationalViewModel.GoToNextQuestion());
     }
     private async void LoadQuestionData(string questionId)
     {

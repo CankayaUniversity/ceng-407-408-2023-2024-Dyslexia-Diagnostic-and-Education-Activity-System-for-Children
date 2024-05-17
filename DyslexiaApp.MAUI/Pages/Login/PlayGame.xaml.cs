@@ -1,15 +1,16 @@
-namespace DyslexiaApp.MAUI.Pages.Login;
 using DyslexiaApp.MAUI.ViewModels;
 using DyslexiaAppMAUI.Shared.Dtos;
 using Microsoft.Maui;
+using System;
 using System.Diagnostics;
+
+namespace DyslexiaApp.MAUI.Pages.Login;
 
 [QueryProperty(nameof(QuestionId), "questionId")]
 public partial class PlayGame : ContentPage
 {
-    private readonly PictureMatchingViewModel _matchingViewModel;
+    private readonly MatchingViewModel _matchingViewModel;
     private EducationalGamesViewModel _educationalViewModel;
-
 
     private string _questionId;
     public string QuestionId
@@ -18,17 +19,19 @@ public partial class PlayGame : ContentPage
         set
         {
             _questionId = Uri.UnescapeDataString(value ?? string.Empty);
+            Debug.WriteLine($"Game Selected: {_questionId}");
             LoadQuestionData(_questionId);
         }
     }
-    public PlayGame(PictureMatchingViewModel matchingViewModel, EducationalGamesViewModel educationalViewModel)
+
+    public PlayGame(MatchingViewModel matchingViewModel, EducationalGamesViewModel educationalViewModel)
     {
         InitializeComponent();
         _matchingViewModel = matchingViewModel;
         _educationalViewModel = educationalViewModel;
         BindingContext = _matchingViewModel;
 
-        NextButton.Command = new Command(() => _educationalViewModel.GoToNextQuestion());
+        NextButton.Command = new Command(async () => await _educationalViewModel.GoToNextQuestion());
     }
 
     private async void LoadQuestionData(string questionId)

@@ -12,15 +12,43 @@ public partial class LoginPage : ContentPage
         BindingContext = authViewModel;
         _authService = authService;
     }
-    protected async override void OnAppearing()
+    private readonly SemaphoreSlim _navigationSemaphore = new SemaphoreSlim(1, 1);
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        _ = OnAppearingAsync();
+    }
+
+    private async Task OnAppearingAsync()
     {
         if (_authService.User is not null
-             && _authService.User.Id != default(Guid)
-             && !string.IsNullOrWhiteSpace(_authService.Token))
+            && _authService.User.Id != default(Guid)
+            && !string.IsNullOrWhiteSpace(_authService.Token))
+        {
+            // 500 milisaniye bekleme ekleyerek önceki navigasyon iþlemlerinin tamamlanmasýný bekleyin
+            await Task.Delay(500);
+
+            await NavigateToHomePageAsync();
+        }
+    }
+
+    private async Task NavigateToHomePageAsync()
+    {
+        await _navigationSemaphore.WaitAsync();
+        try
         {
             await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
         }
+        finally
+        {
+            _navigationSemaphore.Release();
+        }
     }
+
+
+    // Navigasyon iþlemleri sýrasýnda kullanýlacak bir kilit nesnesi
+    private readonly object _navigationLock = new object();
     private async void CreateAccountButton_Clicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync(nameof(Register));

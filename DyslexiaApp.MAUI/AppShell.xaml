@@ -43,6 +43,10 @@
     <ShellContent
        ContentTemplate="{DataTemplate pages:PlayGame}"
        Route="PlayGame" />
+
+    <MenuItem IconImageSource="power"
+              Clicked="SignoutMenuItem_Clicked"/>
+
     <!--<ShellContent 
         Route="PictureMatchingGame" 
         ContentTemplate="{DataTemplate local:PictureMatchingGame}" />-->

@@ -8,7 +8,7 @@ namespace DyslexiaApp.MAUI.Pages.Login;
 public partial class LetterMatchingGame : ContentPage
 {
     private readonly LetterMatchingViewModel _letterViewModel;
-    private DiagnosisMatchingGamesViewModel _diagnosisViewModel;
+    private readonly DiagnosisMatchingGamesViewModel _diagnosisMatchingGamesViewModel;
 
     private string _questionId;
     public string QuestionId
@@ -22,13 +22,16 @@ public partial class LetterMatchingGame : ContentPage
         }
     }
 
-    public LetterMatchingGame(LetterMatchingViewModel letterViewModel, DiagnosisMatchingGamesViewModel diagnosisViewModel)
+    public LetterMatchingGame(LetterMatchingViewModel letterViewModel, DiagnosisMatchingGamesViewModel diagnosisMatchingGamesViewModel)
     {
         InitializeComponent();
         _letterViewModel = letterViewModel;
-        _diagnosisViewModel = diagnosisViewModel;
+        _diagnosisMatchingGamesViewModel = diagnosisMatchingGamesViewModel;
         BindingContext = _letterViewModel;
+
+        NextButton.Command = new Command(async () => await _diagnosisMatchingGamesViewModel.GoToNextQuestion());
     }
+
     private async void LoadQuestionData(string questionId)
     {
         if (Guid.TryParse(questionId, out Guid id))

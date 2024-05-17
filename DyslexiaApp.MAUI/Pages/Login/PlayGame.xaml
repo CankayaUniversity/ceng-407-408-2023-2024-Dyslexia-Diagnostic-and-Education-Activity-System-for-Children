@@ -49,8 +49,8 @@
                            TextColor="#A2DBAE"
                            FontSize="Medium"
                            HorizontalOptions="Center"/>
-                <Frame WidthRequest="200"
-                           HeightRequest="200"
+                <Frame WidthRequest="250"
+                           HeightRequest="250"
                            Margin="5"
                            Padding="0"
                            CornerRadius="10"
@@ -63,7 +63,7 @@
             <Frame BackgroundColor="LightGray"
                        WidthRequest="150"
                        HeightRequest="70"
-                       Margin="230,90"
+                       Margin="250,100"
                        VerticalOptions="End"
                        HorizontalOptions="Start">
                 <StackLayout Orientation="Horizontal" 

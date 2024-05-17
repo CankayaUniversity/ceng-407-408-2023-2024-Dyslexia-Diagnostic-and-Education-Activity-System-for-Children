@@ -3,32 +3,35 @@ using DyslexiaApp.API.Data.Entities;
 using DyslexiaAppMAUI.Shared.Dtos;
 using DyslexiaAppMAUI.Shared.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
+using System.Diagnostics;
+
 namespace DyslexiaApp.API.Services
 {
-    public class AuthService(AppDbContext context, TokenService tokenService, PasswordService passwordService)
+    public class AuthService
     {
-        private readonly AppDbContext _context = context;
-        private readonly TokenService _tokenService = tokenService;
-        private readonly PasswordService _passwordService = passwordService;
+        private readonly AppDbContext _context;
+        private readonly TokenService _tokenService;
+        private readonly PasswordService _passwordService;
 
+        public AuthService(AppDbContext context, TokenService tokenService, PasswordService passwordService)
+        {
+            _context = context;
+            _tokenService = tokenService;
+            _passwordService = passwordService;
+        }
 
         public async Task<ResultWithDataDto<AuthResponseDto>> SignupAsync(SignupRequestDto dto)
         {
-            var Received = dto.Password;
-            // E-posta adresi zaten kayıtlı mı diye kontrol edilir
             if (await _context.Users.AsNoTracking().AnyAsync(u => u.Email == dto.Email))
             {
                 return ResultWithDataDto<AuthResponseDto>.Failure("Bu e-posta adresi zaten kayıtlı.");
             }
 
-            // Şifrenin boş veya null olmadığını kontrol et
             if (string.IsNullOrWhiteSpace(dto.Password))
             {
                 return ResultWithDataDto<AuthResponseDto>.Failure("Şifre boş olamaz.");
             }
 
-            // Yeni kullanıcı nesnesi oluştur
             var user = new User
             {
                 Id = Guid.NewGuid(),
@@ -41,10 +44,8 @@ namespace DyslexiaApp.API.Services
                 IsActive = true
             };
 
-            // Şifre için tuz ve hash oluştur
             (user.Salt, user.HashedPassword) = _passwordService.GenerateSaltAndHash(dto.Password);
 
-            // Kullanıcıyı veritabanına ekle
             try
             {
                 await _context.Users.AddAsync(user);
@@ -57,21 +58,15 @@ namespace DyslexiaApp.API.Services
             }
         }
 
-
-
         public async Task<ResultWithDataDto<AuthResponseDto>> SigninAsync(SigninRequestDto dto)
         {
-            var dbUser = await _context.Users
-                                .AsNoTracking()
-                                .FirstOrDefaultAsync(u => u.Email == dto.Email);
+            var dbUser = await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Email == dto.Email);
             if (dbUser == null)
                 return ResultWithDataDto<AuthResponseDto>.Failure("User does not exist");
             if (!_passwordService.AreEqual(dto.Password, dbUser.Salt, dbUser.HashedPassword))
                 return ResultWithDataDto<AuthResponseDto>.Failure("Incorrect password!");
 
-
             return GenerateAuthResponse(dbUser);
-
         }
 
         private ResultWithDataDto<AuthResponseDto> GenerateAuthResponse(User user)
@@ -83,7 +78,6 @@ namespace DyslexiaApp.API.Services
             return ResultWithDataDto<AuthResponseDto>.Success(authResponse);
         }
 
-        // Kullanıcı profili güncelleme metodu
         public async Task<ResultDto> UpdateUserProfileAsync(UserUpdateDto updateDto)
         {
             var user = await _context.Users.FindAsync(updateDto.Id);
@@ -94,7 +88,6 @@ namespace DyslexiaApp.API.Services
             user.Email = updateDto.Email;
             user.Birthday = updateDto.Birthday;
             user.Gender = updateDto.Gender;
-            // Eğer şifre güncellenmesine izin verilecekse, burada şifre güncelleme işlemi yapılabilir.
 
             try
             {
@@ -104,13 +97,11 @@ namespace DyslexiaApp.API.Services
             }
             catch (Exception ex)
             {
-                // Log the exception if you have logging in place.
+                Debug.WriteLine($"Error updating user: {ex.Message}");
                 return ResultDto.Failure(ex.Message);
             }
         }
 
-
-        // Kullanıcı hesabını devre dışı bırakma metodu
         public async Task<ResultDto> DeactivateUserAccountAsync(Guid userId)
         {
             var user = await _context.Users.FindAsync(userId);
@@ -126,7 +117,6 @@ namespace DyslexiaApp.API.Services
             }
             catch (Exception ex)
             {
-                // Log the exception if you have logging in place.
                 return ResultDto.Failure(ex.Message);
             }
         }
@@ -134,7 +124,6 @@ namespace DyslexiaApp.API.Services
         public async Task<ResultWithDataDto<LoggedInUser>> GetUserByIdAsync(Guid userId)
         {
             var user = await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == userId);
-
             if (user == null)
             {
                 return ResultWithDataDto<LoggedInUser>.Failure("User is not found!");
@@ -143,23 +132,24 @@ namespace DyslexiaApp.API.Services
             var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.Email, user.LastName, user.Birthday, user.Gender);
             return ResultWithDataDto<LoggedInUser>.Success(loggedInUser);
         }
+
         public async Task<ResultDto> ChangePassowordAsync(ChangePasswordDto dto, Guid userId)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u=> u.Id == userId);
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             if (user is null)
                 return ResultDto.Failure("Invalid request");
 
-            if(!_passwordService.AreEqual(dto.OldPassword, user.Salt, user.HashedPassword))
+            if (!_passwordService.AreEqual(dto.OldPassword, user.Salt, user.HashedPassword))
             {
                 return ResultDto.Failure("Incorrect password!");
             }
 
             (user.Salt, user.HashedPassword) = _passwordService.GenerateSaltAndHash(dto.NewPassword);
-
             await _context.SaveChangesAsync();
 
             return ResultDto.Success();
         }
+
         public async Task<ResultWithDataDto<ResetPasswordRequestDto>> ForgotPasswordAsync(string email, IEmailService emailService)
         {
             var result = await GeneratePasswordResetTokenAsync(email);
@@ -177,17 +167,14 @@ namespace DyslexiaApp.API.Services
         public async Task<ResultDto> ResetPassword(string token, string newPassword)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.ResetPasswordToken == token && u.ResetPasswordTokenExpiry > DateTime.Now);
-
             if (user == null)
             {
                 return ResultDto.Failure("Invalid or expired reset token.");
             }
 
-            // Update the password
             (user.Salt, user.HashedPassword) = _passwordService.GenerateSaltAndHash(newPassword);
-            user.ResetPasswordToken = null; // Clear the reset token
+            user.ResetPasswordToken = null;
             user.ResetPasswordTokenExpiry = null;
-
             await _context.SaveChangesAsync();
 
             return ResultDto.Success();
@@ -197,21 +184,19 @@ namespace DyslexiaApp.API.Services
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
 
-            // Eğer kullanıcı mevcut değilse, yeni bir kullanıcı oluştur
             if (user == null)
             {
                 user = new User
                 {
                     Id = Guid.NewGuid(),
                     Email = email,
-                    IsActive = true // Diğer gerekli alanlar varsayılan değerlerle doldurulabilir
+                    IsActive = true
                 };
 
                 await _context.Users.AddAsync(user);
                 await _context.SaveChangesAsync();
             }
 
-            // Oturum açma işleminin geri dönüş değeri
             return GenerateAuthResponse(user);
         }
 
@@ -220,15 +205,9 @@ namespace DyslexiaApp.API.Services
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
             if (user == null) return ResultWithDataDto<PasswordResetTokenDto>.Failure("User does not exist");
 
-            // Doğru parametre ile GeneratePasswordResetToken metodunu çağır
-            var token = _tokenService.GeneratePasswordResetToken(user.Email);  // Burada user.Email kullanılmalı
-
-            // Token'ı veritabanında bir yerde saklayın veya kullanıcı ile ilişkilendirin
-            // Örnek olarak, user nesnesine token ve zaman damgası ekleyebilirsiniz.
+            var token = _tokenService.GeneratePasswordResetToken(user.Email);
             user.ResetPasswordToken = token;
-            user.ResetPasswordTokenExpiry = DateTimeOffset.UtcNow.AddHours(24).DateTime;  // Convert DateTimeOffset to DateTime
-
-            // Değişiklikleri veritabanına kaydet
+            user.ResetPasswordTokenExpiry = DateTimeOffset.UtcNow.AddHours(24).DateTime;
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
 
@@ -237,16 +216,61 @@ namespace DyslexiaApp.API.Services
 
         public async Task<ResultDto> ResetPasswordAsync(string token, string email, string newPassword)
         {
-            // Token ve e-posta adresini doğrulayın
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email && u.ResetPasswordToken == token);
             if (user == null) return ResultDto.Failure("Invalid token or email");
 
-            // Şifreyi güncelleyin
             (user.Salt, user.HashedPassword) = _passwordService.GenerateSaltAndHash(newPassword);
-            user.ResetPasswordToken = null; // Token'ı sıfırla veya geçersiz kıl
+            user.ResetPasswordToken = null;
             await _context.SaveChangesAsync();
 
             return ResultDto.Success();
+        }
+
+        public async Task<ResultWithDataDto<ProfileUpdateTokenDto>> GenerateProfileUpdateTokenAsync(string email)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (user == null)
+            {
+                return ResultWithDataDto<ProfileUpdateTokenDto>.Failure("Kullanıcı bulunamadı");
+            }
+
+            var token = _tokenService.GenerateProfileUpdateToken(user.Email);
+            user.ProfileUpdateToken = token;
+            user.ProfileUpdateTokenExpiry = DateTimeOffset.UtcNow.AddHours(24).DateTime;
+
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+
+            return ResultWithDataDto<ProfileUpdateTokenDto>.Success(new ProfileUpdateTokenDto(token));
+        }
+
+        public async Task<ResultDto> UpdateUserProfileWithTokenAsync(UpdateUserWithTokenDto dto)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == dto.Email && u.ProfileUpdateToken == dto.Token && u.ProfileUpdateTokenExpiry > DateTime.UtcNow);
+            if (user == null)
+            {
+                Debug.WriteLine($"Invalid token or email. Token: {dto.Token}, Email: {dto.Email}");
+                return ResultDto.Failure("Geçersiz token veya e-posta.");
+            }
+
+            user.FirstName = dto.FirstName;
+            user.LastName = dto.LastName;
+            user.Birthday = dto.Birthday;
+            user.Gender = dto.Gender;
+            user.ProfileUpdateToken = null;
+            user.ProfileUpdateTokenExpiry = null;
+
+            try
+            {
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
+                return ResultDto.Success();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error updating user profile: {ex.Message}");
+                return ResultDto.Failure(ex.Message);
+            }
         }
 
     }

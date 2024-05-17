@@ -43,6 +43,8 @@ public partial class MatchingViewModel : BaseViewModel
     [ObservableProperty]
     private bool isCrossVisible;
 
+    private int _currentQuestionIndex = 0;
+
     public MatchingViewModel(IPictureMatchingApi pictureMatchingApi)
     {
         _pictureMatchingApi = pictureMatchingApi;
@@ -57,7 +59,7 @@ public partial class MatchingViewModel : BaseViewModel
         try
         {
             _isInitialized = true;
-            Debug.WriteLine($"Error loading question details: {questionId}");
+            Debug.WriteLine($"Loading question details: {questionId}");
             var question = await _pictureMatchingApi.GetQuestionByIdAsync(questionId);
             Question = question;
         }

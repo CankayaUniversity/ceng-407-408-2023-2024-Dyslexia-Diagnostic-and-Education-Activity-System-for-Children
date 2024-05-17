@@ -23,480 +23,486 @@ namespace DyslexiaApp.API.Migrations
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.DyslexiaDiagnosis", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(2000)
-                        .HasColumnType("nvarchar(2000)");
+                b.Property<string>("Description")
+                    .IsRequired()
+                    .HasMaxLength(2000)
+                    .HasColumnType("nvarchar(2000)");
 
-                    b.Property<string>("FeedBack")
-                        .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
+                b.Property<string>("FeedBack")
+                    .IsRequired()
+                    .HasMaxLength(1000)
+                    .HasColumnType("nvarchar(1000)");
 
-                    b.Property<int>("TestResults")
-                        .HasColumnType("int");
+                b.Property<int>("TestResults")
+                    .HasColumnType("int");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("UserId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                b.HasIndex("UserId");
 
-                    b.ToTable("DyslexiaDiagnosis");
-                });
+                b.ToTable("DyslexiaDiagnosis");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.EducationalGame", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
+                b.Property<string>("Description")
+                    .IsRequired()
+                    .HasMaxLength(1000)
+                    .HasColumnType("nvarchar(1000)");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                b.Property<string>("Name")
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .HasColumnType("nvarchar(255)");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("UserId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                b.HasIndex("UserId");
 
-                    b.ToTable("EducationalGames");
-                });
+                b.ToTable("EducationalGames");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.GameSession", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("EducationalGameId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("EducationalGameId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("MatchingGameId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("MatchingGameId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("NavigationGameId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("NavigationGameId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("SessionScore")
-                        .HasColumnType("int");
+                b.Property<int>("SessionScore")
+                    .HasColumnType("int");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("UserId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("EducationalGameId");
+                b.HasIndex("EducationalGameId");
 
-                    b.HasIndex("MatchingGameId");
+                b.HasIndex("MatchingGameId");
 
-                    b.HasIndex("NavigationGameId");
+                b.HasIndex("NavigationGameId");
 
-                    b.HasIndex("UserId");
+                b.HasIndex("UserId");
 
-                    b.ToTable("GameSessions");
-                });
+                b.ToTable("GameSessions");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Image", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Description")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("QuestionId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("QuestionId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Url")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Url")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("QuestionId");
+                b.HasIndex("QuestionId");
 
-                    b.ToTable("Images");
-                });
+                b.ToTable("Images");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.MatchingGame", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("DyslexiaDiagnosisId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("DyslexiaDiagnosisId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("EducationalGameId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("EducationalGameId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("DyslexiaDiagnosisId");
+                b.HasIndex("DyslexiaDiagnosisId");
 
-                    b.HasIndex("EducationalGameId");
+                b.HasIndex("EducationalGameId");
 
-                    b.ToTable("MatchingGames");
-                });
+                b.ToTable("MatchingGames");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.NavigationGame", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("BalloonPosition")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("BalloonPosition")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("DyslexiaDiagnosisId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("DyslexiaDiagnosisId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("DyslexiaDiagnosisId");
+                b.HasIndex("DyslexiaDiagnosisId");
 
-                    b.ToTable("NavigationGames");
-                });
+                b.ToTable("NavigationGames");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Question", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("CorrectAnswerIndex")
-                        .HasColumnType("int");
+                b.Property<int>("CorrectAnswerIndex")
+                    .HasColumnType("int");
 
-                    b.Property<Guid?>("MainImageId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("MainImageId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("MatchingGameId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("MatchingGameId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("NavigationGameId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("NavigationGameId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("QuestionText")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("QuestionText")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("MainImageId");
+                b.HasIndex("MainImageId");
 
-                    b.HasIndex("MatchingGameId");
+                b.HasIndex("MatchingGameId");
 
-                    b.HasIndex("NavigationGameId");
+                b.HasIndex("NavigationGameId");
 
-                    b.ToTable("Questions");
-                });
+                b.ToTable("Questions");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Sistem", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Layout")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                b.Property<string>("Layout")
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .HasColumnType("nvarchar(255)");
 
-                    b.Property<string>("NavigationElements")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("NavigationElements")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("UserId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                b.HasIndex("UserId");
 
-                    b.ToTable("Sistems");
-                });
+                b.ToTable("Sistems");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Support", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("ContactString")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                b.Property<string>("ContactString")
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .HasColumnType("nvarchar(255)");
 
-                    b.Property<string>("FAQs")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("FAQs")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Message")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Message")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("SistemId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("SistemId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("SupportStatus")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                b.Property<string>("SupportStatus")
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("SistemId");
+                b.HasIndex("SistemId");
 
-                    b.ToTable("Supports");
-                });
+                b.ToTable("Supports");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.User", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("Accuracy")
-                        .HasColumnType("int");
+                b.Property<int>("Accuracy")
+                    .HasColumnType("int");
 
-                    b.Property<DateTime>("Birthday")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime>("Birthday")
+                    .HasColumnType("datetime2");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                b.Property<string>("Email")
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                b.Property<string>("FirstName")
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .HasColumnType("nvarchar(30)");
 
-                    b.Property<string>("Gender")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Gender")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("HashedPassword")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("HashedPassword")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                b.Property<bool>("IsActive")
+                    .HasColumnType("bit");
 
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                b.Property<string>("LastName")
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .HasColumnType("nvarchar(30)");
 
-                    b.Property<string>("ResetPasswordToken")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("ProfileUpdateToken")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("ResetPasswordTokenExpiry")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("ProfileUpdateTokenExpiry")
+                    .HasColumnType("datetime2");
 
-                    b.Property<int>("Role")
-                        .HasColumnType("int");
+                b.Property<string>("ResetPasswordToken")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Salt")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<DateTime?>("ResetPasswordTokenExpiry")
+                    .HasColumnType("datetime2");
 
-                    b.HasKey("Id");
+                b.Property<int>("Role")
+                    .HasColumnType("int");
 
-                    b.ToTable("Users");
-                });
+                b.Property<string>("Salt")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
+
+                b.HasKey("Id");
+
+                b.ToTable("Users");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.DyslexiaDiagnosis", b =>
-                {
-                    b.HasOne("DyslexiaApp.API.Data.Entities.User", "User")
-                        .WithMany("DyslexiaDiagnoses")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+            {
+                b.HasOne("DyslexiaApp.API.Data.Entities.User", "User")
+                    .WithMany("DyslexiaDiagnoses")
+                    .HasForeignKey("UserId")
+                    .OnDelete(DeleteBehavior.NoAction)
+                    .IsRequired();
 
-                    b.Navigation("User");
-                });
+                b.Navigation("User");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.EducationalGame", b =>
-                {
-                    b.HasOne("DyslexiaApp.API.Data.Entities.User", "User")
-                        .WithMany("EducationalGames")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+            {
+                b.HasOne("DyslexiaApp.API.Data.Entities.User", "User")
+                    .WithMany("EducationalGames")
+                    .HasForeignKey("UserId")
+                    .OnDelete(DeleteBehavior.NoAction)
+                    .IsRequired();
 
-                    b.Navigation("User");
-                });
+                b.Navigation("User");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.GameSession", b =>
-                {
-                    b.HasOne("DyslexiaApp.API.Data.Entities.EducationalGame", "EducationalGame")
-                        .WithMany("GameSessions")
-                        .HasForeignKey("EducationalGameId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+            {
+                b.HasOne("DyslexiaApp.API.Data.Entities.EducationalGame", "EducationalGame")
+                    .WithMany("GameSessions")
+                    .HasForeignKey("EducationalGameId")
+                    .OnDelete(DeleteBehavior.NoAction)
+                    .IsRequired();
 
-                    b.HasOne("DyslexiaApp.API.Data.Entities.MatchingGame", null)
-                        .WithMany("GameSessions")
-                        .HasForeignKey("MatchingGameId");
+                b.HasOne("DyslexiaApp.API.Data.Entities.MatchingGame", null)
+                    .WithMany("GameSessions")
+                    .HasForeignKey("MatchingGameId");
 
-                    b.HasOne("DyslexiaApp.API.Data.Entities.NavigationGame", null)
-                        .WithMany("GameSessions")
-                        .HasForeignKey("NavigationGameId");
+                b.HasOne("DyslexiaApp.API.Data.Entities.NavigationGame", null)
+                    .WithMany("GameSessions")
+                    .HasForeignKey("NavigationGameId");
 
-                    b.HasOne("DyslexiaApp.API.Data.Entities.User", "User")
-                        .WithMany("GameSessions")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                b.HasOne("DyslexiaApp.API.Data.Entities.User", "User")
+                    .WithMany("GameSessions")
+                    .HasForeignKey("UserId")
+                    .OnDelete(DeleteBehavior.NoAction)
+                    .IsRequired();
 
-                    b.Navigation("EducationalGame");
+                b.Navigation("EducationalGame");
 
-                    b.Navigation("User");
-                });
+                b.Navigation("User");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Image", b =>
-                {
-                    b.HasOne("DyslexiaApp.API.Data.Entities.Question", null)
-                        .WithMany("ImageOptions")
-                        .HasForeignKey("QuestionId");
-                });
+            {
+                b.HasOne("DyslexiaApp.API.Data.Entities.Question", null)
+                    .WithMany("ImageOptions")
+                    .HasForeignKey("QuestionId");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.MatchingGame", b =>
-                {
-                    b.HasOne("DyslexiaApp.API.Data.Entities.DyslexiaDiagnosis", "DyslexiaDiagnosis")
-                        .WithMany("MatchingGames")
-                        .HasForeignKey("DyslexiaDiagnosisId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+            {
+                b.HasOne("DyslexiaApp.API.Data.Entities.DyslexiaDiagnosis", "DyslexiaDiagnosis")
+                    .WithMany("MatchingGames")
+                    .HasForeignKey("DyslexiaDiagnosisId")
+                    .OnDelete(DeleteBehavior.NoAction)
+                    .IsRequired();
 
-                    b.HasOne("DyslexiaApp.API.Data.Entities.EducationalGame", "EducationalGame")
-                        .WithMany("MatchingGames")
-                        .HasForeignKey("EducationalGameId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                b.HasOne("DyslexiaApp.API.Data.Entities.EducationalGame", "EducationalGame")
+                    .WithMany("MatchingGames")
+                    .HasForeignKey("EducationalGameId")
+                    .OnDelete(DeleteBehavior.NoAction)
+                    .IsRequired();
 
-                    b.Navigation("DyslexiaDiagnosis");
+                b.Navigation("DyslexiaDiagnosis");
 
-                    b.Navigation("EducationalGame");
-                });
+                b.Navigation("EducationalGame");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.NavigationGame", b =>
-                {
-                    b.HasOne("DyslexiaApp.API.Data.Entities.DyslexiaDiagnosis", "DyslexiaDiagnosis")
-                        .WithMany("NavigationGames")
-                        .HasForeignKey("DyslexiaDiagnosisId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+            {
+                b.HasOne("DyslexiaApp.API.Data.Entities.DyslexiaDiagnosis", "DyslexiaDiagnosis")
+                    .WithMany("NavigationGames")
+                    .HasForeignKey("DyslexiaDiagnosisId")
+                    .OnDelete(DeleteBehavior.NoAction)
+                    .IsRequired();
 
-                    b.Navigation("DyslexiaDiagnosis");
-                });
+                b.Navigation("DyslexiaDiagnosis");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Question", b =>
-                {
-                    b.HasOne("DyslexiaApp.API.Data.Entities.Image", "MainImage")
-                        .WithMany()
-                        .HasForeignKey("MainImageId");
+            {
+                b.HasOne("DyslexiaApp.API.Data.Entities.Image", "MainImage")
+                    .WithMany()
+                    .HasForeignKey("MainImageId");
 
-                    b.HasOne("DyslexiaApp.API.Data.Entities.MatchingGame", null)
-                        .WithMany("Questions")
-                        .HasForeignKey("MatchingGameId");
+                b.HasOne("DyslexiaApp.API.Data.Entities.MatchingGame", null)
+                    .WithMany("Questions")
+                    .HasForeignKey("MatchingGameId");
 
-                    b.HasOne("DyslexiaApp.API.Data.Entities.NavigationGame", null)
-                        .WithMany("Questions")
-                        .HasForeignKey("NavigationGameId");
+                b.HasOne("DyslexiaApp.API.Data.Entities.NavigationGame", null)
+                    .WithMany("Questions")
+                    .HasForeignKey("NavigationGameId");
 
-                    b.Navigation("MainImage");
-                });
+                b.Navigation("MainImage");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Sistem", b =>
-                {
-                    b.HasOne("DyslexiaApp.API.Data.Entities.User", "User")
-                        .WithMany("Sistems")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+            {
+                b.HasOne("DyslexiaApp.API.Data.Entities.User", "User")
+                    .WithMany("Sistems")
+                    .HasForeignKey("UserId")
+                    .OnDelete(DeleteBehavior.NoAction)
+                    .IsRequired();
 
-                    b.Navigation("User");
-                });
+                b.Navigation("User");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Support", b =>
-                {
-                    b.HasOne("DyslexiaApp.API.Data.Entities.Sistem", "Sistem")
-                        .WithMany("Supports")
-                        .HasForeignKey("SistemId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+            {
+                b.HasOne("DyslexiaApp.API.Data.Entities.Sistem", "Sistem")
+                    .WithMany("Supports")
+                    .HasForeignKey("SistemId")
+                    .OnDelete(DeleteBehavior.NoAction)
+                    .IsRequired();
 
-                    b.Navigation("Sistem");
-                });
+                b.Navigation("Sistem");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.DyslexiaDiagnosis", b =>
-                {
-                    b.Navigation("MatchingGames");
+            {
+                b.Navigation("MatchingGames");
 
-                    b.Navigation("NavigationGames");
-                });
+                b.Navigation("NavigationGames");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.EducationalGame", b =>
-                {
-                    b.Navigation("GameSessions");
+            {
+                b.Navigation("GameSessions");
 
-                    b.Navigation("MatchingGames");
-                });
+                b.Navigation("MatchingGames");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.MatchingGame", b =>
-                {
-                    b.Navigation("GameSessions");
+            {
+                b.Navigation("GameSessions");
 
-                    b.Navigation("Questions");
-                });
+                b.Navigation("Questions");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.NavigationGame", b =>
-                {
-                    b.Navigation("GameSessions");
+            {
+                b.Navigation("GameSessions");
 
-                    b.Navigation("Questions");
-                });
+                b.Navigation("Questions");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Question", b =>
-                {
-                    b.Navigation("ImageOptions");
-                });
+            {
+                b.Navigation("ImageOptions");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Sistem", b =>
-                {
-                    b.Navigation("Supports");
-                });
+            {
+                b.Navigation("Supports");
+            });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.User", b =>
-                {
-                    b.Navigation("DyslexiaDiagnoses");
+            {
+                b.Navigation("DyslexiaDiagnoses");
 
-                    b.Navigation("EducationalGames");
+                b.Navigation("EducationalGames");
 
-                    b.Navigation("GameSessions");
+                b.Navigation("GameSessions");
 
-                    b.Navigation("Sistems");
-                });
+                b.Navigation("Sistems");
+            });
 #pragma warning restore 612, 618
         }
     }

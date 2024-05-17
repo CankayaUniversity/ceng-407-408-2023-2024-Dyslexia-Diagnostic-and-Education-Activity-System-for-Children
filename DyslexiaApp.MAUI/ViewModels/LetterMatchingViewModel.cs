@@ -42,12 +42,6 @@ public partial class LetterMatchingViewModel : BaseViewModel
     private bool isCrossVisible;
 
     private int _currentQuestionIndex = 0;
-    public int CurrentQuestionIndex
-    {
-        get => _currentQuestionIndex;
-        private set => SetProperty(ref _currentQuestionIndex, value);
-    }
-    public int TotalQuestions => GameQuestions.Count;
     public LetterMatchingViewModel(IPictureMatchingApi pictureMatchingApi)
     {
         _pictureMatchingApi = pictureMatchingApi;
@@ -63,6 +57,7 @@ public partial class LetterMatchingViewModel : BaseViewModel
             _isInitialized = true;
             Debug.WriteLine($"Letter Matching In: {questionId}");
             var question = await _pictureMatchingApi.GetQuestionByIdAsync(questionId);
+            Console.WriteLine(question);
             Question = question;
         }
         catch (Exception ex)

@@ -78,6 +78,61 @@ namespace DyslexiaApp.API.Services
             return newDiagnosisDto; // Ideal olarak, oluşturulan varlık ile doldurulmuş yeni bir DTO döndürülmelidir.
         }
 
+        public async Task<double> CalculateAccuracyRateAsync(UserAnswersDto userAnswersDto)
+        {
+            int totalQuestions = userAnswersDto.UserAnswers.Count;
+            int correctAnswers = 0;
+            int wrongAnswers = 0;
+
+            foreach (var userAnswer in userAnswersDto.UserAnswers)
+            {
+                var question = await _context.Questions.FindAsync(userAnswer.QuestionId);
+                if (question == null) continue;
+
+                if (userAnswer.SelectedAnswerIndex == question.CorrectAnswerIndex)
+                {
+                    correctAnswers++;
+                }
+                else
+                {
+                    wrongAnswers++;
+                }
+            }
+
+            double accuracyRate = (double)correctAnswers / totalQuestions;
+            accuracyRate -= (double)wrongAnswers / totalQuestions * 0.1;
+
+            return accuracyRate;
+        }
+
+        public string DetermineDyslexiaRate(double accuracyRate)
+        {
+            if (accuracyRate > 0.8)
+            {
+                return "Low risk of dyslexia";
+            }
+            else if (accuracyRate > 0.5)
+            {
+                return "Moderate risk of dyslexia";
+            }
+            else
+            {
+                return "High risk of dyslexia";
+            }
+        }
+
+        public async Task<DyslexiaResultDto> SubmitAnswersAsync(UserAnswersDto userAnswersDto)
+        {
+            double accuracyRate = await CalculateAccuracyRateAsync(userAnswersDto);
+            string dyslexiaRate = DetermineDyslexiaRate(accuracyRate);
+
+            return new DyslexiaResultDto
+            {
+                AccuracyRate = accuracyRate,
+                DyslexiaRate = dyslexiaRate
+            };
+        }
+
 
     }
 }
