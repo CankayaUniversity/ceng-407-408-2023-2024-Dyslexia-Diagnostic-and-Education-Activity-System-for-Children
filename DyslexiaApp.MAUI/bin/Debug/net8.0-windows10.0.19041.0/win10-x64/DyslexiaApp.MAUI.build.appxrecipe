@@ -208,6 +208,9 @@
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\chat.scale-100.png">
       <PackagePath>chat.scale-100.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\chatbackground.scale-100.jpeg">
+      <PackagePath>chatbackground.scale-100.jpeg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\check.scale-100.png">
       <PackagePath>check.scale-100.png</PackagePath>
     </AppxPackagedFile>

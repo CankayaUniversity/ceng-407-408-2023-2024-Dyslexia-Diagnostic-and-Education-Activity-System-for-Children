@@ -58,7 +58,8 @@ public static class MauiProgram
                         .AddSingleton<ProfilePage>();
 
         builder.Services.AddTransient<ChatViewModel>()
-            .AddTransient<HomePage>();
+                        .AddTransient<HomePage>()
+                        .AddTransient<IOpenAIService, OpenAIService>();
 
         ConfigureRefit(builder.Services);
 

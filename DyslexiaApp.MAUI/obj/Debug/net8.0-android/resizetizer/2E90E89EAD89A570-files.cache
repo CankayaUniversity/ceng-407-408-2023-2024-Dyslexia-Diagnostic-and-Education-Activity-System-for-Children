@@ -1,6 +1,7 @@
 ﻿obj\Debug\net8.0-android\resizetizer\r\drawable\accept.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\back_icon.jpg
 obj\Debug\net8.0-android\resizetizer\r\drawable\chat.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\chatbackground.jpeg
 obj\Debug\net8.0-android\resizetizer\r\drawable\check.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\close.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\cloud.png

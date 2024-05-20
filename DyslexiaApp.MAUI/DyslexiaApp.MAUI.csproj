@@ -59,6 +59,7 @@
 	  <None Remove="Resources\Images\accept.png" />
 	  <None Remove="Resources\Images\back_icon.jpg" />
 	  <None Remove="Resources\Images\chat.png" />
+	  <None Remove="Resources\Images\chatbackground.jpeg" />
 	  <None Remove="Resources\Images\check.png" />
 	  <None Remove="Resources\Images\close.png" />
 	  <None Remove="Resources\Images\cloud.png" />

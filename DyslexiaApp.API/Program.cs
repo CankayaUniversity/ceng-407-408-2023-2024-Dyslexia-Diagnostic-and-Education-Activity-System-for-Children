@@ -1,16 +1,13 @@
 using DyslexiaApp.API.Endpoints;
+using DyslexiaApp.API.Models;
 using DyslexiaApp.API.Services;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 using System.Text.Json;
-using Google.Apis.Gmail.v1;
-using Microsoft.Extensions.Options;
-using DyslexiaApp.API.Models;
 
 namespace DyslexiaApp.API
 {
@@ -24,11 +21,12 @@ namespace DyslexiaApp.API
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            // JWT and Google Authentication setup
+            // JWT Authentication setup
             builder.Services.AddAuthentication(options =>
             {
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddJwtBearer(jwtOptions =>
                 jwtOptions.TokenValidationParameters = TokenService.GetTokenValidationParameters(builder.Configuration)
@@ -63,7 +61,7 @@ namespace DyslexiaApp.API
             builder.Services.AddTransient<QuestionService>();
             builder.Services.AddTransient<MatchingGameService>();
             builder.Services.AddTransient<NavigationGameService>();
-            
+
             builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
             // SendGrid e-posta servisini ekleyin
             builder.Services.AddSingleton<IEmailService, SendGridEmailService>(serviceProvider =>

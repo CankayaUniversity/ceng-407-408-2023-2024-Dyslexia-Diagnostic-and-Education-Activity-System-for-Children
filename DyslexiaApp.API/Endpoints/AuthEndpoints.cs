@@ -2,6 +2,7 @@
 using DyslexiaAppMAUI.Shared.Dtos;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
 namespace DyslexiaApp.API.Endpoints
@@ -75,7 +76,7 @@ namespace DyslexiaApp.API.Endpoints
                 }
             });
 
-            authGroup.MapPost("/generate-profile-update-token", async (string email, AuthService authService) =>
+            authGroup.MapPost("/generate-profile-update-token", async ([FromQuery] string email, AuthService authService) =>
             {
                 var result = await authService.GenerateProfileUpdateTokenAsync(email);
                 if (result.IsSuccess)
@@ -86,7 +87,8 @@ namespace DyslexiaApp.API.Endpoints
             }).WithName("GenerateProfileUpdateToken")
             .Produces<ProfileUpdateTokenDto>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status400BadRequest)
-            .WithTags("User");
+             .WithTags("User");
+
 
             authGroup.MapPut("/update-with-token", async (UpdateUserWithTokenDto dto, AuthService authService) =>
             {

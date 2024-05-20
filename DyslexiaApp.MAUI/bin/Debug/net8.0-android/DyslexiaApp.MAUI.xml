@@ -57,8 +57,8 @@
         <member name="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.IsPopupVisible">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ChatViewModel.isPopupVisible"/>
         </member>
-        <member name="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.Messages">
-            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ChatViewModel.messages"/>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.Content">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ChatViewModel.content"/>
         </member>
         <member name="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.CurrentMessage">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ChatViewModel.currentMessage"/>
@@ -79,7 +79,7 @@
             <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.SendMessageCommand"/>.</summary>
         </member>
         <member name="P:DyslexiaApp.MAUI.ViewModels.ChatViewModel.SendMessageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.ChatViewModel.SendMessage"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.ChatViewModel.SendMessage"/>.</summary>
         </member>
         <member name="T:DyslexiaApp.MAUI.ViewModels.DiagnosisMatchingGamesViewModel">
             <inheritdoc/>
@@ -308,8 +308,8 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPopupVisible">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPopupVisible" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Messages">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Messages" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Content">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Content" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentMessage">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentMessage" generated properties.</summary>
@@ -386,8 +386,8 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPopupVisible">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPopupVisible" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Messages">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Messages" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Content">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Content" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentMessage">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentMessage" generated properties.</summary>

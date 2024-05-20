@@ -6,6 +6,7 @@ namespace DyslexiaApp.MAUI.Services
 {
     public interface IAuthApi
     {
+
         [Post("/api/auth/signup")]
         Task<ResultWithDataDto<AuthResponseDto>> SignupAsync(SignupRequestDto dto);
 
@@ -19,3 +20,4 @@ namespace DyslexiaApp.MAUI.Services
         Task<ResultDto> UpdateUserProfileWithTokenAsync(UpdateUserWithTokenDto updateUserWithTokenDto);
     }
 }
+

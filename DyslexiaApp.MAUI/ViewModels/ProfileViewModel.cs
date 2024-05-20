@@ -80,19 +80,22 @@ namespace DyslexiaApp.MAUI.ViewModels
         {
             try
             {
-                // Generate profile update token
-                var generateTokenResult = await _authService.GenerateProfileUpdateTokenAsync(Email!);
-                Debug.WriteLine($"generateTokenResult: {generateTokenResult}");
-                Debug.WriteLine($"generateTokenResult IsSuccess: {generateTokenResult.IsSuccess}");
-                Debug.WriteLine($"generateTokenResult Data: {generateTokenResult.Data}");
-                Debug.WriteLine($"generateTokenResult ErrorMessage: {generateTokenResult.ErrorMessage}");
+                // Kullanıcı email adresinin null olmadığından emin olun
+                if (string.IsNullOrEmpty(Email))
+                {
+                    Debug.WriteLine("Email is null or empty");
+                    return;
+                }
 
+                // Profil güncelleme token'ını oluştur
+                var generateTokenResult = await _authService.GenerateProfileUpdateTokenAsync(Email);
                 if (!generateTokenResult.IsSuccess)
                 {
                     Debug.WriteLine($"Failed to generate token: {generateTokenResult.ErrorMessage}");
                     return;
                 }
 
+                // UpdateUserWithTokenDto nesnesini oluştur
                 var updateWithTokenDto = new UpdateUserWithTokenDto
                 {
                     Id = _authService.User!.Id,
@@ -101,13 +104,11 @@ namespace DyslexiaApp.MAUI.ViewModels
                     Email = Email,
                     Birthday = Birthdate,
                     Gender = Gender,
-                    Token = generateTokenResult.Data!.Token // Token'ı buraya ekleyin
+                    Token = generateTokenResult.Data!.Token // Token'ı ekleyin
                 };
 
+                // Kullanıcı profilini token ile güncelle
                 var result = await _authService.UpdateUserProfileWithTokenAsync(updateWithTokenDto);
-                Debug.WriteLine($"result: {result}");
-                Debug.WriteLine($"result IsSuccess: {result.IsSuccess}");
-                Debug.WriteLine($"result ErrorMessage: {result.ErrorMessage}");
                 if (result.IsSuccess)
                 {
                     Debug.WriteLine("Profile updated successfully");
@@ -133,5 +134,6 @@ namespace DyslexiaApp.MAUI.ViewModels
                 Debug.WriteLine($"Error updating profile: {ex.Message}");
             }
         }
+
     }
 }

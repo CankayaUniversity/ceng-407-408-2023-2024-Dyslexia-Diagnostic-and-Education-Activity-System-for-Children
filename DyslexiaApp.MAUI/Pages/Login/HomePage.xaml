@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
@@ -72,7 +71,7 @@
             </Label>
         </Grid>
 
-        <Grid  Style="{StaticResource MainContainerStyle}">
+        <Grid Style="{StaticResource MainContainerStyle}">
             <StackLayout Style="{StaticResource CardContainerStyle}">
                 <Frame Style="{StaticResource CardMainStyle}">
                     <ContentView >
@@ -81,12 +80,9 @@
                                TextColor="#019BE1" 
                                FontAttributes="Bold" 
                                HorizontalOptions="End" />
-
                             <Image Source="diagnosis.jpg" 
                                Aspect="AspectFill" 
                                WidthRequest="200"/>
-
-
                         </VerticalStackLayout>
                         <ContentView.GestureRecognizers>
                             <TapGestureRecognizer 
@@ -102,12 +98,9 @@
                                TextColor="#019BE1" 
                                FontAttributes="Bold" 
                                HorizontalOptions="End" />
-
                             <Image Source="education.jpg" 
                                Aspect="AspectFill"
                                WidthRequest="200"/>
-
-
                         </VerticalStackLayout>
                         <ContentView.GestureRecognizers>
                             <TapGestureRecognizer 
@@ -117,73 +110,129 @@
                     </ContentView>
                 </Frame>
             </StackLayout>
-
         </Grid>
 
         <Frame IsVisible="{Binding IsPopupVisible}"
-                  HorizontalOptions="CenterAndExpand"
-                  VerticalOptions="CenterAndExpand"
-                   BackgroundColor="White" Padding="20" CornerRadius="15"
-                        BorderColor="Black" WidthRequest="500" HeightRequest="500">
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+               BackgroundColor="White" Padding="20" CornerRadius="15"
+               BorderColor="Black" WidthRequest="500" HeightRequest="500">
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+                <Grid>
 
-                <ImageButton Source="close.png" 
-                             BackgroundColor="Transparent"
-                             WidthRequest="30"
-                             HeightRequest="30"
-                             Aspect="AspectFit"
-                             HorizontalOptions="End" 
-                             VerticalOptions="Start"
-                             Grid.Column="1" Grid.Row="0"
-                             Command="{Binding CloseChatCommand}"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
 
-                <CollectionView Grid.Row="0" Grid.Column="0" ItemsSource="{Binding Messages}"
-                        HorizontalOptions="End" VerticalOptions="End"
-                        HeightRequest="350" WidthRequest="400"
-                        Margin="0,50,-10,0"
-                        BackgroundColor="SkyBlue">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Label Text="{Binding .}" Margin="10" HorizontalOptions="End"/>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+                    <ImageButton Source="close.png" 
+                                  BackgroundColor="Transparent"
+                                  Margin="-10,-10"
+                                  WidthRequest="25"
+                                  HeightRequest="25"
+                                  Padding="10"
+                                  Aspect="AspectFit"
+                                  HorizontalOptions="End" 
+                                  VerticalOptions="Start"
+                                  Grid.Column="1" Grid.Row="0"
+                                  Command="{Binding CloseChatCommand}"/>
 
-                <!--x:Name="chatEntry"-->
-                <Grid Grid.Row="1"
-                      HorizontalOptions="FillAndExpand"
-                      VerticalOptions="End"
-                      HeightRequest="50"
-                      WidthRequest="200"
-                      Margin="10,50,150,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="300"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-                    <Entry  Text="{Binding CurrentMessage}" WidthRequest="300" Placeholder="Type your question here..." Grid.Column="0"/>
-                    <Button Text="Send"  Command="{Binding SendMessageCommand}" Grid.Column="1" WidthRequest="100"/>
+                    <Grid Grid.Row="0" 
+                          VerticalOptions="FillAndExpand"
+                          Margin="0,30,10,0">
+                        <Image Source="chatbackground.jpeg"
+                               Aspect="AspectFill"
+                               Opacity="1" />
+
+                        <ScrollView Grid.Row="0" VerticalOptions="FillAndExpand">
+                            <CollectionView ItemsSource="{Binding Content}"
+                                            HorizontalOptions="FillAndExpand" 
+                                            VerticalOptions="FillAndExpand"
+                                            Margin="10">
+
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Frame CornerRadius="10" BackgroundColor="Transparent" Padding="10">
+                                            <Frame.Resources>
+                                                <ResourceDictionary>
+                                                    <Style TargetType="Frame">
+                                                        <!-- Default HorizontalOptions and Margin for Frames -->
+                                                        <Setter Property="HorizontalOptions" Value="Start" />
+                                                        <Setter Property="Margin" Value="10" />
+
+                                                        <!-- Style Triggers to change properties based on IsUserMessage value -->
+                                                        <Style.Triggers>
+                                                            <!-- When IsUserMessage is True -->
+                                                            <DataTrigger TargetType="Frame" Binding="{Binding IsUserMessage}" Value="True">
+                                                                <Setter Property="HorizontalOptions" Value="End" />
+                                                                <Setter Property="BackgroundColor" Value="Transparent" />
+                                                                <Setter Property="Margin" Value="10,5" />
+                                                            </DataTrigger>
+                                                            <!-- When IsUserMessage is False -->
+                                                            <DataTrigger TargetType="Frame" Binding="{Binding IsUserMessage}" Value="False">
+                                                                <Setter Property="HorizontalOptions" Value="Start" />
+                                                                <Setter Property="BackgroundColor" Value="Transparent" />
+                                                                <Setter Property="Margin" Value="10,5" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </ResourceDictionary>
+                                            </Frame.Resources>
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid>
+                                                    <Frame BorderColor="Black"
+                                                           Background="#D8D8DE">
+                                                        <Label Text="{Binding Content}" 
+                                                               Margin="5"
+                                                               VerticalOptions="Start" 
+                                                               HorizontalOptions="Start"
+                                                               TextColor="Black"/>
+                                                    </Frame>
+
+                                                </Grid>
+
+
+                                            </Grid>
+
+                                        </Frame>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </ScrollView>
+
+
+                    </Grid>
+
+
+                    <Grid Grid.Row="1" 
+                          HorizontalOptions="FillAndExpand" 
+                          VerticalOptions="End" 
+                          Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Entry Text="{Binding CurrentMessage}" Placeholder="Type your question here..." 
+                               Grid.Column="0" 
+                               TextColor="Black" 
+                               VerticalOptions="Start" 
+                               HorizontalOptions="Start"/>
+                        <Button Text="Send" Command="{Binding SendMessageCommand}" Grid.Column="1" />
+                    </Grid>
                 </Grid>
             </Grid>
         </Frame>
 
+        <Grid HorizontalOptions="End" VerticalOptions="End" Margin="50,20">
+            <ImageButton Source="chat.png" BackgroundColor="Transparent" WidthRequest="50" VerticalOptions="End" HorizontalOptions="End" Command="{Binding ShowChatCommand}"/>
 
-        <Grid HorizontalOptions="End"
-              VerticalOptions="End"
-              Margin="50,20">
-            <ImageButton Source="chat.png" BackgroundColor="Transparent"
-                         WidthRequest="50"
-                         VerticalOptions="End"
-                         HorizontalOptions="End"
-                         Command="{Binding ShowChatCommand}"/>
         </Grid>
-
     </Grid>
+
 </ContentPage>
