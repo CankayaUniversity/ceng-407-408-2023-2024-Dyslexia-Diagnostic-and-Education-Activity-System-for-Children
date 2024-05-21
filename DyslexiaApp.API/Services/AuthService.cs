@@ -78,31 +78,34 @@ namespace DyslexiaApp.API.Services
             return ResultWithDataDto<AuthResponseDto>.Success(authResponse);
         }
 
-        public async Task<ResultDto> UpdateUserProfileAsync(UserUpdateDto updateDto)
+        public async Task<ResultWithDataDto<LoggedInUser>> UpdateUserAsync(Guid userId, UpdateUserDto dto)
         {
-            var user = await _context.Users.FindAsync(updateDto.Id);
-            if (user == null) return ResultDto.Failure("Kullanıcı bulunamadı!");
-
-            user.FirstName = updateDto.FirstName;
-            user.LastName = updateDto.LastName;
-            user.Email = updateDto.Email;
-            user.Birthday = updateDto.Birthday;
-            user.Gender = updateDto.Gender;
-
             try
             {
+                var user = await _context.Users.FindAsync(userId);
+                if (user == null)
+                {
+                    return ResultWithDataDto<LoggedInUser>.Failure("Kullanıcı bulunamadı.");
+                }
+
+                user.UpdateProfile(dto.FirstName, dto.LastName, dto.Email, dto.Birthday, dto.Gender);
+
                 _context.Users.Update(user);
                 await _context.SaveChangesAsync();
-                return ResultDto.Success();
+
+                var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.LastName, user.Email, user.Birthday, user.Gender);
+                return ResultWithDataDto<LoggedInUser>.Success(loggedInUser);
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Error updating user: {ex.Message}");
-                return ResultDto.Failure(ex.Message);
+                // Hata loglaması
+                Console.WriteLine($"Hata: {ex.Message}");
+                return ResultWithDataDto<LoggedInUser>.Failure("Kullanıcı güncellenirken bir hata oluştu.");
             }
         }
+    
 
-        public async Task<ResultDto> DeactivateUserAccountAsync(Guid userId)
+    public async Task<ResultDto> DeactivateUserAccountAsync(Guid userId)
         {
             var user = await _context.Users.FindAsync(userId);
             if (user == null) return ResultDto.Failure("Kullanıcı bulunamadı!");
@@ -226,52 +229,7 @@ namespace DyslexiaApp.API.Services
             return ResultDto.Success();
         }
 
-        public async Task<ResultWithDataDto<ProfileUpdateTokenDto>> GenerateProfileUpdateTokenAsync(string email)
-        {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
-            if (user == null)
-            {
-                return ResultWithDataDto<ProfileUpdateTokenDto>.Failure("Kullanıcı bulunamadı");
-            }
-
-            var token = _tokenService.GenerateProfileUpdateToken(user.Email);
-            user.ProfileUpdateToken = token;
-            user.ProfileUpdateTokenExpiry = DateTimeOffset.UtcNow.AddHours(24).DateTime;
-
-            _context.Users.Update(user);
-            await _context.SaveChangesAsync();
-
-            return ResultWithDataDto<ProfileUpdateTokenDto>.Success(new ProfileUpdateTokenDto(token));
-        }
-
-        public async Task<ResultDto> UpdateUserProfileWithTokenAsync(UpdateUserWithTokenDto dto)
-        {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == dto.Email && u.ProfileUpdateToken == dto.Token && u.ProfileUpdateTokenExpiry > DateTime.UtcNow);
-            if (user == null)
-            {
-                Debug.WriteLine($"Invalid token or email. Token: {dto.Token}, Email: {dto.Email}");
-                return ResultDto.Failure("Geçersiz token veya e-posta.");
-            }
-
-            user.FirstName = dto.FirstName;
-            user.LastName = dto.LastName;
-            user.Birthday = dto.Birthday;
-            user.Gender = dto.Gender;
-            user.ProfileUpdateToken = null;
-            user.ProfileUpdateTokenExpiry = null;
-
-            try
-            {
-                _context.Users.Update(user);
-                await _context.SaveChangesAsync();
-                return ResultDto.Success();
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error updating user profile: {ex.Message}");
-                return ResultDto.Failure(ex.Message);
-            }
-        }
+        
 
 
     }

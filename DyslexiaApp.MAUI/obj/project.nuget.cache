@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lHNm3R0vAnsXBhQeQPpAOC3/XY9/HOZEBJb/zrC1LsWnhWUtbvjV5k2kS0+OJ27YNPMzgMo+Gw+Pxg1zV4nmjA==",
+  "dgSpecHash": "btFiUUCeMP3xs997RdlOkyMlqFP00IHmpags59t79TcSgX1gHkQGpBtbrU3k+lkxo2EWCGUVFcd+oUI2pzEOxQ==",
   "success": true,
   "projectFilePath": "D:\\408\\DyslexiaApp.MAUI\\DyslexiaApp.MAUI.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,10 @@
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\8.0.0\\microsoft.extensions.options.configurationextensions.8.0.0.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\microsoft.graphics.win2d\\1.0.5.1\\microsoft.graphics.win2d.1.0.5.1.nupkg.sha512",
+    "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.4.1\\microsoft.identitymodel.abstractions.7.4.1.nupkg.sha512",
+    "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.4.1\\microsoft.identitymodel.jsonwebtokens.7.4.1.nupkg.sha512",
+    "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\microsoft.identitymodel.logging\\7.4.1\\microsoft.identitymodel.logging.7.4.1.nupkg.sha512",
+    "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.4.1\\microsoft.identitymodel.tokens.7.4.1.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\microsoft.maui.controls\\8.0.6\\microsoft.maui.controls.8.0.6.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.6\\microsoft.maui.controls.build.tasks.8.0.6.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\microsoft.maui.controls.compatibility\\8.0.6\\microsoft.maui.controls.compatibility.8.0.6.nupkg.sha512",
@@ -48,6 +52,7 @@
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.0\\system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.formats.asn1\\8.0.0\\system.formats.asn1.8.0.0.nupkg.sha512",
+    "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.4.1\\system.identitymodel.tokens.jwt.7.4.1.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.net.http.json\\7.0.1\\system.net.http.json.7.0.1.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.0\\system.security.cryptography.pkcs.8.0.0.nupkg.sha512",

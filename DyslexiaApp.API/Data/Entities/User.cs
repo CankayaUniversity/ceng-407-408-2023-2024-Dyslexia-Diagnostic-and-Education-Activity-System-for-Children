@@ -1,4 +1,5 @@
-﻿using DyslexiaAppMAUI.Shared.Models;
+﻿using DyslexiaAppMAUI.Shared.Dtos;
+using DyslexiaAppMAUI.Shared.Models;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 
@@ -63,6 +64,19 @@ namespace DyslexiaApp.API.Data.Entities
             DyslexiaDiagnoses = new List<DyslexiaDiagnosis>();
             Sistems = new List<Sistem>();
             GameSessions = new HashSet<GameSession>();
+        }
+
+        public void UpdateProfile(string firstName, string lastName, string email, DateTime birthday, string gender)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+            Birthday = birthday;
+            Gender = gender;
+        }
+        public LoggedInUser ToLoggedInUser()
+        {
+            return new LoggedInUser(Id, FirstName, LastName, Email, Birthday, Gender);
         }
 
         // Kullanıcı ile ilgili diğer metodlar, örneğin hesap oluşturma, profil güncelleme vs. burada tanımlanabilir.

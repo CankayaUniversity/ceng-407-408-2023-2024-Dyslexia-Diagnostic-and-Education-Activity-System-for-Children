@@ -71,7 +71,6 @@ public partial class AuthViewModel(IAuthApi authApi, AuthService authService) : 
         }
         catch (Exception ex)
         {
-
             await ShowErrorAlertAsync(ex.Message);
         }
         finally
@@ -81,7 +80,7 @@ public partial class AuthViewModel(IAuthApi authApi, AuthService authService) : 
     }
 
     [RelayCommand]
-    private async Task SinginAsync()
+    private async Task SigninAsync()
     {
         IsBusy = true;
         try
@@ -99,11 +98,9 @@ public partial class AuthViewModel(IAuthApi authApi, AuthService authService) : 
             {
                 await ShowErrorAlertAsync(result.ErrorMessage ?? "Unknown error in singing in");
             }
-
         }
         catch (Exception ex)
         {
-
             await ShowErrorAlertAsync(ex.Message);
         }
         finally
@@ -111,5 +108,4 @@ public partial class AuthViewModel(IAuthApi authApi, AuthService authService) : 
             IsBusy = false;
         }
     }
-
 }

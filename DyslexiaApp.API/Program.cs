@@ -2,6 +2,7 @@ using DyslexiaApp.API.Endpoints;
 using DyslexiaApp.API.Models;
 using DyslexiaApp.API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
@@ -29,8 +30,9 @@ namespace DyslexiaApp.API
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddJwtBearer(jwtOptions =>
-                jwtOptions.TokenValidationParameters = TokenService.GetTokenValidationParameters(builder.Configuration)
-            );
+            {
+                jwtOptions.TokenValidationParameters = TokenService.GetTokenValidationParameters(builder.Configuration);
+            });
 
             // Authorization setup
             builder.Services.AddAuthorization();
@@ -51,9 +53,17 @@ namespace DyslexiaApp.API
                 options.OperationFilter<SecurityRequirementsOperationFilter>();
             });
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                                      .AllowAnyMethod()
+                                      .AllowAnyHeader());
+            });
+
             // Register services
             builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
-            builder.Services.AddTransient<TokenService>();
+            builder.Services.AddSingleton<TokenService>();
             builder.Services.AddTransient<PasswordService>();
             builder.Services.AddTransient<AuthService>();
             builder.Services.AddTransient<DyslexiaDiagnosisService>();
@@ -80,6 +90,8 @@ namespace DyslexiaApp.API
             }
 
             app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseCors("CorsPolicy");
             app.UseAuthentication();
             app.UseAuthorization();
             app.MapEndpoints();

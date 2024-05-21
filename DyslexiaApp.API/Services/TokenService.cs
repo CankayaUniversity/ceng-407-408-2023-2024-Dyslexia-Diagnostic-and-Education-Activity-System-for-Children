@@ -19,10 +19,11 @@ namespace DyslexiaApp.API.Services
         public static TokenValidationParameters GetTokenValidationParameters(IConfiguration configuration) =>
             new TokenValidationParameters
             {
-                ValidateAudience = false,
-                ValidateIssuer = false,
+                ValidateAudience = true,
+                ValidateIssuer = true,
                 ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
+                ValidAudience = configuration["Jwt:Audience"],
                 ValidIssuer = configuration["Jwt:Issuer"],
                 IssuerSigningKey = GetSecurityKey(configuration)
             };
@@ -31,6 +32,7 @@ namespace DyslexiaApp.API.Services
         {
             var securityKey = GetSecurityKey(_configuration);
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            var audience = _configuration["Jwt:Audience"];
             var issuer = _configuration["Jwt:Issuer"];
             var expireInMinutes = Convert.ToInt32(_configuration["Jwt:ExpireInMinute"]);
 
@@ -43,7 +45,7 @@ namespace DyslexiaApp.API.Services
 
             var token = new JwtSecurityToken(
                 issuer: issuer,
-                audience: "*",
+                audience: audience,
                 claims: claims,
                 expires: DateTime.Now.AddMinutes(expireInMinutes),
                 signingCredentials: credentials);

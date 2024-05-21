@@ -175,7 +175,7 @@
                                    VerticalOptions="Center" 
                                    HorizontalOptions="Center"/>
                             <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ProfileViewModel}}, Path=UpdateProfileCommand}" />
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ProfileViewModel}}, Path=UpdateUserProfileCommand}" />
                             </Grid.GestureRecognizers>
                         </Grid>
 

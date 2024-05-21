@@ -31,13 +31,44 @@ namespace DyslexiaApp.API.Endpoints
             app.MapGet("/api/dyslexiadiagnosis", async (DyslexiaDiagnosisService dyslexiaDiagnosisService) =>
                 TypedResults.Ok(await dyslexiaDiagnosisService.GetDyslexiaDiagnosesAsync()));
 
+            app.MapGet("/api/navigationgame/start", async (HttpContext httpContext, [FromServices] NavigationGameService navigationGameService) =>
+            {
+                try
+                {
+                    var navigationGame = await navigationGameService.StartGameAsync();
+                    await httpContext.Response.WriteAsJsonAsync(navigationGame);
+                }
+                catch (Exception ex)
+                {
+                    httpContext.Response.StatusCode = 400; // Bad Request
+                    await httpContext.Response.WriteAsync($"Error: {ex.Message}");
+                }
+            });
+
+
             app.MapPost("/api/educationalgame", async (EducationalDto dto, EducationalGameService educationalGameService) =>
                 TypedResults.Ok(await educationalGameService.AddEducationalGameAsync(dto)));
 
             app.MapGet("/api/educationalgame", async (EducationalGameService educationalGameService) =>
                 TypedResults.Ok(await educationalGameService.GetEducationalGamesAsync()));
 
+            
+
             var authGroup = app.MapGroup("/api/user").RequireAuthorization();
+            app.MapPut("/api/user/update", async (UpdateUserDto dto, ClaimsPrincipal principal, AuthService authService) =>
+            {
+                var userId = principal.GetUserId();
+                var result = await authService.UpdateUserAsync(userId, dto);
+
+                if (!result.IsSuccess)
+                {
+                    return Results.BadRequest(new { Error = result.ErrorMessage });
+                }
+
+                return Results.Ok(result.Data);
+            });
+
+           
 
             authGroup.MapGet("/{userId}", async (Guid userId, AuthService authService, HttpContext httpContext) =>
             {
@@ -56,53 +87,8 @@ namespace DyslexiaApp.API.Endpoints
                 return Results.Ok(userResult.Data);
             });
 
-            authGroup.MapPut("/update", async (UserUpdateDto dto, AuthService authService, HttpRequest request) =>
-            {
-                var userIdClaim = request.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-                if (string.IsNullOrEmpty(userIdClaim) || Guid.Parse(userIdClaim) != dto.Id)
-                {
-                    return Results.Problem("Yetkisiz erişim.", statusCode: StatusCodes.Status403Forbidden);
-                }
-
-                var result = await authService.UpdateUserProfileAsync(dto);
-                if (result.IsSuccess)
-                {
-                    var updatedUser = await authService.GetUserByIdAsync(dto.Id);
-                    return Results.Ok(updatedUser);
-                }
-                else
-                {
-                    return Results.Problem(result.ErrorMessage, statusCode: StatusCodes.Status400BadRequest);
-                }
-            });
-
-            authGroup.MapPost("/generate-profile-update-token", async ([FromQuery] string email, AuthService authService) =>
-            {
-                var result = await authService.GenerateProfileUpdateTokenAsync(email);
-                if (result.IsSuccess)
-                {
-                    return Results.Ok(result.Data);
-                }
-                return Results.Problem(result.ErrorMessage, statusCode: StatusCodes.Status400BadRequest);
-            }).WithName("GenerateProfileUpdateToken")
-            .Produces<ProfileUpdateTokenDto>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status400BadRequest)
-             .WithTags("User");
 
 
-            authGroup.MapPut("/update-with-token", async (UpdateUserWithTokenDto dto, AuthService authService) =>
-            {
-                var result = await authService.UpdateUserProfileWithTokenAsync(dto);
-                if (result.IsSuccess)
-                {
-                    var updatedUser = await authService.GetUserByIdAsync(dto.Id);
-                    return Results.Ok(updatedUser.Data);
-                }
-                return Results.Problem(result.ErrorMessage, statusCode: StatusCodes.Status400BadRequest);
-            }).WithName("UpdateUserProfileWithToken")
-              .Produces(StatusCodes.Status200OK)
-              .Produces(StatusCodes.Status400BadRequest)
-              .WithTags("User");
 
             authGroup.MapDelete("/deactivate/{userId}", async (Guid userId, AuthService authService, HttpRequest request) =>
             {

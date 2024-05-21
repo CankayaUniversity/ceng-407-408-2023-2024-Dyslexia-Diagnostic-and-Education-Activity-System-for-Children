@@ -44,14 +44,12 @@ namespace DyslexiaApp.API.Services
                     )).ToArray(),
                     diagnosis.NavigationGames.Select(navGame => new NavigationGameDto(
                         navGame.Id,
-                        navGame.Questions.Select(q => new QuestionDto
+                        navGame.Questions.Select(q => new NavigationGameQuestionDto
                         {
                             Id = q.Id,
-                            QuestionText = q.QuestionText,
-                            MainImage = q.MainImage != null ? new ImageDto { Id = q.MainImage.Id, Url = q.MainImage.Url, Description = q.MainImage.Description } : null,
-                            ImageOptions = q.ImageOptions.Select(io => new ImageDto { Id = io.Id, Url = io.Url, Description = io.Description }).ToList(),
-                            CorrectAnswerIndex = q.CorrectAnswerIndex
-                        }).ToList()
+                            BaloonPosition = q.BaloonPosition,
+                        }).ToList(),
+                        navGame.BalloonPosition
                     )).ToArray()
                 ))
                 .ToArrayAsync();

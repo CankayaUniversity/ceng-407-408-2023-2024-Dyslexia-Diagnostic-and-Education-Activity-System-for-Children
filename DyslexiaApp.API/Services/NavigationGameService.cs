@@ -19,15 +19,22 @@ namespace DyslexiaApp.API.Services
         }
 
         // Oyun başlatma
-        public async Task<NavigationGameDto> StartGameAsync(Guid diagnosisId)
+        public async Task<NavigationGameDto> StartGameAsync()
         {
-            var diagnosis = await _context.DyslexiaDiagnosis
-                .Include(d => d.NavigationGames)
-                .FirstOrDefaultAsync(d => d.Id == diagnosisId);
-
+            // Örnek olarak geçerli bir DyslexiaDiagnosis kaydını almak veya oluşturmak
+            var diagnosis = await _context.DyslexiaDiagnosis.FirstOrDefaultAsync();
             if (diagnosis == null)
             {
-                throw new Exception("Diagnosis not found.");
+                diagnosis = new DyslexiaDiagnosis
+                {
+                    Id = Guid.NewGuid(),
+                    // Diğer gerekli alanları doldurun
+                    TestResults = 0,
+                    FeedBack = "Initial feedback",
+                    Description = "Initial description"
+                };
+                _context.DyslexiaDiagnosis.Add(diagnosis);
+                await _context.SaveChangesAsync();
             }
 
             // Balonun konumunu rastgele belirle
@@ -43,44 +50,16 @@ namespace DyslexiaApp.API.Services
             _context.NavigationGames.Add(game);
             await _context.SaveChangesAsync();
 
-            return new NavigationGameDto(game.Id, new List<QuestionDto>());
+            return new NavigationGameDto(game.Id, new List<NavigationGameQuestionDto>(), balloonPosition);
         }
+    }
 
 
         // Kullanıcının seçimini kontrol etme
-        public async Task<bool> CheckChoiceAsync(Guid gameId, string choice)
-        {
-            var game = await _context.NavigationGames.FindAsync(gameId);
-            if (game == null) return false;
-
-            // Kullanıcının seçimi, kaydedilmiş konum ile karşılaştır
-            bool isCorrect = game.BalloonPosition == choice;
-
-            return isCorrect;
-        }
+        
 
 
         // Oyun için soruları yükleme
-        public async Task<List<QuestionDto>> LoadQuestionsForGame(Guid gameId)
-        {
-            var game = await _context.NavigationGames
-                .Include(g => g.Questions)
-                    .ThenInclude(q => q.MainImage)
-                .FirstOrDefaultAsync(g => g.Id == gameId);
-
-            if (game == null)
-            {
-                throw new Exception("Game not found.");
-            }
-
-            return game.Questions.Select(q => new QuestionDto
-            {
-                Id = q.Id,
-                QuestionText = q.QuestionText,
-                MainImage = q.MainImage != null ? new ImageDto { Id = q.MainImage.Id, Url = q.MainImage.Url, Description = q.MainImage.Description } : null,
-                ImageOptions = q.ImageOptions.Select(io => new ImageDto { Id = io.Id, Url = io.Url, Description = io.Description }).ToList(),
-                CorrectAnswerIndex = q.CorrectAnswerIndex
-            }).ToList();
-        }
-    }
+       
+    
 }

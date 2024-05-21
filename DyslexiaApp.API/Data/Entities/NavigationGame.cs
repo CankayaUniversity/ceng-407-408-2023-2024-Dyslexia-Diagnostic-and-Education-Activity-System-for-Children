@@ -15,11 +15,11 @@ namespace DyslexiaApp.API.Data.Entities
 
         public virtual ICollection<GameSession> GameSessions { get; set; }
         public virtual DyslexiaDiagnosis DyslexiaDiagnosis { get; set; }
-        public virtual ICollection<Question> Questions { get; set; }
+        public virtual ICollection<NavigationGameQuestion> Questions { get; set; }
         public NavigationGame()
         {
             GameSessions = new HashSet<GameSession>();
-            Questions = new HashSet<Question>();
+            Questions = new HashSet<NavigationGameQuestion>();
         }
 
     }

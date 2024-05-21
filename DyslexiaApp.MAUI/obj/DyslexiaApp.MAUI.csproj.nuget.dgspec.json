@@ -131,6 +131,10 @@
             "SendGrid": {
               "target": "Package",
               "version": "[9.29.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.4.1, )"
             }
           },
           "imports": [
@@ -206,6 +210,10 @@
             "SendGrid": {
               "target": "Package",
               "version": "[9.29.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.4.1, )"
             }
           },
           "imports": [
@@ -281,6 +289,10 @@
             "SendGrid": {
               "target": "Package",
               "version": "[9.29.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.4.1, )"
             }
           },
           "imports": [
@@ -351,6 +363,10 @@
             "SendGrid": {
               "target": "Package",
               "version": "[9.29.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.4.1, )"
             }
           },
           "imports": [

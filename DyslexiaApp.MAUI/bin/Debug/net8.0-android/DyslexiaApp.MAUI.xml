@@ -36,11 +36,11 @@
         <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SignupCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SignupAsync"/>.</summary>
         </member>
-        <member name="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel.singinCommand">
-            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SinginCommand"/>.</summary>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.AuthViewModel.signinCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SigninCommand"/>.</summary>
         </member>
-        <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SinginCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SinginAsync"/>.</summary>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SigninCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.AuthViewModel.SigninAsync"/>.</summary>
         </member>
         <member name="T:DyslexiaApp.MAUI.ViewModels.BaseViewModel">
             <inheritdoc/>
@@ -269,11 +269,11 @@
         <member name="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.Gender">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ProfileViewModel._gender"/>
         </member>
-        <member name="F:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.updateProfileCommand">
-            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.UpdateProfileCommand"/>.</summary>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.updateUserProfileCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.UpdateUserProfileCommand"/>.</summary>
         </member>
-        <member name="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.UpdateProfileCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.UpdateProfileAsync"/>.</summary>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.UpdateUserProfileCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.UpdateUserProfile"/>.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
@@ -443,10 +443,7 @@
         <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.SigninAsync(DyslexiaAppMAUI.Shared.Dtos.SigninRequestDto)">
             <inheritdoc />
         </member>
-        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.GenerateProfileUpdateTokenAsync(System.String)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.UpdateUserProfileWithTokenAsync(DyslexiaAppMAUI.Shared.Dtos.UpdateUserWithTokenDto)">
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.UpdateUserAsync(System.Guid,DyslexiaAppMAUI.Shared.Dtos.UpdateUserDto)">
             <inheritdoc />
         </member>
         <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#SignupAsync(DyslexiaAppMAUI.Shared.Dtos.SignupRequestDto)">
@@ -455,10 +452,7 @@
         <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#SigninAsync(DyslexiaAppMAUI.Shared.Dtos.SigninRequestDto)">
             <inheritdoc />
         </member>
-        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#GenerateProfileUpdateTokenAsync(System.String)">
-            <inheritdoc />
-        </member>
-        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#UpdateUserProfileWithTokenAsync(DyslexiaAppMAUI.Shared.Dtos.UpdateUserWithTokenDto)">
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#UpdateUserAsync(System.Guid,DyslexiaAppMAUI.Shared.Dtos.UpdateUserDto)">
             <inheritdoc />
         </member>
         <member name="T:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIEducationalGameListApi">

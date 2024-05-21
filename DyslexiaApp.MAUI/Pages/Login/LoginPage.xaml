@@ -58,7 +58,7 @@
                 <Button Text="LOGIN" 
                         Style="{StaticResource ButtonStyle}"
                         IsEnabled="{Binding CanSignin}"
-                        Command="{Binding SinginCommand}"/>
+                        Command="{Binding SigninCommand}"/>
                 <Label Text="If you don't have an account, you can create one for free."
                        HorizontalTextAlignment="Center"
                        Style="{StaticResource LabelStyle}" />

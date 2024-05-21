@@ -8,7 +8,8 @@ namespace DyslexiaAppMAUI.Shared.Dtos;
 
 public record struct NavigationGameDto(
     Guid Id,
-    List <QuestionDto> Questions
+    List <NavigationGameQuestionDto> Questions,
+    string BaloonPosition
 );
 
 

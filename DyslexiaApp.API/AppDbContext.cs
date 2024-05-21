@@ -22,6 +22,7 @@ namespace DyslexiaApp.API
         public DbSet<DyslexiaDiagnosis> DyslexiaDiagnosis { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Image> Images { get; set; }
+        public DbSet<NavigationGameQuestion> NavigationGameQuestions { get; set; }
 
 
 

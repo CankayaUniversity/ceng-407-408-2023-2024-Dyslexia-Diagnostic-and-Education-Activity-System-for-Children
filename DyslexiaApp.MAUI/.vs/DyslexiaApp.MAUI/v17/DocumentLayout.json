@@ -3,48 +3,32 @@
   "WorkspaceRootPath": "D:\\408\\DyslexiaApp.MAUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\pages\\login\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:pages\\login\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}|..\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj|d:\\408\\dyslexiaappmaui.shared\\dtos\\resultwithdatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\services\\openaiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:services\\openaiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}|..\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj|d:\\408\\dyslexiaappmaui.shared\\dtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\services\\iopenaiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:services\\iopenaiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\pages\\login\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:pages\\login\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\models\\completionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:models\\completionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\models\\completionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:models\\completionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\models\\choice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:models\\choice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\helpers\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:helpers\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}|..\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj|d:\\408\\dyslexiaappmaui.shared\\dtos\\userupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\services\\iauthapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:services\\iauthapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -53,33 +37,113 @@
       "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\endpoints\\authendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\viewmodels\\authviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:viewmodels\\authviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}|..\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj|d:\\408\\dyslexiaappmaui.shared\\dtos\\updateuserwithtokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}|..\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj|d:\\408\\dyslexiaappmaui.shared\\dtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\408\\DyslexiaApp.MAUI\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\services\\questionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\408\\DyslexiaApp.API\\Migrations\\20240521132803_mig_17.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}|..\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj|d:\\408\\dyslexiaappmaui.shared\\dtos\\loggedinuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\viewmodels\\authviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:viewmodels\\authviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\data\\entities\\sistem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\data\\entities\\support.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\data\\entities\\dyslexiadiagnosis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\data\\entities\\educationalgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\data\\entities\\gamesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\data\\entities\\navigationgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\data\\entities\\matchinggame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\services\\dyslexiadiagnosisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\services\\navigationgameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}|..\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj|d:\\408\\dyslexiaappmaui.shared\\dtos\\navigationgamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}|..\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj|d:\\408\\dyslexiaappmaui.shared\\dtos\\dyslexiadiagnosisdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\408\\DyslexiaApp.API\\Migrations\\20240521121857_mig_16.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\services\\passwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\services\\matchinggameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\services\\educationalgameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\data\\entities\\navigationgamequestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\data\\entities\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\408\\DyslexiaApp.API\\Migrations\\20240521120726_mig_15.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}|..\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj|d:\\408\\dyslexiaappmaui.shared\\dtos\\navigationgamequestiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}|..\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj|d:\\408\\dyslexiaappmaui.shared\\dtos\\questiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEDE677-CBC3-4CFA-83E2-B5B72D17E263}|..\\DyslexiaApp.API\\DyslexiaApp.API.csproj|d:\\408\\dyslexiaapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CACEEA6D-4B2E-41B3-84AD-51F00DCB3BB2}|..\\DyslexiaAppMAUI.Shared\\DyslexiaAppMAUI.Shared.csproj|d:\\408\\dyslexiaappmaui.shared\\dtos\\updateuserwithtokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\pages\\login\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:pages\\login\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|d:\\408\\dyslexiaapp.maui\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38A74386-8A8F-4FB2-AA67-E0C7EDA43D91}|DyslexiaApp.MAUI.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -89,7 +153,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -105,181 +169,182 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "MauiProgram.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\MauiProgram.cs",
-              "RelativeToolTip": "MauiProgram.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAQwDgAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T11:56:48.591Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HomePage.xaml",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Pages\\Login\\HomePage.xaml",
-              "RelativeDocumentMoniker": "Pages\\Login\\HomePage.xaml",
-              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Pages\\Login\\HomePage.xaml",
-              "RelativeToolTip": "Pages\\Login\\HomePage.xaml",
-              "ViewState": "AQIAAOAAAAAAAAAAAAAEwO0AAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-20T15:32:06.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OpenAIService.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Services\\OpenAIService.cs",
-              "RelativeDocumentMoniker": "Services\\OpenAIService.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Services\\OpenAIService.cs",
-              "RelativeToolTip": "Services\\OpenAIService.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAwwDoAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:30:51.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IOpenAIService.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Services\\IOpenAIService.cs",
-              "RelativeDocumentMoniker": "Services\\IOpenAIService.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Services\\IOpenAIService.cs",
-              "RelativeToolTip": "Services\\IOpenAIService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:30:15.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Message.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Models\\Message.cs",
-              "RelativeDocumentMoniker": "Models\\Message.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Models\\Message.cs",
-              "RelativeToolTip": "Models\\Message.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:29:32.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CompletionResponse.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Models\\CompletionResponse.cs",
-              "RelativeDocumentMoniker": "Models\\CompletionResponse.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Models\\CompletionResponse.cs",
-              "RelativeToolTip": "Models\\CompletionResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:29:07.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ChatViewModel.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\ViewModels\\ChatViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ChatViewModel.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\ViewModels\\ChatViewModel.cs",
-              "RelativeToolTip": "ViewModels\\ChatViewModel.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwDoAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:31:16.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CompletionRequest.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Models\\CompletionRequest.cs",
-              "RelativeDocumentMoniker": "Models\\CompletionRequest.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Models\\CompletionRequest.cs",
-              "RelativeToolTip": "Models\\CompletionRequest.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAUwBwAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:28:37.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Choice.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Models\\Choice.cs",
-              "RelativeDocumentMoniker": "Models\\Choice.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Models\\Choice.cs",
-              "RelativeToolTip": "Models\\Choice.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:28:11.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Constants.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Helpers\\Constants.cs",
-              "RelativeDocumentMoniker": "Helpers\\Constants.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Helpers\\Constants.cs",
-              "RelativeToolTip": "Helpers\\Constants.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:27:01.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Services\\AuthService.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.API\\Services\\AuthService.cs",
-              "RelativeToolTip": "..\\DyslexiaApp.API\\Services\\AuthService.cs",
-              "ViewState": "AQIAAOwAAAAAAAAAAAAawPcAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T11:42:23.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "ProfileViewModel.cs",
               "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\ViewModels\\ProfileViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ProfileViewModel.cs",
               "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\ViewModels\\ProfileViewModel.cs",
               "RelativeToolTip": "ViewModels\\ProfileViewModel.cs",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAhwIcAAAAIAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAIAwwE8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-17T11:34:44.234Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAnwEEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T11:34:42.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserUpdateDto.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\UserUpdateDto.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaAppMAUI.Shared\\Dtos\\UserUpdateDto.cs",
+              "ToolTip": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\UserUpdateDto.cs",
+              "RelativeToolTip": "..\\DyslexiaAppMAUI.Shared\\Dtos\\UserUpdateDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T13:11:30.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateUserDto.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\UpdateUserDto.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaAppMAUI.Shared\\Dtos\\UpdateUserDto.cs",
+              "ToolTip": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\UpdateUserDto.cs",
+              "RelativeToolTip": "..\\DyslexiaAppMAUI.Shared\\Dtos\\UpdateUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T13:13:03.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Pages\\Login\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "Pages\\Login\\ProfilePage.xaml",
+              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Pages\\Login\\ProfilePage.xaml",
+              "RelativeToolTip": "Pages\\Login\\ProfilePage.xaml",
+              "ViewState": "AQIAAKUAAAAAAAAAAAAAALEAAAChAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-21T13:40:19.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ResultWithDataDto.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\ResultWithDataDto.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaAppMAUI.Shared\\Dtos\\ResultWithDataDto.cs",
+              "ToolTip": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\ResultWithDataDto.cs",
+              "RelativeToolTip": "..\\DyslexiaAppMAUI.Shared\\Dtos\\ResultWithDataDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T13:23:31.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IAuthApi.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Services\\IAuthApi.cs",
+              "RelativeDocumentMoniker": "Services\\IAuthApi.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Services\\IAuthApi.cs",
+              "RelativeToolTip": "Services\\IAuthApi.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T12:21:08.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Services\\AuthService.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Services\\AuthService.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Services\\AuthService.cs",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAIwGkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T11:42:23.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAYwB8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T14:51:32.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "AuthEndpoints.cs",
               "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Endpoints\\AuthEndpoints.cs",
               "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Endpoints\\AuthEndpoints.cs",
               "ToolTip": "D:\\408\\DyslexiaApp.API\\Endpoints\\AuthEndpoints.cs",
               "RelativeToolTip": "..\\DyslexiaApp.API\\Endpoints\\AuthEndpoints.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwCcAAABNAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAIwDkAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T11:49:26.766Z"
+              "WhenOpened": "2024-05-17T11:49:26.766Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 10,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaAppMAUI.Shared\\Dtos\\AuthResponseDto.cs",
+              "ToolTip": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\AuthResponseDto.cs",
+              "RelativeToolTip": "..\\DyslexiaAppMAUI.Shared\\Dtos\\AuthResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T13:09:19.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "App.g.i.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeToolTip": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAD4v0MAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T12:31:54.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Program.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Program.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Program.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Program.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAQwEEAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T13:24:25.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "TokenService.cs",
               "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Services\\TokenService.cs",
               "ToolTip": "D:\\408\\DyslexiaApp.API\\Services\\TokenService.cs",
               "RelativeToolTip": "..\\DyslexiaApp.API\\Services\\TokenService.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAASwEsAAAAIAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAzwCQAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-17T11:42:57.88Z",
               "EditorCaption": ""
@@ -287,87 +352,401 @@
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Services\\AuthService.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Services\\AuthService.cs",
-              "RelativeToolTip": "Services\\AuthService.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAhwEAAAAAQAAAA",
+              "Title": "QuestionService.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Services\\QuestionService.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Services\\QuestionService.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Services\\QuestionService.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Services\\QuestionService.cs",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAywJMAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T11:34:42.587Z"
+              "WhenOpened": "2024-05-21T12:17:40.781Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IAuthApi.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Services\\IAuthApi.cs",
-              "RelativeDocumentMoniker": "Services\\IAuthApi.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Services\\IAuthApi.cs",
-              "RelativeToolTip": "Services\\IAuthApi.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAxwBcAAAAAAAAA",
+              "DocumentIndex": 15,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\appsettings.Development.json",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\appsettings.Development.json",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-20T17:48:09.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LoggedInUser.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\LoggedInUser.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaAppMAUI.Shared\\Dtos\\LoggedInUser.cs",
+              "ToolTip": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\LoggedInUser.cs",
+              "RelativeToolTip": "..\\DyslexiaAppMAUI.Shared\\Dtos\\LoggedInUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T12:21:08.704Z",
+              "WhenOpened": "2024-05-21T13:25:26.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Program.cs",
-              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Program.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.API\\Program.cs",
-              "RelativeToolTip": "..\\DyslexiaApp.API\\Program.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAhwB8AAAAQAAAA",
+              "Title": "20240521132803_mig_17.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Migrations\\20240521132803_mig_17.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Migrations\\20240521132803_mig_17.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Migrations\\20240521132803_mig_17.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Migrations\\20240521132803_mig_17.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T13:24:25.686Z"
+              "WhenOpened": "2024-05-21T13:28:03.635Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Data\\Entities\\User.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\User.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Data\\Entities\\User.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAwE8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:16:41.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "AuthViewModel.cs",
               "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\ViewModels\\AuthViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\AuthViewModel.cs",
               "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\ViewModels\\AuthViewModel.cs",
               "RelativeToolTip": "ViewModels\\AuthViewModel.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAawFoAAAAxAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAiwG8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T11:52:23.578Z"
+              "WhenOpened": "2024-05-17T11:52:23.578Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
+              "Title": "EducationalGame.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\EducationalGame.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Data\\Entities\\EducationalGame.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\EducationalGame.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Data\\Entities\\EducationalGame.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:16:23.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "GameSession.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\GameSession.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Data\\Entities\\GameSession.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\GameSession.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Data\\Entities\\GameSession.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:16:14.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "NavigationGame.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\NavigationGame.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Data\\Entities\\NavigationGame.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\NavigationGame.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Data\\Entities\\NavigationGame.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBUAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T11:55:48.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Support.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\Support.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Data\\Entities\\Support.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\Support.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Data\\Entities\\Support.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:55:24.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Sistem.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\Sistem.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Data\\Entities\\Sistem.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\Sistem.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Data\\Entities\\Sistem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:55:26.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MatchingGame.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\MatchingGame.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Data\\Entities\\MatchingGame.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\MatchingGame.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Data\\Entities\\MatchingGame.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:16:27.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DyslexiaDiagnosis.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\DyslexiaDiagnosis.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Data\\Entities\\DyslexiaDiagnosis.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\DyslexiaDiagnosis.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Data\\Entities\\DyslexiaDiagnosis.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:13:13.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DyslexiaDiagnosisService.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Services\\DyslexiaDiagnosisService.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Services\\DyslexiaDiagnosisService.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Services\\DyslexiaDiagnosisService.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Services\\DyslexiaDiagnosisService.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAnwDIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T18:47:10.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "NavigationGameService.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Services\\NavigationGameService.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Services\\NavigationGameService.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Services\\NavigationGameService.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Services\\NavigationGameService.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAnwD8AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T11:46:44.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DyslexiaDiagnosisDto.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\DyslexiaDiagnosisDto.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaAppMAUI.Shared\\Dtos\\DyslexiaDiagnosisDto.cs",
+              "ToolTip": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\DyslexiaDiagnosisDto.cs",
+              "RelativeToolTip": "..\\DyslexiaAppMAUI.Shared\\Dtos\\DyslexiaDiagnosisDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:15:27.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "NavigationGameDto.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\NavigationGameDto.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaAppMAUI.Shared\\Dtos\\NavigationGameDto.cs",
+              "ToolTip": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\NavigationGameDto.cs",
+              "RelativeToolTip": "..\\DyslexiaAppMAUI.Shared\\Dtos\\NavigationGameDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T11:56:19.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "20240521121857_mig_16.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Migrations\\20240521121857_mig_16.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Migrations\\20240521121857_mig_16.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Migrations\\20240521121857_mig_16.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Migrations\\20240521121857_mig_16.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:18:57.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "MatchingGameService.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Services\\MatchingGameService.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Services\\MatchingGameService.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Services\\MatchingGameService.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Services\\MatchingGameService.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:17:29.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "PasswordService.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Services\\PasswordService.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Services\\PasswordService.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Services\\PasswordService.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Services\\PasswordService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:17:39.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "EducationalGameService.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Services\\EducationalGameService.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Services\\EducationalGameService.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Services\\EducationalGameService.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Services\\EducationalGameService.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:17:12.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "NavigationGameQuestion.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\NavigationGameQuestion.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Data\\Entities\\NavigationGameQuestion.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\NavigationGameQuestion.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Data\\Entities\\NavigationGameQuestion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:02:40.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Question.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\Question.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Data\\Entities\\Question.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Data\\Entities\\Question.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Data\\Entities\\Question.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:02:26.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "20240521120726_mig_15.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\Migrations\\20240521120726_mig_15.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\Migrations\\20240521120726_mig_15.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\Migrations\\20240521120726_mig_15.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\Migrations\\20240521120726_mig_15.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:07:26.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\AppDbContext.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\AppDbContext.cs",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\AppDbContext.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBgAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T12:03:38.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "QuestionDto.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\QuestionDto.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaAppMAUI.Shared\\Dtos\\QuestionDto.cs",
+              "ToolTip": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\QuestionDto.cs",
+              "RelativeToolTip": "..\\DyslexiaAppMAUI.Shared\\Dtos\\QuestionDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T11:56:29.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "NavigationGameQuestionDto.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\NavigationGameQuestionDto.cs",
+              "RelativeDocumentMoniker": "..\\DyslexiaAppMAUI.Shared\\Dtos\\NavigationGameQuestionDto.cs",
+              "ToolTip": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\NavigationGameQuestionDto.cs",
+              "RelativeToolTip": "..\\DyslexiaAppMAUI.Shared\\Dtos\\NavigationGameQuestionDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T11:57:11.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.API\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\DyslexiaApp.API\\appsettings.json",
+              "ToolTip": "D:\\408\\DyslexiaApp.API\\appsettings.json",
+              "RelativeToolTip": "..\\DyslexiaApp.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-20T17:48:06.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
               "Title": "UpdateUserWithTokenDto.cs",
               "DocumentMoniker": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\UpdateUserWithTokenDto.cs",
               "RelativeDocumentMoniker": "..\\DyslexiaAppMAUI.Shared\\Dtos\\UpdateUserWithTokenDto.cs",
               "ToolTip": "D:\\408\\DyslexiaAppMAUI.Shared\\Dtos\\UpdateUserWithTokenDto.cs",
               "RelativeToolTip": "..\\DyslexiaAppMAUI.Shared\\Dtos\\UpdateUserWithTokenDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-19T12:48:21.386Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 43,
               "Title": "LoginPage.xaml",
               "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\Pages\\Login\\LoginPage.xaml",
               "RelativeDocumentMoniker": "Pages\\Login\\LoginPage.xaml",
               "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\Pages\\Login\\LoginPage.xaml",
               "RelativeToolTip": "Pages\\Login\\LoginPage.xaml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAADwAAAA3AAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAADwAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-05-17T11:57:38.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "App.g.i.cs",
-              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
-              "RelativeDocumentMoniker": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
-              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
-              "RelativeToolTip": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAhwEQAAAAMAAAA",
+              "DocumentIndex": 44,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "D:\\408\\DyslexiaApp.MAUI\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "D:\\408\\DyslexiaApp.MAUI\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAAAGsAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T12:31:54.012Z"
+              "WhenOpened": "2024-05-20T17:16:13.493Z"
             }
           ]
         }

@@ -76,64 +76,59 @@ namespace DyslexiaApp.MAUI.ViewModels
         }
 
         [RelayCommand]
-        public async Task UpdateProfileAsync()
+        public async Task UpdateUserProfile()
         {
+            if (_authService.User == null)
+            {
+                await ShowErrorAlertAsync("User not authenticated.");
+                return;
+            }
+
+            var userId = _authService.User.Id;
+            var dto = new UpdateUserDto(
+                FirstName: Name!,
+                LastName: LastName!,
+                Email: Email!,
+                Birthday: Birthdate,
+                Gender: Gender!
+            );
+
+            IsBusy = true;
             try
             {
-                // Kullanıcı email adresinin null olmadığından emin olun
-                if (string.IsNullOrEmpty(Email))
-                {
-                    Debug.WriteLine("Email is null or empty");
-                    return;
-                }
-
-                // Profil güncelleme token'ını oluştur
-                var generateTokenResult = await _authService.GenerateProfileUpdateTokenAsync(Email);
-                if (!generateTokenResult.IsSuccess)
-                {
-                    Debug.WriteLine($"Failed to generate token: {generateTokenResult.ErrorMessage}");
-                    return;
-                }
-
-                // UpdateUserWithTokenDto nesnesini oluştur
-                var updateWithTokenDto = new UpdateUserWithTokenDto
-                {
-                    Id = _authService.User!.Id,
-                    FirstName = Name,
-                    LastName = LastName,
-                    Email = Email,
-                    Birthday = Birthdate,
-                    Gender = Gender,
-                    Token = generateTokenResult.Data!.Token // Token'ı ekleyin
-                };
-
-                // Kullanıcı profilini token ile güncelle
-                var result = await _authService.UpdateUserProfileWithTokenAsync(updateWithTokenDto);
+                var result = await _authService.UpdateUserAsync(userId, dto);
                 if (result.IsSuccess)
                 {
-                    Debug.WriteLine("Profile updated successfully");
+                    await ShowSuccessAlertAsync("User profile updated successfully.");
                 }
                 else
                 {
-                    Debug.WriteLine($"Failed to update profile: {result.ErrorMessage}");
+                    await ShowErrorAlertAsync(result.ErrorMessage);
                 }
-            }
-            catch (ValidationApiException ex)
-            {
-                Debug.WriteLine($"Validation error: {ex.Content}");
-            }
-            catch (ApiException ex)
-            {
-                Debug.WriteLine($"API error: {ex.Content}");
-                Debug.WriteLine($"Status Code: {ex.StatusCode}");
-                Debug.WriteLine($"Reason Phrase: {ex.ReasonPhrase}");
             }
             catch (Exception ex)
             {
                 await ShowErrorAlertAsync(ex.Message);
-                Debug.WriteLine($"Error updating profile: {ex.Message}");
+                Debug.WriteLine($"Error updating user profile: {ex.Message}");
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
 
+        private Task ShowErrorAlertAsync(string message)
+        {
+            // Implement your error alert logic here
+            Debug.WriteLine(message);
+            return Task.CompletedTask;
+        }
+
+        private Task ShowSuccessAlertAsync(string message)
+        {
+            // Implement your success alert logic here
+            Debug.WriteLine(message);
+            return Task.CompletedTask;
+        }
     }
 }
