@@ -133,12 +133,12 @@
                    WidthRequest="150"
                    HeightRequest="200"/>
         </Grid>
-        <Grid WidthRequest="100"
+        <Grid WidthRequest="200"
               HeightRequest="50"
               Margin="855,500,0,20">
             <Button x:Name="NextButton"
                     FontSize="Medium"
-                    Text="Next"
+                    Text="{Binding NextButtonText}"
                     IsEnabled="{Binding IsAnswerCorrect}" />
         </Grid>
     </Grid>

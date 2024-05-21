@@ -12,6 +12,7 @@ namespace DyslexiaApp.MAUI.ViewModels;
 public partial class MatchingViewModel : BaseViewModel
 {
     private readonly IPictureMatchingApi _pictureMatchingApi;
+    private readonly EducationalGamesViewModel _educationalGamesViewModel;
     private bool _isInitialized = false;
 
     public ObservableCollection<QuestionDto> GameQuestions { get; } = new ObservableCollection<QuestionDto>();
@@ -19,21 +20,17 @@ public partial class MatchingViewModel : BaseViewModel
     [ObservableProperty]
     private Guid questionId;
 
-    //[ObservableProperty]
-    //private ObservableCollection<QuestionDto> questions;
-
     [ObservableProperty]
     private QuestionDto? _question;
 
-    // Kullanıcının kalan hakkı
     [ObservableProperty]
-    private int? attemptsRemaining = 3;
+    private int? attemptsRemaining;
 
-    // Mevcut soru için yapılan deneme sayısı
+    public Action DecreaseAttempts { get; set; }
+
     [ObservableProperty]
     private int? currentAttempts = 0;
 
-    // Cevabın doğruluğunu takip eder
     [ObservableProperty]
     private bool? isCorrect;
 
@@ -45,9 +42,13 @@ public partial class MatchingViewModel : BaseViewModel
 
     private int _currentQuestionIndex = 0;
 
-    public MatchingViewModel(IPictureMatchingApi pictureMatchingApi)
+    [ObservableProperty]
+    private string nextButtonText;
+
+    public MatchingViewModel(IPictureMatchingApi pictureMatchingApi, EducationalGamesViewModel educationalGamesViewModel)
     {
         _pictureMatchingApi = pictureMatchingApi;
+        _educationalGamesViewModel = educationalGamesViewModel;
     }
 
     public async Task InitializeAsync(Guid questionId)
@@ -62,6 +63,7 @@ public partial class MatchingViewModel : BaseViewModel
             Debug.WriteLine($"Loading question details: {questionId}");
             var question = await _pictureMatchingApi.GetQuestionByIdAsync(questionId);
             Question = question;
+            UpdateNextButtonText();
         }
         catch (Exception ex)
         {
@@ -91,7 +93,6 @@ public partial class MatchingViewModel : BaseViewModel
         var selectedIndex = Question?.ImageOptions?.IndexOf(selectedImage) ?? -1;
         Debug.WriteLine($"Seçilen öğenin indeksi: {selectedIndex}");
 
-        // Doğru cevap kontrolü
         if (selectedIndex == Question?.CorrectAnswerIndex)
         {
             Debug.WriteLine("Tebrikler! Doğru cevabı seçtiniz.");
@@ -106,7 +107,7 @@ public partial class MatchingViewModel : BaseViewModel
             IsCrossVisible = true;
 
             IsAnswerCorrect = false;
-            IsCrossVisible = true; // cross.png'yi göster
+            IsCrossVisible = true;
 
             Device.StartTimer(TimeSpan.FromSeconds(3), () =>
             {
@@ -114,10 +115,10 @@ public partial class MatchingViewModel : BaseViewModel
                 return false; // Timer'ı durdur
             });
 
-            if (CurrentAttempts.HasValue && AttemptsRemaining.HasValue && AttemptsRemaining > 0)
+            if (AttemptsRemaining.HasValue && AttemptsRemaining > 0)
             {
-                CurrentAttempts++;
-                AttemptsRemaining--;
+                DecreaseAttempts?.Invoke();
+                AttemptsRemaining = _educationalGamesViewModel.AttemptsRemaining;
 
                 if (AttemptsRemaining <= 0)
                 {
@@ -127,5 +128,17 @@ public partial class MatchingViewModel : BaseViewModel
             }
         }
 
+    }
+
+    private void UpdateNextButtonText()
+    {
+        if (_educationalGamesViewModel.CurrentQuestionIndex >= _educationalGamesViewModel.GameQuestions.Count - 1)
+        {
+            NextButtonText = "Submit";
+        }
+        else
+        {
+            NextButtonText = $"{_educationalGamesViewModel.CurrentQuestionIndex + 1}/10 Continue";
+        }
     }
 }

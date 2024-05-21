@@ -1,25 +1,33 @@
-namespace DyslexiaApp.MAUI.Pages.Login;
-
-public partial class DiagnosticTestAgreement : ContentPage
+namespace DyslexiaApp.MAUI.Pages.Login
 {
-    public DiagnosticTestAgreement()
+    public partial class DiagnosticTestAgreement : ContentPage
     {
-        InitializeComponent();
-    }
-    private async void Close_Button(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
-    }
-    private async void GoTestInfo_Clicked(object sender, EventArgs e)
-    {
-        if (AgreementCheckBox.IsChecked)
+        public DiagnosticTestAgreement()
         {
-            await Shell.Current.GoToAsync($"//{nameof(DiagnosisLetterMatchingInformation)}");
-        }
-        else
-        {
-            await DisplayAlert("Warning", "You must agree to the terms and conditions before start first test.", "OK");
+            InitializeComponent();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            AgreementCheckBox.IsChecked = false; // Reset the checkbox state
+        }
+
+        private async void Close_Button(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+        }
+
+        private async void GoTestInfo_Clicked(object sender, EventArgs e)
+        {
+            if (AgreementCheckBox.IsChecked)
+            {
+                await Shell.Current.GoToAsync($"//{nameof(DiagnosisLetterMatchingInformation)}");
+            }
+            else
+            {
+                await DisplayAlert("Warning", "You must agree to the terms and conditions before start first test.", "OK");
+            }
+        }
     }
 }

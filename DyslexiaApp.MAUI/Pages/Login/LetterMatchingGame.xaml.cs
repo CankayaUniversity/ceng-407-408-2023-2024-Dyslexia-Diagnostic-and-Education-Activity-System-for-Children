@@ -29,7 +29,7 @@ public partial class LetterMatchingGame : ContentPage
         _diagnosisMatchingGamesViewModel = diagnosisMatchingGamesViewModel;
         BindingContext = _letterViewModel;
 
-        NextButton.Command = new Command(async () => await _diagnosisMatchingGamesViewModel.GoToNextQuestion());
+        NextButton.Command = new Command(_letterViewModel.AddCurrentSelectionResult);
     }
 
     private async void LoadQuestionData(string questionId)

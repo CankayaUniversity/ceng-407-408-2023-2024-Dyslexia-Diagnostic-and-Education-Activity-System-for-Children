@@ -75,7 +75,7 @@
                                      VerticalOptions="End" 
                                      HorizontalOptions="End"
                                      Clicked="Close_Button"/>
-                        <Label Text="Privacy and Licance Agreement"
+                        <Label Text="Privacy and License Agreement"
                            Margin="0,0,0,15"
                            FontAttributes="Bold"
                            FontSize="Large"

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DyslexiaApp.MAUI.Pages.Login.LetterMatchingGame"
@@ -6,7 +5,6 @@
              x:DataType="vm:LetterMatchingViewModel"
              xmlns:dto="clr-namespace:DyslexiaAppMAUI.Shared.Dtos;assembly=DyslexiaAppMAUI.Shared"
              BackgroundImageSource="lettermatching.jpeg"
-             
              Title="LetterMatchingGame">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -20,7 +18,6 @@
             </Style>
 
             <Style x:Key="QuestionContainerStyle" TargetType="ContentView">
-
                 <Setter Property="WidthRequest" Value="200" />
                 <Setter Property="HeightRequest" Value="200" />
                 <Setter Property="Margin" Value="200,100" />
@@ -28,12 +25,11 @@
                 <Setter Property="VerticalOptions" Value="Start" />
                 <Setter Property="BackgroundColor" Value="Transparent" />
             </Style>
-
         </ResourceDictionary>
     </ContentPage.Resources>
-    <Grid>
 
-        <Grid >
+    <Grid>
+        <Grid>
             <Grid>
                 <Grid Style="{StaticResource HomeIconStyle}" VerticalOptions="Start" HorizontalOptions="Start">
                     <ImageButton Source="home_button.png" 
@@ -45,12 +41,7 @@
                 </Grid>
                 <StackLayout HorizontalOptions="Start"
                              VerticalOptions="Start"
-                             Margin="200,130">
-                    <Label Text="Find the same letter"
-                           TextColor="black"
-                           FontSize="Large"
-                           FontAttributes="Bold"
-                           HorizontalOptions="Center"/>
+                             Margin="200,150">
                     <Frame WidthRequest="250"
                            HeightRequest="250"
                            Margin="5"
@@ -61,25 +52,23 @@
                                Aspect="AspectFill"/>
                     </Frame>
                 </StackLayout>
-
             </Grid>
         </Grid>
 
         <Grid HeightRequest="450"
               WidthRequest="750"
               Margin="600,0,10,30">
-
             <CollectionView ItemsSource="{Binding FilteredImageOptions}"
-                        HeightRequest="390"
-                        WidthRequest="600"
-                        Margin="0,0,90,30"
-                        HorizontalOptions="End"
-                        VerticalOptions="End">
+                            HeightRequest="390"
+                            WidthRequest="600"
+                            Margin="0,0,90,30"
+                            HorizontalOptions="End"
+                            VerticalOptions="End">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical" 
-                                 Span="2"
-                                 VerticalItemSpacing="5"
-                                 HorizontalItemSpacing="5"/>
+                                     Span="2"
+                                     VerticalItemSpacing="5"
+                                     HorizontalItemSpacing="5"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="dto:ImageDto">
@@ -100,28 +89,16 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-
-            <Image Source="accept.png"
-               IsVisible="{Binding IsAnswerCorrect}"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"
-               WidthRequest="150"
-               HeightRequest="200" 
-               BackgroundColor="Transparent"/>
-            <Image Source="delete.png"
-               IsVisible="{Binding IsCrossVisible}"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"
-               WidthRequest="150"
-               HeightRequest="200"/>
         </Grid>
-        <Grid WidthRequest="100"
-          HeightRequest="50"
-          Margin="855,500,0,20">
+
+        <Grid WidthRequest="200"
+              HeightRequest="50"
+              Margin="660,500,0,20">
             <Button x:Name="NextButton"
                     FontSize="Medium"
-                    Text="Next"
-                    IsEnabled="{Binding IsAnswerCorrect}"/>
+                    Text="{Binding NextButtonText}"
+                    Command="{Binding AddCurrentSelectionResultCommand}"
+                    IsEnabled="{Binding IsOptionSelected}"/>
         </Grid>
     </Grid>
 </ContentPage>

@@ -32,6 +32,10 @@ public partial class PlayGame : ContentPage
         BindingContext = _matchingViewModel;
 
         NextButton.Command = new Command(async () => await _educationalViewModel.GoToNextQuestion());
+
+        _matchingViewModel.AttemptsRemaining = _educationalViewModel.AttemptsRemaining;
+        _matchingViewModel.DecreaseAttempts = _educationalViewModel.DecreaseAttempts;
+
     }
 
     private async void LoadQuestionData(string questionId)

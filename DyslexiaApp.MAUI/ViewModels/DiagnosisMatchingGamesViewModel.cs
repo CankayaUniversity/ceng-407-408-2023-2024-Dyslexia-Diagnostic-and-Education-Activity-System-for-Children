@@ -5,13 +5,13 @@ using DyslexiaApp.MAUI.Services;
 using DyslexiaAppMAUI.Shared.Dtos;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace DyslexiaApp.MAUI.ViewModels;
+
 public partial class DiagnosisMatchingGamesViewModel : BaseViewModel
 {
     private readonly IEducationalGameListApi _educationalGameListApi;
@@ -24,13 +24,17 @@ public partial class DiagnosisMatchingGamesViewModel : BaseViewModel
     [ObservableProperty]
     private EducationalDto selectedGame;
 
-    public static ObservableCollection<QuestionDto> GameQuestions { get; private set; }
+    public ObservableCollection<QuestionDto> GameQuestions { get; private set; }
 
-    public static int CurrentQuestionIndex { get; set; }
+    public int CurrentQuestionIndex { get; set; }
+
+    // New list to store answer results
+    public List<int> AnswerResults { get; private set; }
 
     public DiagnosisMatchingGamesViewModel(IEducationalGameListApi educationalGameListApi)
     {
         _educationalGameListApi = educationalGameListApi;
+        AnswerResults = new List<int>();
     }
 
     public async Task InitializeAsync()
@@ -60,7 +64,7 @@ public partial class DiagnosisMatchingGamesViewModel : BaseViewModel
     {
         if (Educational != null && Educational.Length > 1)
         {
-            SelectedGame = Educational[2]; // 2. oyunu seçer
+            SelectedGame = Educational[0];
             Debug.WriteLine($"Selected Game: {SelectedGame.Name}");
 
             SelectedGameStart();
@@ -128,31 +132,11 @@ public partial class DiagnosisMatchingGamesViewModel : BaseViewModel
         }
         else
         {
-            await Shell.Current.DisplayAlert("End of Game", "You have completed all questions in this game.", "OK");
-            await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+            await Shell.Current.DisplayAlert("End of Game", "You have completed all questions in this test. Go to next Test.", "OK");
+
+            Debug.WriteLine($"Answer Results: {String.Join(", ", AnswerResults)}");
+
+            await Shell.Current.GoToAsync($"//{nameof(DiagnosisNavigationInfo)}");
         }
     }
 }
-
-
-
-
-
-//[RelayCommand]
-//public async Task GoToNextQuestion()
-//{
-//    if (CurrentQuestionIndex < GameQuestions.Count - 1)
-//    {
-//        CurrentQuestionIndex++;
-//        var nextQuestion = GameQuestions[CurrentQuestionIndex];
-//        Debug.WriteLine($"next Question ID: {nextQuestion.Id}");
-//        var route = $"{nameof(LetterMatchingGame)}?questionId={nextQuestion.Id}";
-//        await Shell.Current.GoToAsync(route);
-//    }
-//    else
-//    {
-//        await Shell.Current.DisplayAlert("End of Game", "You have completed all questions in this game.", "OK");
-
-//        await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
-//    }
-//}

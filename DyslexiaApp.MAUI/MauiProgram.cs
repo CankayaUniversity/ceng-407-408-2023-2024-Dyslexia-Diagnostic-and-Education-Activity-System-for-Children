@@ -48,11 +48,16 @@ public static class MauiProgram
         //builder.Services.AddTransient<EducationalGamesViewModel>()
         //    .AddTransient<DiagnosisLetterMatchingInformation>();
 
-        builder.Services.AddTransient<DiagnosisMatchingGamesViewModel>()
+        builder.Services.AddSingleton<DiagnosisMatchingGamesViewModel>()
             .AddTransient<DiagnosisLetterMatchingInformation>();
 
         builder.Services.AddTransient<LetterMatchingViewModel>()
             .AddTransient<LetterMatchingGame>();
+
+        builder.Services.AddSingleton<DiagnosisNavigationViewModel>()
+                .AddTransient<DiagnosisNavigationInfo>();
+
+        builder.Services.AddTransient<NavigationSkillsGame>();
 
         builder.Services.AddSingleton<ProfileViewModel>()
                         .AddSingleton<ProfilePage>();

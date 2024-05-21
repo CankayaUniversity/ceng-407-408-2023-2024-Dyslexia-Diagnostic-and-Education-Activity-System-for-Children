@@ -38,11 +38,17 @@
            ContentTemplate="{DataTemplate pages:DiagnosticTestAgreement}"
            Route="DiagnosticTestAgreement" />
     <ShellContent
-       ContentTemplate="{DataTemplate pages:LetterMatchingGame}"
-       Route="LetterMatchingGame" />
+           ContentTemplate="{DataTemplate pages:DiagnosisNavigationInfo}"
+           Route="DiagnosisNavigationInfo" />
     <ShellContent
-       ContentTemplate="{DataTemplate pages:PlayGame}"
-       Route="PlayGame" />
+           ContentTemplate="{DataTemplate pages:LetterMatchingGame}"
+           Route="LetterMatchingGame" />
+    <ShellContent
+           ContentTemplate="{DataTemplate pages:PlayGame}"
+           Route="PlayGame" />
+    <ShellContent
+           ContentTemplate="{DataTemplate pages:NavigationSkillsGame}"
+           Route="NavigationSkillsGame" />
 
     <MenuItem IconImageSource="power"
               Clicked="SignoutMenuItem_Clicked"/>

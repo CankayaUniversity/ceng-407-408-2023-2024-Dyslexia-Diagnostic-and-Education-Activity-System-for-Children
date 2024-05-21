@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-05-21T15:03:32.005</Modified>
+      <Modified>2024-05-21T15:43:32.189</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-05-21T15:03:30.194</Modified>
+      <Modified>2024-05-21T15:43:31.831</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.runtimeconfig.json">
       <PackagePath>DyslexiaApp.MAUI.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.dll">
       <PackagePath>DyslexiaApp.MAUI.dll</PackagePath>
-      <Modified>2024-05-21T15:03:29.565</Modified>
+      <Modified>2024-05-21T15:43:29.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>DyslexiaApp.MAUI.exe</PackagePath>
-      <Modified>2024-05-21T15:03:29.570</Modified>
+      <Modified>2024-05-21T15:43:29.322</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -396,7 +396,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.deps.json">
       <PackagePath>DyslexiaApp.MAUI.deps.json</PackagePath>
-      <Modified>2024-05-21T12:05:47.389</Modified>
+      <Modified>2024-05-21T15:43:31.403</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ahmet Emre Aydın\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

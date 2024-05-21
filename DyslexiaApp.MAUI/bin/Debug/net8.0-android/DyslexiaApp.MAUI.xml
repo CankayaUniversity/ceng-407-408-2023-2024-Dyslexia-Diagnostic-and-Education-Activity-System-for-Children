@@ -104,6 +104,15 @@
         <member name="P:DyslexiaApp.MAUI.ViewModels.DiagnosisMatchingGamesViewModel.GoToNextQuestionCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.DiagnosisMatchingGamesViewModel.GoToNextQuestion"/>.</summary>
         </member>
+        <member name="T:DyslexiaApp.MAUI.ViewModels.DiagnosisNavigationViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.DiagnosisNavigationViewModel.goToNavigationGameCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.DiagnosisNavigationViewModel.GoToNavigationGameCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.DiagnosisNavigationViewModel.GoToNavigationGameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.DiagnosisNavigationViewModel.GoToNavigationGame"/>.</summary>
+        </member>
         <member name="T:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel">
             <inheritdoc/>
             <inheritdoc/>
@@ -150,18 +159,13 @@
         <member name="T:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel">
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.QuestionId">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.questionId"/>
         </member>
         <member name="P:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.Question">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel._question"/>
-        </member>
-        <member name="P:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.AttemptsRemaining">
-            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.attemptsRemaining"/>
-        </member>
-        <member name="P:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.CurrentAttempts">
-            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.currentAttempts"/>
         </member>
         <member name="P:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.IsCorrect">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.isCorrect"/>
@@ -171,6 +175,12 @@
         </member>
         <member name="P:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.IsCrossVisible">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.isCrossVisible"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.IsOptionSelected">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.isOptionSelected"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.NextButtonText">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.nextButtonText"/>
         </member>
         <member name="M:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.OnQuestionChanged(DyslexiaAppMAUI.Shared.Dtos.QuestionDto)">
             <summary>Executes the logic for when <see cref="P:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.Question"/> just changed.</summary>
@@ -182,6 +192,12 @@
         </member>
         <member name="P:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.ItemSelectedGameCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.ItemSelectedGame(DyslexiaAppMAUI.Shared.Dtos.ImageDto)"/>.</summary>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.addCurrentSelectionResultCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.AddCurrentSelectionResultCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.AddCurrentSelectionResultCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.LetterMatchingViewModel.AddCurrentSelectionResult"/>.</summary>
         </member>
         <member name="T:DyslexiaApp.MAUI.ViewModels.MatchingViewModel">
             <inheritdoc/>
@@ -207,6 +223,9 @@
         </member>
         <member name="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.IsCrossVisible">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.isCrossVisible"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.NextButtonText">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.nextButtonText"/>
         </member>
         <member name="M:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.OnQuestionChanged(DyslexiaAppMAUI.Shared.Dtos.QuestionDto)">
             <summary>Executes the logic for when <see cref="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.Question"/> just changed.</summary>
@@ -329,12 +348,6 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Question">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Question" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AttemptsRemaining">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AttemptsRemaining" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentAttempts">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentAttempts" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsCorrect">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsCorrect" generated properties.</summary>
         </member>
@@ -343,6 +356,18 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsCrossVisible">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsCrossVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsOptionSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsOptionSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NextButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NextButtonText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AttemptsRemaining">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AttemptsRemaining" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentAttempts">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentAttempts" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
@@ -407,12 +432,6 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Question">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Question" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AttemptsRemaining">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AttemptsRemaining" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentAttempts">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentAttempts" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsCorrect">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsCorrect" generated properties.</summary>
         </member>
@@ -421,6 +440,18 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsCrossVisible">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsCrossVisible" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsOptionSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsOptionSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NextButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NextButtonText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AttemptsRemaining">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AttemptsRemaining" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentAttempts">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentAttempts" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
