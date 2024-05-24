@@ -2,6 +2,7 @@ namespace DyslexiaApp.MAUI.Pages.Login;
 using DyslexiaApp.MAUI.Services;
 using DyslexiaApp.MAUI.ViewModels;
 using Microsoft.Maui.Controls;
+using Refit;
 using System.Text.RegularExpressions;
 public partial class LoginPage : ContentPage
 {
@@ -55,7 +56,11 @@ public partial class LoginPage : ContentPage
     }
     private async void ForgotPasswordButton_Clicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync(nameof(ForgotPassword));
+        var authApi = RestService.For<IAuthApi>("https://1dc6hr4z-7066.euw.devtunnels.ms");
+        var authService = new AuthService(authApi);
+        var forgotPasswordViewModel = new ForgotPasswordViewModel(authService);
+        var forgotPasswordPage = new ForgotPassword(forgotPasswordViewModel);
+        await Navigation.PushModalAsync(forgotPasswordPage);
     }
 
     protected override void OnSizeAllocated(double width, double height)

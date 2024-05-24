@@ -477,6 +477,12 @@
         <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.UpdateUserAsync(System.Guid,DyslexiaAppMAUI.Shared.Dtos.UpdateUserDto)">
             <inheritdoc />
         </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.ForgotPasswordAsync(DyslexiaAppMAUI.Shared.Dtos.ForgotPasswordRequestDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.ResetPasswordAsync(DyslexiaAppMAUI.Shared.Dtos.ResetPasswordRequestDto)">
+            <inheritdoc />
+        </member>
         <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#SignupAsync(DyslexiaAppMAUI.Shared.Dtos.SignupRequestDto)">
             <inheritdoc />
         </member>
@@ -484,6 +490,12 @@
             <inheritdoc />
         </member>
         <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#UpdateUserAsync(System.Guid,DyslexiaAppMAUI.Shared.Dtos.UpdateUserDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#ForgotPasswordAsync(DyslexiaAppMAUI.Shared.Dtos.ForgotPasswordRequestDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#ResetPasswordAsync(DyslexiaAppMAUI.Shared.Dtos.ResetPasswordRequestDto)">
             <inheritdoc />
         </member>
         <member name="T:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIEducationalGameListApi">

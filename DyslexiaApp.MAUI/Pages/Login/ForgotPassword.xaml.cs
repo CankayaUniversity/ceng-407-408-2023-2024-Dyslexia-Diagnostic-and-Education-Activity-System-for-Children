@@ -1,94 +1,37 @@
-namespace DyslexiaApp.MAUI.Pages.Login;
-using System.Text.RegularExpressions;
-public partial class ForgotPassword : ContentPage
+namespace DyslexiaApp.MAUI.Pages.Login
 {
-	public ForgotPassword()
-	{
-		InitializeComponent();
-	}
-
-    private async void OnCloseButtonClicked(object sender, EventArgs e)
+    public partial class ForgotPassword : ContentPage
     {
-        await Navigation.PushAsync(new MainPage());
-    }
+        private readonly ForgotPasswordViewModel _viewModel;
 
-    public bool IsValidEmail(string email)
-    {
-        string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-        Regex regex = new Regex(pattern);
-        return regex.IsMatch(email);
-    }
-
-    private async void EmailEntry_Unfocused(object sender, FocusEventArgs e)
-    {
-        string email = emailEntry.Text;
-
-        if (!IsValidEmail(email))
+        public ForgotPassword(ForgotPasswordViewModel viewModel)
         {
-            await DisplayAlert("Error", "Please enter a valid email address.", "OK");
-            emailEntry.Focus();
+            InitializeComponent();
+            BindingContext = viewModel;
+            _viewModel = viewModel;
         }
-    }
 
-    private async void OnSendEmailButtonClicked(object sender, EventArgs e)
-    {
-        // E-posta alanýný kontrol et
-        //string email = emailEntry.Text;
-        //if (string.IsNullOrWhiteSpace(email))
-        //{
-        //    await DisplayAlert("Error", "Please enter your email address.", "OK");
-        //    return;
-        //}
-
-        //// E-posta formatýný kontrol et
-        //if (!IsValidEmail(email))
-        //{
-        //    await DisplayAlert("Error", "Please enter a valid email address.", "OK");
-        //    return;
-        //}
-
-        string enteredCode = null;
-        while (string.IsNullOrEmpty(enteredCode))
+        private void EmailEntry_Unfocused(object sender, FocusEventArgs e)
         {
-            // 6 haneli kodu almak için bir giriþ kutusu göster
-            enteredCode = await DisplayPromptAsync("Enter Code", "Please enter the 6-digit code sent to your email", "OK", "Cancel", maxLength: 6, keyboard: Keyboard.Numeric);
+            // Handle the unfocused event here.
+            var email = ((Entry)sender).Text;
+            // You can add validation or other logic here if needed
+        }
 
-            // Kullanýcý iptal ederse
-            if (enteredCode == null)
+        private async void OnSendEmailButtonClicked(object sender, EventArgs e)
+        {
+            // Komutun çalýþtýrýlabilir olup olmadýðýný kontrol edin
+            if (_viewModel.ForgotPasswordCommand.CanExecute(null))
             {
-                return; // Ýþlemi sonlandýr
+                // Komutu çalýþtýrýn
+                _viewModel.ForgotPasswordCommand.Execute(null);
             }
+        }
 
-            // Kullanýcý iptal etmezse ve boþ bir deðer girerse
-            if (string.IsNullOrWhiteSpace(enteredCode))
-            {
-                await DisplayAlert("Error", "Code cannot be empty. Please try again.", "OK");
-            }
-            else
-            {
-                // Giriþin tam olarak 6 haneli olup olmadýðýný kontrol et
-                if (enteredCode.Length != 6)
-                {
-                    await DisplayAlert("Error", "Please enter a 6-digit code.", "OK");
-                    enteredCode = null; // Girilen kodu temizle ve tekrar giriþ yapýlmasýný saðla
-                }
-                else
-                {
-                    // Giriþin sadece sayýsal deðerler içerip içermediðini kontrol et
-                    if (!int.TryParse(enteredCode, out _))
-                    {
-                        await DisplayAlert("Error", "Please enter only numeric digits.", "OK");
-                        enteredCode = null; // Girilen kodu temizle ve tekrar giriþ yapýlmasýný saðla
-                    }
-                }
-            }
-            //attemptCount++;
-            //if (attemptCount >= maxAttempts)
-            //{
-            //    await DisplayAlert("Error", "You have exceeded the maximum number of attempts.", "OK");
-            //    return; // Ýþlemi sonlandýr
-            //}
-
+        private void OnCloseButtonClicked(object sender, EventArgs e)
+        {
+            // Close the current modal or navigate back
+            Navigation.PopModalAsync();
         }
     }
 }

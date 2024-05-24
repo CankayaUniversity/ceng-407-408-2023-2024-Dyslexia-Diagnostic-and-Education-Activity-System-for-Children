@@ -52,33 +52,6 @@
   },
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoints\u003Eb__1_16",
-    "RelativePath": "api/auth/reset-password",
-    "HttpMethod": "POST",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "DyslexiaAppMAUI.Shared.Dtos.ResetPasswordRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 400
-      }
-    ]
-  },
-  {
-    "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoints\u003Eb__1_1",
     "RelativePath": "api/auth/signin",
     "HttpMethod": "POST",

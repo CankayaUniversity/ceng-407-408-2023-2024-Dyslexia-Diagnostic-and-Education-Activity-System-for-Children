@@ -30,25 +30,25 @@
     <AppXManifest Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-05-21T15:43:32.189</Modified>
+      <Modified>2024-05-23T15:48:23.477</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-05-21T15:43:31.831</Modified>
+      <Modified>2024-05-23T15:48:23.172</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.runtimeconfig.json">
       <PackagePath>DyslexiaApp.MAUI.runtimeconfig.json</PackagePath>
-      <Modified>2024-05-21T12:05:47.442</Modified>
+      <Modified>2024-05-22T15:26:29.514</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.dll">
       <PackagePath>DyslexiaApp.MAUI.dll</PackagePath>
-      <Modified>2024-05-21T15:43:29.261</Modified>
+      <Modified>2024-05-23T15:48:22.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>DyslexiaApp.MAUI.exe</PackagePath>
-      <Modified>2024-05-21T15:43:29.322</Modified>
+      <Modified>2024-05-23T15:48:22.425</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -56,23 +56,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.052</Modified>
+      <Modified>2024-05-22T15:23:23.665</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.065</Modified>
+      <Modified>2024-05-22T15:23:23.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.084</Modified>
+      <Modified>2024-05-22T15:23:23.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.113</Modified>
+      <Modified>2024-05-22T15:23:23.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.235</Modified>
+      <Modified>2024-05-22T15:23:23.898</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -88,187 +88,187 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-05-21T12:05:44.764</Modified>
+      <Modified>2024-05-22T15:23:24.610</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.245</Modified>
+      <Modified>2024-05-22T15:23:25.161</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.275</Modified>
+      <Modified>2024-05-22T15:23:25.193</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.315</Modified>
+      <Modified>2024-05-22T15:23:25.227</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.395</Modified>
+      <Modified>2024-05-22T15:23:25.278</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.592</Modified>
+      <Modified>2024-05-22T15:23:25.484</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.892</Modified>
+      <Modified>2024-05-22T15:23:24.758</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.897</Modified>
+      <Modified>2024-05-22T15:23:24.765</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.924</Modified>
+      <Modified>2024-05-22T15:23:24.796</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.904</Modified>
+      <Modified>2024-05-22T15:23:24.772</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.911</Modified>
+      <Modified>2024-05-22T15:23:24.780</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.848</Modified>
+      <Modified>2024-05-22T15:23:24.712</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.854</Modified>
+      <Modified>2024-05-22T15:23:24.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.887</Modified>
+      <Modified>2024-05-22T15:23:24.751</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.862</Modified>
+      <Modified>2024-05-22T15:23:24.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.870</Modified>
+      <Modified>2024-05-22T15:23:24.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.774</Modified>
+      <Modified>2024-05-22T15:23:24.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.780</Modified>
+      <Modified>2024-05-22T15:23:24.631</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.788</Modified>
+      <Modified>2024-05-22T15:23:24.638</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.796</Modified>
+      <Modified>2024-05-22T15:23:24.646</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.804</Modified>
+      <Modified>2024-05-22T15:23:24.656</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.810</Modified>
+      <Modified>2024-05-22T15:23:24.663</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.815</Modified>
+      <Modified>2024-05-22T15:23:24.669</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.840</Modified>
+      <Modified>2024-05-22T15:23:24.705</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.821</Modified>
+      <Modified>2024-05-22T15:23:24.676</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.825</Modified>
+      <Modified>2024-05-22T15:23:24.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.013</Modified>
+      <Modified>2024-05-22T15:23:24.906</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.022</Modified>
+      <Modified>2024-05-22T15:23:24.918</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.035</Modified>
+      <Modified>2024-05-22T15:23:24.932</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.049</Modified>
+      <Modified>2024-05-22T15:23:24.950</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.089</Modified>
+      <Modified>2024-05-22T15:23:24.986</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.959</Modified>
+      <Modified>2024-05-22T15:23:24.852</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.967</Modified>
+      <Modified>2024-05-22T15:23:24.860</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.975</Modified>
+      <Modified>2024-05-22T15:23:24.868</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.983</Modified>
+      <Modified>2024-05-22T15:23:24.878</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.002</Modified>
+      <Modified>2024-05-22T15:23:24.898</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.929</Modified>
+      <Modified>2024-05-22T15:23:24.802</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.936</Modified>
+      <Modified>2024-05-22T15:23:24.809</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.941</Modified>
+      <Modified>2024-05-22T15:23:24.817</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.946</Modified>
+      <Modified>2024-05-22T15:23:24.832</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.959</Modified>
+      <Modified>2024-05-22T15:23:24.844</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.098</Modified>
+      <Modified>2024-05-22T15:23:24.998</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.113</Modified>
+      <Modified>2024-05-22T15:23:25.013</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.130</Modified>
+      <Modified>2024-05-22T15:23:25.032</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.159</Modified>
+      <Modified>2024-05-22T15:23:25.065</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-05-21T12:05:45.219</Modified>
+      <Modified>2024-05-22T15:23:25.138</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\back_icon.scale-100.jpg">
       <PackagePath>back_icon.scale-100.jpg</PackagePath>
@@ -308,23 +308,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.755</Modified>
+      <Modified>2024-05-22T15:23:24.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.766</Modified>
+      <Modified>2024-05-22T15:23:24.622</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.783</Modified>
+      <Modified>2024-05-22T15:23:24.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.809</Modified>
+      <Modified>2024-05-22T15:23:24.670</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-05-21T12:05:44.889</Modified>
+      <Modified>2024-05-22T15:23:24.776</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\education.scale-100.jpg">
       <PackagePath>education.scale-100.jpg</PackagePath>
@@ -396,7 +396,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.deps.json">
       <PackagePath>DyslexiaApp.MAUI.deps.json</PackagePath>
-      <Modified>2024-05-21T15:43:31.403</Modified>
+      <Modified>2024-05-22T15:26:29.487</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ahmet Emre Aydın\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -780,7 +780,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaAppMAUI.Shared\bin\Debug\net8.0\DyslexiaAppMAUI.Shared.dll">
       <PackagePath>DyslexiaAppMAUI.Shared.dll</PackagePath>
-      <Modified>2024-05-21T13:26:59.635</Modified>
+      <Modified>2024-05-23T15:46:54.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ahmet Emre Aydın\.nuget\packages\microsoft.maui.controls.compatibility\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

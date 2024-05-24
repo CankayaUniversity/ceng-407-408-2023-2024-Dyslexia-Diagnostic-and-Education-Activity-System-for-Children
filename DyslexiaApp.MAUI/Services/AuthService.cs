@@ -1,4 +1,5 @@
 ﻿using DyslexiaAppMAUI.Shared.Dtos;
+using Org.BouncyCastle.Asn1.Ocsp;
 using Refit;
 using System;
 using System.Diagnostics;
@@ -83,6 +84,48 @@ namespace DyslexiaApp.MAUI.Services
             {
                 Debug.WriteLine($"Exception: {ex.Message}");
                 return new ResultWithDataDto<LoggedInUser>(false, null, ex.Message);
+            }
+        }
+
+        public async Task<ResultWithDataDto<ResetPasswordRequestDto>> ForgotPasswordAsync(string email)
+        {
+            try
+            {
+                var dto = new ForgotPasswordRequestDto { Email = email };
+                var response = await _authApi.ForgotPasswordAsync(dto);
+                if (response.IsSuccess)
+                {
+                    var resetLink = $"https://localhost:7066/resetpassword?token={response.Data.Token}&email={email}";
+                    return ResultWithDataDto<ResetPasswordRequestDto>.Success(new ResetPasswordRequestDto { ResetLink = resetLink });
+                }
+                return ResultWithDataDto<ResetPasswordRequestDto>.Failure(response.ErrorMessage);
+            }
+            catch (Exception ex)
+            {
+                return ResultWithDataDto<ResetPasswordRequestDto>.Failure(ex.Message);
+            }
+        }
+
+
+
+
+
+        public async Task<bool> ResetPasswordAsync(string token, string email, string newPassword)
+        {
+            try
+            {
+                var dto = new ResetPasswordRequestDto
+                {
+                    Token = token,
+                    Email = email,
+                    NewPassword = newPassword
+                };
+                var response = await _authApi.ResetPasswordAsync(dto);
+                return response.IsSuccess;
+            }
+            catch
+            {
+                return false;
             }
         }
     }

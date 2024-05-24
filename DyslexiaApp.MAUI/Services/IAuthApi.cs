@@ -15,5 +15,12 @@ namespace DyslexiaApp.MAUI.Services
 
         [Put("/api/users/{userId}")]
         Task<ResultWithDataDto<LoggedInUser>> UpdateUserAsync(Guid userId, [Body] UpdateUserDto dto);
+
+        [Post("/api/auth/forgot-password")]
+        Task<ResultWithDataDto<ResetPasswordRequestDto>> ForgotPasswordAsync([Body] ForgotPasswordRequestDto dto);
+
+
+        [Post("/api/auth/reset-password")]
+        Task<ResultWithDataDto<ResetPasswordRequestDto>> ResetPasswordAsync([Body] ResetPasswordRequestDto dto);
     }
 }

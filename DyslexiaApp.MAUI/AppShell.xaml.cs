@@ -28,6 +28,7 @@ namespace DyslexiaApp.MAUI
                 typeof(PlayGame),
                 typeof(DiagnosisNavigationInfo),
                 typeof(NavigationSkillsGame),
+                typeof(ResetPassword),
             ];
         private readonly AuthService _authService;
         private static void RegisterRoutes()
@@ -42,5 +43,20 @@ namespace DyslexiaApp.MAUI
             _authService.Signout();
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
+
+        private async void OnResetPasswordLinkClicked(string token, string email)
+        {
+            var resetPasswordViewModel = new ResetPasswordViewModel(_authService)
+            {
+                Token = token,
+                Email = email
+            };
+            await Shell.Current.GoToAsync($"{nameof(ResetPassword)}", true, new Dictionary<string, object>
+    {
+        { "Token", token },
+        { "Email", email }
+    });
+        }
+
     }
 }

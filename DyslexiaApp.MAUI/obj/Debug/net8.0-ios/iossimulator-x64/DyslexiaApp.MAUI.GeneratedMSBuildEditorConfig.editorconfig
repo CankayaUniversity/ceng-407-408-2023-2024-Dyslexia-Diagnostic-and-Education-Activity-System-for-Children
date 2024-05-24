@@ -125,6 +125,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Log
 build_metadata.AdditionalFiles.TargetPath = Pages\Login\RegisterAgreement.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Login\RegisterAgreement.xaml
 
+[D:/408/DyslexiaApp.MAUI/Pages/Login/ResetPassword.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Login.ResetPassword.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Login\ResetPassword.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Login\ResetPassword.xaml
+
 [D:/408/DyslexiaApp.MAUI/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Resources.Styles.Colors.xaml

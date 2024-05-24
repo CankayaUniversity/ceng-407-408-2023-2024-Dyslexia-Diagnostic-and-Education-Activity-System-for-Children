@@ -49,17 +49,23 @@
     <ShellContent
            ContentTemplate="{DataTemplate pages:NavigationSkillsGame}"
            Route="NavigationSkillsGame" />
+    <ShellContent
+           ContentTemplate="{DataTemplate pages:ResetPassword}"
+           Route="resetpassword" />
 
     <MenuItem IconImageSource="power"
               Clicked="SignoutMenuItem_Clicked"/>
 
-    <!--<ShellContent 
-        Route="PictureMatchingGame" 
-        ContentTemplate="{DataTemplate local:PictureMatchingGame}" />-->
-
-    <!--<TabBar>
-        <ShellContent Title="Login"
-                      ContentTemplate="{DataTemplate pages:LoginPage}"
-                      Route="LoginPage"/>
-    </TabBar>-->
 </Shell>
+
+
+
+<!--<ShellContent 
+    Route="PictureMatchingGame" 
+    ContentTemplate="{DataTemplate local:PictureMatchingGame}" />-->
+
+<!--<TabBar>
+    <ShellContent Title="Login"
+                  ContentTemplate="{DataTemplate pages:LoginPage}"
+                  Route="LoginPage"/>
+</TabBar>-->
