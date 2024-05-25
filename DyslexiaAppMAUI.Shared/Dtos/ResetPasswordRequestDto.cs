@@ -8,9 +8,9 @@ namespace DyslexiaAppMAUI.Shared.Dtos
 {
     public class ResetPasswordRequestDto
     {
-        public string Token { get; set; }
+        public string VerificationCode { get; set; }
         public string Email { get; set; }
         public string NewPassword { get; set; }
-        public string ResetLink { get; set; }
     }
+
 }

@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using DyslexiaApp.MAUI.Services;
 using DyslexiaAppMAUI.Shared.Dtos;
-using DyslexiaApp.MAUI.Pages.Login;
 
+namespace DyslexiaApp.MAUI.ViewModels;
 public class ForgotPasswordViewModel : INotifyPropertyChanged
 {
     private readonly AuthService _authService;
@@ -69,13 +69,17 @@ public class ForgotPasswordViewModel : INotifyPropertyChanged
     {
         var result = await _authService.SendVerificationCodeAsync(Email);
         Message = result.IsSuccess ? "Verification code sent successfully." : $"Failed to send verification code: {result.ErrorMessage}";
-        IsVerificationCodeVisible = result.IsSuccess;
+        IsVerificationCodeVisible = result.IsSuccess; // This should update the visibility of the verification code section
     }
 
     private async Task VerifyCodeAsync()
     {
         var result = await _authService.VerifyCodeAsync(Email, VerificationCode);
         Message = result.IsSuccess ? "Code verified successfully. Proceed to reset password." : $"Invalid verification code: {result.ErrorMessage}";
+        if (result.IsSuccess)
+        {
+            await Shell.Current.GoToAsync($"//ResetPasswordPage?email={Email}&verificationCode={VerificationCode}");
+        }
     }
 
     public event PropertyChangedEventHandler PropertyChanged;

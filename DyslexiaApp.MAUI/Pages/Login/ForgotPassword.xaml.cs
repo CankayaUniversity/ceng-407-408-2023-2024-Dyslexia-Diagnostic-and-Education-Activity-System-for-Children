@@ -1,35 +1,36 @@
-namespace DyslexiaApp.MAUI.Pages.Login
+using DyslexiaApp.MAUI.ViewModels;
+
+namespace DyslexiaApp.MAUI.Pages.Login;
+
+public partial class ForgotPassword : ContentPage
 {
-    public partial class ForgotPassword : ContentPage
+    private readonly ForgotPasswordViewModel _viewModel;
+
+    public ForgotPassword(ForgotPasswordViewModel viewModel)
     {
-        private readonly ForgotPasswordViewModel _viewModel;
+        InitializeComponent();
+        BindingContext = viewModel;
+        _viewModel = viewModel;
+    }
 
-        public ForgotPassword(ForgotPasswordViewModel viewModel)
+    private async void OnSendEmailButtonClicked(object sender, EventArgs e)
+    {
+        if (_viewModel.SendCodeCommand.CanExecute(null))
         {
-            InitializeComponent();
-            BindingContext = viewModel;
-            _viewModel = viewModel;
+            _viewModel.SendCodeCommand.Execute(null);
         }
+    }
 
-        private async void OnSendEmailButtonClicked(object sender, EventArgs e)
+    private async void OnVerifyCodeButtonClicked(object sender, EventArgs e)
+    {
+        if (_viewModel.VerifyCodeCommand.CanExecute(null))
         {
-            if (_viewModel.SendCodeCommand.CanExecute(null))
-            {
-                _viewModel.SendCodeCommand.Execute(null);
-            }
+            _viewModel.VerifyCodeCommand.Execute(null);
         }
+    }
 
-        private async void OnVerifyCodeButtonClicked(object sender, EventArgs e)
-        {
-            if (_viewModel.VerifyCodeCommand.CanExecute(null))
-            {
-                _viewModel.VerifyCodeCommand.Execute(null);
-            }
-        }
-
-        private void OnCloseButtonClicked(object sender, EventArgs e)
-        {
-            Navigation.PopModalAsync();
-        }
+    private void OnCloseButtonClicked(object sender, EventArgs e)
+    {
+        Navigation.PopModalAsync();
     }
 }

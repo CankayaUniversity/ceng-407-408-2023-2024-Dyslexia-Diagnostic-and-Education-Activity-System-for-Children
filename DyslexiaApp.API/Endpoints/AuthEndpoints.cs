@@ -151,18 +151,18 @@ namespace DyslexiaApp.API.Endpoints
 
             app.MapPost("/api/auth/reset-password", async (ResetPasswordRequestDto dto, AuthService authService) =>
             {
-                var result = await authService.ResetPasswordAsync(dto.Token, dto.Email, dto.NewPassword);
+                var result = await authService.ResetPasswordAsync(dto.VerificationCode, dto.Email, dto.NewPassword);
                 if (!result.IsSuccess)
                 {
                     return Results.BadRequest(new { Error = result.ErrorMessage });
                 }
-                return Results.Ok();
+                return Results.Ok(result.Data);
             }).WithName("ResetPassword")
               .Produces(StatusCodes.Status200OK)
               .Produces(StatusCodes.Status400BadRequest)
               .WithTags("Auth");
 
-           
+
 
 
             return app;

@@ -3,3 +3,7 @@
 /bin/
 
 /DyslexiaApp.API/bin/Debug/net8.0/appsettings.Development.json
+/DyslexiaApp.MAUI/.vs/ProjectEvaluation/dyslexiaapp.maui.metadata.v7.bin
+/DyslexiaApp.MAUI/.vs/ProjectEvaluation/dyslexiaapp.maui.projects.v7.bin
+*.bin
+/DyslexiaApp.API/appsettings.Development.json

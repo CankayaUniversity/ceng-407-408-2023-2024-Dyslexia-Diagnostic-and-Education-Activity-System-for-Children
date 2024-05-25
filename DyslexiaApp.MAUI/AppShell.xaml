@@ -50,8 +50,11 @@
            ContentTemplate="{DataTemplate pages:NavigationSkillsGame}"
            Route="NavigationSkillsGame" />
     <ShellContent
-           ContentTemplate="{DataTemplate pages:ResetPassword}"
-           Route="resetpassword" />
+       ContentTemplate="{DataTemplate pages:ForgotPassword}"
+       Route="ForgotPassword" />
+    <ShellContent
+           ContentTemplate="{DataTemplate pages:ResetPasswordPage}"
+           Route="ResetPasswordPage" />
 
     <MenuItem IconImageSource="power"
               Clicked="SignoutMenuItem_Clicked"/>

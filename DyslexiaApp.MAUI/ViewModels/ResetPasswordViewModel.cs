@@ -3,21 +3,23 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using DyslexiaApp.MAUI.Services;
+using DyslexiaApp.MAUI.ViewModels;
 
-public class ResetPasswordViewModel : INotifyPropertyChanged
+namespace DyslexiaApp.MAUI.ViewModels;
+public class ResetPasswordViewModel : BaseViewModel
 {
     private readonly AuthService _authService;
-    private string _token;
+    private string _verificationCode;
     private string _email;
     private string _newPassword;
     private string _message;
 
-    public string Token
+    public string VerificationCode
     {
-        get => _token;
+        get => _verificationCode;
         set
         {
-            _token = value;
+            _verificationCode = value;
             OnPropertyChanged();
         }
     }
@@ -62,8 +64,8 @@ public class ResetPasswordViewModel : INotifyPropertyChanged
 
     private async Task ResetPasswordAsync()
     {
-        var result = await _authService.ResetPasswordAsync(Token, Email, NewPassword);
-        Message = result ? "Password reset successfully." : "Failed to reset password.";
+        var result = await _authService.ResetPasswordAsync(VerificationCode, Email, NewPassword);
+        Message = result.IsSuccess ? "Password reset successfully." : $"Failed to reset password: {result.ErrorMessage}";
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
@@ -73,3 +75,5 @@ public class ResetPasswordViewModel : INotifyPropertyChanged
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }
+
+

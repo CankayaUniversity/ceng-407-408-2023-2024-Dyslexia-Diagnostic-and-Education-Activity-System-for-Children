@@ -85,24 +85,25 @@ namespace DyslexiaApp.MAUI.Services
             }
         }
 
-        public async Task<bool> ResetPasswordAsync(string token, string email, string newPassword)
+        public async Task<ResultWithDataDto<ResetPasswordRequestDto>> ResetPasswordAsync(string verificationCode, string email, string newPassword)
         {
             try
             {
                 var dto = new ResetPasswordRequestDto
                 {
-                    Token = token,
+                    VerificationCode = verificationCode,
                     Email = email,
                     NewPassword = newPassword
                 };
                 var response = await _authApi.ResetPasswordAsync(dto);
-                return response.IsSuccess;
+                return response;
             }
-            catch
+            catch (Exception ex)
             {
-                return false;
+                return ResultWithDataDto<ResetPasswordRequestDto>.Failure(ex.Message);
             }
         }
+
 
 
         public async Task<ResultDto> SendVerificationCodeAsync(string email)

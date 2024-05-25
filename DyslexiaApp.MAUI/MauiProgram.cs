@@ -66,6 +66,12 @@ public static class MauiProgram
                         .AddTransient<HomePage>()
                         .AddTransient<IOpenAIService, OpenAIService>();
 
+        builder.Services.AddTransient<ForgotPasswordViewModel>()
+            .AddTransient<ForgotPassword>();
+
+        builder.Services.AddTransient<ResetPasswordViewModel>()
+            .AddTransient<ResetPasswordPage>();
+
         ConfigureRefit(builder.Services);
 
         return builder.Build();
@@ -110,7 +116,7 @@ public static class MauiProgram
 
             if (DeviceInfo.DeviceType == DeviceType.Physical)
             {
-                baseUrl = "https://13zfvl9h-7066.euw.devtunnels.ms/";
+                baseUrl = "https://83qqbhbt-7066.euw.devtunnels.ms";
             }
 
             httpClient.BaseAddress = new Uri(baseUrl);

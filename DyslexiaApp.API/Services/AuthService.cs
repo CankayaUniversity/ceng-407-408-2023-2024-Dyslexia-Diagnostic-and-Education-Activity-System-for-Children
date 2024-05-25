@@ -156,19 +156,7 @@ namespace DyslexiaApp.API.Services
             return ResultDto.Success();
         }
 
-        public async Task<ResultWithDataDto<ResetPasswordRequestDto>> ForgotPasswordAsync(string email, IEmailService emailService)
-        {
-            var result = await GeneratePasswordResetTokenAsync(email);
-            if (!result.IsSuccess)
-            {
-                return ResultWithDataDto<ResetPasswordRequestDto>.Failure(result.ErrorMessage);
-            }
-
-            var resetLink = $"https://localhost:7066/reset-password?token={result.Data.Token}&email={email}";
-            await emailService.SendEmailAsync(email, "Şifre Sıfırlama", $"Şifrenizi sıfırlamak için bu linki kullanın: {resetLink}");
-
-            return ResultWithDataDto<ResetPasswordRequestDto>.Success(new ResetPasswordRequestDto { ResetLink = resetLink });
-        }
+       
 
         public async Task<ResultDto> ResetPassword(string token, string newPassword)
         {
@@ -220,17 +208,34 @@ namespace DyslexiaApp.API.Services
             return ResultWithDataDto<PasswordResetTokenDto>.Success(new PasswordResetTokenDto(token));
         }
 
-        public async Task<ResultDto> ResetPasswordAsync(string token, string email, string newPassword)
+        public async Task<ResultWithDataDto<ResetPasswordRequestDto>> ResetPasswordAsync(string verificationCode, string email, string newPassword)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email && u.ResetPasswordToken == token);
-            if (user == null) return ResultDto.Failure("Invalid token or email");
+            try
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email && u.VerificationCode == verificationCode);
+                if (user == null)
+                {
+                    return ResultWithDataDto<ResetPasswordRequestDto>.Failure("Invalid code or email");
+                }
 
-            (user.Salt, user.HashedPassword) = _passwordService.GenerateSaltAndHash(newPassword);
-            user.ResetPasswordToken = null;
-            await _context.SaveChangesAsync();
+                (user.Salt, user.HashedPassword) = _passwordService.GenerateSaltAndHash(newPassword);
+                user.VerificationCode = null;
+                await _context.SaveChangesAsync();
 
-            return ResultDto.Success();
+                return ResultWithDataDto<ResetPasswordRequestDto>.Success(new ResetPasswordRequestDto
+                {
+                    VerificationCode = verificationCode,
+                    Email = email,
+                    NewPassword = newPassword
+                });
+            }
+            catch (Exception ex)
+            {
+                return ResultWithDataDto<ResetPasswordRequestDto>.Failure(ex.Message);
+            }
         }
+
+
 
         public async Task<ResultDto> SendVerificationCodeAsync(string email)
         {
