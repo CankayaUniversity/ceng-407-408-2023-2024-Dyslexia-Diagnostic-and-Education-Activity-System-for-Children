@@ -1349,6 +1349,8 @@ D:\408\DyslexiaApp.API\bin\Debug\net8.0\NuGet.Packaging.dll
 D:\408\DyslexiaApp.API\bin\Debug\net8.0\NuGet.ProjectModel.dll
 D:\408\DyslexiaApp.API\bin\Debug\net8.0\NuGet.Protocol.dll
 D:\408\DyslexiaApp.API\bin\Debug\net8.0\NuGet.Versioning.dll
+D:\408\DyslexiaApp.API\bin\Debug\net8.0\Refit.dll
+D:\408\DyslexiaApp.API\bin\Debug\net8.0\Refit.Newtonsoft.Json.dll
 D:\408\DyslexiaApp.API\bin\Debug\net8.0\Scrutor.dll
 D:\408\DyslexiaApp.API\bin\Debug\net8.0\SendGrid.dll
 D:\408\DyslexiaApp.API\bin\Debug\net8.0\StarkbankEcdsa.dll

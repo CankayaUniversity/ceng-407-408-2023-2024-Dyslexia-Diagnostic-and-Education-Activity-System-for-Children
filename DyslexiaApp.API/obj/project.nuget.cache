@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aFfIzObS6bYFW5TPsCxABF5cpLztoxJbXcIzj/YvenPwAzWBSNb57BaLgQ68I5tx0E0d7lR41huYBrcgLF4S3g==",
+  "dgSpecHash": "jI/SIoNmgDvxbz7ivTnB3gvIRHs8djn9Y9wW7BxjBz3wgzaIwr6z/RivYiJtQ57Ng86v42AQqXXuz+Z0Vybwlw==",
   "success": true,
   "projectFilePath": "D:\\408\\DyslexiaApp.API\\DyslexiaApp.API.csproj",
   "expectedPackageFiles": [
@@ -132,6 +132,8 @@
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\nuget.projectmodel\\6.9.1\\nuget.projectmodel.6.9.1.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\nuget.protocol\\6.9.1\\nuget.protocol.6.9.1.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\nuget.versioning\\6.9.1\\nuget.versioning.6.9.1.nupkg.sha512",
+    "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\refit\\7.0.0\\refit.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\refit.newtonsoft.json\\7.0.0\\refit.newtonsoft.json.7.0.0.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\scrutor\\3.3.0\\scrutor.3.3.0.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\sendgrid\\9.29.3\\sendgrid.9.29.3.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\starkbank-ecdsa\\1.3.3\\starkbank-ecdsa.1.3.3.nupkg.sha512",
@@ -161,6 +163,7 @@
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
+    "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.net.http.json\\7.0.1\\system.net.http.json.7.0.1.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.reflection.metadata\\7.0.0\\system.reflection.metadata.7.0.0.nupkg.sha512",
     "C:\\Users\\Ahmet Emre Aydın\\.nuget\\packages\\system.reflection.metadataloadcontext\\7.0.0\\system.reflection.metadataloadcontext.7.0.0.nupkg.sha512",

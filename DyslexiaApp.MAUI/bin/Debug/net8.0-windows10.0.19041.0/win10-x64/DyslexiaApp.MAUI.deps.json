@@ -19,7 +19,9 @@
           "Microsoft.Maui.Controls": "8.0.6",
           "Microsoft.Maui.Controls.Compatibility": "8.0.6",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
           "Refit.HttpClientFactory": "7.0.0",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3",
           "System.IdentityModel.Tokens.Jwt": "7.4.1",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.31"
@@ -663,6 +665,18 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.12"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3",
@@ -744,6 +758,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "runtime": {
@@ -1049,6 +1065,13 @@
       "sha512": "sha512-27zuHqcN2BJbNqGF0OlUAPEKNnPFibJVHsS5XnViS2Brw1ceCbzYsDqP19dlgWCb/sLGFxSpRWhkCimOo8jljw==",
       "path": "refit.httpclientfactory/7.0.0",
       "hashPath": "refit.httpclientfactory.7.0.0.nupkg.sha512"
+    },
+    "Refit.Newtonsoft.Json/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wyF5v8palQYkbkRn/cDSAvDulZjY5kL2XQUD76nSbcAwqUnMaRRuEPJt3njR0+dPoABuV8RYqSvYDce8+enJ2g==",
+      "path": "refit.newtonsoft.json/7.0.0",
+      "hashPath": "refit.newtonsoft.json.7.0.0.nupkg.sha512"
     },
     "SendGrid/9.29.3": {
       "type": "package",

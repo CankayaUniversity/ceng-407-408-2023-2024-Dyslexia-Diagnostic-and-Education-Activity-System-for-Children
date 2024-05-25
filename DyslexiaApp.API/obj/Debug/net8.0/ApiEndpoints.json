@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoints\u003Eb__1_2",
+    "Method": "\u003CMapEndpoints\u003Eb__1_4",
     "RelativePath": "api/auth/change-password",
     "HttpMethod": "POST",
     "IsController": false,
@@ -25,15 +25,15 @@
   },
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoints\u003Eb__1_15",
-    "RelativePath": "api/auth/forgot-password",
+    "Method": "\u003CMapEndpoints\u003Eb__1_17",
+    "RelativePath": "api/auth/reset-password",
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "DyslexiaAppMAUI.Shared.Dtos.ForgotPasswordRequestDto",
+        "Type": "DyslexiaAppMAUI.Shared.Dtos.ResetPasswordRequestDto",
         "IsRequired": true
       }
     ],
@@ -47,6 +47,30 @@
         "Type": "System.Void",
         "MediaTypes": [],
         "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__1_2",
+    "RelativePath": "api/auth/send-verification-code",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DyslexiaAppMAUI.Shared.Dtos.ForgotPasswordRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DyslexiaAppMAUI.Shared.Dtos.ResultDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
       }
     ]
   },
@@ -101,6 +125,30 @@
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoints\u003Eb__1_3",
+    "RelativePath": "api/auth/verify-code",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DyslexiaAppMAUI.Shared.Dtos.VerifyCodeRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DyslexiaAppMAUI.Shared.Dtos.ResultDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__1_5",
     "RelativePath": "api/dyslexiadiagnosis",
     "HttpMethod": "POST",
     "IsController": false,
@@ -124,7 +172,7 @@
   },
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoints\u003Eb__1_4",
+    "Method": "\u003CMapEndpoints\u003Eb__1_6",
     "RelativePath": "api/dyslexiadiagnosis",
     "HttpMethod": "GET",
     "IsController": false,
@@ -142,7 +190,7 @@
   },
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoints\u003Eb__1_6",
+    "Method": "\u003CMapEndpoints\u003Eb__1_8",
     "RelativePath": "api/educationalgame",
     "HttpMethod": "POST",
     "IsController": false,
@@ -166,7 +214,7 @@
   },
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoints\u003Eb__1_7",
+    "Method": "\u003CMapEndpoints\u003Eb__1_9",
     "RelativePath": "api/educationalgame",
     "HttpMethod": "GET",
     "IsController": false,
@@ -184,7 +232,7 @@
   },
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoints\u003Eb__1_5",
+    "Method": "\u003CMapEndpoints\u003Eb__1_7",
     "RelativePath": "api/navigationgame/start",
     "HttpMethod": "GET",
     "IsController": false,
@@ -200,7 +248,7 @@
   },
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoints\u003Eb__1_11",
+    "Method": "\u003CMapEndpoints\u003Eb__1_13",
     "RelativePath": "api/question",
     "HttpMethod": "POST",
     "IsController": false,
@@ -224,7 +272,7 @@
   },
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoints\u003Eb__1_12",
+    "Method": "\u003CMapEndpoints\u003Eb__1_14",
     "RelativePath": "api/question",
     "HttpMethod": "GET",
     "IsController": false,
@@ -242,7 +290,7 @@
   },
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoints\u003Eb__1_13",
+    "Method": "\u003CMapEndpoints\u003Eb__1_15",
     "RelativePath": "api/question/{questionId}",
     "HttpMethod": "GET",
     "IsController": false,
@@ -264,7 +312,7 @@
   },
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec__DisplayClass1_0",
-    "Method": "\u003CMapEndpoints\u003Eb__14",
+    "Method": "\u003CMapEndpoints\u003Eb__16",
     "RelativePath": "api/token",
     "HttpMethod": "GET",
     "IsController": false,
@@ -291,7 +339,7 @@
   },
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoints\u003Eb__1_9",
+    "Method": "\u003CMapEndpoints\u003Eb__1_11",
     "RelativePath": "api/user/{userId}",
     "HttpMethod": "GET",
     "IsController": false,
@@ -313,7 +361,7 @@
   },
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoints\u003Eb__1_10",
+    "Method": "\u003CMapEndpoints\u003Eb__1_12",
     "RelativePath": "api/user/deactivate/{userId}",
     "HttpMethod": "DELETE",
     "IsController": false,
@@ -335,7 +383,7 @@
   },
   {
     "ContainingType": "DyslexiaApp.API.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapEndpoints\u003Eb__1_8",
+    "Method": "\u003CMapEndpoints\u003Eb__1_10",
     "RelativePath": "api/user/update",
     "HttpMethod": "PUT",
     "IsController": false,

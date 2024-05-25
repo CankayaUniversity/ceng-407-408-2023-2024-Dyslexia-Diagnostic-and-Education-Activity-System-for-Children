@@ -477,7 +477,10 @@
         <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.UpdateUserAsync(System.Guid,DyslexiaAppMAUI.Shared.Dtos.UpdateUserDto)">
             <inheritdoc />
         </member>
-        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.ForgotPasswordAsync(DyslexiaAppMAUI.Shared.Dtos.ForgotPasswordRequestDto)">
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.SendVerificationCodeAsync(DyslexiaAppMAUI.Shared.Dtos.ForgotPasswordRequestDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.VerifyCodeAsync(DyslexiaAppMAUI.Shared.Dtos.VerifyCodeRequestDto)">
             <inheritdoc />
         </member>
         <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.ResetPasswordAsync(DyslexiaAppMAUI.Shared.Dtos.ResetPasswordRequestDto)">
@@ -492,7 +495,10 @@
         <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#UpdateUserAsync(System.Guid,DyslexiaAppMAUI.Shared.Dtos.UpdateUserDto)">
             <inheritdoc />
         </member>
-        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#ForgotPasswordAsync(DyslexiaAppMAUI.Shared.Dtos.ForgotPasswordRequestDto)">
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#SendVerificationCodeAsync(DyslexiaAppMAUI.Shared.Dtos.ForgotPasswordRequestDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#VerifyCodeAsync(DyslexiaAppMAUI.Shared.Dtos.VerifyCodeRequestDto)">
             <inheritdoc />
         </member>
         <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIAuthApi.DyslexiaApp#MAUI#Services#IAuthApi#ResetPasswordAsync(DyslexiaAppMAUI.Shared.Dtos.ResetPasswordRequestDto)">

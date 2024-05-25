@@ -66,8 +66,6 @@ namespace DyslexiaApp.API.Services
                 TestResults = newDiagnosisDto.TestResults,
                 FeedBack = newDiagnosisDto.FeedBack,
                 Description = newDiagnosisDto.Description,
-                // MatchingGames ve NavigationGames gibi ilişkili varlıklar yönetilmeli,
-                // bu örnekte basitleştirilmiştir.
             };
 
             _context.DyslexiaDiagnosis.Add(newDiagnosis);

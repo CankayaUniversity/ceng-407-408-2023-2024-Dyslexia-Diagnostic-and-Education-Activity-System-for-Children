@@ -110,7 +110,7 @@ public static class MauiProgram
 
             if (DeviceInfo.DeviceType == DeviceType.Physical)
             {
-                baseUrl = "https://1dc6hr4z-7066.euw.devtunnels.ms";
+                baseUrl = "https://13zfvl9h-7066.euw.devtunnels.ms/";
             }
 
             httpClient.BaseAddress = new Uri(baseUrl);

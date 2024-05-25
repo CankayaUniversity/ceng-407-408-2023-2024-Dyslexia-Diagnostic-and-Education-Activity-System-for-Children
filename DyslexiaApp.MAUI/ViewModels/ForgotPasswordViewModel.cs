@@ -3,13 +3,16 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using DyslexiaApp.MAUI.Services;
-using Refit;
+using DyslexiaAppMAUI.Shared.Dtos;
+using DyslexiaApp.MAUI.Pages.Login;
 
 public class ForgotPasswordViewModel : INotifyPropertyChanged
 {
     private readonly AuthService _authService;
     private string _email;
+    private string _verificationCode;
     private string _message;
+    private bool _isVerificationCodeVisible;
 
     public string Email
     {
@@ -17,6 +20,16 @@ public class ForgotPasswordViewModel : INotifyPropertyChanged
         set
         {
             _email = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public string VerificationCode
+    {
+        get => _verificationCode;
+        set
+        {
+            _verificationCode = value;
             OnPropertyChanged();
         }
     }
@@ -31,42 +44,39 @@ public class ForgotPasswordViewModel : INotifyPropertyChanged
         }
     }
 
-    public ICommand ForgotPasswordCommand { get; }
+    public bool IsVerificationCodeVisible
+    {
+        get => _isVerificationCodeVisible;
+        set
+        {
+            _isVerificationCodeVisible = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public ICommand SendCodeCommand { get; }
+    public ICommand VerifyCodeCommand { get; }
 
     public ForgotPasswordViewModel(AuthService authService)
     {
         _authService = authService;
-        ForgotPasswordCommand = new Command(async () => await ForgotPasswordAsync());
+        SendCodeCommand = new Command(async () => await SendCodeAsync());
+        VerifyCodeCommand = new Command(async () => await VerifyCodeAsync());
+        IsVerificationCodeVisible = false;
     }
 
-    private async Task ForgotPasswordAsync()
+    private async Task SendCodeAsync()
     {
-        try
-        {
-            var result = await _authService.ForgotPasswordAsync(Email);
-            if (result.IsSuccess)
-            {
-                Message = $"Şifre sıfırlama bağlantınız: {result.Data.ResetLink}";
-            }
-            else
-            {
-                Message = $"Şifre sıfırlama talebi başarısız: {result.ErrorMessage}";
-            }
-        }
-        catch (ApiException ex)
-        {
-            // Hata loglama
-            Console.WriteLine($"API Exception: {ex.Message}");
-            Message = "Şifre sıfırlama talebi sırasında bir hata oluştu.";
-        }
-        catch (Exception ex)
-        {
-            // Genel hata loglama
-            Console.WriteLine($"Exception: {ex.Message}");
-            Message = "Şifre sıfırlama talebi sırasında bir hata oluştu.";
-        }
+        var result = await _authService.SendVerificationCodeAsync(Email);
+        Message = result.IsSuccess ? "Verification code sent successfully." : $"Failed to send verification code: {result.ErrorMessage}";
+        IsVerificationCodeVisible = result.IsSuccess;
     }
 
+    private async Task VerifyCodeAsync()
+    {
+        var result = await _authService.VerifyCodeAsync(Email, VerificationCode);
+        Message = result.IsSuccess ? "Code verified successfully. Proceed to reset password." : $"Invalid verification code: {result.ErrorMessage}";
+    }
 
     public event PropertyChangedEventHandler PropertyChanged;
 

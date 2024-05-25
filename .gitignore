@@ -2,3 +2,4 @@
 /obj/
 /bin/
 
+/DyslexiaApp.API/bin/Debug/net8.0/appsettings.Development.json

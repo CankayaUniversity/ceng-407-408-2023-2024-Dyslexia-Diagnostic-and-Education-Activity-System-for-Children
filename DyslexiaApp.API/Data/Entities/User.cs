@@ -47,8 +47,8 @@ namespace DyslexiaApp.API.Data.Entities
         public string? ResetPasswordToken { get; set; }
         public DateTime? ResetPasswordTokenExpiry { get; set; }
 
-        public string? ProfileUpdateToken { get; set; }
-        public DateTime? ProfileUpdateTokenExpiry { get; set; }
+        public string? VerificationCode { get; set; }
+        public DateTime? VerificationCodeExpiry { get; set; }
 
 
 

@@ -457,6 +457,9 @@
     <AppxPackagedFile Include="C:\Users\Ahmet Emre Aydın\.nuget\packages\refit.httpclientfactory\7.0.0\lib\net7.0\Refit.HttpClientFactory.dll">
       <PackagePath>Refit.HttpClientFactory.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ahmet Emre Aydın\.nuget\packages\refit.newtonsoft.json\7.0.0\lib\net7.0\Refit.Newtonsoft.Json.dll">
+      <PackagePath>Refit.Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ahmet Emre Aydın\.nuget\packages\sendgrid\9.29.3\lib\netstandard2.0\SendGrid.dll">
       <PackagePath>SendGrid.dll</PackagePath>
     </AppxPackagedFile>

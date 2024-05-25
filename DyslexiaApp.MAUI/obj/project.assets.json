@@ -779,6 +779,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -2750,6 +2767,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -3538,6 +3557,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -5491,6 +5527,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -6279,6 +6317,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -8232,6 +8287,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -9020,6 +9077,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -10973,6 +11047,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -11761,6 +11837,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -13714,6 +13807,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -14502,6 +14597,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -16455,6 +16567,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -17243,6 +17357,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -19196,6 +19327,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -19984,6 +20117,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -21937,6 +22087,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -22701,6 +22853,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -22910,6 +23079,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -23674,6 +23845,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -23865,6 +24053,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -24629,6 +24819,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -24820,6 +25027,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -25584,6 +25793,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -25775,6 +26001,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -26539,6 +26767,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -26730,6 +26975,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -27494,6 +27741,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -27685,6 +27949,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -28449,6 +28715,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -28640,6 +28923,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -29404,6 +29689,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -29595,6 +29897,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -30359,6 +30663,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -30568,6 +30889,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -31332,6 +31655,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -31523,6 +31863,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -32287,6 +32629,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -32478,6 +32837,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -33242,6 +33603,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -33433,6 +33811,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -34197,6 +34577,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -34388,6 +34785,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -35152,6 +35551,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -35343,6 +35759,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -36107,6 +36525,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -36298,6 +36733,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -37062,6 +37499,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -37253,6 +37707,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -38160,6 +38616,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -38369,6 +38842,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -39248,6 +39723,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -39439,6 +39931,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -40318,6 +40812,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -40509,6 +41020,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -41388,6 +41901,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -41579,6 +42109,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -42458,6 +42990,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -42649,6 +43198,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -43528,6 +44079,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -43719,6 +44287,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -44598,6 +45168,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -44789,6 +45376,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -45674,6 +46263,23 @@
           }
         }
       },
+      "Refit.Newtonsoft.Json/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Refit.Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SendGrid/9.29.3": {
         "type": "package",
         "dependencies": {
@@ -45865,6 +46471,8 @@
           "Google.Apis.Auth": "1.68.0",
           "Google.Apis.Gmail.v1": "1.68.0.3399",
           "MimeKit": "4.5.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Refit.Newtonsoft.Json": "7.0.0",
           "SendGrid": "9.29.3"
         },
         "compile": {
@@ -48508,6 +49116,28 @@
         "refit_logo.png"
       ]
     },
+    "Refit.Newtonsoft.Json/7.0.0": {
+      "sha512": "wyF5v8palQYkbkRn/cDSAvDulZjY5kL2XQUD76nSbcAwqUnMaRRuEPJt3njR0+dPoABuV8RYqSvYDce8+enJ2g==",
+      "type": "package",
+      "path": "refit.newtonsoft.json/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "README.md",
+        "lib/net462/Refit.Newtonsoft.Json.dll",
+        "lib/net462/Refit.Newtonsoft.Json.xml",
+        "lib/net6.0/Refit.Newtonsoft.Json.dll",
+        "lib/net6.0/Refit.Newtonsoft.Json.xml",
+        "lib/net7.0/Refit.Newtonsoft.Json.dll",
+        "lib/net7.0/Refit.Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Refit.Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Refit.Newtonsoft.Json.xml",
+        "refit.newtonsoft.json.7.0.0.nupkg.sha512",
+        "refit.newtonsoft.json.nuspec",
+        "refit_logo.png"
+      ]
+    },
     "SendGrid/9.29.3": {
       "sha512": "nb/zHePecN9U4/Bmct+O+lpgK994JklbCCNMIgGPOone/DngjQoMCHeTvkl+m0Nglvm0dqMEshmvB4fO8eF3dA==",
       "type": "package",
@@ -50905,7 +51535,9 @@
       "Microsoft.Maui.Controls.Compatibility >= 8.0.6",
       "Microsoft.NET.ILLink.Tasks >= 8.0.2",
       "MimeKit >= 4.5.0",
+      "Newtonsoft.Json >= 13.0.3",
       "Refit.HttpClientFactory >= 7.0.0",
+      "Refit.Newtonsoft.Json >= 7.0.0",
       "SendGrid >= 9.29.3",
       "System.IdentityModel.Tokens.Jwt >= 7.4.1"
     ],
@@ -50921,7 +51553,9 @@
       "Microsoft.Maui.Controls.Compatibility >= 8.0.6",
       "Microsoft.NET.ILLink.Tasks >= 8.0.2",
       "MimeKit >= 4.5.0",
+      "Newtonsoft.Json >= 13.0.3",
       "Refit.HttpClientFactory >= 7.0.0",
+      "Refit.Newtonsoft.Json >= 7.0.0",
       "SendGrid >= 9.29.3",
       "System.IdentityModel.Tokens.Jwt >= 7.4.1"
     ],
@@ -50937,7 +51571,9 @@
       "Microsoft.Maui.Controls.Compatibility >= 8.0.6",
       "Microsoft.NET.ILLink.Tasks >= 8.0.2",
       "MimeKit >= 4.5.0",
+      "Newtonsoft.Json >= 13.0.3",
       "Refit.HttpClientFactory >= 7.0.0",
+      "Refit.Newtonsoft.Json >= 7.0.0",
       "SendGrid >= 9.29.3",
       "System.IdentityModel.Tokens.Jwt >= 7.4.1"
     ],
@@ -50952,7 +51588,9 @@
       "Microsoft.Maui.Controls >= 8.0.6",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.6",
       "MimeKit >= 4.5.0",
+      "Newtonsoft.Json >= 13.0.3",
       "Refit.HttpClientFactory >= 7.0.0",
+      "Refit.Newtonsoft.Json >= 7.0.0",
       "SendGrid >= 9.29.3",
       "System.IdentityModel.Tokens.Jwt >= 7.4.1"
     ]
@@ -51081,7 +51719,15 @@
             "target": "Package",
             "version": "[4.5.0, )"
           },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
           "Refit.HttpClientFactory": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
+          "Refit.Newtonsoft.Json": {
             "target": "Package",
             "version": "[7.0.0, )"
           },
@@ -51160,7 +51806,15 @@
             "target": "Package",
             "version": "[4.5.0, )"
           },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
           "Refit.HttpClientFactory": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
+          "Refit.Newtonsoft.Json": {
             "target": "Package",
             "version": "[7.0.0, )"
           },
@@ -51239,7 +51893,15 @@
             "target": "Package",
             "version": "[4.5.0, )"
           },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
           "Refit.HttpClientFactory": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
+          "Refit.Newtonsoft.Json": {
             "target": "Package",
             "version": "[7.0.0, )"
           },
@@ -51313,7 +51975,15 @@
             "target": "Package",
             "version": "[4.5.0, )"
           },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
           "Refit.HttpClientFactory": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
+          "Refit.Newtonsoft.Json": {
             "target": "Package",
             "version": "[7.0.0, )"
           },

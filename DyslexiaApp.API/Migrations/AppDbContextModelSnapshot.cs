@@ -48,7 +48,7 @@ namespace DyslexiaApp.API.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("DyslexiaDiagnosis", (string)null);
+                    b.ToTable("DyslexiaDiagnosis");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.EducationalGame", b =>
@@ -74,7 +74,7 @@ namespace DyslexiaApp.API.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("EducationalGames", (string)null);
+                    b.ToTable("EducationalGames");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.GameSession", b =>
@@ -108,7 +108,7 @@ namespace DyslexiaApp.API.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("GameSessions", (string)null);
+                    b.ToTable("GameSessions");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Image", b =>
@@ -132,7 +132,7 @@ namespace DyslexiaApp.API.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.ToTable("Images", (string)null);
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.MatchingGame", b =>
@@ -153,7 +153,7 @@ namespace DyslexiaApp.API.Migrations
 
                     b.HasIndex("EducationalGameId");
 
-                    b.ToTable("MatchingGames", (string)null);
+                    b.ToTable("MatchingGames");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.NavigationGame", b =>
@@ -173,7 +173,7 @@ namespace DyslexiaApp.API.Migrations
 
                     b.HasIndex("DyslexiaDiagnosisId");
 
-                    b.ToTable("NavigationGames", (string)null);
+                    b.ToTable("NavigationGames");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.NavigationGameQuestion", b =>
@@ -193,7 +193,7 @@ namespace DyslexiaApp.API.Migrations
 
                     b.HasIndex("NavigationGameId");
 
-                    b.ToTable("NavigationGameQuestions", (string)null);
+                    b.ToTable("NavigationGameQuestions");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Question", b =>
@@ -221,7 +221,7 @@ namespace DyslexiaApp.API.Migrations
 
                     b.HasIndex("MatchingGameId");
 
-                    b.ToTable("Questions", (string)null);
+                    b.ToTable("Questions");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Sistem", b =>
@@ -246,7 +246,7 @@ namespace DyslexiaApp.API.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Sistems", (string)null);
+                    b.ToTable("Sistems");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.Support", b =>
@@ -280,7 +280,7 @@ namespace DyslexiaApp.API.Migrations
 
                     b.HasIndex("SistemId");
 
-                    b.ToTable("Supports", (string)null);
+                    b.ToTable("Supports");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.User", b =>
@@ -321,12 +321,6 @@ namespace DyslexiaApp.API.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<string>("ProfileUpdateToken")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("ProfileUpdateTokenExpiry")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("ResetPasswordToken")
                         .HasColumnType("nvarchar(max)");
 
@@ -340,9 +334,15 @@ namespace DyslexiaApp.API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("VerificationCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("VerificationCodeExpiry")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("DyslexiaApp.API.Data.Entities.DyslexiaDiagnosis", b =>

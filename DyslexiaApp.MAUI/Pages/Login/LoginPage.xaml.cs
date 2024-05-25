@@ -56,7 +56,7 @@ public partial class LoginPage : ContentPage
     }
     private async void ForgotPasswordButton_Clicked(object sender, EventArgs e)
     {
-        var authApi = RestService.For<IAuthApi>("https://1dc6hr4z-7066.euw.devtunnels.ms");
+        var authApi = RestService.For<IAuthApi>("https://localhost:7066");
         var authService = new AuthService(authApi);
         var forgotPasswordViewModel = new ForgotPasswordViewModel(authService);
         var forgotPasswordPage = new ForgotPassword(forgotPasswordViewModel);

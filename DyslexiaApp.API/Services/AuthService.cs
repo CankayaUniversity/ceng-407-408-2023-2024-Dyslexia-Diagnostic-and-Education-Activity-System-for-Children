@@ -2,6 +2,7 @@
 using DyslexiaApp.API.Data.Entities;
 using DyslexiaAppMAUI.Shared.Dtos;
 using DyslexiaAppMAUI.Shared.Models;
+using Google.Apis.Gmail.v1;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
@@ -12,12 +13,14 @@ namespace DyslexiaApp.API.Services
         private readonly AppDbContext _context;
         private readonly TokenService _tokenService;
         private readonly PasswordService _passwordService;
+        private readonly IEmailService _emailService;
 
-        public AuthService(AppDbContext context, TokenService tokenService, PasswordService passwordService)
+        public AuthService(AppDbContext context, TokenService tokenService, PasswordService passwordService, IEmailService emailService)
         {
             _context = context;
             _tokenService = tokenService;
             _passwordService = passwordService;
+            _emailService = emailService;
         }
 
         public async Task<ResultWithDataDto<AuthResponseDto>> SignupAsync(SignupRequestDto dto)
@@ -229,8 +232,63 @@ namespace DyslexiaApp.API.Services
             return ResultDto.Success();
         }
 
+        public async Task<ResultDto> SendVerificationCodeAsync(string email)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (user == null)
+                return ResultDto.Failure("User does not exist");
 
+            var verificationCode = GenerateVerificationCode();
+            user.VerificationCode = verificationCode;
+            user.VerificationCodeExpiry = DateTime.UtcNow.AddMinutes(10);
 
+            try
+            {
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
 
+                var message = $"Your verification code is: {verificationCode}";
+                await _emailService.SendEmailAsync(user.Email, "Your verification code", message);
+
+                return ResultDto.Success();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return ResultDto.Failure(ex.Message);
+            }
+        }
+
+        public async Task<ResultDto> VerifyCodeAsync(string email, string code)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (user == null || user.VerificationCode != code || user.VerificationCodeExpiry < DateTime.UtcNow)
+                return ResultDto.Failure("Invalid or expired verification code");
+
+            user.VerificationCode = null;
+            user.VerificationCodeExpiry = null;
+
+            try
+            {
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
+                return ResultDto.Success();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return ResultDto.Failure(ex.Message);
+            }
+        }
+
+        private string GenerateVerificationCode()
+        {
+            var random = new Random();
+            return random.Next(100000, 999999).ToString();
+        }
     }
+
+
+
 }
+

@@ -22,6 +22,18 @@ namespace DyslexiaApp.API.Endpoints
             app.MapPost("/api/auth/signin", async (SigninRequestDto dto, AuthService authService) =>
                 TypedResults.Ok(await authService.SigninAsync(dto)));
 
+            app.MapPost("/api/auth/send-verification-code", async (ForgotPasswordRequestDto dto, AuthService authService) =>
+            {
+                var result = await authService.SendVerificationCodeAsync(dto.Email);
+                return TypedResults.Ok(result);
+            });
+
+            app.MapPost("/api/auth/verify-code", async (VerifyCodeRequestDto dto, AuthService authService) =>
+            {
+                var result = await authService.VerifyCodeAsync(dto.Email, dto.Code);
+                return TypedResults.Ok(result);
+            });
+
             app.MapPost("/api/auth/change-password", [Authorize] async (ChangePasswordDto dto, ClaimsPrincipal principal, AuthService authService) =>
                 TypedResults.Ok(await authService.ChangePassowordAsync(dto, principal.GetUserId())));
 
@@ -137,19 +149,6 @@ namespace DyslexiaApp.API.Endpoints
                 return Results.Ok(new { Token = token });
             });
 
-            app.MapPost("/api/auth/forgot-password", async (ForgotPasswordRequestDto dto, AuthService authService, IEmailService emailService) =>
-            {
-                var result = await authService.ForgotPasswordAsync(dto.Email, emailService);
-                if (!result.IsSuccess)
-                {
-                    return Results.BadRequest(new { Error = result.ErrorMessage });
-                }
-                return Results.Ok();
-            }).WithName("ForgotPassword")
-              .Produces(StatusCodes.Status200OK)
-              .Produces(StatusCodes.Status400BadRequest)
-              .WithTags("Auth");
-
             app.MapPost("/api/auth/reset-password", async (ResetPasswordRequestDto dto, AuthService authService) =>
             {
                 var result = await authService.ResetPasswordAsync(dto.Token, dto.Email, dto.NewPassword);
@@ -162,6 +161,9 @@ namespace DyslexiaApp.API.Endpoints
               .Produces(StatusCodes.Status200OK)
               .Produces(StatusCodes.Status400BadRequest)
               .WithTags("Auth");
+
+           
+
 
             return app;
         }
