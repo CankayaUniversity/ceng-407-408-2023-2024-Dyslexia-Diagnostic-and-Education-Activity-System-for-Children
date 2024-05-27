@@ -1,6 +1,5 @@
 ﻿using DyslexiaApp.MAUI.Pages.Login;
 using DyslexiaApp.MAUI.Services;
-using DyslexiaApp.MAUI.ViewModels;
 
 namespace DyslexiaApp.MAUI
 {
@@ -29,9 +28,13 @@ namespace DyslexiaApp.MAUI
                 typeof(PlayGame),
                 typeof(DiagnosisNavigationInfo),
                 typeof(NavigationSkillsGame),
-                typeof(ForgotPassword),
+                typeof(DiagnosisSymmetryInfo),
+                typeof(SymmetryGameTest),
+                typeof(DiagnosisResultPage),
+                typeof(EducationalResultPage),
                 typeof(ResetPasswordPage),
-                
+                typeof(ForgotPassword),
+
             ];
         private readonly AuthService _authService;
         private static void RegisterRoutes()
@@ -46,8 +49,5 @@ namespace DyslexiaApp.MAUI
             _authService.Signout();
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
-
-        
-
     }
 }

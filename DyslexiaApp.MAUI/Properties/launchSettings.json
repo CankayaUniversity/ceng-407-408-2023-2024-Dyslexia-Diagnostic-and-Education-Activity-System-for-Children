@@ -8,7 +8,7 @@
   "DyslexiaApp.MAUI": {
     "commandName": "Project",
     "launchBrowser": true,
-    "applicationUrl": "https://localhost:7066;https://83qqbhbt-7066.euw.devtunnels.ms",
+    "applicationUrl": "https://localhost:7066;https://2bd4p4bs-7066.euw.devtunnels.ms",
     "environmentVariables": {
       "ASPNETCORE_ENVIRONMENT": "Development"
     }

@@ -14,6 +14,8 @@ public partial class MatchingViewModel : BaseViewModel
     private readonly IPictureMatchingApi _pictureMatchingApi;
     private readonly EducationalGamesViewModel _educationalGamesViewModel;
     private bool _isInitialized = false;
+    private bool _isAnswerSelected = false;
+    private int _wrongAnswerCount = 0;
 
     public ObservableCollection<QuestionDto> GameQuestions { get; } = new ObservableCollection<QuestionDto>();
 
@@ -39,6 +41,9 @@ public partial class MatchingViewModel : BaseViewModel
 
     [ObservableProperty]
     private bool isCrossVisible;
+
+    [ObservableProperty]
+    private int score = 0;
 
     private int _currentQuestionIndex = 0;
 
@@ -82,14 +87,20 @@ public partial class MatchingViewModel : BaseViewModel
             return new ObservableCollection<ImageDto>(Question?.ImageOptions.Skip(1) ?? new List<ImageDto>());
         }
     }
+
     partial void OnQuestionChanged(QuestionDto value)
     {
         OnPropertyChanged(nameof(FilteredImageOptions));
     }
 
     [RelayCommand]
-    public void ItemSelectedGame(ImageDto selectedImage)
+    public async Task ItemSelectedGameAsync(ImageDto selectedImage)
     {
+        if (_isAnswerSelected)
+        {
+            return;
+        }
+
         var selectedIndex = Question?.ImageOptions?.IndexOf(selectedImage) ?? -1;
         Debug.WriteLine($"Seçilen öğenin indeksi: {selectedIndex}");
 
@@ -98,21 +109,23 @@ public partial class MatchingViewModel : BaseViewModel
             Debug.WriteLine("Tebrikler! Doğru cevabı seçtiniz.");
             IsCorrect = true;
             IsAnswerCorrect = true;
-
+            _isAnswerSelected = true;
+            Score += 100;
+            _educationalGamesViewModel.IncreaseTotalScore(100);
+            _wrongAnswerCount = 0;
         }
         else
         {
             Debug.WriteLine("Üzgünüm, yanlış cevap.");
             IsCorrect = false;
             IsCrossVisible = true;
-
             IsAnswerCorrect = false;
             IsCrossVisible = true;
 
-            Device.StartTimer(TimeSpan.FromSeconds(3), () =>
+            Device.StartTimer(TimeSpan.FromSeconds(2), () =>
             {
-                IsCrossVisible = false; // 3 saniye sonra cross.png'yi gizle
-                return false; // Timer'ı durdur
+                IsCrossVisible = false;
+                return false;
             });
 
             if (AttemptsRemaining.HasValue && AttemptsRemaining > 0)
@@ -120,14 +133,19 @@ public partial class MatchingViewModel : BaseViewModel
                 DecreaseAttempts?.Invoke();
                 AttemptsRemaining = _educationalGamesViewModel.AttemptsRemaining;
 
+                _wrongAnswerCount++;
+                var penalty = _wrongAnswerCount * 10;
+                Score -= penalty;
+                _educationalGamesViewModel.DecreaseTotalScore(penalty);
+
                 if (AttemptsRemaining <= 0)
                 {
+                    await Shell.Current.DisplayAlert("End of Game", "You no longer have the right to try. You are directed back to the Educational Game page.", "Return Game Page");
                     Debug.WriteLine("Deneme hakkınız kalmamıştır. Oyun sonlandırılıyor.");
-                    Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+                    await Shell.Current.GoToAsync($"//{nameof(EducationalGameList)}");
                 }
             }
         }
-
     }
 
     private void UpdateNextButtonText()

@@ -113,6 +113,32 @@
         <member name="P:DyslexiaApp.MAUI.ViewModels.DiagnosisNavigationViewModel.GoToNavigationGameCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.DiagnosisNavigationViewModel.GoToNavigationGame"/>.</summary>
         </member>
+        <member name="T:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel.Educational">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel._educational"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel.SelectedGame">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel.selectedGame"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel.CurrentQuestionIndex">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel.currentQuestionIndex"/>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel.startTestCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel.StartTestCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel.StartTestCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel.StartTest"/>.</summary>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel.goToNextQuestionCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel.GoToNextQuestionCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel.GoToNextQuestionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.DiagnosisSymmetryMatchViewModel.GoToNextQuestion"/>.</summary>
+        </member>
         <member name="T:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel">
             <inheritdoc/>
             <inheritdoc/>
@@ -131,6 +157,9 @@
         </member>
         <member name="P:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.FilteredEducational">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel._filteredEducational"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.TotalScore">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.totalScore"/>
         </member>
         <member name="F:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.showGameDetailsCommand">
             <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.EducationalGamesViewModel.ShowGameDetailsCommand"/>.</summary>
@@ -224,6 +253,9 @@
         <member name="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.IsCrossVisible">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.isCrossVisible"/>
         </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.Score">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.score"/>
+        </member>
         <member name="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.NextButtonText">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.nextButtonText"/>
         </member>
@@ -236,7 +268,28 @@
             <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.ItemSelectedGameCommand"/>.</summary>
         </member>
         <member name="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.ItemSelectedGameCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.ItemSelectedGame(DyslexiaAppMAUI.Shared.Dtos.ImageDto)"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.ItemSelectedGameAsync(DyslexiaAppMAUI.Shared.Dtos.ImageDto)"/>.</summary>
+        </member>
+        <member name="T:DyslexiaApp.MAUI.ViewModels.NavigationGameViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.NavigationGameViewModel.AttemptCount">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.NavigationGameViewModel._attemptCount"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.NavigationGameViewModel.IsOptionSelected">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.NavigationGameViewModel.isOptionSelected"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.NavigationGameViewModel.Question">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.NavigationGameViewModel._question"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.NavigationGameViewModel.BaloonPositionText">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.NavigationGameViewModel.baloonPositionText"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.NavigationGameViewModel.RandomPosition">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.NavigationGameViewModel.randomPosition"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.NavigationGameViewModel.ButtonPositions">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.NavigationGameViewModel.buttonPositions"/>
         </member>
         <member name="T:DyslexiaApp.MAUI.ViewModels.PictureMatchingViewModel">
             <inheritdoc/>
@@ -288,11 +341,60 @@
         <member name="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.Gender">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ProfileViewModel._gender"/>
         </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.StatusMessage">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ProfileViewModel._statusMessage"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.StatusMessageColor">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.ProfileViewModel._statusMessageColor"/>
+        </member>
         <member name="F:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.updateUserProfileCommand">
             <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.UpdateUserProfileCommand"/>.</summary>
         </member>
         <member name="P:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.UpdateUserProfileCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.ProfileViewModel.UpdateUserProfile"/>.</summary>
+        </member>
+        <member name="T:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.QuestionId">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.questionId"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.Question">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel._question"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.IsCorrect">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.isCorrect"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.IsAnswerCorrect">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.isAnswerCorrect"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.IsCrossVisible">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.isCrossVisible"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.IsOptionSelected">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.isOptionSelected"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.NextButtonText">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.nextButtonText"/>
+        </member>
+        <member name="M:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.OnQuestionChanged(DyslexiaAppMAUI.Shared.Dtos.QuestionDto)">
+            <summary>Executes the logic for when <see cref="P:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.Question"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.Question"/> is changed.</remarks>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.itemSelectedGameCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.ItemSelectedGameCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.ItemSelectedGameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.ItemSelectedGame(DyslexiaAppMAUI.Shared.Dtos.ImageDto)"/>.</summary>
+        </member>
+        <member name="F:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.addCurrentSelectionResultCommand">
+            <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.AddCurrentSelectionResultCommand"/>.</summary>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.AddCurrentSelectionResultCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:DyslexiaApp.MAUI.ViewModels.SymmetryTestViewModel.AddCurrentSelectionResult"/>.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
@@ -339,8 +441,14 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedGame">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedGame" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentQuestionIndex">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentQuestionIndex" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FilteredEducational">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FilteredEducational" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalScore">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalScore" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.QuestionId">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "QuestionId" generated properties.</summary>
@@ -369,8 +477,29 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentAttempts">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentAttempts" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Score">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Score" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AttemptCount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AttemptCount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BaloonPositionText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BaloonPositionText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.RandomPosition">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "RandomPosition" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ButtonPositions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ButtonPositions" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StatusMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StatusMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StatusMessageColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StatusMessageColor" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -423,8 +552,14 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedGame">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedGame" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentQuestionIndex">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentQuestionIndex" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FilteredEducational">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FilteredEducational" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalScore">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalScore" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.QuestionId">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "QuestionId" generated properties.</summary>
@@ -453,8 +588,29 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentAttempts">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentAttempts" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Score">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Score" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AttemptCount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AttemptCount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BaloonPositionText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BaloonPositionText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.RandomPosition">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "RandomPosition" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ButtonPositions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ButtonPositions" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StatusMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StatusMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StatusMessageColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StatusMessageColor" generated properties.</summary>
         </member>
         <member name="T:Refit.Implementation.Generated">
             <inheritdoc />
@@ -540,10 +696,16 @@
         <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIPictureMatchingApi.GetAllQuestionsAsync">
             <inheritdoc />
         </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIPictureMatchingApi.StartGameAsync">
+            <inheritdoc />
+        </member>
         <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIPictureMatchingApi.DyslexiaApp#MAUI#Services#IPictureMatchingApi#GetQuestionByIdAsync(System.Guid)">
             <inheritdoc />
         </member>
         <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIPictureMatchingApi.DyslexiaApp#MAUI#Services#IPictureMatchingApi#GetAllQuestionsAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.DyslexiaAppMAUIServicesIPictureMatchingApi.DyslexiaApp#MAUI#Services#IPictureMatchingApi#StartGameAsync">
             <inheritdoc />
         </member>
     </members>

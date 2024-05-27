@@ -5426,3 +5426,9 @@ D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\stamp\_ConvertResourcesCases.st
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\stamp\_GenerateJavaStubs.stamp
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\choose.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\coin.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\crossed.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\mark.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\warning.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\resizetizer\r\drawable\welldone.png

@@ -44,42 +44,63 @@
             </Grid>
             <StackLayout HorizontalOptions="Start"
                              VerticalOptions="Start"
-                             Margin="200,130">
+                             Margin="200,100">
                 <Label Text="Match Parts"
-                           TextColor="#A2DBAE"
-                           FontSize="Medium"
-                           HorizontalOptions="Center"/>
+                       TextColor="#A2DBAE"
+                       FontSize="Medium"
+                       HorizontalOptions="Center"/>
                 <Frame WidthRequest="250"
-                           HeightRequest="250"
-                           Margin="5"
-                           Padding="0"
-                           CornerRadius="10"
-                           BorderColor="Black">
+                       HeightRequest="250"
+                       Margin="5"
+                       Padding="0"
+                       CornerRadius="10"
+                       BorderColor="Black">
                     <Image Source="{Binding Question.MainImage.Url}"
-                               Aspect="AspectFill"/>
+                           Aspect="AspectFill"/>
                 </Frame>
             </StackLayout>
 
             <Frame BackgroundColor="LightGray"
-                       WidthRequest="150"
-                       HeightRequest="70"
-                       Margin="250,100"
+                       WidthRequest="200"
+                       HeightRequest="150"
+                       Margin="230,40"
                        VerticalOptions="End"
                        HorizontalOptions="Start">
-                <StackLayout Orientation="Horizontal" 
-                             HorizontalOptions="Start" 
-                             VerticalOptions="Center"
-                             WidthRequest="100">
-                    <Image Source="heart.png" 
-                           WidthRequest="50"/>
-                    <Label Text="{Binding AttemptsRemaining, StringFormat='x{0:F0}'}"
-                           FontSize="24"
-                           FontAttributes="Bold"
-                           VerticalOptions="Center" 
-                           Margin="10,12,10,0"
-                           WidthRequest="50"
-                           HeightRequest="50"/>
-                </StackLayout>
+                <VerticalStackLayout>
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Center"
+                                 WidthRequest="150">
+                        <Image Source="heart.png" 
+                               WidthRequest="50"/>
+                        <Label Text="{Binding AttemptsRemaining, StringFormat='x{0:F0}'}"
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center" 
+                               Margin="10,12,0,0"
+                               WidthRequest="50"
+                               HeightRequest="50"/>
+
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" 
+                                 HorizontalOptions="Start" 
+                                 VerticalOptions="Center"
+                                 WidthRequest="150">
+                        <Image Source="coin.png" 
+                               WidthRequest="30"/>
+                        <Label Text="{Binding Score}"
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center" 
+                               Margin="10,12,0,0"
+                               WidthRequest="50"
+                               HeightRequest="50"/>
+
+                    </StackLayout>
+
+                </VerticalStackLayout>
+
+
             </Frame>
         </Grid>
 
@@ -119,19 +140,20 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <Image Source="accept.png"
+            <Image Source="mark.png"
                    IsVisible="{Binding IsAnswerCorrect}"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
-                   WidthRequest="150"
+                   WidthRequest="250"
                    HeightRequest="200" 
                    BackgroundColor="Transparent"/>
-            <Image Source="delete.png"
+            <Image Source="crossed.png"
                    IsVisible="{Binding IsCrossVisible}"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
-                   WidthRequest="150"
-                   HeightRequest="200"/>
+                   WidthRequest="250"
+                   HeightRequest="200"
+                   BackgroundColor="Transparent"/>
         </Grid>
         <Grid WidthRequest="200"
               HeightRequest="50"

@@ -55,6 +55,18 @@
     <ShellContent
            ContentTemplate="{DataTemplate pages:ResetPasswordPage}"
            Route="ResetPasswordPage" />
+    <ShellContent
+       ContentTemplate="{DataTemplate pages:DiagnosisSymmetryInfo}"
+       Route="DiagnosisSymmetryInfo" />
+    <ShellContent
+   ContentTemplate="{DataTemplate pages:SymmetryGameTest}"
+   Route="SymmetryGameTest" />
+    <ShellContent
+   ContentTemplate="{DataTemplate pages:DiagnosisResultPage}"
+   Route="DiagnosisResultPage" />
+    <ShellContent 
+    ContentTemplate="{DataTemplate pages:EducationalResultPage}"
+    Route="EducationalResultPage" />
 
     <MenuItem IconImageSource="power"
               Clicked="SignoutMenuItem_Clicked"/>

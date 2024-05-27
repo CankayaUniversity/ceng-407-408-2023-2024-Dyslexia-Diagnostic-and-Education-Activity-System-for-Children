@@ -28,6 +28,12 @@ namespace DyslexiaApp.MAUI.ViewModels
         [ObservableProperty]
         private string? _gender;
 
+        [ObservableProperty]
+        private string? _statusMessage;
+
+        [ObservableProperty]
+        private Color _statusMessageColor;
+
         private bool _isInitialized;
 
         public ProfileViewModel(AuthService authService)
@@ -99,10 +105,14 @@ namespace DyslexiaApp.MAUI.ViewModels
                 var result = await _authService.UpdateUserAsync(userId, dto);
                 if (result.IsSuccess)
                 {
+                    StatusMessage = "Profile updated successfully.";
+                    StatusMessageColor = Colors.Green;
                     await ShowSuccessAlertAsync("User profile updated successfully.");
                 }
                 else
                 {
+                    StatusMessage = "Something went wrong.";
+                    StatusMessageColor = Colors.Red;
                     await ShowErrorAlertAsync(result.ErrorMessage);
                 }
             }

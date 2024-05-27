@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DyslexiaApp.MAUI.Pages.Login.EducationalResultPage"
+             xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
+             x:DataType="vm:EducationalGamesViewModel"
+             BackgroundImageSource="mainpage.jpg">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ProfileIconStyle" TargetType="ImageButton">
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="WidthRequest" Value="100" />
+                <Setter Property="HeightRequest" Value="110" />
+                <Setter Property="CornerRadius" Value="55" />
+                <Setter Property="VerticalOptions" Value="StartAndExpand" />
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+            </Style>
+
+            <Style x:Key="ProfileIconTextStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="StartIconStyle" TargetType="ImageButton">
+                <Setter Property="Margin" Value="10,-2,10,10" />
+                <Setter Property="WidthRequest" Value="150" />
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="CornerRadius" Value="60" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="HorizontalOptions" Value="End" />
+            </Style>
+
+            <Style x:Key="StartIconTextStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="Margin" Value="0,-25,0,0" />
+                <Setter Property="BackgroundColor" Value="#C7E3F0" />
+                <Setter Property="TextColor" Value="#019BE1" />
+                <Setter Property="PlaceholderColor" Value="#019BE1" />
+                <Setter Property="HeightRequest" Value="-10" />
+                <Setter Property="FontFamily" Value="Popins" />
+                <Setter Property="WidthRequest" Value="250" />
+            </Style>
+
+            <Style x:Key="CustomPickerStyle" TargetType="Picker">
+                <Setter Property="Margin" Value="0,-25,0,0" />
+                <Setter Property="BackgroundColor" Value="#C7E3F0" />
+                <Setter Property="TextColor" Value="#019BE1" />
+                <Setter Property="HeightRequest" Value="-10" />
+                <Setter Property="FontFamily" Value="Popins" />
+                <Setter Property="WidthRequest" Value="250"/>
+                <Setter Property="CharacterSpacing" Value="3"/>
+            </Style>
+
+            <Color x:Key="SemiTransparentBlack">#CCF5F6F6</Color>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid Style="{StaticResource ProfileIconStyle}" VerticalOptions="Start" HorizontalOptions="Start">
+            <ImageButton Source="home_button.png" 
+                         BackgroundColor="Transparent"
+                         VerticalOptions="Center" 
+                         HorizontalOptions="Center"
+                         Clicked="Close_Button"/>
+        </Grid>
+
+        <Grid VerticalOptions="Center" 
+              HorizontalOptions="Center"
+              Margin="25,0,0,0"
+              WidthRequest="1075"
+              HeightRequest="550"
+              Background="{StaticResource SemiTransparentBlack}">
+
+            <VerticalStackLayout >
+                <Frame BackgroundColor="White" Padding="30"
+                       CornerRadius="15"
+                       BorderColor="Transparent"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                       AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                       WidthRequest="550" HeightRequest="500"
+                       HorizontalOptions="Center"
+                       VerticalOptions="StartAndExpand"
+                       Margin="10,30,10,10">
+
+                    <VerticalStackLayout >
+                        <Label Text="You did it!"
+                               Margin="0,0,0,15"
+                               FontAttributes="Bold"
+                               FontSize="40"
+                               TextColor="Black"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start" />
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="170" />
+                                <RowDefinition Height="60" />
+                                <RowDefinition Height="60" />
+                                <RowDefinition Height="60" />
+                            </Grid.RowDefinitions>
+
+                            <Image Grid.Row="0" Source="welldone.png" WidthRequest="350" HeightRequest="180"/>
+                            <Label Grid.Row="1" Text="{Binding Source={RelativeSource AncestorType={x:Type vm:EducationalGamesViewModel}}, Path=TotalScore, StringFormat='Total Score: {0}'}" 
+                                   FontSize="25"
+                                   FontAttributes="Bold"
+                                   WidthRequest="250" HeightRequest="50"
+                                   Margin="70,40,0,0"/>
+
+                            <Grid Grid.Row="3"
+                                  Style="{StaticResource StartIconStyle}" 
+                                  VerticalOptions="End" 
+                                  HorizontalOptions="End"
+                                  WidthRequest="100"
+                                  HeightRequest="100"
+                                  Margin="0,0,0,0">
+                                <ImageButton Source="cloud.png" 
+                                         BackgroundColor="Transparent"
+                                         VerticalOptions="Center" 
+                                         HorizontalOptions="Center"
+                                         Clicked="Close_Button"/>
+                                <Label Text="  Return 
+                                        Main Page " 
+                                   Style="{StaticResource StartIconTextStyle}" 
+                                   VerticalOptions="Center" 
+                                   HorizontalOptions="Center"/>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Close_Button"/>
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                        </Grid>
+
+
+
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+        </Grid>
+
+    </Grid>
+</ContentPage>

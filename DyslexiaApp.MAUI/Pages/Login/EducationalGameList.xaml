@@ -85,29 +85,39 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="dto:EducationalDto">
-                        <Frame WidthRequest="200"
-                               HeightRequest="200"
-                               Margin="15,11,10,10"
-                               Padding="0"
-                               CornerRadius="10"
-                               BorderColor="Black"
-                               BackgroundColor="#A2DBAE">
-                            <Grid RowDefinitions="*, Auto,Auto">
-                                <Image Grid.Row="0"
-                                       Source="listedpicture.jpeg"
-                                       Aspect="AspectFill"/>
-                                <Label Grid.Row="0"
-                                       Text="{Binding Name}"
-                                       FontSize="Medium"
-                                       TextColor="ForestGreen"
-                                       FontAttributes="Bold"
-                                       Margin="60,90,0,0"
-                                       BackgroundColor="Transparent" />
-                                <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:EducationalGamesViewModel}}, Path= ShowGameDetailsCommand}" CommandParameter="{Binding .}" />
-                                </Grid.GestureRecognizers>
-                            </Grid>
-                        </Frame>
+                        <VerticalStackLayout>
+                            <Frame WidthRequest="200"
+                                   HeightRequest="200"
+                                   Margin="20,130,10,10"
+                                   Padding="0"
+                                   CornerRadius="10"
+                                   BorderColor="Black"
+                                   BackgroundColor="#A2DBAE">
+
+                                <Grid RowDefinitions="*, Auto,Auto">
+                                    <Image Grid.Row="0"
+                                           Source="listedpicture.jpeg"
+                                           Aspect="Fill"/>
+                                    <Label Grid.Row="0"
+                                           Text="{Binding Name}"
+                                           FontSize="Medium"
+                                           TextColor="ForestGreen"
+                                           FontAttributes="Bold"
+                                           Margin="60,90,0,0"
+                                           BackgroundColor="Transparent" />
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:EducationalGamesViewModel}}, Path= ShowGameDetailsCommand}" CommandParameter="{Binding .}" />
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                            </Frame>
+                            <Label Text="{Binding Source={RelativeSource AncestorType={x:Type vm:EducationalGamesViewModel}}, Path=TotalScore, StringFormat=' Best Score: {0}'}" 
+                                   FontSize="25"
+                                   TextColor="ForestGreen"
+                                   FontAttributes="Bold"
+                                   WidthRequest="150" HeightRequest="50"
+                                   Margin="50,0,10,0"/>
+                        </VerticalStackLayout>
+
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

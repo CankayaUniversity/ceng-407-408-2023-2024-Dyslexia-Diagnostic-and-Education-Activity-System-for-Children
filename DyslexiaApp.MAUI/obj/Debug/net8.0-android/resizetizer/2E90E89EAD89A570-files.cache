@@ -3,9 +3,12 @@ obj\Debug\net8.0-android\resizetizer\r\drawable\back_icon.jpg
 obj\Debug\net8.0-android\resizetizer\r\drawable\chat.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\chatbackground.jpeg
 obj\Debug\net8.0-android\resizetizer\r\drawable\check.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\choose.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\close.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\cloud.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\coin.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\cross.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\crossed.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\delete.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\diagnosis.jpg
 obj\Debug\net8.0-android\resizetizer\r\drawable\education.jpg
@@ -16,6 +19,7 @@ obj\Debug\net8.0-android\resizetizer\r\drawable\listedpicture.jpeg
 obj\Debug\net8.0-android\resizetizer\r\drawable\login.jpg
 obj\Debug\net8.0-android\resizetizer\r\drawable\login_page_mobile.jpg
 obj\Debug\net8.0-android\resizetizer\r\drawable\mainpage.jpg
+obj\Debug\net8.0-android\resizetizer\r\drawable\mark.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\navigation.jpeg
 obj\Debug\net8.0-android\resizetizer\r\drawable\picturematching.jpeg
 obj\Debug\net8.0-android\resizetizer\r\drawable\power.png
@@ -25,6 +29,8 @@ obj\Debug\net8.0-android\resizetizer\r\drawable\speech_bubble_right.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\star.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\symmetry.jpeg
 obj\Debug\net8.0-android\resizetizer\r\drawable\trash.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\warning.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\welldone.png
 obj\Debug\net8.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
 obj\Debug\net8.0-android\resizetizer\r\drawable-mdpi\dotnet_bot.png
 obj\Debug\net8.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png

@@ -49,7 +49,7 @@
                            CornerRadius="10"
                            BorderColor="Black">
                         <Image Source="{Binding Question.MainImage.Url}"
-                               Aspect="AspectFill"/>
+                               Aspect="AspectFit"/>
                     </Frame>
                 </StackLayout>
             </Grid>

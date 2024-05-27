@@ -47,6 +47,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Log
 build_metadata.AdditionalFiles.TargetPath = Pages\Login\DiagnosisNavigationInfo.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Login\DiagnosisNavigationInfo.xaml
 
+[D:/408/DyslexiaApp.MAUI/Pages/Login/DiagnosisResultPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Login.DiagnosisResultPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Login\DiagnosisResultPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Login\DiagnosisResultPage.xaml
+
 [D:/408/DyslexiaApp.MAUI/Pages/Login/DiagnosisSymmetryInfo.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Login.DiagnosisSymmetryInfo.xaml
@@ -64,6 +70,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Login.EducationalGameList.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Login\EducationalGameList.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Login\EducationalGameList.xaml
+
+[D:/408/DyslexiaApp.MAUI/Pages/Login/EducationalResultPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Login.EducationalResultPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Login\EducationalResultPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Login\EducationalResultPage.xaml
 
 [D:/408/DyslexiaApp.MAUI/Pages/Login/ForgotPassword.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -130,6 +142,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Login.ResetPasswordPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Login\ResetPasswordPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Login\ResetPasswordPage.xaml
+
+[D:/408/DyslexiaApp.MAUI/Pages/Login/SymmetryGameTest.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DyslexiaApp.MAUI.Pages.Login.SymmetryGameTest.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Login\SymmetryGameTest.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Login\SymmetryGameTest.xaml
 
 [D:/408/DyslexiaApp.MAUI/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

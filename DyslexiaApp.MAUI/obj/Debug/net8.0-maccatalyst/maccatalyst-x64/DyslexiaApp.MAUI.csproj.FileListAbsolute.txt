@@ -1601,3 +1601,9 @@ D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\refint\Dysl
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\DyslexiaApp.MAUI.pdb
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\DyslexiaApp.MAUI.genruntimeconfig.cache
 D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\DyslexiaApp.MAUI.dll
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\mark.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\coin.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\crossed.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\welldone.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\choose.png
+D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\warning.png

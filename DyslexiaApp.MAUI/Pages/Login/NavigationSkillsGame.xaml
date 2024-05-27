@@ -2,6 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DyslexiaApp.MAUI.Pages.Login.NavigationSkillsGame"
+             xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
+             x:DataType="vm:NavigationGameViewModel"
+             xmlns:dto="clr-namespace:DyslexiaAppMAUI.Shared.Dtos;assembly=DyslexiaAppMAUI.Shared"
              BackgroundImageSource="navigation.jpeg">
 
     <ContentPage.Resources>
@@ -23,9 +26,30 @@
                 <Setter Property="VerticalOptions" Value="Start" />
                 <Setter Property="BackgroundColor" Value="Transparent" />
             </Style>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BackgroundColor" Value="#A7E4FF" />
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
+            <Style x:Key="QuestionStyle" TargetType="Label">
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BackgroundColor" Value="#126C94" />
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+
         </ResourceDictionary>
     </ContentPage.Resources>
-
 
     <Grid>
         <Grid>
@@ -53,26 +77,40 @@
             </Grid>
         </Grid>
         <Grid HeightRequest="450">
-            <Label Text="Click the button in the correct option !"
-                   Margin="0,0,0,15"
-                   FontAttributes="Bold"
-                   FontSize="35"
-                   TextColor="#126C94"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <AbsoluteLayout Grid.Row="0" HeightRequest="300" WidthRequest="1200" Margin="0,100,0,0">
+                <Button Style="{StaticResource QuestionStyle}"
+                        Text="{Binding BaloonPositionText}"
+                        AbsoluteLayout.LayoutBounds="{Binding ButtonPositions[0]}"
+                        AbsoluteLayout.LayoutFlags="PositionProportional" />
+            </AbsoluteLayout>
+
+            <VerticalStackLayout Grid.Row="1" HeightRequest="70" Margin="0,120,0,0">
+                <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="200">
+                    <Button Style="{StaticResource ButtonStyle}"
+                            Text="LEFT"
+                            Command="{Binding CheckAnswerCommand}"
+                            CommandParameter="Left"/>
+                    <Button Style="{StaticResource ButtonStyle}"
+                            Text="RIGHT"
+                            Command="{Binding CheckAnswerCommand}"
+                            CommandParameter="Right"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
         </Grid>
 
         <Grid WidthRequest="200"
               HeightRequest="50"
               Margin="900,550,0,20">
             <Button FontSize="Medium"
-                    Text="n/10 Continue"/>
+                    Text="{Binding ContinueButtonText}"
+                    Command="{Binding ContinueCommand}"
+                    IsEnabled="{Binding IsOptionSelected}"/>
         </Grid>
     </Grid>
 </ContentPage>
-
-<!--<Button x:Name="NextButton"
-     FontSize="Medium"
-     Text="{Binding NextButtonText}"
-     Command="{Binding AddCurrentSelectionResultCommand}"
-     IsEnabled="{Binding IsOptionSelected}"/>-->

@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DyslexiaApp.MAUI.Pages.Login.DiagnosisNavigationInfo"
              xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
-             x:DataType="vm:DiagnosisNavigationViewModel"
              BackgroundImageSource="mainpage.jpg">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -107,9 +106,9 @@
                             <Label Text="Start Test" 
                                Style="{StaticResource StartIconTextStyle}" 
                                VerticalOptions="Center" 
-                               HorizontalOptions="Center" />
+                               HorizontalOptions="Center"/>
                             <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:DiagnosisNavigationViewModel}}, Path=GoToNavigationGameCommand}" />
+                                <TapGestureRecognizer Tapped="GoToNavigationGame"/>
                             </Grid.GestureRecognizers>
                         </Grid>
 

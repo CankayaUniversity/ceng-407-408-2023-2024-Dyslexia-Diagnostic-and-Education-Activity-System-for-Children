@@ -214,14 +214,23 @@
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\check.scale-100.png">
       <PackagePath>check.scale-100.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\choose.scale-100.png">
+      <PackagePath>choose.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\close.scale-100.png">
       <PackagePath>close.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\cloud.scale-100.png">
       <PackagePath>cloud.scale-100.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\coin.scale-100.png">
+      <PackagePath>coin.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\cross.scale-100.png">
       <PackagePath>cross.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\crossed.scale-100.png">
+      <PackagePath>crossed.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete.scale-100.png">
       <PackagePath>delete.scale-100.png</PackagePath>
@@ -268,6 +277,9 @@
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mainpage.scale-100.jpg">
       <PackagePath>mainpage.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mark.scale-100.png">
+      <PackagePath>mark.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\navigation.scale-100.jpeg">
       <PackagePath>navigation.scale-100.jpeg</PackagePath>
     </AppxPackagedFile>
@@ -294,6 +306,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\trash.scale-100.png">
       <PackagePath>trash.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\warning.scale-100.png">
+      <PackagePath>warning.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\welldone.scale-100.png">
+      <PackagePath>welldone.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\408\DyslexiaApp.MAUI\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DyslexiaApp.MAUI.deps.json">
       <PackagePath>DyslexiaApp.MAUI.deps.json</PackagePath>

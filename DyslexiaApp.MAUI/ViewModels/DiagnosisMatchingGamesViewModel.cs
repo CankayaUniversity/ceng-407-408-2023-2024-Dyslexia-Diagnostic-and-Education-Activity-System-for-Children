@@ -132,7 +132,7 @@ public partial class DiagnosisMatchingGamesViewModel : BaseViewModel
         }
         else
         {
-            await Shell.Current.DisplayAlert("End of Game", "You have completed all questions in this test. Go to next Test.", "OK");
+            // Shell.Current.DisplayAlert("End of Game", "You have completed all questions in this test. Go to next Test.", "OK");
 
             Debug.WriteLine($"Answer Results: {String.Join(", ", AnswerResults)}");
 

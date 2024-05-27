@@ -38,6 +38,9 @@ namespace DyslexiaApp.MAUI.ViewModels
         private const int TotalAttempts = 3;
         public int AttemptsRemaining { get; private set; }
 
+        [ObservableProperty]
+        private int totalScore = 0;
+
         public EducationalGamesViewModel(IEducationalGameListApi educationalGameListApi)
         {
             _educationalGameListApi = educationalGameListApi;
@@ -116,6 +119,7 @@ namespace DyslexiaApp.MAUI.ViewModels
         [RelayCommand]
         public async Task GoToPictureMatchingGame()
         {
+            TotalScore = 0;
             if (GameQuestions == null || GameQuestions.Count == 0)
             {
                 await Shell.Current.DisplayAlert("Error", "No questions available.", "OK");
@@ -140,15 +144,9 @@ namespace DyslexiaApp.MAUI.ViewModels
                 return;
             }
 
-            if (AttemptsRemaining <= 0)
-            {
-                await Shell.Current.DisplayAlert("End of Game", "You have used all attempts. The game will now exit.", "OK");
-                await Shell.Current.GoToAsync($"//{nameof(EducationalGameList)}");
-                return;
-            }
-
             if (CurrentQuestionIndex < GameQuestions.Count - 1)
             {
+                Debug.WriteLine($"Total Score: {TotalScore}");
                 CurrentQuestionIndex++;
                 var nextQuestion = GameQuestions[CurrentQuestionIndex];
                 Debug.WriteLine($"Next Question ID: {nextQuestion.Id}");
@@ -157,9 +155,8 @@ namespace DyslexiaApp.MAUI.ViewModels
             }
             else
             {
-                await Shell.Current.DisplayAlert("End of Game", "You have completed all questions in this test.", "OK");
 
-                await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+                await Shell.Current.GoToAsync($"//{nameof(EducationalResultPage)}");
             }
         }
 
@@ -169,6 +166,16 @@ namespace DyslexiaApp.MAUI.ViewModels
             {
                 AttemptsRemaining--;
             }
+        }
+
+        public void IncreaseTotalScore(int amount)
+        {
+            TotalScore += amount;
+        }
+
+        public void DecreaseTotalScore(int amount)
+        {
+            TotalScore -= amount;
         }
 
         [RelayCommand]

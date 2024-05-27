@@ -10,6 +10,9 @@ namespace DyslexiaApp.MAUI.Services
 
         [Get("/api/question")]
         Task<List<QuestionDto>> GetAllQuestionsAsync();
+
+        [Get("/api/navigationgame/start")]
+        Task<NavigationGameDto> StartGameAsync();
     }
 
 }
