@@ -76,6 +76,24 @@ namespace DyslexiaApp.MAUI.ViewModels
             }
         }
 
+        public void Reset()
+        {
+            _isInitialized = false;
+            AttemptCount = 1;
+            OnPropertyChanged(nameof(AttemptCount));
+            OnPropertyChanged(nameof(ContinueButtonText));
+            IsOptionSelected = false;
+            Question = null;
+            BaloonPositionText = null;
+            RandomPosition = Rectangle.Empty;
+            ButtonPositions?.Clear();
+            _currentSelectionResult = 0;
+            OnPropertyChanged(nameof(IsOptionSelected));
+            OnPropertyChanged(nameof(Question));
+            OnPropertyChanged(nameof(BaloonPositionText));
+            OnPropertyChanged(nameof(RandomPosition));
+            OnPropertyChanged(nameof(ButtonPositions));
+        }
         private void SetRandomPositions()
         {
             Random rnd = new Random();

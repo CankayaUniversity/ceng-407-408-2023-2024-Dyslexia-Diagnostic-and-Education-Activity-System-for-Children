@@ -29,9 +29,6 @@
          ContentTemplate="{DataTemplate pages:EducationalGameList}"
          Route="EducationalGameList" />
     <ShellContent
-          ContentTemplate="{DataTemplate pages:PictureMatchingGame}"
-          Route="PictureMatchingGame" />
-    <ShellContent
            ContentTemplate="{DataTemplate pages:ProfilePage}"
            Route="ProfilePage" />
     <ShellContent

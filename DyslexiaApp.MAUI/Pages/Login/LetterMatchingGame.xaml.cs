@@ -1,47 +1,63 @@
 using DyslexiaApp.MAUI.ViewModels;
-using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+using System;
+using System.Threading.Tasks;
+using System.Text.Json;
+using DyslexiaAppMAUI.Shared.Dtos;
 using System.Diagnostics;
 
-namespace DyslexiaApp.MAUI.Pages.Login;
-
-[QueryProperty(nameof(QuestionId), "questionId")]
-public partial class LetterMatchingGame : ContentPage
+namespace DyslexiaApp.MAUI.Pages.Login
 {
-    private readonly LetterMatchingViewModel _letterViewModel;
-    private readonly DiagnosisMatchingGamesViewModel _diagnosisMatchingGamesViewModel;
-
-    private string _questionId;
-    public string QuestionId
+    [QueryProperty(nameof(QuestionJson), "questionJson")]
+    public partial class LetterMatchingGame : ContentPage
     {
-        get => _questionId;
-        set
+        private readonly LetterMatchingViewModel _letterViewModel;
+        private readonly DiagnosisMatchingGamesViewModel _diagnosisMatchingGamesViewModel;
+
+        public string QuestionJson { get; set; }
+
+        public LetterMatchingGame(LetterMatchingViewModel letterViewModel, DiagnosisMatchingGamesViewModel diagnosisMatchingGamesViewModel)
         {
-            _questionId = Uri.UnescapeDataString(value ?? string.Empty);
-            Debug.WriteLine($"Game Selected: {_questionId}");
-            LoadQuestionData(_questionId);
+            InitializeComponent();
+            _letterViewModel = letterViewModel;
+            _diagnosisMatchingGamesViewModel = diagnosisMatchingGamesViewModel;
+            BindingContext = _letterViewModel;
+
+            NextButton.Command = new Command(_letterViewModel.AddCurrentSelectionResult);
         }
-    }
 
-    public LetterMatchingGame(LetterMatchingViewModel letterViewModel, DiagnosisMatchingGamesViewModel diagnosisMatchingGamesViewModel)
-    {
-        InitializeComponent();
-        _letterViewModel = letterViewModel;
-        _diagnosisMatchingGamesViewModel = diagnosisMatchingGamesViewModel;
-        BindingContext = _letterViewModel;
-
-        NextButton.Command = new Command(_letterViewModel.AddCurrentSelectionResult);
-    }
-
-    private async void LoadQuestionData(string questionId)
-    {
-        if (Guid.TryParse(questionId, out Guid id))
+        protected override async void OnAppearing()
         {
-            await _letterViewModel.InitializeAsync(id);
-        }
-    }
+            base.OnAppearing();
 
-    private async void Home_Button(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+            if (!string.IsNullOrEmpty(QuestionJson))
+            {
+                await LoadQuestionData(QuestionJson);
+            }
+        }
+
+        private async Task LoadQuestionData(string questionJson)
+        {
+            try
+            {
+                var question = JsonSerializer.Deserialize<QuestionDto>(questionJson);
+                Debug.WriteLine($"Question ID: {question.Id}");
+                if (question != null)
+                {
+                    _letterViewModel.InitializeAsync(question);// Set the question directly in the ViewModel
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error deserializing question: {ex.Message}");
+                await DisplayAlert("Error", "Failed to load question.", "OK");
+            }
+        }
+
+        private async void Home_Button(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+        }
+
     }
 }

@@ -15,6 +15,12 @@ namespace DyslexiaApp.MAUI.ViewModels
         private readonly DiagnosisMatchingGamesViewModel _diagnosisMatchingGamesViewModel;
         private bool _isInitialized = false;
 
+        private QuestionDto _currentQuestion;
+        public QuestionDto CurrentQuestion
+        {
+            get => _currentQuestion;
+            set => SetProperty(ref _currentQuestion, value);
+        }
         public ObservableCollection<QuestionDto> GameQuestions { get; } = new ObservableCollection<QuestionDto>();
 
         [ObservableProperty]
@@ -40,13 +46,17 @@ namespace DyslexiaApp.MAUI.ViewModels
 
         private int _currentSelectionResult;
 
+        [ObservableProperty]
+        private int selectedIndex;
+
+
         public LetterMatchingViewModel(IPictureMatchingApi pictureMatchingApi, DiagnosisMatchingGamesViewModel diagnosisMatchingGamesViewModel)
         {
             _pictureMatchingApi = pictureMatchingApi;
             _diagnosisMatchingGamesViewModel = diagnosisMatchingGamesViewModel;
         }
 
-        public async Task InitializeAsync(Guid questionId)
+        public async Task InitializeAsync(QuestionDto question)
         {
             if (_isInitialized)
                 return;
@@ -55,9 +65,6 @@ namespace DyslexiaApp.MAUI.ViewModels
             try
             {
                 _isInitialized = true;
-                Debug.WriteLine($"Letter Matching In: {questionId}");
-                var question = await _pictureMatchingApi.GetQuestionByIdAsync(questionId);
-                Console.WriteLine(question);
                 Question = question;
                 UpdateNextButtonText();
             }
@@ -75,9 +82,32 @@ namespace DyslexiaApp.MAUI.ViewModels
         {
             get
             {
-                return new ObservableCollection<ImageDto>(Question?.ImageOptions.Skip(1) ?? new List<ImageDto>());
+                if (Question?.ImageOptions == null || Question.MainImage == null)
+                {
+                    Debug.WriteLine("ImageOptions or MainImage is null.");
+                    return new ObservableCollection<ImageDto>();
+                }
+
+                Debug.WriteLine("Original ImageOptions:");
+                for (int i = 0; i < Question.ImageOptions.Count; i++)
+                {
+                    Debug.WriteLine($"Index {i}: {Question.ImageOptions[i].Id}");
+                }
+
+                // Filter out the main image
+                var filteredOptions = Question.ImageOptions.Where(img => img.Id != Question.MainImage.Id).ToList();
+
+                Debug.WriteLine("Filtered ImageOptions:");
+                for (int i = 0; i < filteredOptions.Count; i++)
+                {
+                    Debug.WriteLine($"Index {i}: {filteredOptions[i].Id}");
+                }
+
+                return new ObservableCollection<ImageDto>(filteredOptions);
             }
         }
+
+
 
         partial void OnQuestionChanged(QuestionDto value)
         {
@@ -87,37 +117,37 @@ namespace DyslexiaApp.MAUI.ViewModels
         [RelayCommand]
         public void ItemSelectedGame(ImageDto selectedImage)
         {
-            var selectedIndex = Question?.ImageOptions?.IndexOf(selectedImage) ?? -1;
+            Debug.WriteLine($"q:{Question.Id}");
+            SelectedIndex = Question?.ImageOptions?.IndexOf(selectedImage) ?? -1;
             Debug.WriteLine($"Selected item index: {selectedIndex}");
 
             IsOptionSelected = true;
 
-            var userAnswer = new UserAnswerDto
+            if (SelectedIndex == Question?.CorrectAnswerIndex)
             {
-                QuestionId = Question?.Id ?? Guid.Empty,
-                SelectedAnswerIndex = selectedIndex
-            };
-
-            if (selectedIndex == Question?.CorrectAnswerIndex)
-            {
-                Debug.WriteLine("Tebrikler! Doğru cevabı seçtiniz.");
+                Debug.WriteLine("Congratulations! You selected the correct answer.");
                 IsCorrect = true;
-                _currentSelectionResult = 1; // Geçici olarak sonucu sakla
+                _currentSelectionResult = 1; // Store the result temporarily
             }
             else
             {
-                Debug.WriteLine("Maalesef, yanlış cevap.");
+                Debug.WriteLine("Sorry, incorrect answer.");
                 IsCorrect = false;
-                _currentSelectionResult = 0; // Geçici olarak sonucu sakla
+                _currentSelectionResult = 0; // Store the result temporarily
             }
-
-            // Kullanıcı cevabını listeye ekle
-            _diagnosisMatchingGamesViewModel.AnswerResults.AnswerResults.Add(userAnswer);
         }
 
         [RelayCommand]
         public void AddCurrentSelectionResult()
         {
+            var userAnswer = new UserAnswerDto
+            {
+                QuestionId = Question?.Id ?? Guid.Empty,
+                SelectedAnswerIndex = SelectedIndex
+            };
+
+            _diagnosisMatchingGamesViewModel.AnswerResults.AnswerResults.Add(userAnswer);
+
             _diagnosisMatchingGamesViewModel.GoToNextQuestionCommand.Execute(null);
         }
 
@@ -134,3 +164,4 @@ namespace DyslexiaApp.MAUI.ViewModels
         }
     }
 }
+

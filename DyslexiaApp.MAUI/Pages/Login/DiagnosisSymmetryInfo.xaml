@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DyslexiaApp.MAUI.Pages.Login.DiagnosisSymmetryInfo"
              xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
-             x:DataType="vm:DiagnosisSymmetryMatchViewModel"
+             x:DataType="vm:DiagnosisMatchingGamesViewModel"
              xmlns:dto="clr-namespace:DyslexiaAppMAUI.Shared.Dtos;assembly=DyslexiaAppMAUI.Shared"
              BackgroundImageSource="mainpage.jpg">
     <ContentPage.Resources>
@@ -135,7 +135,7 @@
                                     Style="{StaticResource StartIconTextStyle}" 
                                     VerticalOptions="Center" 
                                     HorizontalOptions="Center" />
-                            <Button BackgroundColor="Transparent" Command="{Binding Source={RelativeSource AncestorType={x:Type vm:DiagnosisSymmetryMatchViewModel}}, Path=StartTestCommand}"/>
+                            <Button BackgroundColor="Transparent" Command="{Binding GoToSymmetryGameCommand}"/>
                         </Grid>
 
                     </Grid>

@@ -22,7 +22,6 @@ namespace DyslexiaApp.MAUI
                 typeof(DiagnosticTestAgreement),
                 typeof(DiagnosisLetterMatchingInformation),
                 typeof(EducationalGameList),
-                typeof (PictureMatchingGame),
                 typeof(ProfilePage),
                 typeof(LetterMatchingGame),
                 typeof(PlayGame),

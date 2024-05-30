@@ -10,14 +10,14 @@ namespace DyslexiaApp.MAUI.Pages.Login
     public partial class DiagnosisResultPage : ContentPage
     {
         private readonly DiagnosisResultViewModel _dyslexiaDiagnosisViewModel;
-        private readonly DiagnosisSymmetryMatchViewModel _diagnosisSymmetryMatchViewModel;
+        private readonly DiagnosisMatchingGamesViewModel _diagnosisMatchingGamesViewModel;
 
-        public DiagnosisResultPage(DyslexiaResultDto dyslexiaResultDto, DiagnosisResultViewModel diagnosisResultViewModel,DiagnosisSymmetryMatchViewModel diagnosisSymmetryMatchViewModel)
+        public DiagnosisResultPage(DyslexiaResultDto dyslexiaResultDto, DiagnosisResultViewModel diagnosisResultViewModel,DiagnosisMatchingGamesViewModel diagnosisMatchingGamesViewModel)
         {
             InitializeComponent();
             _dyslexiaDiagnosisViewModel = diagnosisResultViewModel;
-            _diagnosisSymmetryMatchViewModel = diagnosisSymmetryMatchViewModel;
-            BindingContext = _diagnosisSymmetryMatchViewModel;
+            _diagnosisMatchingGamesViewModel = diagnosisMatchingGamesViewModel;
+            BindingContext = _diagnosisMatchingGamesViewModel;
 
             if (dyslexiaResultDto == null)
             {

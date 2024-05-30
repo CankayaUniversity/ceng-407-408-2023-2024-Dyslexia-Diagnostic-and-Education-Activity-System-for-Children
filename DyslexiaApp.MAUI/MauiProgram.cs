@@ -42,11 +42,11 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<AuthService>();
 
-        builder.Services.AddSingleton<EducationalGamesViewModel>()
+        builder.Services.AddSingleton<DiagnosisMatchingGamesViewModel>()  
                         .AddSingleton<EducationalGameList>();
 
-        builder.Services.AddTransient<MatchingViewModel>()
-                        .AddTransient<PictureMatchingGame>();
+        builder.Services.AddTransient<MatchingViewModel>();
+                        
 
         builder.Services.AddTransient<MatchingViewModel>()
                         .AddTransient<PlayGame>();
@@ -86,7 +86,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<NavigationGameViewModel>()
                         .AddTransient<NavigationSkillsGame>();
 
-        builder.Services.AddSingleton<DiagnosisSymmetryMatchViewModel>()
+        builder.Services.AddSingleton<DiagnosisMatchingGamesViewModel>()
                         .AddTransient<DiagnosisSymmetryInfo>();
 
         builder.Services.AddTransient<SymmetryTestViewModel>()
@@ -161,7 +161,7 @@ public static class MauiProgram
 
         if (DeviceInfo.DeviceType == DeviceType.Physical)
         {
-            baseUrl = "https://qknhtc6j-7066.euw.devtunnels.ms";
+            baseUrl = "https://4r0lbx2t-7066.euw.devtunnels.ms";
         }
 
         httpClient.BaseAddress = new Uri(baseUrl);

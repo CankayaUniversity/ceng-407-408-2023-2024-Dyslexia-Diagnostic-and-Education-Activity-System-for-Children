@@ -15,7 +15,6 @@ namespace DyslexiaApp.MAUI.ViewModels
     public partial class SymmetryTestViewModel : BaseViewModel
     {
         private readonly IPictureMatchingApi _pictureMatchingApi;
-        private readonly DiagnosisSymmetryMatchViewModel _diagnosisSymmetryMatchViewModel;
         private readonly DiagnosisMatchingGamesViewModel _diagnosisMatchingGamesViewModel;
         private bool _isInitialized = false;
 
@@ -44,16 +43,17 @@ namespace DyslexiaApp.MAUI.ViewModels
 
         private int _currentSelectionResult;
 
-        public SymmetryTestViewModel(IPictureMatchingApi pictureMatchingApi, DiagnosisSymmetryMatchViewModel diagnosisSymmetryMatchViewModel, DiagnosisMatchingGamesViewModel diagnosisMatchingGamesViewModel)
+        [ObservableProperty]
+
+        private int selectedIndex;
+
+        public SymmetryTestViewModel(DiagnosisMatchingGamesViewModel diagnosisMatchingGamesViewModel)
         {
-            _pictureMatchingApi = pictureMatchingApi;
-            _diagnosisSymmetryMatchViewModel = diagnosisSymmetryMatchViewModel;
             _diagnosisMatchingGamesViewModel = diagnosisMatchingGamesViewModel;
         }
 
-        public async Task InitializeAsync(Guid questionId)
+        public async Task InitializeAsync(QuestionDto question)
         {
-            Debug.WriteLine($"Symmetry Initialize: {questionId}");
             if (_isInitialized)
                 return;
 
@@ -61,11 +61,9 @@ namespace DyslexiaApp.MAUI.ViewModels
             try
             {
                 _isInitialized = true;
-                Debug.WriteLine($"Symmetry In: {questionId}");
-                var question = await _pictureMatchingApi.GetQuestionByIdAsync(questionId);
-                Console.WriteLine(question);
                 Question = question;
                 UpdateNextButtonText();
+                Debug.WriteLine($"Question Initialized: {Question.Id}");
             }
             catch (Exception ex)
             {
@@ -77,13 +75,48 @@ namespace DyslexiaApp.MAUI.ViewModels
             }
         }
 
+
         public ObservableCollection<ImageDto> FilteredImageOptions
         {
             get
             {
-                return new ObservableCollection<ImageDto>(Question?.ImageOptions.Skip(1) ?? new List<ImageDto>());
+                if (Question == null)
+                {
+                    Debug.WriteLine("Question is null.");
+                    return new ObservableCollection<ImageDto>();
+                }
+
+                if (Question.ImageOptions == null)
+                {
+                    Debug.WriteLine("ImageOptions is null.");
+                    return new ObservableCollection<ImageDto>();
+                }
+
+                if (Question.MainImage == null)
+                {
+                    Debug.WriteLine("MainImage is null.");
+                    return new ObservableCollection<ImageDto>();
+                }
+
+                Debug.WriteLine("Original ImageOptions:");
+                for (int i = 0; i < Question.ImageOptions.Count; i++)
+                {
+                    Debug.WriteLine($"Index {i}: {Question.ImageOptions[i].Id}");
+                }
+
+                var filteredOptions = Question.ImageOptions.Where(img => img.Id != Question.MainImage.Id).ToList();
+
+                Debug.WriteLine("Filtered ImageOptions:");
+                for (int i = 0; i < filteredOptions.Count; i++)
+                {
+                    Debug.WriteLine($"Index {i}: {filteredOptions[i].Id}");
+                }
+
+                return new ObservableCollection<ImageDto>(filteredOptions);
             }
         }
+
+        
 
         partial void OnQuestionChanged(QuestionDto value)
         {
@@ -93,18 +126,14 @@ namespace DyslexiaApp.MAUI.ViewModels
         [RelayCommand]
         public void ItemSelectedGame(ImageDto selectedImage)
         {
-            var selectedIndex = Question?.ImageOptions?.IndexOf(selectedImage) ?? -1;
-            Debug.WriteLine($"Selected item index: {selectedIndex}");
+            SelectedIndex = Question?.ImageOptions?.IndexOf(selectedImage) ?? -1;
+            Debug.WriteLine($"Selected item index: {SelectedIndex}");
 
             IsOptionSelected = true;
 
-            var userAnswer = new UserAnswerDto
-            {
-                QuestionId = Question?.Id ?? Guid.Empty,
-                SelectedAnswerIndex = selectedIndex
-            };
+            
 
-            if (selectedIndex == Question?.CorrectAnswerIndex)
+            if (SelectedIndex == Question?.CorrectAnswerIndex)
             {
                 Debug.WriteLine("Tebrikler! Doğru cevabı seçtiniz.");
                 IsCorrect = true;
@@ -118,25 +147,31 @@ namespace DyslexiaApp.MAUI.ViewModels
             }
 
             // Kullanıcı cevabını listeye ekle
-            _diagnosisMatchingGamesViewModel.AnswerResults.AnswerResults.Add(userAnswer);
+            
         }
 
         [RelayCommand]
         public void AddCurrentSelectionResult()
         {
-            _diagnosisSymmetryMatchViewModel.GoToNextQuestionCommand.Execute(null);
+            var userAnswer = new UserAnswerDto
+            {
+                QuestionId = Question?.Id ?? Guid.Empty,
+                SelectedAnswerIndex = SelectedIndex
+            };
+            _diagnosisMatchingGamesViewModel.AnswerResults.AnswerResults.Add(userAnswer);
+            _diagnosisMatchingGamesViewModel.GoToNextSymmetryQuestionCommand.Execute(null);
         }
 
 
         private void UpdateNextButtonText()
         {
-            if (_diagnosisSymmetryMatchViewModel.CurrentQuestionIndex >= _diagnosisSymmetryMatchViewModel.GameQuestions.Count - 1)
+            if (_diagnosisMatchingGamesViewModel.CurrentQuestionIndex >= _diagnosisMatchingGamesViewModel.GameQuestions.Count - 1)
             {
                 NextButtonText = "Submit";
             }
             else
             {
-                NextButtonText = $"{_diagnosisSymmetryMatchViewModel.CurrentQuestionIndex + 1}/10 Continue";
+                NextButtonText = $"{_diagnosisMatchingGamesViewModel.CurrentQuestionIndex + 1}/10 Continue";
             }
         }
     }

@@ -17,6 +17,8 @@ namespace DyslexiaApp.MAUI.ViewModels
         private string _verificationCode;
         private string _message;
         private bool _isVerificationCodeVisible;
+        private Color _messageColor;
+        private string _verificationMessage;
 
         public string Email
         {
@@ -42,6 +44,26 @@ namespace DyslexiaApp.MAUI.ViewModels
             set => SetProperty(ref _isVerificationCodeVisible, value);
         }
 
+        public string VerificationMessage
+        {
+            get => _verificationMessage;
+            set
+            {
+                _verificationMessage = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Color MessageColor
+        {
+            get => _messageColor;
+            set
+            {
+                _messageColor = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ICommand SendCodeCommand { get; }
         public ICommand VerifyCodeCommand { get; }
 
@@ -56,17 +78,33 @@ namespace DyslexiaApp.MAUI.ViewModels
         private async Task SendCodeAsync()
         {
             var result = await _authService.SendVerificationCodeAsync(Email);
-            Message = result.IsSuccess ? "Verification code sent successfully." : $"Failed to send verification code: {result.ErrorMessage}";
-            IsVerificationCodeVisible = result.IsSuccess; // This should update the visibility of the verification code section
+            if (result.IsSuccess)
+            {
+                Message = "E-Mail send successfully. Check your E-Mail.";
+                MessageColor = Colors.Green;
+            }
+            else
+            {
+                Message = $"Invalid E-mail address: {result.ErrorMessage}";
+                MessageColor = Colors.Red;
+            }
+            IsVerificationCodeVisible = result.IsSuccess;
         }
 
         private async Task VerifyCodeAsync()
         {
             var result = await _authService.VerifyCodeAsync(Email, VerificationCode);
-            Message = result.IsSuccess ? "Code verified successfully. Proceed to reset password." : $"Invalid verification code: {result.ErrorMessage}";
             if (result.IsSuccess)
             {
+                VerificationMessage = "Verification code sent successfully.";
+                MessageColor = Colors.Green;
+                await Task.Delay(2000);
                 await Shell.Current.GoToAsync($"//ResetPasswordPage?email={Email}&verificationCode={VerificationCode}");
+            }
+            else
+            {
+                VerificationMessage = $"Failed to send verification code: {result.ErrorMessage}";
+                MessageColor = Colors.Red;
             }
         }
 

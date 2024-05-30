@@ -11,8 +11,8 @@ namespace DyslexiaApp.MAUI.ViewModels;
 
 public partial class MatchingViewModel : BaseViewModel
 {
-    private readonly IPictureMatchingApi _pictureMatchingApi;
-    private readonly EducationalGamesViewModel _educationalGamesViewModel;
+    private readonly DiagnosisMatchingGamesViewModel _diagnosisMatchingGamesViewModel;
+
     private bool _isInitialized = false;
     private bool _isAnswerSelected = false;
     private int _wrongAnswerCount = 0;
@@ -50,13 +50,15 @@ public partial class MatchingViewModel : BaseViewModel
     [ObservableProperty]
     private string nextButtonText;
 
-    public MatchingViewModel(IPictureMatchingApi pictureMatchingApi, EducationalGamesViewModel educationalGamesViewModel)
+    [ObservableProperty]
+    private int totalScore;
+
+    public MatchingViewModel(DiagnosisMatchingGamesViewModel diagnosisMatchingGamesViewModel)
     {
-        _pictureMatchingApi = pictureMatchingApi;
-        _educationalGamesViewModel = educationalGamesViewModel;
+        _diagnosisMatchingGamesViewModel = diagnosisMatchingGamesViewModel;
     }
 
-    public async Task InitializeAsync(Guid questionId)
+    public async Task InitializeAsync(QuestionDto question)
     {
         if (_isInitialized)
             return;
@@ -65,10 +67,9 @@ public partial class MatchingViewModel : BaseViewModel
         try
         {
             _isInitialized = true;
-            Debug.WriteLine($"Loading question details: {questionId}");
-            var question = await _pictureMatchingApi.GetQuestionByIdAsync(questionId);
             Question = question;
             UpdateNextButtonText();
+            Debug.WriteLine($"Question Initialized: {Question.Id}");
         }
         catch (Exception ex)
         {
@@ -84,7 +85,38 @@ public partial class MatchingViewModel : BaseViewModel
     {
         get
         {
-            return new ObservableCollection<ImageDto>(Question?.ImageOptions.Skip(1) ?? new List<ImageDto>());
+            if (Question == null)
+            {
+                Debug.WriteLine("Question is null.");
+                return new ObservableCollection<ImageDto>();
+            }
+
+            if (Question.ImageOptions == null)
+            {
+                Debug.WriteLine("ImageOptions is null.");
+                return new ObservableCollection<ImageDto>();
+            }
+
+            if (Question.MainImage == null)
+            {
+                Debug.WriteLine("MainImage is null.");
+                return new ObservableCollection<ImageDto>();
+            }
+
+            Debug.WriteLine("Original ImageOptions:");
+            for (int i = 0; i < Question.ImageOptions.Count; i++)
+            {
+                Debug.WriteLine($"Index {i}: {Question.ImageOptions[i].Id}");
+            }
+            var filteredOptions = Question.ImageOptions.Where(img => img.Id != Question.MainImage.Id).ToList();
+
+            Debug.WriteLine("Filtered ImageOptions:");
+            for (int i = 0; i < filteredOptions.Count; i++)
+            {
+                Debug.WriteLine($"Index {i}: {filteredOptions[i].Id}");
+            }
+
+            return new ObservableCollection<ImageDto>(filteredOptions);
         }
     }
 
@@ -111,7 +143,7 @@ public partial class MatchingViewModel : BaseViewModel
             IsAnswerCorrect = true;
             _isAnswerSelected = true;
             Score += 100;
-            _educationalGamesViewModel.IncreaseTotalScore(100);
+            _diagnosisMatchingGamesViewModel.IncreaseTotalScore(100);
             _wrongAnswerCount = 0;
         }
         else
@@ -131,12 +163,14 @@ public partial class MatchingViewModel : BaseViewModel
             if (AttemptsRemaining.HasValue && AttemptsRemaining > 0)
             {
                 DecreaseAttempts?.Invoke();
-                AttemptsRemaining = _educationalGamesViewModel.AttemptsRemaining;
+                AttemptsRemaining = _diagnosisMatchingGamesViewModel.AttemptsRemaining;
 
                 _wrongAnswerCount++;
                 var penalty = _wrongAnswerCount * 10;
                 Score -= penalty;
-                _educationalGamesViewModel.DecreaseTotalScore(penalty);
+                TotalScore = _diagnosisMatchingGamesViewModel.TotalScore;
+                _diagnosisMatchingGamesViewModel.DecreaseTotalScore(penalty);
+
 
                 if (AttemptsRemaining <= 0)
                 {
@@ -145,18 +179,25 @@ public partial class MatchingViewModel : BaseViewModel
                     await Shell.Current.GoToAsync($"//{nameof(EducationalGameList)}");
                 }
             }
+            TotalScore = _diagnosisMatchingGamesViewModel.TotalScore;
         }
+    }
+
+    [RelayCommand]
+    public void GoToNextQuestion()
+    {
+        _diagnosisMatchingGamesViewModel.GoToNextSymmetryQuestionCommand.Execute(null);
     }
 
     private void UpdateNextButtonText()
     {
-        if (_educationalGamesViewModel.CurrentQuestionIndex >= _educationalGamesViewModel.GameQuestions.Count - 1)
+        if (_diagnosisMatchingGamesViewModel.CurrentQuestionIndex >= _diagnosisMatchingGamesViewModel.GameQuestions.Count - 1)
         {
             NextButtonText = "Submit";
         }
         else
         {
-            NextButtonText = $"{_educationalGamesViewModel.CurrentQuestionIndex + 1}/10 Continue";
+            NextButtonText = $"{_diagnosisMatchingGamesViewModel.CurrentQuestionIndex + 1}/10 Continue";
         }
     }
 }

@@ -144,7 +144,7 @@ public partial class DiagnosisSymmetryMatchViewModel : BaseViewModel
         }
         else
         {
-            Debug.WriteLine($"Answer Results Navigation: {string.Join(", ", _diagnosisMatchingGamesViewModel.AnswerResults)}");
+            Debug.WriteLine($"Answer Results Navigation: {string.Join(", ", _diagnosisMatchingGamesViewModel.AnswerResults.AnswerResults)}");
             
             // Cevapları gönder
             var result = await _diagnosisMatchingGamesViewModel.SubmitAnswersAsync(_email);

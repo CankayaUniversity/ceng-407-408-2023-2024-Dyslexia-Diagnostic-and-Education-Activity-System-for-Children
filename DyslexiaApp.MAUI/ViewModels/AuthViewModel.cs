@@ -80,7 +80,7 @@ public partial class AuthViewModel(IAuthApi authApi, AuthService authService) : 
     }
 
     [RelayCommand]
-    private async Task SigninAsync()
+    public async Task SigninAsync()
     {
         IsBusy = true;
         try

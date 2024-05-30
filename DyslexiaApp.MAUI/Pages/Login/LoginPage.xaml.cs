@@ -7,11 +7,14 @@ using System.Text.RegularExpressions;
 public partial class LoginPage : ContentPage
 {
     private readonly AuthService _authService;
-    public LoginPage(AuthViewModel authViewModel, AuthService authService)
+    private readonly DiagnosisMatchingGamesViewModel _diagnosisMatchingGamesViewModel;
+
+    public LoginPage(AuthViewModel authViewModel, AuthService authService, DiagnosisMatchingGamesViewModel diagnosisMatchingGamesViewModel)
     {
         InitializeComponent();
         BindingContext = authViewModel;
         _authService = authService;
+        _diagnosisMatchingGamesViewModel = diagnosisMatchingGamesViewModel;
     }
     private readonly SemaphoreSlim _navigationSemaphore = new SemaphoreSlim(1, 1);
 
@@ -30,6 +33,8 @@ public partial class LoginPage : ContentPage
             // 500 milisaniye bekleme ekleyerek önceki navigasyon iþlemlerinin tamamlanmasýný bekleyin
             await Task.Delay(500);
 
+
+            await _diagnosisMatchingGamesViewModel.LoadAllQuestionsAndImages();
             await NavigateToHomePageAsync();
         }
     }

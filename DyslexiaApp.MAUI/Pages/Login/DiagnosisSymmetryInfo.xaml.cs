@@ -4,18 +4,20 @@ namespace DyslexiaApp.MAUI.Pages.Login;
 
 public partial class DiagnosisSymmetryInfo : ContentPage
 {
-    private readonly DiagnosisSymmetryMatchViewModel _diagnosisSymmetryMatchViewModel;
+    private readonly DiagnosisMatchingGamesViewModel _diagnosisMatchingGamesViewModel;
 
-    public DiagnosisSymmetryInfo(DiagnosisSymmetryMatchViewModel diagnosisSymmetryMatchViewModel)
+    public DiagnosisSymmetryInfo(DiagnosisMatchingGamesViewModel diagnosisMatchingGamesViewModel)
     {
         InitializeComponent();
-        _diagnosisSymmetryMatchViewModel = diagnosisSymmetryMatchViewModel;
-        BindingContext = _diagnosisSymmetryMatchViewModel;
+        _diagnosisMatchingGamesViewModel = diagnosisMatchingGamesViewModel;
+        BindingContext = _diagnosisMatchingGamesViewModel;
     }
 
     protected async override void OnAppearing()
     {
-        await _diagnosisSymmetryMatchViewModel.InitializeAsync();
+        base.OnAppearing();
+        _diagnosisMatchingGamesViewModel.ResetSymmetry();
+        await _diagnosisMatchingGamesViewModel.SelectDefaultGame1();
     }
 
     private async void Close_Button(object sender, EventArgs e)

@@ -152,9 +152,6 @@
 	  <MauiXaml Update="Pages\Login\NavigationSkillsGame.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Login\PictureMatchingGame.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Pages\Login\PlayGame.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
