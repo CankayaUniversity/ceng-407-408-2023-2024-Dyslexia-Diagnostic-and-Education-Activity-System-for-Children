@@ -2,24 +2,65 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DyslexiaApp.MAUI.Pages.Login.DiagnosticTestAgreement"
-             Title="Diagnostic Test Privacy Agreement"
              BackgroundImageSource="mainpage.jpg">
     <ContentPage.Resources>
         <ResourceDictionary>
 
             <Style x:Key="HomeIconStyle" TargetType="ImageButton">
-                <Setter Property="Margin" Value="5" />
-                <Setter Property="WidthRequest" Value="80" />
-                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="Margin">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android" Value="2,5,2,5" />
+                            <On Platform="WinUI" Value="5" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="WidthRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="60" />
+                            <On Platform="WinUI" Value="80" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="HeightRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="80" />
+                            <On Platform="WinUI" Value="100" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
                 <Setter Property="CornerRadius" Value="55" />
                 <Setter Property="VerticalOptions" Value="StartAndExpand" />
                 <Setter Property="HorizontalOptions" Value="StartAndExpand" />
             </Style>
 
             <Style x:Key="StartIconStyle" TargetType="ImageButton">
-                <Setter Property="Margin" Value="10,-2,10,10" />
-                <Setter Property="WidthRequest" Value="160" />
-                <Setter Property="HeightRequest" Value="120" />
+                <Setter Property="Margin">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android" Value="15,-35,5,5" />
+                            <On Platform="WinUI" Value="10,-2,-400,90" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="WidthRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="140" />
+                            <On Platform="WinUI" Value="160" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="HeightRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="90" />
+                            <On Platform="WinUI" Value="120" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
                 <Setter Property="CornerRadius" Value="60" />
                 <Setter Property="VerticalOptions" Value="End" />
                 <Setter Property="HorizontalOptions" Value="End" />
@@ -27,7 +68,7 @@
 
             <Style x:Key="StartIconTextStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="White" />
-                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontSize" Value="{OnPlatform Android='10', WinUI='14' ,iOS='10'}"/>
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="Center" />
@@ -51,8 +92,8 @@
         <Grid VerticalOptions="Center" 
               HorizontalOptions="Center"
               Margin="25,30,0,0"
-              WidthRequest="1100"
-              HeightRequest="500"
+              WidthRequest="{OnPlatform Android=650, WinUI=1100}"
+              HeightRequest="{OnPlatform Android=280, WinUI=500}"
               Background="{StaticResource SemiTransparentBlack}">
 
 
@@ -62,21 +103,22 @@
                    BorderColor="Transparent"
                    AbsoluteLayout.LayoutFlags="PositionProportional"
                    AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
-                   WidthRequest="700" HeightRequest="350"
-                   Margin="10,70,10,10">
+                   WidthRequest="{OnPlatform Android=500, WinUI=700}" 
+                   HeightRequest="{OnPlatform Android=250, WinUI=350}"
+                   Margin="{OnPlatform Android='10,20,10,10', WinUI='10,70,10,10'}">
 
                     <VerticalStackLayout >
                         <ImageButton Source="close.png" 
                                      BackgroundColor="Transparent"
-                                     WidthRequest="5"
-                                     HeightRequest="5"
+                                     WidthRequest="{OnPlatform Android=40, WinUI=5}" 
+                                     HeightRequest="{OnPlatform Android=40, WinUI=5}"
                                      Scale="0.5" 
                                      Padding="0"
                                      VerticalOptions="End" 
                                      HorizontalOptions="End"
                                      Clicked="Close_Button"/>
                         <Label Text="Privacy and License Agreement"
-                           Margin="0,0,0,15"
+                           Margin="{OnPlatform Android='-20,-20,10,10', WinUI='0,0,0,15'}"
                            FontAttributes="Bold"
                            FontSize="Large"
                            TextColor="Black"
@@ -86,7 +128,7 @@
                         <Grid>
                             <HorizontalStackLayout HorizontalOptions="Center" 
                                                    VerticalOptions="Center"
-                                                   Margin="20">
+                                                   Margin="{OnPlatform Android=10, WinUI=20}">
                                 <CheckBox x:Name="AgreementCheckBox"
                                           IsChecked="False"
                                           Color="Black"
@@ -99,11 +141,10 @@
 
                         </Grid>
 
-
-                        <Grid
-                          Style="{StaticResource StartIconStyle}" 
+                        <Grid Style="{StaticResource StartIconStyle}"
                           VerticalOptions="End" 
-                          HorizontalOptions="End">
+                          HorizontalOptions="End"
+                           WidthRequest="{OnPlatform Android=80, WinUI=1000}" >
                             <ImageButton Source="cloud.png" 
                                      BackgroundColor="Transparent"
                                      VerticalOptions="Center" 

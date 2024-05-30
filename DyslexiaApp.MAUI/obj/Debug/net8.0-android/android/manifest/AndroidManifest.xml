@@ -11,8 +11,11 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <permission android:name="com.companyname.dyslexiaapp.maui.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.companyname.dyslexiaapp.maui.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-  <application android:name="crc640120552808c5c7af.MainApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/appicon" android:label="DyslexiaApp.MAUI" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
-    <activity android:name="crc640120552808c5c7af.MainActivity" android:configChanges="density|orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:theme="@style/Maui.SplashTheme">
+  <application android:name="crc640120552808c5c7af.MainApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="true" android:icon="@mipmap/appicon" android:label="DyslexiaApp.MAUI" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
+    <activity android:name="com.companyname.dyslexiaapp.maui.MainActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:screenOrientation="landscape">
+      <!-- Diğer activity ayarları -->
+    </activity>
+    <activity android:name="crc640120552808c5c7af.MainActivity" android:configChanges="density|orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:screenOrientation="landscape" android:theme="@style/Maui.SplashTheme">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

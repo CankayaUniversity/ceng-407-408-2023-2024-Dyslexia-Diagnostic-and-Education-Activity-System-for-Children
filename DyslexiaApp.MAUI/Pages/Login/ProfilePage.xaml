@@ -11,9 +11,30 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="ProfileIconStyle" TargetType="ImageButton">
-                <Setter Property="Margin" Value="5" />
-                <Setter Property="WidthRequest" Value="100" />
-                <Setter Property="HeightRequest" Value="110" />
+                <Setter Property="Margin">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android" Value="2" />
+                            <On Platform="WinUI" Value="5" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="WidthRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="80" />
+                            <On Platform="WinUI" Value="100" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="HeightRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="90" />
+                            <On Platform="WinUI" Value="110" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
                 <Setter Property="CornerRadius" Value="55" />
                 <Setter Property="VerticalOptions" Value="StartAndExpand" />
                 <Setter Property="HorizontalOptions" Value="StartAndExpand" />
@@ -27,10 +48,24 @@
             </Style>
 
             <Style x:Key="StartIconStyle" TargetType="ImageButton">
-                <Setter Property="Margin" Value="10,-2,10,10" />
-                <Setter Property="WidthRequest" Value="150" />
-                <Setter Property="HeightRequest" Value="100" />
-                <Setter Property="CornerRadius" Value="60" />
+                <Setter Property="Margin" Value="{OnPlatform Android='0,0,0,0', WinUI='10,-2,10,10'}"/>
+                <Setter Property="WidthRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="100" />
+                            <On Platform="WinUI" Value="150" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="HeightRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="100" />
+                            <On Platform="WinUI" Value="100" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="CornerRadius" Value="50" />
                 <Setter Property="VerticalOptions" Value="End" />
                 <Setter Property="HorizontalOptions" Value="End" />
             </Style>
@@ -44,22 +79,64 @@
             </Style>
 
             <Style x:Key="EntryStyle" TargetType="Entry">
-                <Setter Property="Margin" Value="0,-25,0,0" />
+                <Setter Property="Margin">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android" Value="0,-15,0,0" />
+                            <On Platform="WinUI" Value="0,-25,0,0" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
                 <Setter Property="BackgroundColor" Value="#C7E3F0" />
                 <Setter Property="TextColor" Value="#019BE1" />
                 <Setter Property="PlaceholderColor" Value="#019BE1" />
-                <Setter Property="HeightRequest" Value="-10" />
+                <Setter Property="HeightRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="40" />
+                            <On Platform="WinUI" Value="-10" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
                 <Setter Property="FontFamily" Value="Popins" />
-                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="WidthRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="200" />
+                            <On Platform="WinUI" Value="250" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
             </Style>
 
             <Style x:Key="CustomPickerStyle" TargetType="Picker">
-                <Setter Property="Margin" Value="0,-25,0,0" />
+                <Setter Property="Margin">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android" Value="0,-15,0,0" />
+                            <On Platform="WinUI" Value="0,-25,0,0" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
                 <Setter Property="BackgroundColor" Value="#C7E3F0" />
                 <Setter Property="TextColor" Value="#019BE1" />
-                <Setter Property="HeightRequest" Value="-10" />
+                <Setter Property="HeightRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="40" />
+                            <On Platform="WinUI" Value="-10" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
                 <Setter Property="FontFamily" Value="Popins" />
-                <Setter Property="WidthRequest" Value="250"/>
+                <Setter Property="WidthRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="200" />
+                            <On Platform="WinUI" Value="250" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
                 <Setter Property="CharacterSpacing" Value="3"/>
             </Style>
 
@@ -82,8 +159,8 @@
         <Grid VerticalOptions="Center" 
               HorizontalOptions="Center"
               Margin="25,30,0,0"
-              WidthRequest="1075"
-              HeightRequest="540"
+              WidthRequest="{OnPlatform Android=560, WinUI=1075}"
+              HeightRequest="{OnPlatform Android=410, WinUI=540}"
               Background="{StaticResource SemiTransparentBlack}">
 
             <VerticalStackLayout >
@@ -106,7 +183,8 @@
                        BorderColor="Transparent"
                        AbsoluteLayout.LayoutFlags="PositionProportional"
                        AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
-                       WidthRequest="450" HeightRequest="500"
+                       WidthRequest="{OnPlatform Android=450, WinUI=450}"
+                       HeightRequest="{OnPlatform Android=390, WinUI=500}"
                        HorizontalOptions="Center"
                        VerticalOptions="StartAndExpand"
                        Margin="10,-30,10,10">
@@ -114,15 +192,15 @@
                     <VerticalStackLayout >
                         <ImageButton Source="close.png" 
                                      BackgroundColor="Transparent"
-                                     WidthRequest="5"
-                                     HeightRequest="5"
+                                     WidthRequest="{OnPlatform Android=50, WinUI=5}"
+                                     HeightRequest="{OnPlatform Android=50, WinUI=5}"
                                      Scale="0.5" 
                                      Padding="0"
                                      VerticalOptions="End" 
                                      HorizontalOptions="End"
                                      Clicked="Close_Button"/>
                         <Label Text="MY PROFILE"
-                               Margin="0,-35,0,15"
+                               Margin="{OnPlatform Android='0,-40,0,15', WinUI='0,-35,0,15'}"
                                FontAttributes="Bold"
                                FontSize="Title"
                                TextColor="#019BE1"
@@ -131,12 +209,12 @@
 
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="50" />
-                                <RowDefinition Height="50" />
-                                <RowDefinition Height="50" />
-                                <RowDefinition Height="50" />
-                                <RowDefinition Height="50" />
-                                <RowDefinition Height="50" />
+                                <RowDefinition Height="{OnPlatform Android=33, WinUI=50}" />
+                                <RowDefinition Height="{OnPlatform Android=33, WinUI=50}"/>
+                                <RowDefinition Height="{OnPlatform Android=33, WinUI=50}" />
+                                <RowDefinition Height="{OnPlatform Android=33, WinUI=50}" />
+                                <RowDefinition Height="{OnPlatform Android=33, WinUI=50}" />
+                                <RowDefinition Height="{OnPlatform Android=33, WinUI=50}" />
                             </Grid.RowDefinitions>
 
                             <Entry Grid.Row="0" Placeholder="Name" Style="{StaticResource EntryStyle}" Text="{Binding Name}" />
@@ -158,44 +236,36 @@
                             </Picker>
                             <Entry Grid.Row="5"
                                    x:Name="resultEntry"
-                                   Placeholder="Diagnostic Result:"
+                                   Text="{Binding Accuracy , StringFormat='Diagnostic Result: {0:0.##}%'}"
                                    Style="{StaticResource EntryStyle}"
                                    IsReadOnly="True" />
                         </Grid>
 
-                        <Grid >
-
+                        <Grid>
                             <Grid VerticalOptions="End" 
                                   HorizontalOptions="Center" 
-                                  Margin="0,10,61,70">
+                                  Margin="0,10,61,0">
                                 <Label Text="{Binding StatusMessage}" TextColor="{Binding StatusMessageColor}" />
                             </Grid>
-
-                            <Grid Style="{StaticResource StartIconStyle}" 
-                                  VerticalOptions="End" 
-                                  HorizontalOptions="End"
-                                  WidthRequest="100"
-                                  HeightRequest="100">
+                            <Grid VerticalOptions="End" HorizontalOptions="End">
                                 <ImageButton Source="cloud.png" 
                                              BackgroundColor="Transparent"
+                                             WidthRequest="50"
+                                             HeightRequest="50"
                                              VerticalOptions="Center" 
                                              HorizontalOptions="Center"/>
                                 <Label Text="Save" 
                                        Style="{StaticResource StartIconTextStyle}" 
                                        VerticalOptions="Center" 
                                        HorizontalOptions="Center"/>
-                                <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ProfileViewModel}}, Path=UpdateUserProfileCommand}" />
-                                </Grid.GestureRecognizers>
+
+                                <Button BackgroundColor="Transparent" Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ProfileViewModel}}, Path=UpdateUserProfileCommand}" />
+
                             </Grid>
-
                         </Grid>
-
                     </VerticalStackLayout>
                 </Frame>
             </VerticalStackLayout>
-
         </Grid>
-
     </Grid>
 </ContentPage>

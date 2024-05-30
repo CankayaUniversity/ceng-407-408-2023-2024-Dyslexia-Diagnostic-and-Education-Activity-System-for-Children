@@ -2,6 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DyslexiaApp.MAUI.Pages.Login.DiagnosisResultPage"
+             xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
+             x:DataType="vm:DiagnosisResultViewModel"
+             xmlns:dto="clr-namespace:DyslexiaAppMAUI.Shared.Dtos;assembly=DyslexiaAppMAUI.Shared"
              BackgroundImageSource="mainpage.jpg">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -23,8 +26,8 @@
 
             <Style x:Key="StartIconStyle" TargetType="ImageButton">
                 <Setter Property="Margin" Value="10,-2,10,10" />
-                <Setter Property="WidthRequest" Value="150" />
-                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="HeightRequest" Value="200" />
                 <Setter Property="CornerRadius" Value="60" />
                 <Setter Property="VerticalOptions" Value="End" />
                 <Setter Property="HorizontalOptions" Value="End" />
@@ -32,7 +35,7 @@
 
             <Style x:Key="StartIconTextStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="White" />
-                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontSize" Value="{OnPlatform Android=13, WinUI=7}"/>
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="Center" />
@@ -74,54 +77,61 @@
         <Grid VerticalOptions="Center" 
               HorizontalOptions="Center"
               Margin="25,0,0,0"
-              WidthRequest="1075"
-              HeightRequest="550"
-              Background="{StaticResource SemiTransparentBlack}">
+              WidthRequest="{OnPlatform Android=700, WinUI=1075}"
+              HeightRequest="{OnPlatform Android=330, WinUI=550}"
+              BackgroundColor="{StaticResource SemiTransparentBlack}">
 
-            <VerticalStackLayout >
+            <VerticalStackLayout>
                 <Frame BackgroundColor="White" Padding="30"
                        CornerRadius="15"
                        BorderColor="Transparent"
                        AbsoluteLayout.LayoutFlags="PositionProportional"
                        AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
-                       WidthRequest="650" HeightRequest="500"
+                       WidthRequest="{OnPlatform Android=500, WinUI=650}" 
+                       HeightRequest="{OnPlatform Android=300, WinUI=500}"
                        HorizontalOptions="Center"
                        VerticalOptions="StartAndExpand"
                        Margin="10,30,10,10">
 
-                    <VerticalStackLayout >
+                    <VerticalStackLayout>
                         <Label Text="Completed!"
                                Margin="0,0,0,15"
                                FontAttributes="Bold"
-                               FontSize="40"
+                               FontSize="{OnPlatform Android=25, WinUI=40}"
                                TextColor="Black"
                                HorizontalOptions="Center"
                                VerticalOptions="Start" />
 
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="170" />
+                                <RowDefinition Height="{OnPlatform Android=57, WinUI=170}" />
                                 <RowDefinition Height="60" />
                                 <RowDefinition Height="60" />
-                                <RowDefinition Height="60" />
+                                <RowDefinition Height="{OnPlatform Android=30, WinUI=60}" />
                             </Grid.RowDefinitions>
 
-                            <Image Grid.Row="0" Source="welldone.png" WidthRequest="350" HeightRequest="180"/>
-                            <Label Grid.Row="1" Text="Accuracy Rate: % " 
-                                   FontSize="25"
+                            <Image Grid.Row="0" Source="welldone.png" 
+                                   WidthRequest="{OnPlatform Android=220, WinUI=350}" 
+                                   HeightRequest="{OnPlatform Android=100, WinUI=180}"/>
+                            <Label Grid.Row="1" Text="{Binding AccuracyRate, StringFormat='Accuracy Rate: {0:P2}'}" 
+                                   FontSize="{OnPlatform Android=18, WinUI=20}"
                                    FontAttributes="Bold"
-                                   WidthRequest="250" HeightRequest="50"/>
-                            <Image Grid.Row="2" Source="warning.png" WidthRequest="50" HeightRequest="50"
+                                   WidthRequest="{OnPlatform Android=220, WinUI=250}" 
+                                   HeightRequest="{OnPlatform Android=100, WinUI=50}"
+                                   Margin="{OnPlatform Android='10,80,10,10', WinUI='0,0,0,0'}"/>
+                            <Image Grid.Row="2" Source="warning.png" 
+                                   WidthRequest="{OnPlatform Android=35, WinUI=50}" 
+                                   HeightRequest="{OnPlatform Android=35, WinUI=50}"
                                    HorizontalOptions="Start"
                                    VerticalOptions="Start"
-                                   Margin="100,0,10,0"/>
-                            <Label Grid.Row="2" Text="Your dyslexia risk rate is low! Congratulations" 
-                                   FontSize="20"
+                                   Margin="{OnPlatform Android='40,-20,0,0', WinUI='100,0,10,0'}"/>
+                            <Label Grid.Row="2" Text="{Binding DyslexiaRate}" 
+                                   FontSize="{OnPlatform Android=15, WinUI=20}"
                                    FontAttributes="Bold"
                                    WidthRequest="300" HeightRequest="100"
                                    HorizontalTextAlignment="Center"
                                    VerticalOptions="FillAndExpand"
-                                   Margin="40,50,20,0"/>
+                                   Margin="{OnPlatform Android='40,10,50,0', WinUI='40,50,20,0'}"/>
                             <Grid Grid.Row="3"
                                   Style="{StaticResource StartIconStyle}" 
                                   VerticalOptions="End" 
@@ -134,25 +144,20 @@
                                              VerticalOptions="Center" 
                                              HorizontalOptions="Center"
                                              Clicked="Close_Button"/>
-                                <Label Text="  Return 
-                                            Main Page " 
+                                <Label Text="Return Main Page" 
                                        Style="{StaticResource StartIconTextStyle}" 
                                        VerticalOptions="Center" 
-                                       HorizontalOptions="Center"/>
+                                       HorizontalOptions="Center"
+                                       Margin="{OnPlatform Android='15,0,0,0', WinUI='0,0,0,0'}"/>
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="Close_Button"/>
                                 </Grid.GestureRecognizers>
                             </Grid>
 
                         </Grid>
-
-
-
                     </VerticalStackLayout>
                 </Frame>
             </VerticalStackLayout>
-
         </Grid>
-
     </Grid>
 </ContentPage>

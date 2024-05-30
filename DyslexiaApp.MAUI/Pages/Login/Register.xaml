@@ -4,7 +4,6 @@
              x:Class="DyslexiaApp.MAUI.Pages.Login.Register"
              xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
              x:DataType="vm:AuthViewModel"
-             Title="Create New Account"
              BackgroundImageSource="login.jpg">
     <ContentPage.Resources>
         <ResourceDictionary>

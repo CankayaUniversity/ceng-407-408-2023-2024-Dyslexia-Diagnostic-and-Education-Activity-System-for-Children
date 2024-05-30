@@ -13,6 +13,7 @@ namespace DyslexiaApp.MAUI.ViewModels;
 
 public partial class DiagnosisSymmetryMatchViewModel : BaseViewModel
 {
+    private readonly string _email;
     private readonly IEducationalGameListApi _educationalGameListApi;
     private readonly DiagnosisMatchingGamesViewModel _diagnosisMatchingGamesViewModel;
     [ObservableProperty]
@@ -26,13 +27,25 @@ public partial class DiagnosisSymmetryMatchViewModel : BaseViewModel
     [ObservableProperty]
     private int currentQuestionIndex; // Use ObservableProperty to automatically implement INotifyPropertyChanged
 
+    [ObservableProperty]
+    private double accuracyRate;
+
+    [ObservableProperty]
+    private string dyslexiaRate;
+
     public ObservableCollection<QuestionDto> GameQuestions { get; private set; }
+
+    public List<UserAnswerDto> AnswerResults { get; private set; } = new List<UserAnswerDto>();
+
+    
 
     public DiagnosisSymmetryMatchViewModel(IEducationalGameListApi educationalGameListApi, DiagnosisMatchingGamesViewModel diagnosisMatchingGamesViewModel)
     {
+        _email = _email = Preferences.Get("UserEmail", string.Empty); ;
         _educationalGameListApi = educationalGameListApi;
         _diagnosisMatchingGamesViewModel = diagnosisMatchingGamesViewModel;
         GameQuestions = new ObservableCollection<QuestionDto>();
+
     }
 
     public async Task InitializeAsync()
@@ -111,7 +124,6 @@ public partial class DiagnosisSymmetryMatchViewModel : BaseViewModel
             Debug.WriteLine($"Navigating to Symmetry with Question ID: {firstQuestion.Id}");
         }
     }
-
     [RelayCommand]
     public async Task GoToNextQuestion()
     {
@@ -126,16 +138,32 @@ public partial class DiagnosisSymmetryMatchViewModel : BaseViewModel
         if (CurrentQuestionIndex < GameQuestions.Count - 1)
         {
             CurrentQuestionIndex++;
-            Debug.WriteLine($"Incremented Question Index: {CurrentQuestionIndex}");
             var nextQuestion = GameQuestions[CurrentQuestionIndex];
-            Debug.WriteLine($"next with Question ID: {nextQuestion}");
             var route = $"{nameof(SymmetryGameTest)}?questionId={nextQuestion.Id}";
             await Shell.Current.GoToAsync(route);
         }
         else
         {
             Debug.WriteLine($"Answer Results Navigation: {string.Join(", ", _diagnosisMatchingGamesViewModel.AnswerResults)}");
+            
+            // Cevapları gönder
+            var result = await _diagnosisMatchingGamesViewModel.SubmitAnswersAsync(_email);
+
+            if (result != null)
+            {
+                Debug.WriteLine($"Result: {result.DyslexiaRate}");
+                Debug.WriteLine($"Result: {result.AccuracyRate*100}");
+
+            }
+
+            accuracyRate = result.AccuracyRate;
+            dyslexiaRate = result.DyslexiaRate;
             await Shell.Current.GoToAsync($"//{nameof(DiagnosisResultPage)}");
         }
     }
+
+
+
+
+
 }

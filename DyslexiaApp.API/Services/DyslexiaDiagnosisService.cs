@@ -1,6 +1,8 @@
 ﻿using DyslexiaApp.API.Data.Entities;
+using DyslexiaAppMAUI.Shared;
 using DyslexiaAppMAUI.Shared.Dtos;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 using System.Linq;
 
 namespace DyslexiaApp.API.Services
@@ -76,11 +78,11 @@ namespace DyslexiaApp.API.Services
 
         public async Task<double> CalculateAccuracyRateAsync(UserAnswersDto userAnswersDto)
         {
-            int totalQuestions = userAnswersDto.UserAnswers.Count;
+            int totalQuestions = userAnswersDto.AnswerResults.Count;
             int correctAnswers = 0;
             int wrongAnswers = 0;
 
-            foreach (var userAnswer in userAnswersDto.UserAnswers)
+            foreach (var userAnswer in userAnswersDto.AnswerResults)
             {
                 var question = await _context.Questions.FindAsync(userAnswer.QuestionId);
                 if (question == null) continue;
@@ -96,8 +98,6 @@ namespace DyslexiaApp.API.Services
             }
 
             double accuracyRate = (double)correctAnswers / totalQuestions;
-            accuracyRate -= (double)wrongAnswers / totalQuestions * 0.1;
-
             return accuracyRate;
         }
 
@@ -117,10 +117,22 @@ namespace DyslexiaApp.API.Services
             }
         }
 
-        public async Task<DyslexiaResultDto> SubmitAnswersAsync(UserAnswersDto userAnswersDto)
+        public async Task<DyslexiaResultDto> SubmitAnswersAsync(UserAnswersDto userAnswersDto,string email)
         {
             double accuracyRate = await CalculateAccuracyRateAsync(userAnswersDto);
             string dyslexiaRate = DetermineDyslexiaRate(accuracyRate);
+
+            Debug.WriteLine($"Accuracy : {accuracyRate}");
+            Debug.WriteLine($"Dyslexia : {dyslexiaRate}");
+
+            // userId ile kullanıcıyı bulup doğruluk oranını güncelle
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (user != null)
+            {
+                user.Accuracy = (int)(accuracyRate * 100); // Accuracy oranını yüzde olarak saklamak için
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
+            }
 
             return new DyslexiaResultDto
             {
@@ -128,6 +140,7 @@ namespace DyslexiaApp.API.Services
                 DyslexiaRate = dyslexiaRate
             };
         }
+
 
 
     }

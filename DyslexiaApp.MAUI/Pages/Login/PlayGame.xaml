@@ -5,7 +5,6 @@
              xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
              x:DataType="vm:MatchingViewModel"
              xmlns:dto="clr-namespace:DyslexiaAppMAUI.Shared.Dtos;assembly=DyslexiaAppMAUI.Shared"
-             Title="PlayGame"
              BackgroundImageSource="picturematching.jpeg">
 
     <ContentPage.Resources>
@@ -31,26 +30,27 @@
 
         </ResourceDictionary>
     </ContentPage.Resources>
-    <Grid HeightRequest="600">
+    <Grid HeightRequest="{OnPlatform Default='600', Android='300'}">
 
         <Grid >
             <Grid Style="{StaticResource HomeIconStyle}" VerticalOptions="Start" HorizontalOptions="Start">
                 <ImageButton Source="home_button.png" 
-                             Margin="0,10,20,10"
+                             Margin="{OnPlatform Default='0,10,20,10', Android=' 0,10,50,30'}"
                              BackgroundColor="Transparent"
                              VerticalOptions="Center" 
                              HorizontalOptions="Center"
                              Clicked="Home_Button"/>
             </Grid>
+
             <StackLayout HorizontalOptions="Start"
                              VerticalOptions="Start"
-                             Margin="200,100">
+                             Margin="{OnPlatform Default='200,100', Android='150,30'}">
                 <Label Text="Match Parts"
                        TextColor="#A2DBAE"
                        FontSize="Medium"
                        HorizontalOptions="Center"/>
-                <Frame WidthRequest="250"
-                       HeightRequest="250"
+                <Frame WidthRequest="{OnPlatform Default='250', Android='200'}"
+                       HeightRequest="{OnPlatform Default='250', Android='200'}"
                        Margin="5"
                        Padding="0"
                        CornerRadius="10"
@@ -60,41 +60,45 @@
                 </Frame>
             </StackLayout>
 
-            <Frame BackgroundColor="LightGray"
-                       WidthRequest="200"
-                       HeightRequest="150"
-                       Margin="230,40"
-                       VerticalOptions="End"
-                       HorizontalOptions="Start">
+            <Frame BackgroundColor="{OnPlatform WinUI='LightGray', Android='Transparent'}"
+                   WidthRequest="{OnPlatform Default='200', Android='150'}"
+                   HeightRequest="{OnPlatform Default='150', Android='130'}"
+                   Margin="{OnPlatform Default='230,40', Android='0,0'}"
+                   VerticalOptions="End"
+                   HorizontalOptions="Start"
+                   BorderColor="{OnPlatform Default='White', Android='Transparent'}">
                 <VerticalStackLayout>
                     <StackLayout Orientation="Horizontal" 
                                  HorizontalOptions="Start" 
                                  VerticalOptions="Center"
                                  WidthRequest="150">
                         <Image Source="heart.png" 
-                               WidthRequest="50"/>
+                               WidthRequest="{OnPlatform Default='50', Android='30'}"/>
                         <Label Text="{Binding AttemptsRemaining, StringFormat='x{0:F0}'}"
                                FontSize="24"
                                FontAttributes="Bold"
                                VerticalOptions="Center" 
                                Margin="10,12,0,0"
                                WidthRequest="50"
-                               HeightRequest="50"/>
+                               HeightRequest="50"
+                               TextColor="{OnPlatform Default='Black', Android='White'}"/>
 
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" 
                                  HorizontalOptions="Start" 
                                  VerticalOptions="Center"
-                                 WidthRequest="150">
+                                 WidthRequest="120">
                         <Image Source="coin.png" 
-                               WidthRequest="30"/>
+                               BackgroundColor="Transparent"
+                               WidthRequest="{OnPlatform Default='30', Android='30'}"/>
                         <Label Text="{Binding Score}"
                                FontSize="24"
+                               TextColor="{OnPlatform Default='Black', Android='White'}"
                                FontAttributes="Bold"
                                VerticalOptions="Center" 
-                               Margin="10,12,0,0"
-                               WidthRequest="50"
-                               HeightRequest="50"/>
+                               Margin="{OnPlatform Default='10,12,0,0', Android='10,0,0,0'}"
+                               WidthRequest="{OnPlatform Default='50', Android='30'}"
+                               HeightRequest="{OnPlatform Default='50', Android='30'}"/>
 
                     </StackLayout>
 
@@ -104,26 +108,27 @@
             </Frame>
         </Grid>
 
-        <Grid HeightRequest="450"
-          WidthRequest="500"
-          Margin="600,0,10,30">
+        <Grid HeightRequest="{OnPlatform Default='450', Android='250'}"
+              WidthRequest="{OnPlatform Default='500', Android='350'}"
+              Margin="{OnPlatform Default='600,0,10,30', Android='400,0,30,150'}">
+
 
             <CollectionView ItemsSource="{Binding FilteredImageOptions}"
-                            HeightRequest="425"
-                            WidthRequest="500"
-                            Margin="0,0,10,30"
+                            HeightRequest="{OnPlatform Default='425', Android='225'}"
+                            WidthRequest="{OnPlatform Default='500', Android='350'}"
+                            Margin="{OnPlatform Default='0,0,10,30', Android = '0,0,0,-40'}"
                             HorizontalOptions="End"
                             VerticalOptions="End">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical" 
-                                 Span="2"
-                                 VerticalItemSpacing="5"
-                                 HorizontalItemSpacing="5"/>
+                                     Span="2"
+                                     VerticalItemSpacing="{OnPlatform Default='5', Android='1'}"
+                                     HorizontalItemSpacing="{OnPlatform Default='5', Android='1'}"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="dto:ImageDto">
-                        <Frame WidthRequest="200"
-                               HeightRequest="200"
+                        <Frame WidthRequest="{OnPlatform Default='200', Android='120'}"
+                               HeightRequest="{OnPlatform Default='200', Android='100'}"
                                Margin="5"
                                Padding="0"
                                CornerRadius="10"
@@ -144,24 +149,26 @@
                    IsVisible="{Binding IsAnswerCorrect}"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
-                   WidthRequest="250"
-                   HeightRequest="200" 
+                   WidthRequest="{OnPlatform Default='250', Android='150'}"
+                   HeightRequest="{OnPlatform Default='200', Android='100'}"
                    BackgroundColor="Transparent"/>
             <Image Source="crossed.png"
                    IsVisible="{Binding IsCrossVisible}"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
-                   WidthRequest="250"
-                   HeightRequest="200"
+                   WidthRequest="{OnPlatform Default='250', Android='200'}"
+                   HeightRequest="{OnPlatform Default='200', Android='200'}"
                    BackgroundColor="Transparent"/>
         </Grid>
-        <Grid WidthRequest="200"
-              HeightRequest="50"
-              Margin="855,500,0,20">
+        <Grid WidthRequest="{OnPlatform Default='200', Android='180'}"
+              HeightRequest="{OnPlatform Default='50', Android='40'}"
+              Margin="{OnPlatform Default='855,500,0,20', Android='500,250,10,30'}">
             <Button x:Name="NextButton"
                     FontSize="Medium"
                     Text="{Binding NextButtonText}"
-                    IsEnabled="{Binding IsAnswerCorrect}" />
+                    IsEnabled="{Binding IsAnswerCorrect}" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
         </Grid>
     </Grid>
 </ContentPage>

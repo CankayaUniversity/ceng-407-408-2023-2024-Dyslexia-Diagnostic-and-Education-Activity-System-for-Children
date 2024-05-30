@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using DyslexiaApp.MAUI.Pages.Login;
 using DyslexiaApp.MAUI.Services;
+using DyslexiaAppMAUI.Shared;
 using DyslexiaAppMAUI.Shared.Dtos;
 using System;
 using System.Collections.Generic;
@@ -29,12 +30,12 @@ public partial class DiagnosisMatchingGamesViewModel : BaseViewModel
     public int CurrentQuestionIndex { get; set; }
 
     // New list to store answer results
-    public List<int> AnswerResults { get; private set; }
+    public UserAnswersDto AnswerResults { get; private set; }
 
     public DiagnosisMatchingGamesViewModel(IEducationalGameListApi educationalGameListApi)
     {
         _educationalGameListApi = educationalGameListApi;
-        AnswerResults = new List<int>();
+        AnswerResults = new UserAnswersDto { AnswerResults = new List<UserAnswerDto>() };
     }
 
     public async Task InitializeAsync()
@@ -137,6 +138,21 @@ public partial class DiagnosisMatchingGamesViewModel : BaseViewModel
             Debug.WriteLine($"Answer Results: {String.Join(", ", AnswerResults)}");
 
             await Shell.Current.GoToAsync($"//{nameof(DiagnosisNavigationInfo)}");
+        }
+    }
+
+    public async Task<DyslexiaResultDto> SubmitAnswersAsync(string email)
+    {
+        try
+        {
+            var result = await _educationalGameListApi.SubmitAnswersAsync(AnswerResults,email);
+            Debug.WriteLine($"Result= {result}");
+            return result;
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Error submitting answers: {ex.Message}");
+            return null;
         }
     }
 }

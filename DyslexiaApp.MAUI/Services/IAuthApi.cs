@@ -25,5 +25,7 @@ namespace DyslexiaApp.MAUI.Services
         [Post("/api/auth/reset-password")]
         Task<ResultWithDataDto<ResetPasswordRequestDto>> ResetPasswordAsync([Body] ResetPasswordRequestDto dto);
 
+       
+
     }
 }

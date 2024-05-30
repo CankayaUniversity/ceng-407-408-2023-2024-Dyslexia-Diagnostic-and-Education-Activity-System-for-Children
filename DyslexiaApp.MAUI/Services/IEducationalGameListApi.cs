@@ -1,4 +1,5 @@
-﻿using DyslexiaAppMAUI.Shared.Dtos;
+﻿using DyslexiaAppMAUI.Shared;
+using DyslexiaAppMAUI.Shared.Dtos;
 using Refit;
 
 namespace DyslexiaApp.MAUI.Services
@@ -10,5 +11,8 @@ namespace DyslexiaApp.MAUI.Services
 
         [Get("/api/question/")]
         Task<List<QuestionDto>> GetAllQuestionsAsync();
+
+        [Post("/api/dyslexiadiagnosis/submit-answers")]
+        Task<DyslexiaResultDto> SubmitAnswersAsync([Body] UserAnswersDto dto, string email);
     }
 }

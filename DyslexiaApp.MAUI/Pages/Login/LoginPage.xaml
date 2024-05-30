@@ -5,7 +5,6 @@
              xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
              x:DataType="vm:AuthViewModel"
              BackgroundImageSource="login.jpg"
-             Title="Login"
              x:Name="Login">
     <ContentPage.Resources>
         <ResourceDictionary>

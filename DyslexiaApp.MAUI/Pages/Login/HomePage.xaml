@@ -3,7 +3,6 @@
              xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
              x:Class="DyslexiaApp.MAUI.Pages.Login.HomePage"
              x:DataType="vm:ChatViewModel"
-             Title="Main Page"
              BackgroundImageSource="mainpage.jpg">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -115,21 +114,23 @@
         <Frame IsVisible="{Binding IsPopupVisible}"
                HorizontalOptions="CenterAndExpand"
                VerticalOptions="CenterAndExpand"
-               BackgroundColor="White" Padding="20" CornerRadius="15"
-               BorderColor="Black" WidthRequest="500" HeightRequest="500">
+               BackgroundColor="White" Padding="{OnPlatform Android=15, WinUI=25}" CornerRadius="15"
+               BorderColor="Black" 
+               WidthRequest="{OnPlatform Android=430, WinUI=500}"
+               HeightRequest="{OnPlatform Android=300, WinUI=500}">
             <Grid>
                 <Grid>
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="60"/>
                     </Grid.RowDefinitions>
 
                     <ImageButton Source="close.png" 
                                   BackgroundColor="Transparent"
-                                  Margin="-10,-10"
-                                  WidthRequest="25"
-                                  HeightRequest="25"
+                                  Margin="{OnPlatform Android='0,0', WinUI='-10,-10'}"
+                                  WidthRequest="{OnPlatform Android=20, WinUI=25}"
+                                  HeightRequest="{OnPlatform Android=20, WinUI=25}"
                                   Padding="10"
                                   Aspect="AspectFit"
                                   HorizontalOptions="End" 
@@ -229,8 +230,13 @@
             </Grid>
         </Frame>
 
-        <Grid HorizontalOptions="End" VerticalOptions="End" Margin="50,20">
-            <ImageButton Source="chat.png" BackgroundColor="Transparent" WidthRequest="50" VerticalOptions="End" HorizontalOptions="End" Command="{Binding ShowChatCommand}"/>
+        <Grid HorizontalOptions="End" VerticalOptions="End" Margin="{OnPlatform Android='30,-10,10,-200', WinUI='50,20'}">
+            <ImageButton Source="chat.png" 
+                         BackgroundColor="Transparent" 
+                         WidthRequest="50" 
+                         VerticalOptions="End" 
+                         HorizontalOptions="End" 
+                         Command="{Binding ShowChatCommand}"/>
 
         </Grid>
     </Grid>

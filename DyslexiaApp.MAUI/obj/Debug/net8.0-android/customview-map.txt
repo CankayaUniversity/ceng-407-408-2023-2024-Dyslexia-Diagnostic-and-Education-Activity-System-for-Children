@@ -30,6 +30,8 @@ com.google.android.material.appbar.MaterialToolbar;D:\408\DyslexiaApp.MAUI\obj\D
 com.google.android.material.tabs.TabLayout;D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\lp\153\jl\res\layout\tabbar.xml
 declare-styleable;D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\lp\153\jl\res\values\attrs.xml
 declare-styleable;D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\lp\156\jl\res\values\attr.xml
+domain;obj\Debug\net8.0-android\res\xml\network_security_config.xml
+domain-config;obj\Debug\net8.0-android\res\xml\network_security_config.xml
 external-cache-path;D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\lp\157\jl\res\xml\microsoft_maui_essentials_fileprovider_file_paths.xml
 external-path;D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\lp\157\jl\res\xml\microsoft_maui_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\net8.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
@@ -46,6 +48,7 @@ layer-list;obj\Debug\net8.0-android\resizetizer\sp\drawable-v31\maui_splash_imag
 microsoft.maui.controls.platform.compatibility.ShellFlyoutLayout;D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\lp\154\jl\res\layout\flyoutcontent.xml
 monochrome;obj\Debug\net8.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 monochrome;obj\Debug\net8.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
+network-security-config;obj\Debug\net8.0-android\res\xml\network_security_config.xml
 paths;D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\lp\157\jl\res\xml\microsoft_maui_essentials_fileprovider_file_paths.xml
 resources;D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\lp\153\jl\res\values\attrs.xml
 resources;D:\408\DyslexiaApp.MAUI\obj\Debug\net8.0-android\lp\153\jl\res\values\styles.xml

@@ -7274,3 +7274,4 @@ int[] styleable include { 0x7f030135 }
 int styleable include_constraintSet 0
 int xml image_share_filepaths 0x7f120000
 int xml microsoft_maui_essentials_fileprovider_file_paths 0x7f120001
+int xml network_security_config 0x7f120002

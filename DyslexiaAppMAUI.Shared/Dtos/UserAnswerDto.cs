@@ -12,14 +12,7 @@ public class UserAnswerDto
     public int SelectedAnswerIndex { get; set; }
 }
 
-public class UserAnswersDto
-{
-    public List<UserAnswerDto> UserAnswers { get; set; }
-}
 
-public class DyslexiaResultDto
-{
-    public double AccuracyRate { get; set; }
-    public string DyslexiaRate { get; set; }
-}
+
+
 

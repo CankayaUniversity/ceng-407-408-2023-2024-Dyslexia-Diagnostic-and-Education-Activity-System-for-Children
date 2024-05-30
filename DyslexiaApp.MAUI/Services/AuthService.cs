@@ -156,6 +156,10 @@ namespace DyslexiaApp.MAUI.Services
                 Debug.WriteLine($"Exception: {ex.Message}");
                 return ResultDto.Failure(ex.Message);
             }
+
+
         }
+
+        
     }
 }

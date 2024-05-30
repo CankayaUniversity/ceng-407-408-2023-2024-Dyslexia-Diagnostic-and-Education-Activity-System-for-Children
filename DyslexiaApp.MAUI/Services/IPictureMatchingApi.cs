@@ -13,6 +13,8 @@ namespace DyslexiaApp.MAUI.Services
 
         [Get("/api/navigationgame/start")]
         Task<NavigationGameDto> StartGameAsync();
+
+        
     }
 
 }

@@ -89,6 +89,7 @@ public partial class AuthViewModel(IAuthApi authApi, AuthService authService) : 
 
             var result = await _authApi.SigninAsync(signinDto);
 
+            Preferences.Set("UserEmail", Email);
             if (result.IsSuccess)
             {
                 _authService.Signin(result.Data);

@@ -17,6 +17,9 @@ namespace DyslexiaApp.MAUI.ViewModels
         private bool _isInitialized = false;
 
         [ObservableProperty]
+        private string email;
+
+        [ObservableProperty]
         private int _attemptCount = 1;
 
         private const int MaxAttempts = 10;
@@ -88,7 +91,14 @@ namespace DyslexiaApp.MAUI.ViewModels
 
         private async Task Continue()
         {
-            _diagnosisMatchingGamesViewModel.AnswerResults.Add(_currentSelectionResult);
+            var userAnswer = new UserAnswerDto
+            {
+                QuestionId = Question?.Id ?? Guid.Empty,
+                SelectedAnswerIndex = _currentSelectionResult
+            };
+
+            _diagnosisMatchingGamesViewModel.AnswerResults.AnswerResults.Add(userAnswer);
+
             if (AttemptCount < MaxAttempts)
             {
                 AttemptCount++;
@@ -101,8 +111,6 @@ namespace DyslexiaApp.MAUI.ViewModels
                 Debug.WriteLine($"Answer Results Navigation: {string.Join(", ", _diagnosisMatchingGamesViewModel.AnswerResults)}");
                 await Shell.Current.GoToAsync($"//{nameof(DiagnosisSymmetryInfo)}");
             }
-
-            //_diagnosisMatchingGamesViewModel.AnswerResults.Add(_currentSelectionResult);
         }
 
         private void CheckAnswer(string selectedAnswer)

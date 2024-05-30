@@ -143,7 +143,7 @@ namespace DyslexiaApp.API.Endpoints
                     return Results.Problem("Kullanıcı adı veya şifre hatalı", statusCode: StatusCodes.Status401Unauthorized);
                 }
 
-                var user = new LoggedInUser(authResult.Data.User.Id, authResult.Data.User.Name, authResult.Data.User.LastName, authResult.Data.User.Email, authResult.Data.User.Birthday, authResult.Data.User.Gender);
+                var user = new LoggedInUser(authResult.Data.User.Id, authResult.Data.User.Name, authResult.Data.User.LastName, authResult.Data.User.Email, authResult.Data.User.Birthday, authResult.Data.User.Gender,authResult.Data.User.Accuracy);
                 var token = tokenService.GenerateJwt(user);
 
                 return Results.Ok(new { Token = token });
@@ -162,7 +162,11 @@ namespace DyslexiaApp.API.Endpoints
               .Produces(StatusCodes.Status400BadRequest)
               .WithTags("Auth");
 
-
+            app.MapPost("/api/dyslexiadiagnosis/submit-answers", async (UserAnswersDto dto, DyslexiaDiagnosisService dyslexiaDiagnosisService,string email) =>
+            {
+                var result = await dyslexiaDiagnosisService.SubmitAnswersAsync(dto,email);
+                return Results.Ok(result);
+            });
 
 
             return app;

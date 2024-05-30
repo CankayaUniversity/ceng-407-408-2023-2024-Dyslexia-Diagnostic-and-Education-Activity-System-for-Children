@@ -98,27 +98,35 @@ namespace DyslexiaApp.MAUI.ViewModels
 
             IsOptionSelected = true;
 
+            var userAnswer = new UserAnswerDto
+            {
+                QuestionId = Question?.Id ?? Guid.Empty,
+                SelectedAnswerIndex = selectedIndex
+            };
+
             if (selectedIndex == Question?.CorrectAnswerIndex)
             {
-                Debug.WriteLine("Congratulations! You selected the correct answer.");
+                Debug.WriteLine("Tebrikler! Doğru cevabı seçtiniz.");
                 IsCorrect = true;
-                _currentSelectionResult = 1; // Store the result temporarily
+                _currentSelectionResult = 1; // Geçici olarak sonucu sakla
             }
             else
             {
-                Debug.WriteLine("Sorry, incorrect answer.");
+                Debug.WriteLine("Maalesef, yanlış cevap.");
                 IsCorrect = false;
-                _currentSelectionResult = 0; // Store the result temporarily
+                _currentSelectionResult = 0; // Geçici olarak sonucu sakla
             }
+
+            // Kullanıcı cevabını listeye ekle
+            _diagnosisMatchingGamesViewModel.AnswerResults.AnswerResults.Add(userAnswer);
         }
 
         [RelayCommand]
         public void AddCurrentSelectionResult()
         {
-            _diagnosisMatchingGamesViewModel.AnswerResults.Add(_currentSelectionResult);
-
             _diagnosisSymmetryMatchViewModel.GoToNextQuestionCommand.Execute(null);
         }
+
 
         private void UpdateNextButtonText()
         {

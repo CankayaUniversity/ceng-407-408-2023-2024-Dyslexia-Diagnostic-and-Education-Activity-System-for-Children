@@ -34,6 +34,10 @@ namespace DyslexiaApp.MAUI.ViewModels
         [ObservableProperty]
         private Color _statusMessageColor;
 
+        [ObservableProperty]
+        private int _accuracy;
+
+
         private bool _isInitialized;
 
         public ProfileViewModel(AuthService authService)
@@ -50,12 +54,16 @@ namespace DyslexiaApp.MAUI.ViewModels
                 Email = _authService.User.Email;
                 Birthdate = _authService.User.Birthday;
                 Gender = _authService.User.Gender;
+                Accuracy = _authService.User.Accuracy;
+
 
                 Debug.WriteLine($"Name: {Name}");
                 Debug.WriteLine($"LastName: {LastName}");
                 Debug.WriteLine($"Email: {Email}");
                 Debug.WriteLine($"Birthday: {Birthdate}");
                 Debug.WriteLine($"Gender: {Gender}");
+                Debug.WriteLine($"Accuracy: {Accuracy}");
+                
             }
             else
             {

@@ -1,15 +1,21 @@
-﻿//using Android.OS;
-//using Java.Util.Logging;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
 using Refit;
-using System.Net.Security;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Runtime.ConstrainedExecution;
 using DyslexiaApp.MAUI.Services;
 using DyslexiaApp.MAUI.ViewModels;
 using DyslexiaApp.MAUI.Pages.Login;
+using System.Net.Security;
+using DyslexiaAppMAUI.Shared;
+
+
+#if ANDROID
+using Xamarin.Android.Net;
+using System.Net.Http;
+#elif IOS
+using Security;
+using Foundation;
+#endif
 
 namespace DyslexiaApp.MAUI;
 
@@ -67,10 +73,10 @@ public static class MauiProgram
                         .AddTransient<IOpenAIService, OpenAIService>();
 
         builder.Services.AddTransient<ForgotPasswordViewModel>()
-            .AddTransient<ForgotPassword>();
+                        .AddTransient<ForgotPassword>();
 
         builder.Services.AddTransient<ResetPasswordViewModel>()
-            .AddTransient<ResetPasswordPage>();
+                        .AddTransient<ResetPasswordPage>();
 
         builder.Services.AddSingleton<EducationalGamesViewModel>()
                 .AddSingleton<EducationalResultPage>();
@@ -86,8 +92,12 @@ public static class MauiProgram
         builder.Services.AddTransient<SymmetryTestViewModel>()
                         .AddTransient<SymmetryGameTest>();
 
-        builder.Services.AddSingleton<DiagnosisResultPage>();
+        builder.Services.AddSingleton<DiagnosisResultPage>();     
+        builder.Services.AddTransient<DiagnosisResultViewModel>();
+        builder.Services.AddTransient<DyslexiaResultDto>();
 
+
+         
         ConfigureRefit(builder.Services);
 
         return builder.Build();
@@ -96,48 +106,65 @@ public static class MauiProgram
     {
         var refitSettings = new RefitSettings
         {
-
             HttpMessageHandlerFactory = () =>
             {
+#if ANDROID
+                return new AndroidMessageHandler
+                {
+                    ServerCertificateCustomValidationCallback = (httpRequestMessage, certificate, chain, sslPolicyErrors) =>
+                    {
+                        // Sertifika doğrulamasını geçici olarak devre dışı bırakıyoruz.
+                        return true;
+                    }
+                };
+#elif IOS
+                return new NSUrlSessionHandler
+                {
+                    TrustOverrideForUrl = (NSUrlSessionHandler sender, string url, SecTrust trust) =>
+                    {
+                        // iOS için sertifika doğrulamasını geçici olarak devre dışı bırakıyoruz.
+                        return url.StartsWith("https://localhost");
+                    }
+                };
+#elif WINDOWS
                 var handler = new HttpClientHandler();
-
-#if DEBUG
                 handler.ServerCertificateCustomValidationCallback = (request, cert, chain, errors) =>
                 {
+                    // Windows için sertifika doğrulamasını geçici olarak devre dışı bırakıyoruz.
                     if (request.RequestUri.Host.Equals("https://localhost") || request.RequestUri.Host.Equals("127.0.0.1"))
                     {
                         return true;
                     }
                     return errors == SslPolicyErrors.None;
                 };
-#endif
                 return handler;
+#endif
+                return null;
             }
         };
+
         services.AddRefitClient<IAuthApi>(refitSettings)
-            .ConfigureHttpClient(SetHttpClient);
+             .ConfigureHttpClient(SetHttpClient);
 
         services.AddRefitClient<IEducationalGameListApi>(refitSettings)
             .ConfigureHttpClient(SetHttpClient);
 
         services.AddRefitClient<IPictureMatchingApi>(refitSettings)
             .ConfigureHttpClient(SetHttpClient);
+    }
 
-
-        static void SetHttpClient(HttpClient httpClient)
-        {
-            var baseUrl = DeviceInfo.Platform == DevicePlatform.WinUI
-                               ? "https://127.0.0.1:7066"
+    private static void SetHttpClient(HttpClient httpClient)
+    {
+        var baseUrl = DeviceInfo.Platform == DevicePlatform.Android
+                               ? "https://10.0.2.2:7066"
                                : "https://localhost:7066";
 
-            if (DeviceInfo.DeviceType == DeviceType.Physical)
-            {
-                baseUrl = "https://2bd4p4bs-7066.euw.devtunnels.ms";
-            }
-
-            httpClient.BaseAddress = new Uri(baseUrl);
-
+        if (DeviceInfo.DeviceType == DeviceType.Physical)
+        {
+            baseUrl = "https://qknhtc6j-7066.euw.devtunnels.ms";
         }
 
+        httpClient.BaseAddress = new Uri(baseUrl);
     }
 }
+

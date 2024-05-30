@@ -74,7 +74,7 @@ namespace DyslexiaApp.API.Services
 
         private ResultWithDataDto<AuthResponseDto> GenerateAuthResponse(User user)
         {
-            var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.Email, user.LastName, user.Birthday, user.Gender);
+            var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.Email, user.LastName, user.Birthday, user.Gender,user.Accuracy);
             var token = _tokenService.GenerateJwt(loggedInUser);
             var authResponse = new AuthResponseDto(loggedInUser, token);
 
@@ -96,7 +96,7 @@ namespace DyslexiaApp.API.Services
                 _context.Users.Update(user);
                 await _context.SaveChangesAsync();
 
-                var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.LastName, user.Email, user.Birthday, user.Gender);
+                var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.Email, user.LastName, user.Birthday, user.Gender, user.Accuracy);
                 return ResultWithDataDto<LoggedInUser>.Success(loggedInUser);
             }
             catch (Exception ex)
@@ -135,7 +135,7 @@ namespace DyslexiaApp.API.Services
                 return ResultWithDataDto<LoggedInUser>.Failure("User is not found!");
             }
 
-            var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.Email, user.LastName, user.Birthday, user.Gender);
+            var loggedInUser = new LoggedInUser(user.Id, user.FirstName, user.Email, user.LastName, user.Birthday, user.Gender, user.Accuracy);
             return ResultWithDataDto<LoggedInUser>.Success(loggedInUser);
         }
 
@@ -215,6 +215,7 @@ namespace DyslexiaApp.API.Services
                 var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email && u.VerificationCode == verificationCode);
                 if (user == null)
                 {
+                    Debug.WriteLine($"User not found or verification code expired. Email: {email}, Code: {verificationCode}");
                     return ResultWithDataDto<ResetPasswordRequestDto>.Failure("Invalid code or email");
                 }
 
@@ -270,8 +271,8 @@ namespace DyslexiaApp.API.Services
             if (user == null || user.VerificationCode != code || user.VerificationCodeExpiry < DateTime.UtcNow)
                 return ResultDto.Failure("Invalid or expired verification code");
 
-            user.VerificationCode = null;
-            user.VerificationCodeExpiry = null;
+            //user.VerificationCode = null;
+            //user.VerificationCodeExpiry = null;
 
             try
             {

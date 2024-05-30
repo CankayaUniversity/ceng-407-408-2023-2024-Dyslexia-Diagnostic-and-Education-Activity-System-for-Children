@@ -76,7 +76,7 @@ namespace DyslexiaApp.API.Data.Entities
         }
         public LoggedInUser ToLoggedInUser()
         {
-            return new LoggedInUser(Id, FirstName, LastName, Email, Birthday, Gender);
+            return new LoggedInUser(Id, FirstName, LastName, Email, Birthday, Gender,Accuracy);
         }
 
         // Kullanıcı ile ilgili diğer metodlar, örneğin hesap oluşturma, profil güncelleme vs. burada tanımlanabilir.

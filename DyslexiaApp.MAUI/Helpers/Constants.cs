@@ -13,7 +13,7 @@ namespace DyslexiaApp.MAUI.Helpers
         public const string OpenAIUrl = "https://api.openai.com/";
 
         // API token for authenticating with the OpenAI service
-        public const string OpenAIToken = "sk-proj-mVR4Va2KDcuBRWEoL8YCT3BlbkFJWch6Bk0VxDPIDbcHk5V5";
+        public const string OpenAIToken = "";
 
         // Endpoint for the OpenAI completions API
         public const string OpenAIEndpoint_Completions = "v1/completions";

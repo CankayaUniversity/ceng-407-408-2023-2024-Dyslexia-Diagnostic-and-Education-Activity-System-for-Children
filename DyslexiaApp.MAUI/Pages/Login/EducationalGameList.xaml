@@ -12,7 +12,7 @@
             <Style x:Key="CardMainStyle" TargetType="Frame">
                 <Setter Property="BackgroundColor" Value="White" />
                 <Setter Property="Padding" Value="0" />
-                <Setter Property="Margin" Value="50" />
+                <Setter Property="Margin" Value="{OnPlatform iOS='50', Android='20', Default='50'}" />
                 <Setter Property="CornerRadius" Value="10" />
                 <Setter Property="HasShadow" Value="True" />
                 <Setter Property="WidthRequest" Value="230" />
@@ -21,7 +21,7 @@
             <Style x:Key="CardContainerStyle" TargetType="StackLayout">
                 <Setter Property="Orientation" Value="Horizontal" />
                 <Setter Property="HorizontalOptions" Value="Start" />
-                <Setter Property="Spacing" Value="30" />
+                <Setter Property="Spacing" Value="{OnPlatform iOS='30', Android='10', Default='30'}" />
             </Style>
 
             <Style x:Key="HomeIconStyle" TargetType="ImageButton">
@@ -34,8 +34,8 @@
             </Style>
 
             <Style x:Key="StartIconStyle" TargetType="ImageButton">
-                <Setter Property="Margin" Value="10,-50,-10,10" />
-                <Setter Property="WidthRequest" Value="160" />
+                <Setter Property="Margin" Value="{OnPlatform iOS='10,-50,-10,10', Android='5,-65,-5,5', Default='10,-50,-10,10'}" />
+                <Setter Property="WidthRequest" Value="{OnPlatform Android=100, Default=160}" />
                 <Setter Property="HeightRequest" Value="120" />
                 <Setter Property="CornerRadius" Value="60" />
                 <Setter Property="VerticalOptions" Value="End" />
@@ -67,15 +67,15 @@
 
         <Grid VerticalOptions="Center" 
               HorizontalOptions="Center"
-              WidthRequest="1100"
-              HeightRequest="500"
+              WidthRequest="{OnPlatform iOS='1100', Android='700', Default='1100'}"
+              HeightRequest="{OnPlatform iOS='500', Android='300', Default='500'}"
               Margin="30,0,0,0"
               Background="{StaticResource SemiTransparentBlack}">
 
             <CollectionView ItemsSource="{Binding FilteredEducational}"
-                            WidthRequest="700"
-                            HeightRequest="600"
-                            Margin="50,-100"
+                            WidthRequest="{OnPlatform iOS='700', Android='600', Default='700'}"
+                            HeightRequest="{OnPlatform iOS='600', Android='500', Default='600'}"
+                            Margin="{OnPlatform iOS='50,-100', Android='20,-50', Default='50,-100'}"
                             HorizontalOptions="Start"
                             VerticalOptions="Start">
                 <CollectionView.ItemsLayout>
@@ -86,9 +86,9 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="dto:EducationalDto">
                         <VerticalStackLayout>
-                            <Frame WidthRequest="200"
-                                   HeightRequest="200"
-                                   Margin="20,130,10,10"
+                            <Frame WidthRequest="{OnPlatform iOS='200', Android='150', Default='200'}"
+                                   HeightRequest="{OnPlatform iOS='200', Android='150', Default='200'}"
+                                   Margin="{OnPlatform iOS='20,130,10,10', Android='10,80,5,5', Default='20,130,10,10'}"
                                    Padding="0"
                                    CornerRadius="10"
                                    BorderColor="Black"
@@ -103,7 +103,7 @@
                                            FontSize="Medium"
                                            TextColor="ForestGreen"
                                            FontAttributes="Bold"
-                                           Margin="60,90,0,0"
+                                           Margin="{OnPlatform iOS='60,90,0,0', Android='40,60,0,0', Default='60,90,0,0'}"
                                            BackgroundColor="Transparent" />
                                     <Grid.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:EducationalGamesViewModel}}, Path= ShowGameDetailsCommand}" CommandParameter="{Binding .}" />
@@ -111,11 +111,12 @@
                                 </Grid>
                             </Frame>
                             <Label Text="{Binding Source={RelativeSource AncestorType={x:Type vm:EducationalGamesViewModel}}, Path=TotalScore, StringFormat=' Best Score: {0}'}" 
-                                   FontSize="25"
+                                   FontSize="{OnPlatform iOS='25', Android='15', Default='20'}"
                                    TextColor="ForestGreen"
                                    FontAttributes="Bold"
-                                   WidthRequest="150" HeightRequest="50"
-                                   Margin="50,0,10,0"/>
+                                   WidthRequest="{OnPlatform iOS='150', Android='120', Default='150'}"
+                                   HeightRequest="{OnPlatform iOS='50', Android='40', Default='50'}"
+                                   Margin="{OnPlatform iOS='50,0,10,0', Android='30,0,5,0', Default='50,0,10,0'}"/>
                         </VerticalStackLayout>
 
                     </DataTemplate>
@@ -128,20 +129,22 @@
                      Padding="10"
                      HorizontalOptions="Center"
                      VerticalOptions="Center"
-                     HeightRequest="600" 
-                     WidthRequest="900">
-            <Frame HeightRequest="300" 
-                   WidthRequest="550">
+                     HeightRequest="{OnPlatform iOS='600', Android='450', Default='600'}" 
+                     WidthRequest="{OnPlatform iOS='900', Android='500', Default='900'}">
+
+            <Frame HeightRequest="{OnPlatform iOS='300', Android='200', Default='300'}" 
+                   WidthRequest="{OnPlatform iOS='550', Android='350', Default='550'}">
                 <VerticalStackLayout>
                     <ImageButton Source="close.png" 
-                          BackgroundColor="Transparent"
-                          WidthRequest="5"
-                          HeightRequest="5"
-                          Scale="0.5" 
-                          Padding="0"
-                          VerticalOptions="End" 
-                          HorizontalOptions="End"
-                          Command="{Binding ClosePopupCommand}"/>
+                                  BackgroundColor="Transparent"
+                                  WidthRequest="20"
+                                  HeightRequest="30"
+                                  Scale="1" 
+                                  Padding="0"
+                                  VerticalOptions="End" 
+                                  HorizontalOptions="End"
+                                  Command="{Binding ClosePopupCommand}"
+                                  Margin="15,5"/>
                     <Label Text="{Binding SelectedGame.Name}"
                             Margin="0,-30"
                             FontAttributes="Bold"
@@ -151,7 +154,7 @@
                             TextColor="#019BE1"/>
 
                     <Label  Text="{Binding SelectedGame.Description}"
-                            Margin="0,40"
+                            Margin="{OnPlatform iOS='0,40', Android='0,50', Default='0,40'}"
                             FontAttributes="Bold"
                             FontSize="Small"
                             HorizontalOptions="Center"
@@ -167,9 +170,9 @@
                                 Style="{StaticResource StartIconTextStyle}" 
                                 VerticalOptions="Center" 
                                 HorizontalOptions="Center"/>
-                        <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:EducationalGamesViewModel}}, Path=GoToPictureMatchingGameCommand}" />
-                        </Grid.GestureRecognizers>
+
+                        <Button BackgroundColor="Transparent" Command="{Binding Source={RelativeSource AncestorType={x:Type vm:EducationalGamesViewModel}}, Path=GoToPictureMatchingGameCommand}" />
+
 
                     </Grid>
                 </VerticalStackLayout>

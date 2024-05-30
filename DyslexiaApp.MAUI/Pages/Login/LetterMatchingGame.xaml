@@ -4,8 +4,7 @@
              xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
              x:DataType="vm:LetterMatchingViewModel"
              xmlns:dto="clr-namespace:DyslexiaAppMAUI.Shared.Dtos;assembly=DyslexiaAppMAUI.Shared"
-             BackgroundImageSource="lettermatching.jpeg"
-             Title="LetterMatchingGame">
+             BackgroundImageSource="lettermatching.jpeg">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="HomeIconStyle" TargetType="ImageButton">
@@ -28,12 +27,12 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid>
+    <Grid  HeightRequest="{OnPlatform Default='600', Android='300'}">
         <Grid>
             <Grid>
                 <Grid Style="{StaticResource HomeIconStyle}" VerticalOptions="Start" HorizontalOptions="Start">
                     <ImageButton Source="home_button.png" 
-                                 Margin="0,10,-20,10"
+                                 Margin="{OnPlatform Default='0,10,-20,10', Android=' 0,10,50,30'}"
                                  BackgroundColor="Transparent"
                                  VerticalOptions="Center" 
                                  HorizontalOptions="Center"
@@ -41,45 +40,47 @@
                 </Grid>
                 <StackLayout HorizontalOptions="Start"
                              VerticalOptions="Start"
-                             Margin="200,150">
-                    <Frame WidthRequest="250"
-                           HeightRequest="250"
+                              Margin="{OnPlatform Default='200,150', Android='150,30'}">
+                    <Frame WidthRequest="{OnPlatform Default='250', Android='200'}"
+                           HeightRequest="{OnPlatform Default='250', Android='200'}"
                            Margin="5"
                            Padding="0"
                            CornerRadius="10"
-                           BorderColor="Black">
+                           BorderColor="Transparent">
                         <Image Source="{Binding Question.MainImage.Url}"
-                               Aspect="AspectFit"/>
+                               Aspect="AspectFit"
+                               BackgroundColor="White"/>
                     </Frame>
                 </StackLayout>
             </Grid>
         </Grid>
 
-        <Grid HeightRequest="450"
-              WidthRequest="750"
-              Margin="600,0,10,30">
+        <Grid HeightRequest="{OnPlatform Default='450', Android='250'}"
+              WidthRequest="{OnPlatform Default='750', Android='350'}"
+              Margin="{OnPlatform Default='600,0,10,30', Android='400,0,30,150'}">
             <CollectionView ItemsSource="{Binding FilteredImageOptions}"
-                            HeightRequest="390"
-                            WidthRequest="600"
-                            Margin="0,0,90,30"
+                            HeightRequest="{OnPlatform Default='390', Android='225'}"
+                            WidthRequest="{OnPlatform Default='600', Android='350'}"
+                            Margin="{OnPlatform Default='0,0,90,30', Android = '0,0,0,-66'}"
                             HorizontalOptions="End"
                             VerticalOptions="End">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical" 
                                      Span="2"
-                                     VerticalItemSpacing="5"
-                                     HorizontalItemSpacing="5"/>
+                                     VerticalItemSpacing="{OnPlatform Default='5', Android='5'}"
+                                     HorizontalItemSpacing="{OnPlatform Default='5', Android='5'}"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="dto:ImageDto">
-                        <Frame WidthRequest="290"
-                               HeightRequest="185"
+                        <Frame WidthRequest="{OnPlatform Default='290', Android='249'}"
+                               HeightRequest="{OnPlatform Default='185', Android='88'}"
                                Margin="5"
                                Padding="0"
                                CornerRadius="10"
-                               BorderColor="Black">
+                               BorderColor="Transparent">
                             <Image Source="{Binding Url}"
-                                   Aspect="AspectFit">
+                                   Aspect="AspectFit"
+                                   BackgroundColor="Transparent">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:LetterMatchingViewModel}}, Path=ItemSelectedGameCommand}"
                                                           CommandParameter="{Binding .}"/>
@@ -91,9 +92,9 @@
             </CollectionView>
         </Grid>
 
-        <Grid WidthRequest="200"
-              HeightRequest="50"
-              Margin="660,500,0,20">
+        <Grid WidthRequest="{OnPlatform Default='200', Android='160'}"
+              HeightRequest="{OnPlatform Default='50', Android='40'}"
+               Margin="{OnPlatform Default='660,500,0,20', Android='400,280,10,30'}">
             <Button x:Name="NextButton"
                     FontSize="Medium"
                     Text="{Binding NextButtonText}"
