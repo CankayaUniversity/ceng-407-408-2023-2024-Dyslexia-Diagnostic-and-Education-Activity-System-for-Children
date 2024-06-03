@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DyslexiaApp.MAUI.Pages.Login.EducationalResultPage"
              xmlns:vm="clr-namespace:DyslexiaApp.MAUI.ViewModels"
-             x:DataType="vm:EducationalGamesViewModel"
+             x:DataType="vm:DiagnosisMatchingGamesViewModel"
              BackgroundImageSource="mainpage.jpg">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -54,7 +54,7 @@
                 <Setter Property="BackgroundColor" Value="#C7E3F0" />
                 <Setter Property="TextColor" Value="#019BE1" />
                 <Setter Property="HeightRequest" Value="-10" />
-                <Setter Property="FontFamily" Value="Popins" />
+                <Setter Property="FontFamily" Value="Poppins" />
                 <Setter Property="WidthRequest" Value="250"/>
                 <Setter Property="CharacterSpacing" Value="3"/>
             </Style>
@@ -75,8 +75,8 @@
         <Grid VerticalOptions="Center" 
               HorizontalOptions="Center"
               Margin="25,0,0,0"
-              WidthRequest="{OnPlatform Android=700, WinUI=1075}"
-              HeightRequest="{OnPlatform Android=250, WinUI=550}"
+              WidthRequest="{OnPlatform Android=600, WinUI=1075}"
+              HeightRequest="{OnPlatform Android=340, WinUI=550}"
               Background="{StaticResource SemiTransparentBlack}">
 
             <VerticalStackLayout >
@@ -102,20 +102,20 @@
 
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="60" />
-                                <RowDefinition Height="60" />
-                                <RowDefinition Height="20" />
-                                <RowDefinition Height="40" />
+                                <RowDefinition Height="{OnPlatform Android=60, WinUI=170}" />
+                                <RowDefinition Height="{OnPlatform Android=60, WinUI=60}" />
+                                <RowDefinition Height="{OnPlatform Android=20, WinUI=60}" />
+                                <RowDefinition Height="{OnPlatform Android=40, WinUI=60}" />
                             </Grid.RowDefinitions>
 
                             <Image Grid.Row="0" Source="welldone.png" 
                                     WidthRequest="{OnPlatform Android=300, WinUI=350}"
                                     HeightRequest="{OnPlatform Android=90, WinUI=180}"/>
-                            <Label Grid.Row="1" Text="{Binding Source={RelativeSource AncestorType={x:Type vm:EducationalGamesViewModel}}, Path=TotalScore, StringFormat=' Best Score: {0}'}" 
+                            <Label Grid.Row="1" Text="{Binding Source={RelativeSource AncestorType={x:Type vm:DiagnosisMatchingGamesViewModel}}, Path=TotalScore, StringFormat=' Best Score: {0}'}" 
                                    TextColor="Black"
                                    FontSize="{OnPlatform Android=20, WinUI=25}"
                                    FontAttributes="Bold"
-                                   WidthRequest="{OnPlatform Android=230, WinUI=250}"
+                                   WidthRequest="{OnPlatform Android=230, WinUI=300}"
                                    HeightRequest="{OnPlatform Android=70, WinUI=50}"
                                    Margin="70,40,0,0"/>
 

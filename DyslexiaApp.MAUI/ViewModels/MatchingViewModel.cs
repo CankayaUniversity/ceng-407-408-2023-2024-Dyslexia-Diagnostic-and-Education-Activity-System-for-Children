@@ -168,8 +168,8 @@ public partial class MatchingViewModel : BaseViewModel
                 _wrongAnswerCount++;
                 var penalty = _wrongAnswerCount * 10;
                 Score -= penalty;
-                TotalScore = _diagnosisMatchingGamesViewModel.TotalScore;
                 _diagnosisMatchingGamesViewModel.DecreaseTotalScore(penalty);
+                //TotalScore = _diagnosisMatchingGamesViewModel.TotalScore;
 
 
                 if (AttemptsRemaining <= 0)
@@ -186,7 +186,7 @@ public partial class MatchingViewModel : BaseViewModel
     [RelayCommand]
     public void GoToNextQuestion()
     {
-        _diagnosisMatchingGamesViewModel.GoToNextSymmetryQuestionCommand.Execute(null);
+        _diagnosisMatchingGamesViewModel.GoToNextPictureQuestionCommand.Execute(null);
     }
 
     private void UpdateNextButtonText()

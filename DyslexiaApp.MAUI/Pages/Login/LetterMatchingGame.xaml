@@ -40,7 +40,7 @@
                 </Grid>
                 <StackLayout HorizontalOptions="Start"
                              VerticalOptions="Start"
-                              Margin="{OnPlatform Default='200,150', Android='150,30'}">
+                              Margin="{OnPlatform Default='200,150', Android='100,30'}">
                     <Frame WidthRequest="{OnPlatform Default='250', Android='200'}"
                            HeightRequest="{OnPlatform Default='250', Android='200'}"
                            Margin="5"
@@ -92,8 +92,8 @@
             </CollectionView>
         </Grid>
 
-        <Grid WidthRequest="{OnPlatform Default='200', Android='160'}"
-              HeightRequest="{OnPlatform Default='50', Android='40'}"
+        <Grid WidthRequest="{OnPlatform Default='200', Android='200'}"
+              HeightRequest="{OnPlatform Default='50', Android='50'}"
                Margin="{OnPlatform Default='660,500,0,20', Android='400,280,10,30'}">
             <Button x:Name="NextButton"
                     FontSize="Medium"

@@ -1,5 +1,4 @@
 namespace DyslexiaApp.MAUI.Pages.Login;
-
 public partial class RegisterAgreement : ContentPage
 {
     public RegisterAgreement()
@@ -23,4 +22,5 @@ public partial class RegisterAgreement : ContentPage
         }
 
     }
+   
 }

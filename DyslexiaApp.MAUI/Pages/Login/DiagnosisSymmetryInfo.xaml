@@ -78,7 +78,7 @@
 
         <Grid VerticalOptions="Center" 
                HorizontalOptions="Center"
-               WidthRequest="{OnPlatform iOS=300, Android=760, WinUI=1100}"
+               WidthRequest="{OnPlatform iOS=300, Android=650, WinUI=1100}"
                HeightRequest="{OnPlatform iOS=300, Android=300, WinUI=490}"
                Margin="40,0,0,0"
                Background="{StaticResource SemiTransparentBlack}">

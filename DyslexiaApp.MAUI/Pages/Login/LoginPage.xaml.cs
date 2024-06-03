@@ -73,7 +73,7 @@ public partial class LoginPage : ContentPage
         base.OnSizeAllocated(width, height);
         SetBackgroundImage();
     }
-
+  
     private void SetBackgroundImage()
     {
 

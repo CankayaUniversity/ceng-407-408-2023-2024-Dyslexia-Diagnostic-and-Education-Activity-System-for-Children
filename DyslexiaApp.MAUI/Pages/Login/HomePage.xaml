@@ -48,10 +48,24 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <Grid>
+        <Grid HorizontalOptions="End" VerticalOptions="Start" Margin="0,10,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <ImageButton Grid.Column="0" 
+                  Source="power.png" 
+                  BackgroundColor="Transparent"
+                  WidthRequest="30" 
+                  HeightRequest="30"
+                  Clicked="SignoutMenuItem_Clicked"/>
+        </Grid>
 
         <!-- Profile Icon Grid'i, içeriği sol üst köşeye konumlandırılmış -->
         <Grid Style="{StaticResource ProfileIconStyle}" VerticalOptions="Start" HorizontalOptions="Start">
-
+           
             <ImageButton Source="star.png" 
                  BackgroundColor="Transparent"
                  VerticalOptions="Center" 

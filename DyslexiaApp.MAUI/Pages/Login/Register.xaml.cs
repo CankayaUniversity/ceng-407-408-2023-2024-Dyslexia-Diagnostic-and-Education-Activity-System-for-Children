@@ -12,4 +12,5 @@ public partial class Register : ContentPage
     {
         await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
     }
+    
 }

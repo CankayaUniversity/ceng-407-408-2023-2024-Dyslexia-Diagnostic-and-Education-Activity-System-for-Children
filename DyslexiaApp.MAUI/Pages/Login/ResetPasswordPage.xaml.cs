@@ -3,7 +3,6 @@ using DyslexiaApp.MAUI.Services;
 using DyslexiaApp.MAUI.ViewModels;
 using Microsoft.Maui.Controls;
 using System.Diagnostics;
-
 namespace DyslexiaApp.MAUI.Pages.Login;
 
 [QueryProperty(nameof(Email), "email")]

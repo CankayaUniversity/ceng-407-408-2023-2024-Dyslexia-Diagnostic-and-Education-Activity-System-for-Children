@@ -42,7 +42,7 @@
                                           Clicked="Home_Button"/>
                         </Grid>
                         <Label Text="Find the symmetry of the picture !"
-                                Margin="{OnPlatform Default='0,0,0,15', Android='-240,-70,70,0'}"
+                                Margin="{OnPlatform Default='0,0,0,15', Android='-140,-70,70,0'}"
                                 FontAttributes="Bold"
                                 FontSize="{OnPlatform Android=20, WinUI=35}"
                                 TextColor="#126C94"
@@ -54,10 +54,10 @@
 
                 <HorizontalStackLayout HorizontalOptions="Start"
                                        VerticalOptions="{OnPlatform Default='Center', Android='Start'}"
-                                       Margin="{OnPlatform Default='0,80,-60,0', Android='190,70,-70,0'}">
+                                       Margin="{OnPlatform Default='650,-200,0,0', Android='190,70,-70,0'}">
 
-                    <Frame WidthRequest="100"
-                           HeightRequest="140"
+                    <Frame WidthRequest="{OnPlatform Default=120, Android=100}"
+                           HeightRequest="{OnPlatform Default=240, Android=140}"
                            Margin="5"
                            Padding="0"
                            CornerRadius="10"
@@ -79,9 +79,9 @@
               WidthRequest="600"
               Margin="{OnPlatform Default='100,30,0,-200', Android='450,0,130,0'}">
             <CollectionView ItemsSource="{Binding FilteredImageOptions}"
-                             HeightRequest="240"
-                             WidthRequest="400"
-                             Margin="0,0"
+                             HeightRequest="{OnPlatform Default=300, Android=240}"
+                             WidthRequest="{OnPlatform Default=800, Android=400}"
+                             Margin="{OnPlatform Default='0,80', Android='0,0'}"
                              HorizontalOptions="Center"
                              VerticalOptions="Center">
                 <CollectionView.ItemsLayout>
@@ -94,11 +94,11 @@
                     <DataTemplate x:DataType="dto:ImageDto">
                         <HorizontalStackLayout>
                             <Image Source="choose.png" 
-                                   WidthRequest="30"
-                                   HeightRequest="40"
+                                   WidthRequest="{OnPlatform Default=45, Android=30}"
+                                   HeightRequest="{OnPlatform Default=130, Android=40}"
                                    Margin="10,20"/>
-                            <Frame WidthRequest="70"
-                                   HeightRequest="100"
+                            <Frame WidthRequest="{OnPlatform Default=80, Android=70}"
+                                   HeightRequest="{OnPlatform Default=160, Android=100}"
                                    Margin="5"
                                    Padding="0"
                                    CornerRadius="10"
@@ -119,8 +119,8 @@
         </Grid>
 
         <Grid WidthRequest="200"
-              HeightRequest="40"
-              Margin="-400,250,0,20">
+              HeightRequest="50"
+              Margin="{OnPlatform Default='90,550,0,20', Android='-200,250,0,20'}">
             <Button x:Name="NextButton"
                     FontSize="Medium"
                     Text="{Binding NextButtonText}"

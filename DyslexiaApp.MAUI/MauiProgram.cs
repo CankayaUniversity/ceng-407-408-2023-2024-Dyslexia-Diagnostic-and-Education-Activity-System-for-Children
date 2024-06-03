@@ -113,7 +113,7 @@ public static class MauiProgram
                 {
                     ServerCertificateCustomValidationCallback = (httpRequestMessage, certificate, chain, sslPolicyErrors) =>
                     {
-                        // Sertifika doğrulamasını geçici olarak devre dışı bırakıyoruz.
+
                         return true;
                     }
                 };
@@ -161,7 +161,7 @@ public static class MauiProgram
 
         if (DeviceInfo.DeviceType == DeviceType.Physical)
         {
-            baseUrl = "https://4r0lbx2t-7066.euw.devtunnels.ms";
+            baseUrl = "https://rjckcbkh-7066.euw.devtunnels.ms";
         }
 
         httpClient.BaseAddress = new Uri(baseUrl);

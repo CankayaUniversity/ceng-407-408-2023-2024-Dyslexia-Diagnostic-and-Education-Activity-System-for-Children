@@ -409,6 +409,8 @@ public partial class DiagnosisMatchingGamesViewModel : BaseViewModel
 
         if (CurrentQuestionIndex < GameQuestions.Count - 1)
         {
+
+            Debug.WriteLine($"Total Score: {TotalScore}");
             CurrentQuestionIndex++;
             var nextQuestion = GameQuestions[CurrentQuestionIndex];
             Debug.WriteLine($"Next Question ID: {nextQuestion.Id}");

@@ -39,7 +39,7 @@
 
             <Style x:Key="QuestionStyle" TargetType="Label">
                 <Setter Property="WidthRequest" Value="{OnPlatform Android='100', WinUI=200}" />
-                <Setter Property="HeightRequest" Value="{OnPlatform Android=50, WinUI=60}" />
+                <Setter Property="HeightRequest" Value="{OnPlatform Android=60, WinUI=60}" />
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="BackgroundColor" Value="#126C94" />
@@ -84,7 +84,7 @@
 
             <AbsoluteLayout Grid.Row="0" 
                             WidthRequest="{OnPlatform Android=900, WinUI=1200}" 
-                            HeightRequest="{OnPlatform Android=180, WinUI=300}"
+                            HeightRequest="{OnPlatform Android=200, WinUI=300}"
                             Margin="{OnPlatform Default='0,100,0,0', Android='0,100,0,0'}">
                 <Button Style="{StaticResource QuestionStyle}"
                         Text="{Binding BaloonPositionText}"
@@ -111,9 +111,9 @@
 
         </Grid>
 
-        <Grid WidthRequest="{OnPlatform Android=150, WinUI=200}" 
-              HeightRequest="{OnPlatform Android=40, WinUI=50}"
-              Margin="{OnPlatform Default='900,550,0,20', Android='700,300,0,20'}">
+        <Grid WidthRequest="{OnPlatform Android=200, WinUI=200}" 
+              HeightRequest="{OnPlatform Android=50, WinUI=50}"
+              Margin="{OnPlatform Default='900,550,0,20', Android='580,300,0,20'}">
             <Button FontSize="Medium"
                     Text="{Binding ContinueButtonText}"
                     Command="{Binding ContinueCommand}"

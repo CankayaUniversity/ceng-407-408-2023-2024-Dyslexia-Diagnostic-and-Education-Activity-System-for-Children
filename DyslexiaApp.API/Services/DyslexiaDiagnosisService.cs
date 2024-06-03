@@ -97,7 +97,7 @@ namespace DyslexiaApp.API.Services
                 }
             }
 
-            double accuracyRate = (double)correctAnswers / (totalQuestions-5);
+            double accuracyRate = (double)correctAnswers / totalQuestions;
             return accuracyRate;
         }
 

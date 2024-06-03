@@ -1,5 +1,4 @@
 using DyslexiaApp.MAUI.ViewModels;
-
 namespace DyslexiaApp.MAUI.Pages.Login;
 
 public partial class ForgotPassword : ContentPage

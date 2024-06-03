@@ -91,7 +91,7 @@
                         <Image Source="coin.png" 
                                BackgroundColor="Transparent"
                                WidthRequest="{OnPlatform Default='30', Android='30'}"/>
-                        <Label Text="{Binding TotalScore}"
+                        <Label Text="{Binding Score}"
                                FontSize="24"
                                TextColor="{OnPlatform Default='Black', Android='White'}"
                                FontAttributes="Bold"
@@ -161,7 +161,7 @@
                    BackgroundColor="Transparent"/>
         </Grid>
         <Grid WidthRequest="{OnPlatform Default='200', Android='180'}"
-              HeightRequest="{OnPlatform Default='50', Android='40'}"
+              HeightRequest="{OnPlatform Default='50', Android='50'}"
               Margin="{OnPlatform Default='855,500,0,20', Android='500,250,10,30'}">
             <Button x:Name="NextButton"
                     FontSize="Medium"

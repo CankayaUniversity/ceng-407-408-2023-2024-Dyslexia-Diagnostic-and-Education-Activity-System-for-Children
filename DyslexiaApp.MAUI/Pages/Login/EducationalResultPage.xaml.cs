@@ -4,13 +4,14 @@ namespace DyslexiaApp.MAUI.Pages.Login;
 
 public partial class EducationalResultPage : ContentPage
 {
-    private readonly EducationalGamesViewModel _educationalGamesViewModel;
+    private readonly DiagnosisMatchingGamesViewModel _diagnosisMatchingGamesViewModel;
 
-    public EducationalResultPage(EducationalGamesViewModel educationalGamesViewModel)
+    public EducationalResultPage(DiagnosisMatchingGamesViewModel diagnosisMatchingGamesViewModel)
     {
         InitializeComponent();
-        _educationalGamesViewModel = educationalGamesViewModel;
-        BindingContext = _educationalGamesViewModel;
+
+        _diagnosisMatchingGamesViewModel = diagnosisMatchingGamesViewModel;
+        BindingContext = _diagnosisMatchingGamesViewModel;
     }
     private async void Close_Button(object sender, EventArgs e)
     {

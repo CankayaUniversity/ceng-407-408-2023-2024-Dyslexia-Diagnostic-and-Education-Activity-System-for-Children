@@ -164,30 +164,17 @@
               Background="{StaticResource SemiTransparentBlack}">
 
             <VerticalStackLayout >
-                <Grid HorizontalOptions="End" VerticalOptions="Start" Margin="0,10,10,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-
-                    <ImageButton Grid.Column="0" 
-                                 Source="power.png" 
-                                 BackgroundColor="Transparent"
-                                 WidthRequest="30" 
-                                 HeightRequest="30"
-                                 Clicked="SignoutMenuItem_Clicked"/>
-                </Grid>
+                
                 <Frame BackgroundColor="White" Padding="30"
                        CornerRadius="15"
                        BorderColor="Transparent"
                        AbsoluteLayout.LayoutFlags="PositionProportional"
                        AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
                        WidthRequest="{OnPlatform Android=450, WinUI=450}"
-                       HeightRequest="{OnPlatform Android=390, WinUI=500}"
+                       HeightRequest="{OnPlatform Android=375, WinUI=500}"
                        HorizontalOptions="Center"
                        VerticalOptions="StartAndExpand"
-                       Margin="10,-30,10,10">
+                       Margin="10,10,10,10">
 
                     <VerticalStackLayout >
                         <ImageButton Source="close.png" 
@@ -244,7 +231,7 @@
                         <Grid>
                             <Grid VerticalOptions="End" 
                                   HorizontalOptions="Center" 
-                                  Margin="0,10,61,0">
+                                  Margin="0,-10,61,0">
                                 <Label Text="{Binding StatusMessage}" TextColor="{Binding StatusMessageColor}" />
                             </Grid>
                             <Grid VerticalOptions="End" HorizontalOptions="End">

@@ -104,6 +104,12 @@
         <member name="P:DyslexiaApp.MAUI.ViewModels.DiagnosisMatchingGamesViewModel.FilteredEducational">
             <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.DiagnosisMatchingGamesViewModel._filteredEducational"/>
         </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.DiagnosisMatchingGamesViewModel.AccuracyRate">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.DiagnosisMatchingGamesViewModel.accuracyRate"/>
+        </member>
+        <member name="P:DyslexiaApp.MAUI.ViewModels.DiagnosisMatchingGamesViewModel.DyslexiaRate">
+            <inheritdoc cref="F:DyslexiaApp.MAUI.ViewModels.DiagnosisMatchingGamesViewModel.dyslexiaRate"/>
+        </member>
         <member name="F:DyslexiaApp.MAUI.ViewModels.DiagnosisMatchingGamesViewModel.goToNextQuestionCommand">
             <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.DiagnosisMatchingGamesViewModel.GoToNextQuestionCommand"/>.</summary>
         </member>
@@ -483,14 +489,14 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FilteredEducational">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FilteredEducational" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentQuestionIndex">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentQuestionIndex" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AccuracyRate">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AccuracyRate" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DyslexiaRate">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DyslexiaRate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentQuestionIndex">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentQuestionIndex" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.QuestionId">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "QuestionId" generated properties.</summary>
@@ -606,14 +612,14 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FilteredEducational">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FilteredEducational" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentQuestionIndex">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentQuestionIndex" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AccuracyRate">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AccuracyRate" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DyslexiaRate">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DyslexiaRate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentQuestionIndex">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentQuestionIndex" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.QuestionId">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "QuestionId" generated properties.</summary>
