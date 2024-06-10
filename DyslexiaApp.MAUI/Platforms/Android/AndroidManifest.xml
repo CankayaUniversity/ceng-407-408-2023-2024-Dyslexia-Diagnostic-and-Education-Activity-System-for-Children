@@ -9,7 +9,8 @@
         android:supportsRtl="true">
 		<activity android:name=".MainActivity"
                   android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-                  android:screenOrientation="landscape">
+                  android:screenOrientation="landscape"
+				  android:usesCleartextTraffic="true">
 			<!-- Diğer activity ayarları -->
 		</activity>
 	</application>

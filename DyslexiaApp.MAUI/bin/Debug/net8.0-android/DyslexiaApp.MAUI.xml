@@ -322,6 +322,16 @@
             <param name="value">The new property value that was set.</param>
             <remarks>This method is invoked right after the value of <see cref="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.Question"/> is changed.</remarks>
         </member>
+        <member name="M:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.OnIsAnswerCorrectChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.IsAnswerCorrect"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.IsAnswerCorrect"/> is changed.</remarks>
+        </member>
+        <member name="M:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.OnIsCrossVisibleChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.IsCrossVisible"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.IsCrossVisible"/> is changed.</remarks>
+        </member>
         <member name="F:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.itemSelectedGameCommand">
             <summary>The backing field for <see cref="P:DyslexiaApp.MAUI.ViewModels.MatchingViewModel.ItemSelectedGameCommand"/>.</summary>
         </member>

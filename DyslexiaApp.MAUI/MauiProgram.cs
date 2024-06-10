@@ -111,11 +111,8 @@ public static class MauiProgram
 #if ANDROID
                 return new AndroidMessageHandler
                 {
-                    ServerCertificateCustomValidationCallback = (httpRequestMessage, certificate, chain, sslPolicyErrors) =>
-                    {
-
-                        return true;
-                    }
+                    ServerCertificateCustomValidationCallback = (httpRequestMessage, certificate, chain, sslPolicyErrors) => true
+                    
                 };
 #elif IOS
                 return new NSUrlSessionHandler

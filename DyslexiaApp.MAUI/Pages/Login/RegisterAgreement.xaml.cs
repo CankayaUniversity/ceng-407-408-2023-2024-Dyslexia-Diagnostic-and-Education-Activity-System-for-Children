@@ -1,3 +1,7 @@
+#if ANDROID
+using Android.Content.PM;
+#endif
+
 namespace DyslexiaApp.MAUI.Pages.Login;
 public partial class RegisterAgreement : ContentPage
 {
@@ -22,5 +26,19 @@ public partial class RegisterAgreement : ContentPage
         }
 
     }
-   
+#if ANDROID
+
+    private void SetOrientation(ScreenOrientation orientation)
+    {
+        var activity = Platform.CurrentActivity;
+        activity.RequestedOrientation = orientation;
+    }
+#endif
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+#if ANDROID
+        SetOrientation(ScreenOrientation.Portrait);
+#endif
+    }
 }

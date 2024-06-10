@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "BouncyCastle.Cryptography/2.3.0": {
+      "BouncyCastle.Cryptography/2.3.1": {
         "type": "package",
         "compile": {
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
@@ -65,7 +65,7 @@
           }
         }
       },
-      "Google.Apis.Gmail.v1/1.68.0.3399": {
+      "Google.Apis.Gmail.v1/1.68.0.3427": {
         "type": "package",
         "dependencies": {
           "Google.Apis": "1.68.0",
@@ -82,10 +82,10 @@
           }
         }
       },
-      "MimeKit/4.5.0": {
+      "MimeKit/4.6.0": {
         "type": "package",
         "dependencies": {
-          "BouncyCastle.Cryptography": "2.3.0",
+          "BouncyCastle.Cryptography": "2.3.1",
           "System.Security.Cryptography.Pkcs": "8.0.0"
         },
         "compile": {
@@ -321,16 +321,16 @@
     }
   },
   "libraries": {
-    "BouncyCastle.Cryptography/2.3.0": {
-      "sha512": "IaVIiYxZLaBulveGDRUx/pBoW/Rc8QeXGF5u2E8xL8RWhVKCgfmtX9NUyGRbnSqnbFQU2zyP3MkXIdH+jUuQBw==",
+    "BouncyCastle.Cryptography/2.3.1": {
+      "sha512": "buwoISwecYke3CmgG1AQSg+sNZjJeIb93vTAtJiHZX35hP/teYMxsfg0NDXGUKjGx6BKBTNKc77O2M3vKvlXZQ==",
       "type": "package",
-      "path": "bouncycastle.cryptography/2.3.0",
+      "path": "bouncycastle.cryptography/2.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "README.md",
-        "bouncycastle.cryptography.2.3.0.nupkg.sha512",
+        "bouncycastle.cryptography.2.3.1.nupkg.sha512",
         "bouncycastle.cryptography.nuspec",
         "lib/net461/BouncyCastle.Cryptography.dll",
         "lib/net461/BouncyCastle.Cryptography.xml",
@@ -407,16 +407,16 @@
         "lib/netstandard2.0/Google.Apis.Core.xml"
       ]
     },
-    "Google.Apis.Gmail.v1/1.68.0.3399": {
-      "sha512": "WyzseTRffWUablrrOiASZ9+MlKsu/Wi5sH33qbkSz6wWBIc2Ty1XiiGSShJHGTVVTBsCN2R6kdD7i8WqG7Jk5w==",
+    "Google.Apis.Gmail.v1/1.68.0.3427": {
+      "sha512": "SOCapuhgPUxPARbO97TpB26jmyJwyJG1hLeEXjeVnWhgf3sXfANbu4JcPULkEkNC7RUahh02gqiN7jyo3mvedw==",
       "type": "package",
-      "path": "google.apis.gmail.v1/1.68.0.3399",
+      "path": "google.apis.gmail.v1/1.68.0.3427",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "NuGetIcon.png",
-        "google.apis.gmail.v1.1.68.0.3399.nupkg.sha512",
+        "google.apis.gmail.v1.1.68.0.3427.nupkg.sha512",
         "google.apis.gmail.v1.nuspec",
         "lib/net462/Google.Apis.Gmail.v1.dll",
         "lib/net462/Google.Apis.Gmail.v1.pdb",
@@ -429,10 +429,10 @@
         "lib/netstandard2.0/Google.Apis.Gmail.v1.xml"
       ]
     },
-    "MimeKit/4.5.0": {
-      "sha512": "OYn8b8b66J4mgtDzoImepiUtdkJOAVGoTj/ghzJ+az4wVixA5L5Z8GmgFhRvQ1btAIwZh/d9zvZLCALndQdz5w==",
+    "MimeKit/4.6.0": {
+      "sha512": "M4jddPQNSClTzHE+HnfrtN93mCXSYF8KewWUTwzXgl49ajzUh8hz/UY4CAnRQR4YJF3lBY5P+r+73VXZAGKafw==",
       "type": "package",
-      "path": "mimekit/4.5.0",
+      "path": "mimekit/4.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -467,7 +467,7 @@
         "lib/netstandard2.1/MimeKit.dll.config",
         "lib/netstandard2.1/MimeKit.pdb",
         "lib/netstandard2.1/MimeKit.xml",
-        "mimekit.4.5.0.nupkg.sha512",
+        "mimekit.4.6.0.nupkg.sha512",
         "mimekit.nuspec"
       ]
     },
@@ -846,8 +846,8 @@
     "net8.0": [
       "Google.Apis >= 1.68.0",
       "Google.Apis.Auth >= 1.68.0",
-      "Google.Apis.Gmail.v1 >= 1.68.0.3399",
-      "MimeKit >= 4.5.0",
+      "Google.Apis.Gmail.v1 >= 1.68.0.3427",
+      "MimeKit >= 4.6.0",
       "Newtonsoft.Json >= 13.0.3",
       "Refit.Newtonsoft.Json >= 7.0.0",
       "SendGrid >= 9.29.3"
@@ -913,11 +913,11 @@
           },
           "Google.Apis.Gmail.v1": {
             "target": "Package",
-            "version": "[1.68.0.3399, )"
+            "version": "[1.68.0.3427, )"
           },
           "MimeKit": {
             "target": "Package",
-            "version": "[4.5.0, )"
+            "version": "[4.6.0, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",

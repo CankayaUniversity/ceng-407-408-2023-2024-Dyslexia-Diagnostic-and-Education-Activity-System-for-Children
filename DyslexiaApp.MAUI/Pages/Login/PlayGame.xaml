@@ -44,7 +44,7 @@
 
             <StackLayout HorizontalOptions="Start"
                              VerticalOptions="Start"
-                             Margin="{OnPlatform Default='200,100', Android='150,30'}">
+                             Margin="{OnPlatform Default='200,100', Android='150,10'}">
                 <Label Text="Match Parts"
                        TextColor="#A2DBAE"
                        FontSize="Medium"
@@ -110,7 +110,7 @@
 
         <Grid HeightRequest="{OnPlatform Default='450', Android='250'}"
               WidthRequest="{OnPlatform Default='500', Android='350'}"
-              Margin="{OnPlatform Default='600,0,10,30', Android='400,0,30,150'}">
+              Margin="{OnPlatform Default='600,0,10,30', Android='400,30,30,150'}">
 
 
             <CollectionView ItemsSource="{Binding FilteredImageOptions}"
@@ -147,24 +147,26 @@
 
             <Image Source="mark.png"
                    IsVisible="{Binding IsAnswerCorrect}"
+                   Margin="{OnPlatform Default='50,50', Android='0,100,0,0'}"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
                    WidthRequest="{OnPlatform Default='250', Android='150'}"
-                   HeightRequest="{OnPlatform Default='200', Android='100'}"
+                   HeightRequest="{OnPlatform Default='200', Android='150'}"
                    BackgroundColor="Transparent"/>
             <Image Source="crossed.png"
                    IsVisible="{Binding IsCrossVisible}"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
-                   WidthRequest="{OnPlatform Default='250', Android='200'}"
-                   HeightRequest="{OnPlatform Default='200', Android='200'}"
+                   Margin="{OnPlatform Default='50,50', Android='0,100,0,0'}"
+                   WidthRequest="{OnPlatform Default='250', Android='150'}"
+                   HeightRequest="{OnPlatform Default='200', Android='150'}"
                    BackgroundColor="Transparent"/>
         </Grid>
-        <Grid WidthRequest="{OnPlatform Default='200', Android='180'}"
-              HeightRequest="{OnPlatform Default='50', Android='50'}"
-              Margin="{OnPlatform Default='855,500,0,20', Android='500,250,10,30'}">
+        <Grid WidthRequest="{OnPlatform Default='200', Android='165'}"
+              HeightRequest="{OnPlatform Default='50', Android='40'}"
+              Margin="{OnPlatform Default='855,500,0,20', Android='500,290,10,30'}">
             <Button x:Name="NextButton"
-                    FontSize="Medium"
+                    FontSize="{OnPlatform Default='Medium', Android='Small'}"
                     Text="{Binding NextButtonText}"
                     IsEnabled="{Binding IsAnswerCorrect}" 
                     HorizontalOptions="Center"

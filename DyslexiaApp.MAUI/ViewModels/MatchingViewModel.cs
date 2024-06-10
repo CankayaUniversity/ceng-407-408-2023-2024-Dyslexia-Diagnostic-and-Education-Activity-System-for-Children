@@ -125,6 +125,16 @@ public partial class MatchingViewModel : BaseViewModel
         OnPropertyChanged(nameof(FilteredImageOptions));
     }
 
+    partial void OnIsAnswerCorrectChanged(bool value)
+    {
+        OnPropertyChanged(nameof(IsAnswerCorrect));
+    }
+
+    partial void OnIsCrossVisibleChanged(bool value)
+    {
+        OnPropertyChanged(nameof(IsCrossVisible));
+    }
+
     [RelayCommand]
     public async Task ItemSelectedGameAsync(ImageDto selectedImage)
     {
@@ -152,7 +162,6 @@ public partial class MatchingViewModel : BaseViewModel
             IsCorrect = false;
             IsCrossVisible = true;
             IsAnswerCorrect = false;
-            IsCrossVisible = true;
 
             Device.StartTimer(TimeSpan.FromSeconds(2), () =>
             {
@@ -169,8 +178,6 @@ public partial class MatchingViewModel : BaseViewModel
                 var penalty = _wrongAnswerCount * 10;
                 Score -= penalty;
                 _diagnosisMatchingGamesViewModel.DecreaseTotalScore(penalty);
-                //TotalScore = _diagnosisMatchingGamesViewModel.TotalScore;
-
 
                 if (AttemptsRemaining <= 0)
                 {
@@ -181,7 +188,16 @@ public partial class MatchingViewModel : BaseViewModel
             }
             TotalScore = _diagnosisMatchingGamesViewModel.TotalScore;
         }
+
+        await Task.Delay(100);
+        Device.BeginInvokeOnMainThread(() =>
+        {
+            OnPropertyChanged(nameof(IsAnswerCorrect));
+            OnPropertyChanged(nameof(IsCrossVisible));
+        });
     }
+
+
 
     [RelayCommand]
     public void GoToNextQuestion()

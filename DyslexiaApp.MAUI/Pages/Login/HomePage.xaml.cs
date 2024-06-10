@@ -1,3 +1,6 @@
+#if ANDROID
+using Android.Content.PM;
+#endif
 using DyslexiaApp.MAUI.Services;
 using DyslexiaApp.MAUI.ViewModels;
 
@@ -35,4 +38,23 @@ public partial class HomePage : ContentPage
     {
         await Shell.Current.GoToAsync($"//{nameof(ProfilePage)}"); ;
     }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+#if ANDROID
+        SetOrientation(ScreenOrientation.Landscape);
+#endif
+
+    }
+
+
+#if ANDROID
+
+    private void SetOrientation(ScreenOrientation orientation)
+    {
+        var activity = Platform.CurrentActivity;
+        activity.RequestedOrientation = orientation;
+    }
+#endif
 }

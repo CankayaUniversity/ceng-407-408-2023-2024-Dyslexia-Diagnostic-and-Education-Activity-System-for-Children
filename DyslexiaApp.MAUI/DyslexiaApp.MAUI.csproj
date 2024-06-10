@@ -95,17 +95,17 @@
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Google.Apis" Version="1.68.0" />
 		<PackageReference Include="Google.Apis.Auth" Version="1.68.0" />
-		<PackageReference Include="Google.Apis.Gmail.v1" Version="1.68.0.3399" />
+		<PackageReference Include="Google.Apis.Gmail.v1" Version="1.68.0.3427" />
 		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.40" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.40" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
-		<PackageReference Include="MimeKit" Version="4.5.0" />
+		<PackageReference Include="MimeKit" Version="4.6.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="Refit.HttpClientFactory" Version="7.0.0" />
 		<PackageReference Include="Refit.Newtonsoft.Json" Version="7.0.0" />
 		<PackageReference Include="SendGrid" Version="9.29.3" />
-		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.4.1" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -165,5 +165,7 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionDyslexiaAppMAUIHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>

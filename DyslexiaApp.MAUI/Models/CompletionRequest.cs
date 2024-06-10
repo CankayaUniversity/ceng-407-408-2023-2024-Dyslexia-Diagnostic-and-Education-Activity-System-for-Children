@@ -22,8 +22,5 @@ namespace DyslexiaApp.MAUI.Models
         [JsonPropertyName("temperature")]
         public double Temperature { get; set; } = 0;
 
-        // The maximum number of tokens to generate in the completion response (default is 100)
-        [JsonPropertyName("max_tokens")]
-        public int MaxTokens { get; set; } = 100;
     }
 }

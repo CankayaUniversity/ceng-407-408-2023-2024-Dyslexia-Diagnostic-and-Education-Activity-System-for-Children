@@ -68,7 +68,15 @@
 
             <Style x:Key="StartIconTextStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="White" />
-                <Setter Property="FontSize" Value="{OnPlatform Android='10', WinUI='14' ,iOS='10'}"/>
+                <Setter Property="FontSize">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android">10</On>
+                            <On Platform="WinUI">14</On>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <!--<Setter Property="FontSize" Value="{OnPlatform Android='10', WinUI='14' ,iOS='10'}"/>-->
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="Center" />

@@ -10,8 +10,24 @@
         <ResourceDictionary>
             <Style x:Key="HomeIconStyle" TargetType="ImageButton">
                 <Setter Property="Margin" Value="10" />
-                <Setter Property="WidthRequest" Value="{OnPlatform Android='140', WinUI='150',iOS='140'}" />
-                <Setter Property="HeightRequest" Value="{OnPlatform Android='100', WinUI='100',iOS='140'}" />
+                <Setter Property="WidthRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="140" />
+                            <On Platform="WinUI" Value="150" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="HeightRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="100" />
+                            <On Platform="WinUI" Value="100" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <!--<Setter Property="WidthRequest" Value="{OnPlatform Android='140', WinUI='150',iOS='140'}" />-->
+                <!--<Setter Property="HeightRequest" Value="{OnPlatform Android='100', WinUI='100',iOS='140'}" />-->
                 <Setter Property="HorizontalOptions" Value="Start" />
                 <Setter Property="VerticalOptions" Value="Start" />
                 <Setter Property="BackgroundColor" Value="Transparent" />
@@ -118,11 +134,11 @@
             </CollectionView>
         </Grid>
 
-        <Grid WidthRequest="200"
-              HeightRequest="50"
-              Margin="{OnPlatform Default='90,550,0,20', Android='-200,250,0,20'}">
+        <Grid WidthRequest="{OnPlatform Default='200', Android='155'}"
+              HeightRequest="{OnPlatform Default='50', Android='50'}"
+              Margin="{OnPlatform Default='90,550,0,20', Android='-300,250,0,20'}">
             <Button x:Name="NextButton"
-                    FontSize="Medium"
+                    FontSize="{OnPlatform Default='Medium', Android='Small'}"
                     Text="{Binding NextButtonText}"
                     IsEnabled="{Binding IsOptionSelected}"
                     Command="{Binding AddCurrentSelectionResultCommand}"/>

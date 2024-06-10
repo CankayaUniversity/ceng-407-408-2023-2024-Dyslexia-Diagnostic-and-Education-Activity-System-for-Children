@@ -48,7 +48,15 @@
             </Style>
 
             <Style x:Key="StartIconStyle" TargetType="ImageButton">
-                <Setter Property="Margin" Value="{OnPlatform Android='0,0,0,0', WinUI='10,-2,10,10'}"/>
+                <Setter Property="Margin">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="0,0,0,0" />
+                            <On Platform="WinUI" Value="10,-2,10,10" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <!--<Setter Property="Margin" Value="{OnPlatform Android='0,0,0,0', WinUI='10,-2,10,10'}"/>-->
                 <Setter Property="WidthRequest">
                     <Setter.Value>
                         <OnPlatform x:TypeArguments="x:Double">

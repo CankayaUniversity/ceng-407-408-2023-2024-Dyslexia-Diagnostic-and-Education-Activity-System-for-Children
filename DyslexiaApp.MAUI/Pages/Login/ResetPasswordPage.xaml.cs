@@ -1,3 +1,7 @@
+#if ANDROID
+using Android.Content.PM;
+#endif
+
 using CommunityToolkit.Mvvm.Input;
 using DyslexiaApp.MAUI.Services;
 using DyslexiaApp.MAUI.ViewModels;
@@ -58,6 +62,9 @@ public partial class ResetPasswordPage : ContentPage
             viewModel.Email = Email;
             viewModel.VerificationCode = VerificationCode;
         }
+#if ANDROID
+        SetOrientation(ScreenOrientation.Portrait);
+#endif
     }
 
     private async void OnResetPasswordClicked(object sender, EventArgs e)
@@ -94,4 +101,13 @@ public partial class ResetPasswordPage : ContentPage
     {
         await Shell.Current.GoToAsync(nameof(LoginPage));
     }
+
+#if ANDROID
+
+    private void SetOrientation(ScreenOrientation orientation)
+    {
+        var activity = Platform.CurrentActivity;
+        activity.RequestedOrientation = orientation;
+    }
+#endif
 }

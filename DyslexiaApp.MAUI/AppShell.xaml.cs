@@ -16,7 +16,6 @@ namespace DyslexiaApp.MAUI
             [
                 typeof(LoginPage),
                 typeof(Register),
-                typeof(ForgotPassword),
                 typeof(RegisterAgreement),
                 typeof(HomePage),
                 typeof(DiagnosticTestAgreement),

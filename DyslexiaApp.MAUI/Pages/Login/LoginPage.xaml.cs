@@ -4,6 +4,10 @@ using DyslexiaApp.MAUI.ViewModels;
 using Microsoft.Maui.Controls;
 using Refit;
 using System.Text.RegularExpressions;
+
+#if ANDROID
+using Android.Content.PM;
+#endif
 public partial class LoginPage : ContentPage
 {
     private readonly AuthService _authService;
@@ -26,6 +30,7 @@ public partial class LoginPage : ContentPage
 
     private async Task OnAppearingAsync()
     {
+
         if (_authService.User is not null
             && _authService.User.Id != default(Guid)
             && !string.IsNullOrWhiteSpace(_authService.Token))
@@ -37,6 +42,9 @@ public partial class LoginPage : ContentPage
             await _diagnosisMatchingGamesViewModel.LoadAllQuestionsAndImages();
             await NavigateToHomePageAsync();
         }
+#if ANDROID
+               SetOrientation(ScreenOrientation.Portrait);
+#endif
     }
 
     private async Task NavigateToHomePageAsync()
@@ -73,7 +81,7 @@ public partial class LoginPage : ContentPage
         base.OnSizeAllocated(width, height);
         SetBackgroundImage();
     }
-  
+
     private void SetBackgroundImage()
     {
 
@@ -86,4 +94,13 @@ public partial class LoginPage : ContentPage
             this.BackgroundImageSource = "login.jpg";
         }
     }
+#if ANDROID
+
+    private void SetOrientation(ScreenOrientation orientation)
+    {
+        var activity = Platform.CurrentActivity;
+        activity.RequestedOrientation = orientation;
+    }
+#endif
+
 }

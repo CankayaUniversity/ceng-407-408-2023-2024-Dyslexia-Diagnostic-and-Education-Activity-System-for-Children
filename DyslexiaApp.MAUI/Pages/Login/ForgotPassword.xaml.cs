@@ -1,3 +1,7 @@
+#if ANDROID
+using Android.Content.PM;
+#endif
+
 using DyslexiaApp.MAUI.ViewModels;
 namespace DyslexiaApp.MAUI.Pages.Login;
 
@@ -31,5 +35,22 @@ public partial class ForgotPassword : ContentPage
     private void OnCloseButtonClicked(object sender, EventArgs e)
     {
         Navigation.PopModalAsync();
+    }
+
+#if ANDROID
+
+    private void SetOrientation(ScreenOrientation orientation)
+    {
+        var activity = Platform.CurrentActivity;
+        activity.RequestedOrientation = orientation;
+    }
+#endif
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+#if ANDROID
+        SetOrientation(ScreenOrientation.Portrait);
+#endif
     }
 }
